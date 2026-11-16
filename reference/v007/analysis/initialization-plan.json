@@ -1,0 +1,48 @@
+{
+  "schema": "review-initialization-analysis-plan-v1",
+  "created_before_new_summary_calculation": true,
+  "scope": "Descriptive reanalysis of existing full saved predictions; no fitting, selection, weight changes, GPU work, or new confirmation.",
+  "datasets": [
+    "ipmsm",
+    "paderborn"
+  ],
+  "cohorts": [
+    "ipmsm/calibration",
+    "ipmsm/pilot",
+    "ipmsm/confirmation",
+    "paderborn/development",
+    "paderborn/confirmation"
+  ],
+  "arms": [
+    "original",
+    "own_boundary"
+  ],
+  "methods": [
+    "linear_residual",
+    "direct200",
+    "d9"
+  ],
+  "pairing": "Exact original and channel-wise index, source_row, target and complete profile identities; registered source hashes and model settings verified before metrics.",
+  "retained_rows": "All stored evaluation endpoints, contiguous profile indices 300 through original row count minus one.",
+  "partition": "For fifth b in 0..4, half-open retained-array bounds floor(n*b/5) to floor(n*(b+1)/5).",
+  "statistic": "Within each profile compute each arm's RMSE on the same fifth. Average own_boundary minus original differences equally across every profile in the cohort. Also retain arm-specific macro and pooled RMSE.",
+  "plot": "Five cohort panels, three methods, all five fifths, zero line. Negative differences favor channel-wise initialization. IPMSM and Paderborn panels may use different stated y ranges to retain legibility.",
+  "interpretation": "Retained-row fifths are not equal physical durations. Comparing refitted procedures does not recover physical rotor initial temperature. All records were previously exposed, and small-cohort results are descriptive.",
+  "no_inferential_test": true,
+  "output": [
+    "paired profile CSV",
+    "arm-specific profile-fifth CSV",
+    "all five cohort summary CSV/JSON",
+    "publication PDF/PNG figure",
+    "source and output checksums"
+  ],
+  "_public_view": {
+    "schema": "public-sanitized-historical-view-v1",
+    "source_id": "private_v007_archive:analysis/initialization-plan.json",
+    "source_sha256": "2a8a07f7f700a54bb8b4dc6e77b24e7cd9bbcd4554e429202f3cb2d465d277ff",
+    "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data.",
+    "receipt_scope": "Historical archival record, not evidence that the current portable release script was executed. Current release checks are recorded separately in provenance/validation-v007.json.",
+    "original_preserved": true,
+    "independent_confirmation": false
+  }
+}

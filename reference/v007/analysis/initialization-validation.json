@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "archived_fifth_contrasts_checked": 50,
+  "max_fifth_difference": 1.3322676295501878e-15,
+  "saved_paper_whole_macro_cells": 30,
+  "max_whole_difference": 1.3322676295501878e-15,
+  "synthetic_unequal_partition_and_index_validation": true,
+  "portable_smoke_run_verified": true,
+  "script_sha256": "c8c4a34eff180c6f36d325fb087d5e4deaeda8fbd422e801d6f7f0b4a945f2ff",
+  "reference_sha256": "a535fd46ee0c9f6b99ddf7d4292faff832604b95af7efa98fa30a8ee0bc0f24c",
+  "archived_analysis_sha256": "4137c6d1aafa80543c7c4bd356a4dc5f29d1d11c7939378e1aeced425982be86",
+  "new_training_fits": 0,
+  "_public_view": {
+    "schema": "public-sanitized-historical-view-v1",
+    "source_id": "private_v007_archive:analysis/initialization-validation.json",
+    "source_sha256": "c5e9f7e0507d72cda12925a5632e2788e3c1db96d829eea3eb7e7510f93c37a4",
+    "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data.",
+    "receipt_scope": "Historical archival record, not evidence that the current portable release script was executed. Current release checks are recorded separately in provenance/validation-v007.json.",
+    "original_preserved": true,
+    "independent_confirmation": false
+  }
+}

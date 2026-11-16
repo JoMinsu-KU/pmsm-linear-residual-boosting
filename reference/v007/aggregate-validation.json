@@ -1,0 +1,32 @@
+{
+  "schema": "pmsm-v007-public-aggregate-validation-v1",
+  "status": "PASS",
+  "scope": "Independent standard-library arithmetic checks of published profile metrics, public file digests and provenance links, exact historical criteria and figure numbering. Private original source digests are recorded but cannot be rechecked without those originals. No raw-array replay, training, inference or fresh confirmation.",
+  "verifier_sha256": "6a150c3edb9582f65883a3800d33188a1fefef4c21f60859401099be8a10d83d",
+  "checked": {
+    "failure_profile_rows": 72,
+    "failure_cohort_rows": 10,
+    "support_profile_rows": 144,
+    "operating_range_rows": 36,
+    "initialization_paired_fifth_rows": 540,
+    "initialization_arm_fifth_rows": 1080,
+    "initialization_fifth_summary_rows": 75,
+    "initialization_whole_profile_rows": 108,
+    "initialization_whole_summary_rows": 15,
+    "historical_confirmation_attempts": 2,
+    "historical_source_digest_records": 7,
+    "publication_figures": 6
+  },
+  "arithmetic_tolerance": {
+    "relative": 1e-11,
+    "absolute": 1e-10
+  },
+  "historically_exposed": true,
+  "independent_confirmation": false,
+  "unverified_from_aggregates": [
+    "Raw source measurements and their marginal quantiles",
+    "Archived model predictions",
+    "Original model fitting",
+    "Cross-motor independence or generalization"
+  ]
+}

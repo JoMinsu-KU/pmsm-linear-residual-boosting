@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "actual_portable_profile_arms": 72,
+  "actual_portable_mode": "smoke",
+  "no_qualifying_failure_figure_not_fabricated": true,
+  "existing_output_refused": true,
+  "missing_run_has_no_historical_fallback": true,
+  "script_sha256": "e17f28f14bd0944ff18bc0cbfde51cbc821d88267234a351b66d7f502f60edb3",
+  "_public_view": {
+    "schema": "public-sanitized-historical-view-v1",
+    "source_id": "private_v007_archive:analysis/failure-portable-validation.json",
+    "source_sha256": "7b18ff9230e0ae7cd7705d90c81ec0a07d0ae148970dcef7d0ea100d24bb37b4",
+    "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data.",
+    "receipt_scope": "Historical archival record, not evidence that the current portable release script was executed. Current release checks are recorded separately in provenance/validation-v007.json.",
+    "original_preserved": true,
+    "independent_confirmation": false
+  }
+}

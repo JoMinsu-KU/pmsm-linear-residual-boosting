@@ -1,0 +1,408 @@
+{
+  "schema": "pmsm-v007-public-confirmation-history-v1",
+  "record_type": "PUBLIC_SANITIZED_HISTORICAL_VIEW",
+  "scope": "The two relevant prior PMSM confirmation attempts and their frozen rules. Later v007 analyses reuse historically exposed records and provide no new independent confirmation.",
+  "units": {
+    "rmse": "degC",
+    "paired_difference": "degC",
+    "relative_change": "percent"
+  },
+  "independent_confirmation_of_present_method": false,
+  "all_current_evaluation_data_previously_exposed": true,
+  "campaign_policy_relevant_subset": {
+    "maximum_confirmation_attempts": 2,
+    "one_sided_alpha_budget": 0.05,
+    "alpha_per_attempt": 0.025,
+    "attempts_consumed": 2,
+    "failure_history_preserved": true,
+    "conditional_test_validity_required": true,
+    "alpha_sum_alone_is_not_error_control": true,
+    "renaming_a_related_candidate_does_not_reset_budget": true,
+    "source_id": "campaign_policy"
+  },
+  "confirmation_ledger_relevant_fields": [
+    {
+      "confirmation_id": "C15_PAPER_FIXED_CONFIRMATION_01",
+      "protocol_version": "c15-paper-v001-frozen",
+      "plan_frozen_at_utc": "2026-11-10T13:24:32.609570+00:00",
+      "error_allocation": "0.025",
+      "interim_rule": "No interim looks; fixed primary; no CONF-driven tuning",
+      "result": "PRIMARY_CONFIRMATION_FAILED",
+      "decision": "NO_CONFIRMED_C15_SUPERIORITY",
+      "analysis_path": "review/c15-paper-final-root-adjudication-v001.json"
+    },
+    {
+      "confirmation_id": "C17_RWTH_FIXED_CONFIRMATION_02",
+      "protocol_version": "rwth-replication-v002-frozen",
+      "plan_frozen_at_utc": "2026-11-10T15:36:00Z",
+      "error_allocation": "0.025",
+      "interim_rule": "No interim looks; exact fixed sign and mean; no CONF tuning",
+      "result": "PRIMARY_CONFIRMATION_FAILED",
+      "decision": "C15_FAMILY_STOPPED_NO_CONFIRMED_CANDIDATE",
+      "analysis_path": "followup-risk-20261110/review/c16-c17-final-root-adjudication-v002.json"
+    }
+  ],
+  "confirmation_attempts": [
+    {
+      "id": "C15_PAPER_FIXED_CONFIRMATION_01",
+      "primary_hypothesis": "A nonnegative, boundary-sum-constrained thermal-history prior followed by residual histogram gradient boosting improves profile-macro RMSE relative to FIT-selected direct histogram gradient boosting.",
+      "model_detail": "25 nonnegative prior coefficients, boundary sum one, no intercept; FIT-only LOPO ridge selection; residual HGB using 33 causal features.",
+      "dataset": "Paderborn PMSM version 3",
+      "split_counts": {
+        "FIT": 41,
+        "DEV": 14,
+        "CONF": 14
+      },
+      "primary_confirmation_profile_ids": [
+        26,
+        19,
+        80,
+        55,
+        67,
+        52,
+        62,
+        57,
+        36,
+        2,
+        15,
+        68,
+        5,
+        58
+      ],
+      "secondary_reserved_ipmsm_profile_ids": [
+        10,
+        15
+      ],
+      "primary_rule": {
+        "mean_rmse_difference": "< 0",
+        "exact_one_sided_sign_p": "<= 0.025",
+        "minimum_percent_improvement": null,
+        "ties": "absolute paired RMSE difference <= 1e-10 omitted from sign test"
+      },
+      "result": {
+        "method_macro_rmse_c": 4.028327284738816,
+        "direct_macro_rmse_c": 3.5732454201879564,
+        "paired_mean_difference_c": 0.45508186455085875,
+        "relative_error_increase_percent": 12.735813274390795,
+        "bootstrap95_c": [
+          -0.16016880873293124,
+          1.1524395727148111
+        ],
+        "wins": 3,
+        "profiles": 14,
+        "exact_one_sided_sign_p": 0.9935302734375,
+        "passed": false
+      },
+      "subsequent_change": "A later frozen study retained the constrained residual predictor as one component of a CAL-weighted mixture with the direct predictor; it did not establish the current unconstrained linear-residual method as a confirmed successor.",
+      "source_ids": [
+        "ledger",
+        "attempt_1_protocol",
+        "attempt_1_result",
+        "attempt_2_protocol"
+      ],
+      "original_adjudication_primary": {
+        "dataset": "paderborn",
+        "role": "confirmation",
+        "profiles": 14,
+        "c15_macro_rmse_c": 4.028327284738816,
+        "direct9_macro_rmse_c": 3.5732454201879564,
+        "paired_difference_c": 0.45508186455085875,
+        "relative_error_increase_percent": 12.735813274390795,
+        "bootstrap95_c": [
+          -0.16016880873293124,
+          1.1524395727148111
+        ],
+        "improved_profiles": 3,
+        "exact_one_sided_sign_p": 0.9935302734375,
+        "alpha": 0.025,
+        "frozen_success_rule_passed": false,
+        "interpretation": "No confirmed superiority; interval crosses zero, so not a significant mean-worsening claim either."
+      }
+    },
+    {
+      "id": "C17_RWTH_FIXED_CONFIRMATION_02",
+      "primary_hypothesis": "A CAL-macro-RMSE-selected convex mixture of direct boosting and the constrained-prior residual predictor improves on direct boosting and all prespecified practical controls.",
+      "dataset": "RWTH motor dataset, Zenodo 10.5281/zenodo.15599966",
+      "split_profile_ids": {
+        "FIT": [
+          38,
+          27,
+          30,
+          23,
+          21,
+          19,
+          29,
+          20,
+          26,
+          37,
+          6,
+          8,
+          35,
+          34,
+          4,
+          15,
+          7,
+          13,
+          18,
+          1
+        ],
+        "CAL": [
+          10,
+          11,
+          22,
+          9,
+          16,
+          31,
+          28,
+          17
+        ],
+        "CONF": [
+          5,
+          32,
+          33,
+          36,
+          24,
+          2,
+          25,
+          14,
+          3,
+          12
+        ]
+      },
+      "cal_weight_on_constrained_residual_predictor": 0.4119720110724355,
+      "primary_rule": {
+        "mean_rmse_difference": "< 0",
+        "exact_one_sided_sign_p": "<= 0.025",
+        "minimum_percent_improvement": null,
+        "additional_practical_rule": "Strictly lower CONF macro-RMSE than each of four alternative CAL mixtures, fixed 50:50 constrained-residual/direct mixture, and the mean of three raw-MLP seed metrics. This is a prespecified mean-performance condition, not additional significance tests.",
+        "ties": "exact zero omitted from sign test"
+      },
+      "result": {
+        "method_macro_rmse_c": 3.122226225378219,
+        "direct_macro_rmse_c": 2.9422320329606935,
+        "paired_mean_difference_c": 0.1799941924175256,
+        "relative_error_increase_percent": 6.11760698684265,
+        "wins": 6,
+        "ties": 0,
+        "profiles": 10,
+        "exact_one_sided_sign_p": 0.376953125,
+        "formal_passed": false,
+        "practical_contribution_passed": false
+      },
+      "subsequent_secondary_observation": {
+        "method": "50:50 average of the direct predictor and complete unconstrained 33-feature linear-residual predictor",
+        "macro_rmse_c": 2.6949474678275513,
+        "relative_improvement_percent": 8.404658856368508,
+        "wins": 9,
+        "profiles": 10,
+        "status": "PROMISING_SECONDARY_OBSERVATION_NOT_NEWLY_CONFIRMED_TOPIC"
+      },
+      "subsequent_change": "The secondary unconstrained linear-residual mixture motivated the present exploratory line; subsequent controlled comparisons motivated emphasis on the complete linear-residual predictor. Existing CONF records were not resealed.",
+      "source_ids": [
+        "ledger",
+        "attempt_2_protocol",
+        "attempt_2_result",
+        "later_feasibility"
+      ],
+      "original_adjudication_primary_subset": {
+        "profile_ids": [
+          5,
+          32,
+          33,
+          36,
+          24,
+          2,
+          25,
+          14,
+          3,
+          12
+        ],
+        "mean_delta": 0.1799941924175256,
+        "per_profile_rmse_differences": [
+          0.24537112116858728,
+          -0.03325595149803284,
+          -0.04530437344131766,
+          0.2784951581207129,
+          -0.06806386945230791,
+          0.6692498562896323,
+          -0.1717257015360074,
+          0.9436463610740251,
+          -0.01072991394171785,
+          -0.007740762608317908
+        ],
+        "wins": 6,
+        "ties": 0,
+        "losses": 4,
+        "n_eff": 10,
+        "exact_one_sided_sign": {
+          "numerator": 386,
+          "denominator": 1024,
+          "p_value": 0.376953125,
+          "direction": "smaller RMSE",
+          "zero_ties_excluded": true
+        },
+        "formal_success": false,
+        "strict_point_mean_controls": [
+          {
+            "comparator": "direct200__cal_macro_rmse",
+            "primary_macro_rmse": 3.122226225378219,
+            "comparator_macro_rmse": 2.9422320329606935,
+            "strictly_lower": false
+          },
+          {
+            "comparator": "linear33__cal_macro_rmse",
+            "primary_macro_rmse": 3.122226225378219,
+            "comparator_macro_rmse": 2.7376299268394773,
+            "strictly_lower": false
+          },
+          {
+            "comparator": "free25__cal_macro_rmse",
+            "primary_macro_rmse": 3.122226225378219,
+            "comparator_macro_rmse": 2.8307165254038353,
+            "strictly_lower": false
+          },
+          {
+            "comparator": "positive_prior__cal_macro_rmse",
+            "primary_macro_rmse": 3.122226225378219,
+            "comparator_macro_rmse": 3.0156968600334855,
+            "strictly_lower": false
+          },
+          {
+            "comparator": "c15__half",
+            "primary_macro_rmse": 3.122226225378219,
+            "comparator_macro_rmse": 3.1869832327411034,
+            "strictly_lower": true
+          },
+          {
+            "comparator": "mlp_three_seed_metric_mean",
+            "primary_macro_rmse": 3.122226225378219,
+            "comparator_macro_rmse": 3.3335116230985613,
+            "strictly_lower": true
+          }
+        ],
+        "contribution_mean_condition": false,
+        "topic_criterion_pass": false,
+        "verdict": "PRIMARY_CONFIRMATION_FAILED",
+        "primary_cal_weight": 0.4119720110724355
+      },
+      "original_adjudication_secondary_signal": {
+        "method": "D9 plus linear33 prior/residual HGB, fixed50:50",
+        "macro_rmse_c": 2.6949474678275513,
+        "improvement_percent": 8.404658856368508,
+        "improved_profiles": 9,
+        "total_profiles": 10,
+        "status": "PROMISING_SECONDARY_OBSERVATION_NOT_NEWLY_CONFIRMED_TOPIC",
+        "limitations": [
+          "Not the prospectively selected primary",
+          "OriginalIPMSM deterioration remains",
+          "CAL weighting is not supported as added contribution",
+          "Novelty versus existing residual/additive methods unresolved"
+        ]
+      }
+    }
+  ],
+  "interpretation_limits": [
+    "Neither prior confirmation evaluated the present complete unconstrained linear-residual method as its primary hypothesis.",
+    "The 8.4047% RWTH result was a secondary observation, not a third confirmation.",
+    "The current study uses historically exposed evaluation data; later post-hoc analyses cannot become fresh confirmation.",
+    "No 3% minimum improvement requirement existed in either frozen confirmation.",
+    "Failed superiority criteria do not prove universal inferiority or impossibility of publication."
+  ],
+  "source_records": [
+    {
+      "id": "ledger",
+      "source_id": "private_campaign_archive:analysis/confirmations.csv",
+      "campaign_relative_path": "analysis/confirmations.csv",
+      "sha256": "d34e44934c380796f715decd2d826b2a45a1ffb8d8b1b8ec0c852317d95b20c0",
+      "relevant_lines": [
+        2,
+        3
+      ]
+    },
+    {
+      "id": "campaign_policy",
+      "source_id": "private_campaign_archive:protocols/campaign-confirmation-policy-v001.md",
+      "campaign_relative_path": "protocols/campaign-confirmation-policy-v001.md",
+      "sha256": "148200a1f689c3db4a743b3e53b8e7768c7af88a27b484ff0cfc493eeac5c42e",
+      "relevant_lines": [
+        5,
+        7
+      ]
+    },
+    {
+      "id": "attempt_1_protocol",
+      "source_id": "private_campaign_archive:protocols/c15-paper-v001-frozen.md",
+      "campaign_relative_path": "protocols/c15-paper-v001-frozen.md",
+      "sha256": "ae506220a508838bf985612237cd3075700cf4ee133ec440c3312c4985361673",
+      "relevant_lines": [
+        11,
+        15,
+        17,
+        23,
+        44,
+        46,
+        48
+      ]
+    },
+    {
+      "id": "attempt_1_result",
+      "source_id": "private_campaign_archive:review/c15-paper-final-root-adjudication-v001.json",
+      "campaign_relative_path": "review/c15-paper-final-root-adjudication-v001.json",
+      "sha256": "7369354f091cdbcec2fbbfcb43bf7e661bcc2ba988f21320080353053bfa7f55",
+      "relevant_lines": [
+        10,
+        26
+      ]
+    },
+    {
+      "id": "attempt_2_protocol",
+      "source_id": "private_campaign_archive:followup-risk-20261110/protocols/rwth-replication-v002-frozen.md",
+      "campaign_relative_path": "followup-risk-20261110/protocols/rwth-replication-v002-frozen.md",
+      "sha256": "f1d201fe4aa6243f8c77c6a8a85a91268d183d0cd24d48bc35ec86b269082b0f",
+      "relevant_lines": [
+        7,
+        11,
+        15,
+        19,
+        112,
+        114,
+        134,
+        136,
+        145,
+        147
+      ]
+    },
+    {
+      "id": "attempt_2_result",
+      "source_id": "private_campaign_archive:followup-risk-20261110/review/c16-c17-final-root-adjudication-v002.json",
+      "campaign_relative_path": "followup-risk-20261110/review/c16-c17-final-root-adjudication-v002.json",
+      "sha256": "e68f178d47d396e8bbe20d5c893e6a8590525e7f0f12c1b46b0eb401b63b937f",
+      "relevant_lines": [
+        10,
+        95,
+        378,
+        400
+      ]
+    },
+    {
+      "id": "later_feasibility",
+      "source_id": "private_campaign_archive:linear-followup-20261111/review/c18-feasibility-assessment-v001.md",
+      "campaign_relative_path": "linear-followup-20261111/review/c18-feasibility-assessment-v001.md",
+      "sha256": "7c2e3e11087842d126dc5edffc3ae5281eee7d68503275a2cf83eb5a2e3e7acb",
+      "relevant_lines": [
+        7,
+        9,
+        17,
+        35,
+        52,
+        76
+      ]
+    }
+  ],
+  "_public_view": {
+    "source_id": "private_v007_archive:review/history-literature.json",
+    "source_sha256": "dd311584a4b2e08d4cb4c36137c2701fa4aef1edb1c05dee5f6d4055de0256c9",
+    "transformation": "Selected confirmation history and interpretation limits from the v007 audit; verified all seven original source SHA-256 values and read relevant frozen-rule/result passages. Removed machine-specific absolute paths, unrelated literature and campaign content. Added clearly named original adjudication subsets and relevant ledger fields. Original records remain unchanged in the private archive.",
+    "originals_preserved": true
+  }
+}

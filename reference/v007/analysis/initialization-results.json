@@ -1,0 +1,2412 @@
+{
+  "schema": "review-initialization-results-v1",
+  "status": "COMPLETE",
+  "new_fits": 0,
+  "new_predictions": 0,
+  "new_formal_tests": 0,
+  "all_data_previously_exposed": true,
+  "paired_profiles": 36,
+  "retained_rows_per_arm": 615498,
+  "model_settings_checks": [
+    {
+      "dataset": "ipmsm",
+      "method": "linear_residual",
+      "identical_tree_settings": {
+        "learning_rate": 0.05,
+        "min_samples_leaf": 20,
+        "l2_regularization": 0.1,
+        "loss": "squared_error",
+        "early_stopping": false,
+        "random_state": 2026111201,
+        "max_leaf_nodes": 15,
+        "max_iter": 200
+      },
+      "fit_ids": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        8,
+        11,
+        14
+      ],
+      "interpretation": "Two separately fitted procedures with the same tree settings and training profiles."
+    },
+    {
+      "dataset": "ipmsm",
+      "method": "direct200",
+      "identical_tree_settings": {
+        "learning_rate": 0.05,
+        "min_samples_leaf": 20,
+        "l2_regularization": 0.1,
+        "loss": "squared_error",
+        "early_stopping": false,
+        "random_state": 2026111201,
+        "max_leaf_nodes": 15,
+        "max_iter": 200
+      },
+      "fit_ids": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        8,
+        11,
+        14
+      ],
+      "interpretation": "Two separately fitted procedures with the same tree settings and training profiles."
+    },
+    {
+      "dataset": "ipmsm",
+      "method": "d9",
+      "identical_tree_settings": {
+        "learning_rate": 0.05,
+        "min_samples_leaf": 20,
+        "l2_regularization": 0.1,
+        "loss": "squared_error",
+        "early_stopping": false,
+        "random_state": 2026111201,
+        "max_leaf_nodes": 7,
+        "max_iter": 500
+      },
+      "fit_ids": [
+        0,
+        2,
+        3,
+        5,
+        7,
+        8,
+        11,
+        14
+      ],
+      "interpretation": "Two separately fitted procedures with the same tree settings and training profiles."
+    },
+    {
+      "dataset": "paderborn",
+      "method": "linear_residual",
+      "identical_tree_settings": {
+        "learning_rate": 0.05,
+        "min_samples_leaf": 20,
+        "l2_regularization": 0.1,
+        "loss": "squared_error",
+        "early_stopping": false,
+        "random_state": 2026111201,
+        "max_leaf_nodes": 15,
+        "max_iter": 200
+      },
+      "fit_ids": [
+        61,
+        79,
+        14,
+        9,
+        27,
+        60,
+        46,
+        72,
+        75,
+        63,
+        71,
+        6,
+        21,
+        43,
+        54,
+        59,
+        29,
+        17,
+        31,
+        42,
+        64,
+        32,
+        70,
+        23,
+        76,
+        7,
+        10,
+        41,
+        47,
+        74,
+        44,
+        69,
+        56,
+        45,
+        50,
+        73,
+        4,
+        49,
+        51,
+        16,
+        65
+      ],
+      "interpretation": "Two separately fitted procedures with the same tree settings and training profiles."
+    },
+    {
+      "dataset": "paderborn",
+      "method": "direct200",
+      "identical_tree_settings": {
+        "learning_rate": 0.05,
+        "min_samples_leaf": 20,
+        "l2_regularization": 0.1,
+        "loss": "squared_error",
+        "early_stopping": false,
+        "random_state": 2026111201,
+        "max_leaf_nodes": 15,
+        "max_iter": 200
+      },
+      "fit_ids": [
+        61,
+        79,
+        14,
+        9,
+        27,
+        60,
+        46,
+        72,
+        75,
+        63,
+        71,
+        6,
+        21,
+        43,
+        54,
+        59,
+        29,
+        17,
+        31,
+        42,
+        64,
+        32,
+        70,
+        23,
+        76,
+        7,
+        10,
+        41,
+        47,
+        74,
+        44,
+        69,
+        56,
+        45,
+        50,
+        73,
+        4,
+        49,
+        51,
+        16,
+        65
+      ],
+      "interpretation": "Two separately fitted procedures with the same tree settings and training profiles."
+    },
+    {
+      "dataset": "paderborn",
+      "method": "d9",
+      "identical_tree_settings": {
+        "learning_rate": 0.05,
+        "min_samples_leaf": 20,
+        "l2_regularization": 0.1,
+        "loss": "squared_error",
+        "early_stopping": false,
+        "random_state": 2026111201,
+        "max_leaf_nodes": 15,
+        "max_iter": 1000
+      },
+      "fit_ids": [
+        61,
+        79,
+        14,
+        9,
+        27,
+        60,
+        46,
+        72,
+        75,
+        63,
+        71,
+        6,
+        21,
+        43,
+        54,
+        59,
+        29,
+        17,
+        31,
+        42,
+        64,
+        32,
+        70,
+        23,
+        76,
+        7,
+        10,
+        41,
+        47,
+        74,
+        44,
+        69,
+        56,
+        45,
+        50,
+        73,
+        4,
+        49,
+        51,
+        16,
+        65
+      ],
+      "interpretation": "Two separately fitted procedures with the same tree settings and training profiles."
+    }
+  ],
+  "whole_summary": [
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "linear_residual",
+      "profiles": 3,
+      "n": 9486,
+      "original_macro_rmse": 1.9398701752841998,
+      "own_macro_rmse": 1.821985505275963
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "direct200",
+      "profiles": 3,
+      "n": 9486,
+      "original_macro_rmse": 2.10061497814891,
+      "own_macro_rmse": 1.9239602436533783
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "d9",
+      "profiles": 3,
+      "n": 9486,
+      "original_macro_rmse": 2.544358190855595,
+      "own_macro_rmse": 2.3794759643852452
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "linear_residual",
+      "profiles": 3,
+      "n": 19407,
+      "original_macro_rmse": 2.659733853420894,
+      "own_macro_rmse": 2.7298943035888605
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "direct200",
+      "profiles": 3,
+      "n": 19407,
+      "original_macro_rmse": 2.726372851157274,
+      "own_macro_rmse": 2.763613274065891
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "d9",
+      "profiles": 3,
+      "n": 19407,
+      "original_macro_rmse": 2.6249140560562227,
+      "own_macro_rmse": 2.7107698659991413
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "linear_residual",
+      "profiles": 2,
+      "n": 5504,
+      "original_macro_rmse": 5.993608587215022,
+      "own_macro_rmse": 5.952796939163818
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "direct200",
+      "profiles": 2,
+      "n": 5504,
+      "original_macro_rmse": 5.055766580915096,
+      "own_macro_rmse": 5.065755637996008
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "d9",
+      "profiles": 2,
+      "n": 5504,
+      "original_macro_rmse": 5.145705741846856,
+      "own_macro_rmse": 5.464584652628354
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "linear_residual",
+      "profiles": 14,
+      "n": 337139,
+      "original_macro_rmse": 2.792642212793082,
+      "own_macro_rmse": 2.559914954509004
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "direct200",
+      "profiles": 14,
+      "n": 337139,
+      "original_macro_rmse": 3.5769725906194165,
+      "own_macro_rmse": 3.4878806217941483
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "d9",
+      "profiles": 14,
+      "n": 337139,
+      "original_macro_rmse": 3.2831621064971324,
+      "own_macro_rmse": 3.0435623777371705
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "linear_residual",
+      "profiles": 14,
+      "n": 243962,
+      "original_macro_rmse": 3.5946766732782507,
+      "own_macro_rmse": 2.460833902583757
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "direct200",
+      "profiles": 14,
+      "n": 243962,
+      "original_macro_rmse": 3.5830406329316378,
+      "own_macro_rmse": 3.3274910532077557
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "d9",
+      "profiles": 14,
+      "n": 243962,
+      "original_macro_rmse": 3.573245420187957,
+      "own_macro_rmse": 3.125540144494784
+    }
+  ],
+  "fifth_summary": [
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "linear_residual",
+      "fifth": 1,
+      "profiles": 3,
+      "n": 1895,
+      "original_macro_rmse": 3.0759008710693325,
+      "own_macro_rmse": 2.932004750067693,
+      "macro_difference": -0.14389612100163915,
+      "original_pooled_rmse": 4.821239284807412,
+      "own_pooled_rmse": 4.6524157069888865,
+      "improved_profiles": 2,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "linear_residual",
+      "fifth": 2,
+      "profiles": 3,
+      "n": 1898,
+      "original_macro_rmse": 1.8189854427772065,
+      "own_macro_rmse": 1.7079127308089799,
+      "macro_difference": -0.11107271196822655,
+      "original_pooled_rmse": 2.615860576093205,
+      "own_pooled_rmse": 2.4970046024026997,
+      "improved_profiles": 3,
+      "worsened_profiles": 0
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "linear_residual",
+      "fifth": 3,
+      "profiles": 3,
+      "n": 1897,
+      "original_macro_rmse": 1.6058449165221915,
+      "own_macro_rmse": 1.529895685862255,
+      "macro_difference": -0.07594923065993615,
+      "original_pooled_rmse": 1.9501570447808114,
+      "own_pooled_rmse": 1.8948826474861085,
+      "improved_profiles": 2,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "linear_residual",
+      "fifth": 4,
+      "profiles": 3,
+      "n": 1898,
+      "original_macro_rmse": 1.0021466352932358,
+      "own_macro_rmse": 0.9774489327894664,
+      "macro_difference": -0.024697702503769275,
+      "original_pooled_rmse": 0.9628370358423167,
+      "own_pooled_rmse": 0.9946120030708843,
+      "improved_profiles": 2,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "linear_residual",
+      "fifth": 5,
+      "profiles": 3,
+      "n": 1898,
+      "original_macro_rmse": 0.7908206354570395,
+      "own_macro_rmse": 0.6967860539437959,
+      "macro_difference": -0.09403458151324363,
+      "original_pooled_rmse": 0.7532054598265083,
+      "own_pooled_rmse": 0.67618312407112,
+      "improved_profiles": 2,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "direct200",
+      "fifth": 1,
+      "profiles": 3,
+      "n": 1895,
+      "original_macro_rmse": 3.149705661295672,
+      "own_macro_rmse": 3.008846001786696,
+      "macro_difference": -0.1408596595089766,
+      "original_pooled_rmse": 5.085914968493713,
+      "own_pooled_rmse": 5.213194688472272,
+      "improved_profiles": 2,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "direct200",
+      "fifth": 2,
+      "profiles": 3,
+      "n": 1898,
+      "original_macro_rmse": 1.6134741200487326,
+      "own_macro_rmse": 1.5467785532044251,
+      "macro_difference": -0.06669556684430743,
+      "original_pooled_rmse": 2.4878538626656472,
+      "own_pooled_rmse": 2.532546888141755,
+      "improved_profiles": 1,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "direct200",
+      "fifth": 3,
+      "profiles": 3,
+      "n": 1897,
+      "original_macro_rmse": 1.483938736803225,
+      "own_macro_rmse": 1.4556850116355398,
+      "macro_difference": -0.028253725167685224,
+      "original_pooled_rmse": 1.8541605560404213,
+      "own_pooled_rmse": 1.8738205216148351,
+      "improved_profiles": 2,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "direct200",
+      "fifth": 4,
+      "profiles": 3,
+      "n": 1898,
+      "original_macro_rmse": 1.1472612113127236,
+      "own_macro_rmse": 0.9193448026482233,
+      "macro_difference": -0.22791640866450033,
+      "original_pooled_rmse": 1.0624149767971967,
+      "own_pooled_rmse": 0.8595927905054778,
+      "improved_profiles": 2,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "direct200",
+      "fifth": 5,
+      "profiles": 3,
+      "n": 1898,
+      "original_macro_rmse": 1.9281909558109878,
+      "own_macro_rmse": 1.4401936306860026,
+      "macro_difference": -0.48799732512498545,
+      "original_pooled_rmse": 2.1137135083029084,
+      "own_pooled_rmse": 1.8448666240268168,
+      "improved_profiles": 2,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "d9",
+      "fifth": 1,
+      "profiles": 3,
+      "n": 1895,
+      "original_macro_rmse": 3.194401269577671,
+      "own_macro_rmse": 2.9928587661709387,
+      "macro_difference": -0.20154250340673194,
+      "original_pooled_rmse": 5.133986206552109,
+      "own_pooled_rmse": 4.9664467363249525,
+      "improved_profiles": 2,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "d9",
+      "fifth": 2,
+      "profiles": 3,
+      "n": 1898,
+      "original_macro_rmse": 1.8921769117841318,
+      "own_macro_rmse": 1.898603003411778,
+      "macro_difference": 0.006426091627646069,
+      "original_pooled_rmse": 2.7831304411641162,
+      "own_pooled_rmse": 2.7345588499148743,
+      "improved_profiles": 2,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "d9",
+      "fifth": 3,
+      "profiles": 3,
+      "n": 1897,
+      "original_macro_rmse": 1.84540212045621,
+      "own_macro_rmse": 1.8191363528977604,
+      "macro_difference": -0.02626576755844967,
+      "original_pooled_rmse": 1.9993523046722528,
+      "own_pooled_rmse": 1.9180798468547982,
+      "improved_profiles": 2,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "d9",
+      "fifth": 4,
+      "profiles": 3,
+      "n": 1898,
+      "original_macro_rmse": 1.904992264007723,
+      "own_macro_rmse": 1.7989223024803322,
+      "macro_difference": -0.10606996152739068,
+      "original_pooled_rmse": 1.9060712647300297,
+      "own_pooled_rmse": 1.7720740699273512,
+      "improved_profiles": 2,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "calibration",
+      "method": "d9",
+      "fifth": 5,
+      "profiles": 3,
+      "n": 1898,
+      "original_macro_rmse": 2.0162423407137617,
+      "own_macro_rmse": 1.6784040845925094,
+      "macro_difference": -0.3378382561212523,
+      "original_pooled_rmse": 1.8424546840405418,
+      "own_pooled_rmse": 1.5907838157269685,
+      "improved_profiles": 3,
+      "worsened_profiles": 0
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "linear_residual",
+      "fifth": 1,
+      "profiles": 3,
+      "n": 3881,
+      "original_macro_rmse": 1.986111456518837,
+      "own_macro_rmse": 2.0680644285778285,
+      "macro_difference": 0.08195297205899148,
+      "original_pooled_rmse": 2.3303109676821743,
+      "own_pooled_rmse": 2.399935997801339,
+      "improved_profiles": 0,
+      "worsened_profiles": 3
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "linear_residual",
+      "fifth": 2,
+      "profiles": 3,
+      "n": 3881,
+      "original_macro_rmse": 3.177692480097324,
+      "own_macro_rmse": 3.2599713772092085,
+      "macro_difference": 0.0822788971118847,
+      "original_pooled_rmse": 4.274645364781307,
+      "own_pooled_rmse": 4.3839193055989805,
+      "improved_profiles": 0,
+      "worsened_profiles": 3
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "linear_residual",
+      "fifth": 3,
+      "profiles": 3,
+      "n": 3882,
+      "original_macro_rmse": 2.6739932976722294,
+      "own_macro_rmse": 2.7484562852451018,
+      "macro_difference": 0.07446298757287269,
+      "original_pooled_rmse": 2.8708202595644594,
+      "own_pooled_rmse": 2.9632529872865088,
+      "improved_profiles": 0,
+      "worsened_profiles": 3
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "linear_residual",
+      "fifth": 4,
+      "profiles": 3,
+      "n": 3881,
+      "original_macro_rmse": 2.6237594098518433,
+      "own_macro_rmse": 2.701851474797094,
+      "macro_difference": 0.07809206494525049,
+      "original_pooled_rmse": 3.0988545393020206,
+      "own_pooled_rmse": 3.2261714905714323,
+      "improved_profiles": 1,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "linear_residual",
+      "fifth": 5,
+      "profiles": 3,
+      "n": 3882,
+      "original_macro_rmse": 2.3354288360633624,
+      "own_macro_rmse": 2.373835255252453,
+      "macro_difference": 0.038406419189090414,
+      "original_pooled_rmse": 2.535870226932585,
+      "own_pooled_rmse": 2.569415011341164,
+      "improved_profiles": 1,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "direct200",
+      "fifth": 1,
+      "profiles": 3,
+      "n": 3881,
+      "original_macro_rmse": 1.861136177313554,
+      "own_macro_rmse": 1.8235506756899411,
+      "macro_difference": -0.03758550162361277,
+      "original_pooled_rmse": 1.9490501872979755,
+      "own_pooled_rmse": 1.9030443306297316,
+      "improved_profiles": 1,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "direct200",
+      "fifth": 2,
+      "profiles": 3,
+      "n": 3881,
+      "original_macro_rmse": 3.46778662506493,
+      "own_macro_rmse": 3.5299283187506707,
+      "macro_difference": 0.06214169368574115,
+      "original_pooled_rmse": 4.028878399144503,
+      "own_pooled_rmse": 4.057995969595142,
+      "improved_profiles": 1,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "direct200",
+      "fifth": 3,
+      "profiles": 3,
+      "n": 3882,
+      "original_macro_rmse": 3.5582872498468596,
+      "own_macro_rmse": 3.642191416978972,
+      "macro_difference": 0.08390416713211257,
+      "original_pooled_rmse": 3.4802947809625677,
+      "own_pooled_rmse": 3.510636358081088,
+      "improved_profiles": 2,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "direct200",
+      "fifth": 4,
+      "profiles": 3,
+      "n": 3881,
+      "original_macro_rmse": 1.9031149939619423,
+      "own_macro_rmse": 1.8890826452080656,
+      "macro_difference": -0.014032348753876711,
+      "original_pooled_rmse": 1.9401135868375026,
+      "own_pooled_rmse": 1.924055847447667,
+      "improved_profiles": 2,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "direct200",
+      "fifth": 5,
+      "profiles": 3,
+      "n": 3882,
+      "original_macro_rmse": 2.0558154917761673,
+      "own_macro_rmse": 2.096370967498704,
+      "macro_difference": 0.04055547572253667,
+      "original_pooled_rmse": 1.9597588461844326,
+      "own_pooled_rmse": 2.034557154083577,
+      "improved_profiles": 1,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "d9",
+      "fifth": 1,
+      "profiles": 3,
+      "n": 3881,
+      "original_macro_rmse": 1.832001058522833,
+      "own_macro_rmse": 1.8645199133264903,
+      "macro_difference": 0.03251885480365716,
+      "original_pooled_rmse": 1.8399723901885272,
+      "own_pooled_rmse": 1.873280855700633,
+      "improved_profiles": 0,
+      "worsened_profiles": 3
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "d9",
+      "fifth": 2,
+      "profiles": 3,
+      "n": 3881,
+      "original_macro_rmse": 3.3702188410405127,
+      "own_macro_rmse": 3.5340712878194545,
+      "macro_difference": 0.16385244677894203,
+      "original_pooled_rmse": 4.08042415477316,
+      "own_pooled_rmse": 4.097462758108674,
+      "improved_profiles": 1,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "d9",
+      "fifth": 3,
+      "profiles": 3,
+      "n": 3882,
+      "original_macro_rmse": 3.1339185372154184,
+      "own_macro_rmse": 3.2627097267888896,
+      "macro_difference": 0.12879118957347124,
+      "original_pooled_rmse": 2.9921554398996824,
+      "own_pooled_rmse": 3.0766390283396374,
+      "improved_profiles": 0,
+      "worsened_profiles": 3
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "d9",
+      "fifth": 4,
+      "profiles": 3,
+      "n": 3881,
+      "original_macro_rmse": 2.136729059988261,
+      "own_macro_rmse": 2.2319422718538813,
+      "macro_difference": 0.09521321186562044,
+      "original_pooled_rmse": 2.171554415899814,
+      "own_pooled_rmse": 2.304003018185894,
+      "improved_profiles": 1,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "pilot",
+      "method": "d9",
+      "fifth": 5,
+      "profiles": 3,
+      "n": 3882,
+      "original_macro_rmse": 1.8086565195413469,
+      "own_macro_rmse": 1.875431922114687,
+      "macro_difference": 0.06677540257333985,
+      "original_pooled_rmse": 1.6813349534498268,
+      "own_pooled_rmse": 1.754682589482585,
+      "improved_profiles": 1,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "linear_residual",
+      "fifth": 1,
+      "profiles": 2,
+      "n": 1100,
+      "original_macro_rmse": 7.508706234705446,
+      "own_macro_rmse": 7.301834330369651,
+      "macro_difference": -0.2068719043357945,
+      "original_pooled_rmse": 6.268887125348645,
+      "own_pooled_rmse": 6.094548798781695,
+      "improved_profiles": 2,
+      "worsened_profiles": 0
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "linear_residual",
+      "fifth": 2,
+      "profiles": 2,
+      "n": 1101,
+      "original_macro_rmse": 6.6260934996052505,
+      "own_macro_rmse": 6.606122553931675,
+      "macro_difference": -0.019970945673576157,
+      "original_pooled_rmse": 5.548738699565469,
+      "own_pooled_rmse": 5.523399657775599,
+      "improved_profiles": 1,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "linear_residual",
+      "fifth": 3,
+      "profiles": 2,
+      "n": 1100,
+      "original_macro_rmse": 6.094926154069245,
+      "own_macro_rmse": 6.11352149161192,
+      "macro_difference": 0.018595337542674173,
+      "original_pooled_rmse": 5.089326392185208,
+      "own_pooled_rmse": 5.1131528285164105,
+      "improved_profiles": 1,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "linear_residual",
+      "fifth": 4,
+      "profiles": 2,
+      "n": 1101,
+      "original_macro_rmse": 4.406362114474058,
+      "own_macro_rmse": 4.385427810509203,
+      "macro_difference": -0.020934303964855516,
+      "original_pooled_rmse": 4.284141021257895,
+      "own_pooled_rmse": 4.3336828534253,
+      "improved_profiles": 1,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "linear_residual",
+      "fifth": 5,
+      "profiles": 2,
+      "n": 1102,
+      "original_macro_rmse": 3.65375146134049,
+      "own_macro_rmse": 3.744770326719784,
+      "macro_difference": 0.09101886537929382,
+      "original_pooled_rmse": 3.5524430406495355,
+      "own_pooled_rmse": 3.677598683121852,
+      "improved_profiles": 0,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "direct200",
+      "fifth": 1,
+      "profiles": 2,
+      "n": 1100,
+      "original_macro_rmse": 5.74264601400514,
+      "own_macro_rmse": 5.631206211957676,
+      "macro_difference": -0.11143980204746362,
+      "original_pooled_rmse": 4.817777275994727,
+      "own_pooled_rmse": 4.705178955111269,
+      "improved_profiles": 1,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "direct200",
+      "fifth": 2,
+      "profiles": 2,
+      "n": 1101,
+      "original_macro_rmse": 5.562478629864586,
+      "own_macro_rmse": 5.488814403690283,
+      "macro_difference": -0.07366422617430324,
+      "original_pooled_rmse": 4.701536744756101,
+      "own_pooled_rmse": 4.60549110283864,
+      "improved_profiles": 1,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "direct200",
+      "fifth": 3,
+      "profiles": 2,
+      "n": 1100,
+      "original_macro_rmse": 5.4076584005162776,
+      "own_macro_rmse": 5.483720294521817,
+      "macro_difference": 0.0760618940055382,
+      "original_pooled_rmse": 4.800122834663315,
+      "own_pooled_rmse": 4.859765929188492,
+      "improved_profiles": 0,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "direct200",
+      "fifth": 4,
+      "profiles": 2,
+      "n": 1101,
+      "original_macro_rmse": 3.9224125886551304,
+      "own_macro_rmse": 3.997215243372034,
+      "macro_difference": 0.07480265471690362,
+      "original_pooled_rmse": 4.330706135456658,
+      "own_pooled_rmse": 4.380565743811734,
+      "improved_profiles": 0,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "direct200",
+      "fifth": 5,
+      "profiles": 2,
+      "n": 1102,
+      "original_macro_rmse": 3.7032858743541164,
+      "own_macro_rmse": 3.7301623993732664,
+      "macro_difference": 0.026876525019150277,
+      "original_pooled_rmse": 3.4491045809461283,
+      "own_pooled_rmse": 3.4650573580236035,
+      "improved_profiles": 0,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "d9",
+      "fifth": 1,
+      "profiles": 2,
+      "n": 1100,
+      "original_macro_rmse": 6.169114590791576,
+      "own_macro_rmse": 6.362405800988467,
+      "macro_difference": 0.19329121019689155,
+      "original_pooled_rmse": 5.179664923929645,
+      "own_pooled_rmse": 5.319576993578509,
+      "improved_profiles": 1,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "d9",
+      "fifth": 2,
+      "profiles": 2,
+      "n": 1101,
+      "original_macro_rmse": 5.723241939242903,
+      "own_macro_rmse": 6.023611693187432,
+      "macro_difference": 0.3003697539445285,
+      "original_pooled_rmse": 4.827899058663167,
+      "own_pooled_rmse": 5.038479097252368,
+      "improved_profiles": 1,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "d9",
+      "fifth": 3,
+      "profiles": 2,
+      "n": 1100,
+      "original_macro_rmse": 6.005763862610983,
+      "own_macro_rmse": 6.152400728487512,
+      "macro_difference": 0.14663686587653024,
+      "original_pooled_rmse": 5.16374889088986,
+      "own_pooled_rmse": 5.249897991628474,
+      "improved_profiles": 1,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "d9",
+      "fifth": 4,
+      "profiles": 2,
+      "n": 1101,
+      "original_macro_rmse": 3.8736560565786293,
+      "own_macro_rmse": 4.3170700032705875,
+      "macro_difference": 0.44341394669195866,
+      "original_pooled_rmse": 3.6633230023573335,
+      "own_pooled_rmse": 4.025210447697886,
+      "improved_profiles": 0,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "ipmsm",
+      "role": "confirmation",
+      "method": "d9",
+      "fifth": 5,
+      "profiles": 2,
+      "n": 1102,
+      "original_macro_rmse": 2.9577371897665414,
+      "own_macro_rmse": 3.6729786729742306,
+      "macro_difference": 0.7152414832076894,
+      "original_pooled_rmse": 2.611755498069022,
+      "own_pooled_rmse": 3.2124231019633407,
+      "improved_profiles": 0,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "linear_residual",
+      "fifth": 1,
+      "profiles": 14,
+      "n": 67423,
+      "original_macro_rmse": 3.0010511754400824,
+      "own_macro_rmse": 2.9101964503245292,
+      "macro_difference": -0.09085472511555306,
+      "original_pooled_rmse": 3.553159753756533,
+      "own_pooled_rmse": 3.562930120046474,
+      "improved_profiles": 6,
+      "worsened_profiles": 8
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "linear_residual",
+      "fifth": 2,
+      "profiles": 14,
+      "n": 67426,
+      "original_macro_rmse": 1.8911067720446695,
+      "own_macro_rmse": 2.0990665223603067,
+      "macro_difference": 0.2079597503156371,
+      "original_pooled_rmse": 2.0904597528961752,
+      "own_pooled_rmse": 2.9477881656889857,
+      "improved_profiles": 6,
+      "worsened_profiles": 8
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "linear_residual",
+      "fifth": 3,
+      "profiles": 14,
+      "n": 67429,
+      "original_macro_rmse": 2.3082089276355084,
+      "own_macro_rmse": 2.037445714083938,
+      "macro_difference": -0.2707632135515699,
+      "original_pooled_rmse": 2.777330530161481,
+      "own_pooled_rmse": 2.353501022105491,
+      "improved_profiles": 10,
+      "worsened_profiles": 4
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "linear_residual",
+      "fifth": 4,
+      "profiles": 14,
+      "n": 67426,
+      "original_macro_rmse": 2.454102493432131,
+      "own_macro_rmse": 2.263669738056236,
+      "macro_difference": -0.1904327553758949,
+      "original_pooled_rmse": 2.9254218102283325,
+      "own_pooled_rmse": 2.4834756998651417,
+      "improved_profiles": 9,
+      "worsened_profiles": 5
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "linear_residual",
+      "fifth": 5,
+      "profiles": 14,
+      "n": 67435,
+      "original_macro_rmse": 2.956290929077416,
+      "own_macro_rmse": 2.2678383712828953,
+      "macro_difference": -0.6884525577945207,
+      "original_pooled_rmse": 3.594367351876361,
+      "own_pooled_rmse": 2.931835984893042,
+      "improved_profiles": 13,
+      "worsened_profiles": 1
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "direct200",
+      "fifth": 1,
+      "profiles": 14,
+      "n": 67423,
+      "original_macro_rmse": 3.394376362588026,
+      "own_macro_rmse": 3.0695673206502563,
+      "macro_difference": -0.32480904193777,
+      "original_pooled_rmse": 4.004196007689127,
+      "own_pooled_rmse": 3.6266647334653896,
+      "improved_profiles": 7,
+      "worsened_profiles": 7
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "direct200",
+      "fifth": 2,
+      "profiles": 14,
+      "n": 67426,
+      "original_macro_rmse": 2.779252835271644,
+      "own_macro_rmse": 2.801457632787248,
+      "macro_difference": 0.022204797515604446,
+      "original_pooled_rmse": 3.5359922981145244,
+      "own_pooled_rmse": 3.4742329684017417,
+      "improved_profiles": 7,
+      "worsened_profiles": 7
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "direct200",
+      "fifth": 3,
+      "profiles": 14,
+      "n": 67429,
+      "original_macro_rmse": 3.505836510223709,
+      "own_macro_rmse": 3.661156886204838,
+      "macro_difference": 0.15532037598112897,
+      "original_pooled_rmse": 4.083663394969246,
+      "own_pooled_rmse": 4.01383806836339,
+      "improved_profiles": 5,
+      "worsened_profiles": 9
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "direct200",
+      "fifth": 4,
+      "profiles": 14,
+      "n": 67426,
+      "original_macro_rmse": 3.0342482612043598,
+      "own_macro_rmse": 3.0353888416694343,
+      "macro_difference": 0.0011405804650745763,
+      "original_pooled_rmse": 3.25591291590929,
+      "own_pooled_rmse": 3.3077167084404824,
+      "improved_profiles": 8,
+      "worsened_profiles": 6
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "direct200",
+      "fifth": 5,
+      "profiles": 14,
+      "n": 67435,
+      "original_macro_rmse": 3.606455806774181,
+      "own_macro_rmse": 3.4503687354980985,
+      "macro_difference": -0.15608707127608246,
+      "original_pooled_rmse": 4.282690125612711,
+      "own_pooled_rmse": 4.157998921708636,
+      "improved_profiles": 9,
+      "worsened_profiles": 5
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "d9",
+      "fifth": 1,
+      "profiles": 14,
+      "n": 67423,
+      "original_macro_rmse": 3.0861277108787313,
+      "own_macro_rmse": 2.82325526482818,
+      "macro_difference": -0.2628724460505513,
+      "original_pooled_rmse": 3.8813299261152086,
+      "own_pooled_rmse": 3.3352235174486236,
+      "improved_profiles": 6,
+      "worsened_profiles": 8
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "d9",
+      "fifth": 2,
+      "profiles": 14,
+      "n": 67426,
+      "original_macro_rmse": 2.569707038096435,
+      "own_macro_rmse": 2.438700440644592,
+      "macro_difference": -0.13100659745184337,
+      "original_pooled_rmse": 3.265029660649314,
+      "own_pooled_rmse": 3.036793845839814,
+      "improved_profiles": 5,
+      "worsened_profiles": 9
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "d9",
+      "fifth": 3,
+      "profiles": 14,
+      "n": 67429,
+      "original_macro_rmse": 3.2019861335305797,
+      "own_macro_rmse": 3.10798093570855,
+      "macro_difference": -0.09400519782203,
+      "original_pooled_rmse": 3.7281667096997486,
+      "own_pooled_rmse": 3.400779257483848,
+      "improved_profiles": 7,
+      "worsened_profiles": 7
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "d9",
+      "fifth": 4,
+      "profiles": 14,
+      "n": 67426,
+      "original_macro_rmse": 2.723702425986782,
+      "own_macro_rmse": 2.678554103378668,
+      "macro_difference": -0.04514832260811425,
+      "original_pooled_rmse": 2.952911705970137,
+      "own_pooled_rmse": 2.8696721592274135,
+      "improved_profiles": 8,
+      "worsened_profiles": 6
+    },
+    {
+      "dataset": "paderborn",
+      "role": "development",
+      "method": "d9",
+      "fifth": 5,
+      "profiles": 14,
+      "n": 67435,
+      "original_macro_rmse": 3.3106999939385346,
+      "own_macro_rmse": 3.0452754788933807,
+      "macro_difference": -0.26542451504515424,
+      "original_pooled_rmse": 4.017616733125286,
+      "own_pooled_rmse": 3.567028125363324,
+      "improved_profiles": 7,
+      "worsened_profiles": 7
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "linear_residual",
+      "fifth": 1,
+      "profiles": 14,
+      "n": 48787,
+      "original_macro_rmse": 3.8813968400277736,
+      "own_macro_rmse": 3.0040810940525846,
+      "macro_difference": -0.8773157459751892,
+      "original_pooled_rmse": 3.848117042069449,
+      "own_pooled_rmse": 2.984168037561257,
+      "improved_profiles": 10,
+      "worsened_profiles": 4
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "linear_residual",
+      "fifth": 2,
+      "profiles": 14,
+      "n": 48792,
+      "original_macro_rmse": 3.009362150477645,
+      "own_macro_rmse": 2.1156260754330285,
+      "macro_difference": -0.8937360750446163,
+      "original_pooled_rmse": 3.15121171597824,
+      "own_pooled_rmse": 2.456101487587457,
+      "improved_profiles": 10,
+      "worsened_profiles": 4
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "linear_residual",
+      "fifth": 3,
+      "profiles": 14,
+      "n": 48793,
+      "original_macro_rmse": 3.2592218564593387,
+      "own_macro_rmse": 1.8110661667040258,
+      "macro_difference": -1.448155689755313,
+      "original_pooled_rmse": 4.90397887330802,
+      "own_pooled_rmse": 2.0179887094698348,
+      "improved_profiles": 11,
+      "worsened_profiles": 3
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "linear_residual",
+      "fifth": 4,
+      "profiles": 14,
+      "n": 48792,
+      "original_macro_rmse": 3.316006118300509,
+      "own_macro_rmse": 2.1007925452479093,
+      "macro_difference": -1.2152135730525997,
+      "original_pooled_rmse": 4.139334652079506,
+      "own_pooled_rmse": 2.6996626026299237,
+      "improved_profiles": 11,
+      "worsened_profiles": 3
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "linear_residual",
+      "fifth": 5,
+      "profiles": 14,
+      "n": 48798,
+      "original_macro_rmse": 3.1633050842253723,
+      "own_macro_rmse": 2.395664927956766,
+      "macro_difference": -0.7676401562686062,
+      "original_pooled_rmse": 3.4418161851279296,
+      "own_pooled_rmse": 2.6579844454638866,
+      "improved_profiles": 12,
+      "worsened_profiles": 2
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "direct200",
+      "fifth": 1,
+      "profiles": 14,
+      "n": 48787,
+      "original_macro_rmse": 4.0570295599242385,
+      "own_macro_rmse": 3.581034605349699,
+      "macro_difference": -0.4759949545745396,
+      "original_pooled_rmse": 3.9230451442216014,
+      "own_pooled_rmse": 3.3764366027598416,
+      "improved_profiles": 7,
+      "worsened_profiles": 7
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "direct200",
+      "fifth": 2,
+      "profiles": 14,
+      "n": 48792,
+      "original_macro_rmse": 3.304106559129855,
+      "own_macro_rmse": 3.465061089726212,
+      "macro_difference": 0.16095453059635742,
+      "original_pooled_rmse": 4.175690073587271,
+      "own_pooled_rmse": 4.186801295972121,
+      "improved_profiles": 5,
+      "worsened_profiles": 9
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "direct200",
+      "fifth": 3,
+      "profiles": 14,
+      "n": 48793,
+      "original_macro_rmse": 2.618015449043148,
+      "own_macro_rmse": 2.7305961383306006,
+      "macro_difference": 0.11258068928745225,
+      "original_pooled_rmse": 3.2299890415280266,
+      "own_pooled_rmse": 2.7464706991849033,
+      "improved_profiles": 7,
+      "worsened_profiles": 7
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "direct200",
+      "fifth": 4,
+      "profiles": 14,
+      "n": 48792,
+      "original_macro_rmse": 2.925177981215775,
+      "own_macro_rmse": 2.815373994379673,
+      "macro_difference": -0.10980398683610192,
+      "original_pooled_rmse": 4.213832937185593,
+      "own_pooled_rmse": 3.8368605470834702,
+      "improved_profiles": 7,
+      "worsened_profiles": 7
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "direct200",
+      "fifth": 5,
+      "profiles": 14,
+      "n": 48798,
+      "original_macro_rmse": 3.5047661994700907,
+      "own_macro_rmse": 2.9851898228384774,
+      "macro_difference": -0.5195763766316136,
+      "original_pooled_rmse": 3.7958897964051164,
+      "own_pooled_rmse": 3.362739705934171,
+      "improved_profiles": 11,
+      "worsened_profiles": 3
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "d9",
+      "fifth": 1,
+      "profiles": 14,
+      "n": 48787,
+      "original_macro_rmse": 3.8461483396249134,
+      "own_macro_rmse": 3.2554444485175713,
+      "macro_difference": -0.5907038911073422,
+      "original_pooled_rmse": 3.7020170568915702,
+      "own_pooled_rmse": 3.038044924553028,
+      "improved_profiles": 7,
+      "worsened_profiles": 7
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "d9",
+      "fifth": 2,
+      "profiles": 14,
+      "n": 48792,
+      "original_macro_rmse": 3.2967660785810247,
+      "own_macro_rmse": 3.2300876742346425,
+      "macro_difference": -0.06667840434638181,
+      "original_pooled_rmse": 3.891036928600048,
+      "own_pooled_rmse": 3.8047719041578825,
+      "improved_profiles": 5,
+      "worsened_profiles": 9
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "d9",
+      "fifth": 3,
+      "profiles": 14,
+      "n": 48793,
+      "original_macro_rmse": 2.7276001625586175,
+      "own_macro_rmse": 2.5679817971778074,
+      "macro_difference": -0.15961836538081015,
+      "original_pooled_rmse": 3.407560369089917,
+      "own_pooled_rmse": 2.565406666238449,
+      "improved_profiles": 8,
+      "worsened_profiles": 6
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "d9",
+      "fifth": 4,
+      "profiles": 14,
+      "n": 48792,
+      "original_macro_rmse": 3.075122099173044,
+      "own_macro_rmse": 2.6773552438445654,
+      "macro_difference": -0.39776685532847855,
+      "original_pooled_rmse": 4.407540996427972,
+      "own_pooled_rmse": 3.925454005152095,
+      "improved_profiles": 8,
+      "worsened_profiles": 6
+    },
+    {
+      "dataset": "paderborn",
+      "role": "confirmation",
+      "method": "d9",
+      "fifth": 5,
+      "profiles": 14,
+      "n": 48798,
+      "original_macro_rmse": 3.392133994467329,
+      "own_macro_rmse": 2.766180733228157,
+      "macro_difference": -0.6259532612391723,
+      "original_pooled_rmse": 3.9362317750476836,
+      "own_pooled_rmse": 3.1643676410759887,
+      "improved_profiles": 9,
+      "worsened_profiles": 5
+    }
+  ],
+  "slowest_filter_difference_after_300_rows": 0.8637392256409542,
+  "interpretation": "Retained-row fifths are not equal physical durations. Comparing refitted procedures does not recover physical rotor initial temperature. All records were previously exposed, and small-cohort results are descriptive.",
+  "plan_sha256": "2a8a07f7f700a54bb8b4dc6e77b24e7cd9bbcd4554e429202f3cb2d465d277ff",
+  "script_sha256": "c8c4a34eff180c6f36d325fb087d5e4deaeda8fbd422e801d6f7f0b4a945f2ff",
+  "sources": [
+    {
+      "path": "linear-followup-20261111/configs/c18-condition-analysis-v001.json",
+      "sha256": "e7574ce5e6df74f89aac232f1d1e21889cc115d4d599fbf3b1173a8486727281"
+    },
+    {
+      "path": "linear-followup-20261111/configs/ipmsm-own-controls-v001.json",
+      "sha256": "aa16de0db09978b84019c28ed77732036449ad064d4ea43f2a4e22fe3cfb31e0"
+    },
+    {
+      "path": "linear-followup-20261111/configs/ipmsm-own_boundary-initialization-v002.json",
+      "sha256": "fcb3db931d0791bb134ac1532b98129845cf4848645484238f11d6f5cc703ffc"
+    },
+    {
+      "path": "linear-followup-20261111/configs/paderborn-own-controls-v001.json",
+      "sha256": "13c3ea028501a01c26d55cc2c398be8ca52b0a1b5a91615075b62a69b5f51993"
+    },
+    {
+      "path": "linear-followup-20261111/configs/paderborn-own_boundary-initialization-v002.json",
+      "sha256": "21aee7ae7f043d302db23ca07f66b47980992d6a10719259e1710433f7e6d256"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-audit-v002/report.json",
+      "sha256": "013e35e8537f71bc2b5fb4bc065a607448986ba584c453465adc14a6b04751fd"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/diagnostic_arrays_lock.json",
+      "sha256": "e387459c198cb762fc4ed0a29a1d882e92ee42839d19de4206141b53c54a095a"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/ipmsm__calibration/profile_1.npz",
+      "sha256": "775544c31ee7329c6954d012f78165d50e0bd001701257ad2c64348e54be587c"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/ipmsm__calibration/profile_12.npz",
+      "sha256": "5f5ed16bd325845aea1d8d469d3bfa70a2600860ae3259f8c8dffb592d2af729"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/ipmsm__calibration/profile_6.npz",
+      "sha256": "0feaf2b5e97e0713bae8ea9ebf959614546eea8277bc7dffdae82c156e56352d"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/ipmsm__confirmation/profile_10.npz",
+      "sha256": "0b2596c3856891be24d1cbb616946209cd356297f70203389705b79bbcc18802"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/ipmsm__confirmation/profile_15.npz",
+      "sha256": "23c99e836d89f0726b9470634e4680ebee9fccecc8a4067c7533b2cb11c2cec6"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/ipmsm__pilot/profile_13.npz",
+      "sha256": "c1a8b49408dfb63dd0da565e30c2ee7b0ebd9398811a9bd769a0c09176eff1c2"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/ipmsm__pilot/profile_4.npz",
+      "sha256": "ffd512a67cee38ab2182bb3bb562f93d52bd6bfc61d196917e6fcbf018270acf"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/ipmsm__pilot/profile_9.npz",
+      "sha256": "9df6c081cd2709d5135af364eb4e2577e95277e708da18c30589e2ca19411a04"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__confirmation/profile_15.npz",
+      "sha256": "0208c97ee4b38eb81fc8b621581277006c991fb0bd0fc327d406315e8efe7cc1"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__confirmation/profile_19.npz",
+      "sha256": "15741422654984100ce01551c36c286200d09bf20c9fd3b9a47ba570871ce40d"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__confirmation/profile_2.npz",
+      "sha256": "c6d0a9e2ae26d171807e5d3c3228655de1b952bb39ff4b17a4ffd275c60249cf"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__confirmation/profile_26.npz",
+      "sha256": "9fa4b12053da6f46f884a1564f3c1b2da52c52f481a937121de47a614f76bbaf"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__confirmation/profile_36.npz",
+      "sha256": "87591ef64f1348f573c4a6f162b500c59e7bcc8178dded349534e097e679d5fb"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__confirmation/profile_5.npz",
+      "sha256": "af7e6bb7ba713c243a08757fee98ecaae03b170491b8f5983461e305ca5126f1"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__confirmation/profile_52.npz",
+      "sha256": "0ae138282dbaf5c083cb764040ae52b9fe4bf79cf4a474bc514ff89104d48b8d"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__confirmation/profile_55.npz",
+      "sha256": "d4fa090ddd30712acd60cc604fc41ea26ee779717756e6b285410ab3a06a79ae"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__confirmation/profile_57.npz",
+      "sha256": "b695c78caa34fb0102e649cfc4261090c0af3cf015cc70d9a7041e00b0a88a4c"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__confirmation/profile_58.npz",
+      "sha256": "be65152eb71ad135c147e59776d0cede761bdb42c976a06cf5d4039639ab5a40"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__confirmation/profile_62.npz",
+      "sha256": "42fb7f2dcc46938f44d35e2d7cfadfa216ea015b9bdfa7ec1a2cb300eb6c17b7"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__confirmation/profile_67.npz",
+      "sha256": "625db702f968644e1a089c3020c02b6b24bf0fb01cf614bc96dd3b674ca1e7ee"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__confirmation/profile_68.npz",
+      "sha256": "e8266b77106ad6cc61ecd12704ff79df3388a5815b7ee3edde453fcb2b2797fe"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__confirmation/profile_80.npz",
+      "sha256": "5548cead4278c1cbbc894d33459796cd9745dd30c36c092319ad3d7a714752c8"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__development/profile_11.npz",
+      "sha256": "8c99703dabf43ac072c41806eaadaf6886460b0fec0723c7d60055477605d000"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__development/profile_12.npz",
+      "sha256": "9a8486dc7655d371d351ac744a78d92faadfcf47235098156d9ef3482477231c"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__development/profile_13.npz",
+      "sha256": "52f51ff682408efe359e56a28c644e0669bc1ab1f726f5dd9048d33e9e540df6"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__development/profile_18.npz",
+      "sha256": "80df1f16ff9b4a18dd061655c459c1c69d5398a651d6b25a58459c1d7726fd17"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__development/profile_20.npz",
+      "sha256": "32982940fea5987ee2b831670861efc8dc312f39a03c49ae38e9661a28860f5d"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__development/profile_24.npz",
+      "sha256": "e2aa8da2a948f49b2725f72439d20d74225ca82c2687af92771c02049034da01"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__development/profile_3.npz",
+      "sha256": "21b8cf194ad53a685f89f8937bed4d3d7ee70d6b42d5325ea70dac36190f7aa8"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__development/profile_30.npz",
+      "sha256": "7c3ec3f403d2ca6569efa272057825bbd2c678a812c516b155aa5676f28af1c5"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__development/profile_48.npz",
+      "sha256": "d92a0d03c65b8206636a0c815c8b9b34c615f40166bfa2bedf62b281bb62f4b7"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__development/profile_53.npz",
+      "sha256": "89598d79e758cf6ac95c2a1c94555391859ba60fc7656343e0dda6c916547beb"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__development/profile_66.npz",
+      "sha256": "1d1a685b4cc629d579b190a66789c1bb5e0d3301d2f69a6b66f93a330ca14a24"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__development/profile_78.npz",
+      "sha256": "4ea3788bb9c58605f6693aff084d6b7f277b7b08631958ea411c56bd23f2db6e"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__development/profile_8.npz",
+      "sha256": "64749350e5285d18a12d8583971f0da7de70a08626d5f85384354db6357d027e"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/paderborn__development/profile_81.npz",
+      "sha256": "d78391e88972dcee59423e18572133c5d38175fa1ae3579461d8e1fdbf02f9b6"
+    },
+    {
+      "path": "linear-followup-20261111/runs/diagnostic-v002/summary.json",
+      "sha256": "db2fedf3e6270d5521b02fffa413eab97c0bdd462b05438bb3dbbbdb2039d135"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-audit-v001/report.json",
+      "sha256": "d5ae1f127c91b9838b3260d7c2c356801bb87c5e2f5599cdf8af7f8dbb075bdc"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/calibration/profile_1.npz",
+      "sha256": "3c59b1fa906391f36e4489c3d4e0a84beb0836bec3b6d60af6b183185e49738b"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/calibration/profile_12.npz",
+      "sha256": "8d0ffb9a2aca412ae1e06dc8f5ae7ac5e2f1d07720f43a83039812e735850956"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/calibration/profile_6.npz",
+      "sha256": "4f79c73eeae07bb4356a8e9bed199fc744c48dd5ec4f0e5a57e5efb998497fa8"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/confirmation/profile_10.npz",
+      "sha256": "a3fd16ae5e13a741c8942a49184ff96c3d87c7287ae266ac9f09efdc47b5cba9"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/confirmation/profile_15.npz",
+      "sha256": "0835aa6035506750c8aa060a3eb050c905b48ca6c7fe8af11e3f2259236eec1e"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/direct200/model.json",
+      "sha256": "5469481e3fa58812239725926f3fdcdbc4e9e05532671bbdb649d400cc4d6120"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/model_lock.json",
+      "sha256": "faca7b1d8e34586e23509fef14cf1484de2df57c22e19eb829b0cc175fae75ae"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/pilot/profile_13.npz",
+      "sha256": "2f12798a5695730a8df65cab29c6a3b99d188d9a4a5bd5e13806dc45c950b0ab"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/pilot/profile_4.npz",
+      "sha256": "bdc088c26a5d70eae63a1016d06bc5cf0cb1379c226ed01fc1979b20104d5151"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/pilot/profile_9.npz",
+      "sha256": "2ca6e1c0690191198c46f20ec80a171654984113de51b87dc829b30ce18b1017"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/prediction_lock.json",
+      "sha256": "a4165013518d506f75aa15a86fd21095ef6e8a823c8321e5edf67bbfe58773e4"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/summary.json",
+      "sha256": "853c69fe23485b50612fea4293fac1adfb970c13860378d936ddfb52730a4ee0"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/calibration/profile_1.npz",
+      "sha256": "4e49dedf259d7c4c5a4b5fd538c38dfe4385773ff2f03266e8d4c31313a2a91e"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/calibration/profile_12.npz",
+      "sha256": "ad9aab921307c648e13565bcee21595009b63e543e352760c1bbd11e4ebfe988"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/calibration/profile_6.npz",
+      "sha256": "825e5458c2003cc1581a9d041c413698712b8698785662188647fdd55af57771"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/confirmation/profile_10.npz",
+      "sha256": "95d59e10181bc3809fb35b1399e79a11c6a9e5fe6cd6b335e4d4895aa6cc07bc"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/confirmation/profile_15.npz",
+      "sha256": "3282db761d261ddd9c5a7186317373bc4339b6c737a92e4af26843ad3169cc2f"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/model.json",
+      "sha256": "e4662e0674822e2a6bc16e4e0de3afaa351fcbeb8cc33b2719b685fc3ec478fa"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/model_lock.json",
+      "sha256": "305832d52cb0f642ff0720f7b896ac303532dce5464ad7f6837d400a68d896b5"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/pilot/profile_13.npz",
+      "sha256": "0725f25de9c46ca677eea64f4df04b1ecf48e6ade6c7c0d4a283879360912b3c"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/pilot/profile_4.npz",
+      "sha256": "292c5b7e1bc9c4102f798e96d4ee0e23335433e4b5dbfc959f543b0b6605d087"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/pilot/profile_9.npz",
+      "sha256": "17cb166c67165f7388a9a10dc37b43f25bd2bc3eac2abf056322adbd2b58689d"
+    },
+    {
+      "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/residual/model.json",
+      "sha256": "08ec93dce32504c241600b6233452df6a246363baa1ceaea2b9d31eb6fbe9c29"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-audit-v001/report.json",
+      "sha256": "33134cb6b8a4ed9c23e33100f047a6907fa1e2ab748c0f00fb2df9a3911ccef1"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/confirmation/profile_15.npz",
+      "sha256": "9f772b0342aefe1f7c149eb2fa1be81a9e7f90e485ea950b1c94f0fb0db6f87f"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/confirmation/profile_19.npz",
+      "sha256": "b91e2de0e529df55ebdd9ec46b3ee143068564f382b4b0d30699742097d03829"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/confirmation/profile_2.npz",
+      "sha256": "0d812452f4b6aed8d4600c2c5a825adbf903a7e0cf700d4797803ce5b37e6538"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/confirmation/profile_26.npz",
+      "sha256": "01c92764ee7d4c2a78170024abb12e9c456da895562c1ed356eca0b5955f8a15"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/confirmation/profile_36.npz",
+      "sha256": "f2440f03dc2b7993b060dc92fb6ab5df94d181d207db087c2fa428a1f0d5d968"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/confirmation/profile_5.npz",
+      "sha256": "6f9e7ecaebf7f74bd4085ab446992cd4d57bdb2f8d1208bbe91bf3025fa62a31"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/confirmation/profile_52.npz",
+      "sha256": "68e6ed4380dcd57d6ddc509f968ac63df0db902e4d24d5848e26112867031dfe"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/confirmation/profile_55.npz",
+      "sha256": "b222580767a4a220957e9400004e2f2264a07de058550aa04848aab861471345"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/confirmation/profile_57.npz",
+      "sha256": "e9073b3d59996f27dbdfc654fbd5b85b471322321f6afb28d0aeb3e50c01394f"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/confirmation/profile_58.npz",
+      "sha256": "1edb25b5ac76c7d6adafb78c1c7090a4b3b27e0a1613697955c91f12dd5005b4"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/confirmation/profile_62.npz",
+      "sha256": "764c619bb1bd7bff0ed8ed66dc465e304c864222f7152ca46d5f625a0ee91e71"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/confirmation/profile_67.npz",
+      "sha256": "3da372c78b591d879aa6b71e430080070d21cb51d6cfc28e3dcee1f58e61dd8c"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/confirmation/profile_68.npz",
+      "sha256": "d75a31c75bd88160e2d5ab3455de96a0eaa9849c61efb4f0107e386b3a82709b"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/confirmation/profile_80.npz",
+      "sha256": "f13e9034d6ab04e96518899b1ff6aae3697417dca9376907be35a7ec3c7de615"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/development/profile_11.npz",
+      "sha256": "1acf29ecacde66c9b8c3cdb202906f8c7d5ec1588907d3edba23b85aac02ec66"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/development/profile_12.npz",
+      "sha256": "188938a12a951bf259282a71b2a930e8434abe998bc1be6e0e70bae97cbcde75"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/development/profile_13.npz",
+      "sha256": "2e722d5378f906d84452bc1b16ff6a857c51f1a8ea61450bc9db1878f6f065e1"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/development/profile_18.npz",
+      "sha256": "d7ddc47a893075d0c345559f57ef33c52e46dc18931b569f096f51fa0061930d"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/development/profile_20.npz",
+      "sha256": "253261f337e152c413f1ce8fe3191ce8917d6186a11ffd132cdbb51fb86b6e58"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/development/profile_24.npz",
+      "sha256": "d531dbcf0935c0167b21f9cb3e7b68b5baac7088d06ae95d5f55c406fb99ade4"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/development/profile_3.npz",
+      "sha256": "8da8a735e006dde8500184839d13ad41a7fc6b165d35c41f95d1bb04ed803c57"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/development/profile_30.npz",
+      "sha256": "4515ab628fba5bb63561f6de322578cac243541c09664518381b584b0fbcb4a0"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/development/profile_48.npz",
+      "sha256": "17f79e7416326daf82797198914ee1d0dc20e8c8224b878c2653180de87ba5db"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/development/profile_53.npz",
+      "sha256": "2b4cdbc82683eb80cf0fca5678b5981a162e9e5cecfe4b0ac8ac5285fcae0d16"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/development/profile_66.npz",
+      "sha256": "ea9e381b1dfa67d7e80ef914464030070f7dac45d46d68a4097fe133a5c94330"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/development/profile_78.npz",
+      "sha256": "8bf130fabf7fe8ab71ecae2fb689886242b117ee54846f87b65482cca227e847"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/development/profile_8.npz",
+      "sha256": "cb2a8e1cc4dd81517df629bf7384a5ca18623772ec277beed9557c21691cb0ba"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/development/profile_81.npz",
+      "sha256": "7cc13a8f3d0262da5161cd03a95b6698eb65a2a7e9991985dc43a3fe81da137e"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/direct200/model.json",
+      "sha256": "8fc90720d17a0e3569d772a8529ee4412f2c27ac3a2718eb7ab4cbe5ac27bf18"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/model_lock.json",
+      "sha256": "697966cecd6f7e9199aa6407959a528401e5c73fc7db995bf962c1616a1d68c1"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/prediction_lock.json",
+      "sha256": "b9f23cdc90eb955334929261e20075e22473b3b20ff2d33283ac8eeb0e62da74"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/summary.json",
+      "sha256": "f2ca34df080349090a7e3f4a1c5a005f3a897e9522ea8096a0b49f2fbe1db62f"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/confirmation/profile_15.npz",
+      "sha256": "6ccdc706f705fa51b846bd59a9939646f357c10cd2888fd57e02f7807b7ae7d5"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/confirmation/profile_19.npz",
+      "sha256": "b4239038c6ce87c6e1e2e0cf2d07a10f73dc7e2bb72d41c43fdeea0ee6347a89"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/confirmation/profile_2.npz",
+      "sha256": "d11f9bddf80da4e606dc8e722e9ebe9e637cad10e2dcb172dfc60110c85d193e"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/confirmation/profile_26.npz",
+      "sha256": "170f4236abec062e926a9c47a9ec54709433e2834e7b21f78ea1c1ed1af7391a"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/confirmation/profile_36.npz",
+      "sha256": "59eaecfafb4f6feb2cedbbcae280037f13d63e4fdeabceee80c8f3f5d11f3108"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/confirmation/profile_5.npz",
+      "sha256": "6c16f80428a0f2041bb8a7a5a527546ff31a109e20410a76da4b77f017585ea3"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/confirmation/profile_52.npz",
+      "sha256": "c6a26fe95dba56897ee8e7dc5ea8c24531dd3b20400e9b7089fd0decc8bde893"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/confirmation/profile_55.npz",
+      "sha256": "b0b4f0a56e17e49807206d4b7495f94fa7ea85013962756a3e04535943825bd6"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/confirmation/profile_57.npz",
+      "sha256": "621de821661226630dd95f6e97e102a97ef8cd8cf0495371cef868962e5b11c2"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/confirmation/profile_58.npz",
+      "sha256": "21da5ba65031a77dcf04db7bd458adab06154dedd2eda6cb020657c98354c34c"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/confirmation/profile_62.npz",
+      "sha256": "be61406ef623ef3e450466b968739eede06f8bcf02e318402d7b9967612cd983"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/confirmation/profile_67.npz",
+      "sha256": "5ab306391a892f287c5bdcdd3ba7eafa48ef2edfe89f8c8363f219a07ae76723"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/confirmation/profile_68.npz",
+      "sha256": "114b8d5254083257c4e8c5068760f71c07754a07c13716a646c9ec9ef4bc7a31"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/confirmation/profile_80.npz",
+      "sha256": "27f3470ba0e222e5420a578d7d72a800312d9ca787458cdb58f7280d8d66905d"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/model.json",
+      "sha256": "1e246077e95a3406a1a4404cd7b303833c38e9a870e047e2db354f6250f590c0"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/development/profile_11.npz",
+      "sha256": "e4df520868d73c2d69c7b6ac0903a65c31b130fd6de1888c957249e26a7df43b"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/development/profile_12.npz",
+      "sha256": "ce51e44121d078bdb4a1e5dcfc0495de7beac2de250ea166ec18e2c004ac614a"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/development/profile_13.npz",
+      "sha256": "15df1d315cacbe042d52f1252afd69e52b01c2d213365f7f869b312c14697c3a"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/development/profile_18.npz",
+      "sha256": "d6c20c014e26d1cd0df320a4a12a2ff92faee7c32eda7101722bb60d4981e0ae"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/development/profile_20.npz",
+      "sha256": "5cefaba1c57fef3cf7c99538947eba66ea9006a4bbf44851260b86464d1346aa"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/development/profile_24.npz",
+      "sha256": "89bbe6cec7f312826636724ddb30b4d877152aa294ccdc3799e7acebb27d3624"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/development/profile_3.npz",
+      "sha256": "e928366834743127fadaf1d9373ebd9948eac8fbeff2686273e32a8ffeb0356b"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/development/profile_30.npz",
+      "sha256": "97f453a28936a6c1dfebcb075edca230f0a107893bf9b96bc0d1ed8335150a67"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/development/profile_48.npz",
+      "sha256": "06847597fedb6de26c6af980da0dfd0e8e6980c20f89ad95c02a5467267c72d6"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/development/profile_53.npz",
+      "sha256": "a6348d3a415a5abdfee25c22640a3edd53614d3d58777d40deb9a9ddcaff54c0"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/development/profile_66.npz",
+      "sha256": "41c80e134261eea96bcb78dd50f444ceb2606abbae65b04af859a3e44a88b603"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/development/profile_78.npz",
+      "sha256": "bca480326f4c02e57b51e52c57f38be11ae11557d8a5b37869dc9f6c539d2bde"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/development/profile_8.npz",
+      "sha256": "a4b54d1e24c955517f74c804a9e7dadcda815f5c38ac08bf972a13ea206fbbbb"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/development/profile_81.npz",
+      "sha256": "ddfb7e4e033081b27a17ca70ba501332da6ceb966dcdb895944b07bf0d27d9b9"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/model_lock.json",
+      "sha256": "4f208331709eafe47717dfc9762da5a5041b7bd63c2a13d3f4d2c8fb7134024b"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/residual/model.json",
+      "sha256": "d9e7f148802faec653f05be05c3d5865ee1f6eedbded20135d3d83b84ee2fde0"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost/model.json",
+      "sha256": "14bf9de72b2f8c56545197a5f280a651620c724442c478d16770e78058064388"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost/receipt.json",
+      "sha256": "6059a06737428c3ad5282f4a451f6cc13416a7f7a4b4c49ea01b827eac9e2874"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.json",
+      "sha256": "63d05c36aa28aa1712420400fc8edbab07a4145da285fa3853222c752c941277"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/receipt.json",
+      "sha256": "5b57980aa4050524218b8882f67875039cd904ba8949af6355a20fe9a800873f"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.json",
+      "sha256": "f831c5f9e66f0e4cf6faf23a73e91ca9e4f836cf18e355e3fdc69a7fd58196a7"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/receipt.json",
+      "sha256": "d080a8b2b314d5713c6412aac92803da877f88c5577acbb8803b91240da3529c"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-assemble-v001/model_lock.json",
+      "sha256": "07e1bc3944c03571d4ad2c37304939125f6617674d39fb04f104e8089743a911"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-evaluate-calibration-v001/profile_12_truth.npz",
+      "sha256": "34349d22bbd7fd3c9e3b9f919642a168a32d4d71b1f5d87ceac8640d05d4fd03"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-evaluate-calibration-v001/profile_1_truth.npz",
+      "sha256": "01a5633124cf1e0a5808453185842e1fbaf76f7a3d129e02eddebab9200a2343"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-evaluate-calibration-v001/profile_6_truth.npz",
+      "sha256": "e797c53073f76ea93a072327acdf13e18c8bf5a31d74f9fe6c13f256bf423094"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-evaluate-confirmation-v001/profile_10_truth.npz",
+      "sha256": "b4cd3643a847eee3f10fb5026a19d16826361bfcda788067ba2fc6d1ce824dac"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-evaluate-confirmation-v001/profile_15_truth.npz",
+      "sha256": "ead8fecd1d8d54827f9e7b6f5bb4586c94900d8fcc40a4f9c27ad602601a82f6"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-evaluate-pilot-v001/profile_13_truth.npz",
+      "sha256": "83c2b6a67faabaa142ee97f38f9243d2d313cdee0db42fa0a115328e70a546c0"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-evaluate-pilot-v001/profile_4_truth.npz",
+      "sha256": "df955a6b5b283dd3a0172fa3086a0610a2ff4c35a82d90b3d96d9204eeebb05e"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-evaluate-pilot-v001/profile_9_truth.npz",
+      "sha256": "0474644d5a8ac1c0a778defe21735257b388ed134f5969c57d2f91c7d1e2eb45"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-predict-calibration-v001/profile_12_predictions.npz",
+      "sha256": "320f30e141cd5954536b106fcf9e43a5ba5caf81da16f9eebd50310098afaf44"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-predict-calibration-v001/profile_1_predictions.npz",
+      "sha256": "d01387b1b0df307e96be1d448be9909cb15a94f3b4fa9a501893357628971355"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-predict-calibration-v001/profile_6_predictions.npz",
+      "sha256": "4acd89f360d9634cdf16292f197b73d47f96a2697f39890f0d42572500b29cdd"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-predict-confirmation-v001/profile_10_predictions.npz",
+      "sha256": "9e8507c6d720b09ec50db55ee43a919e21bfb28ae40f19196d656eacd536563a"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-predict-confirmation-v001/profile_15_predictions.npz",
+      "sha256": "468c688b87c5bddb7b41f3610c0a8c9890773a262f88606759f3e2e65950ffdd"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-predict-pilot-v001/profile_13_predictions.npz",
+      "sha256": "ef11788b81c05777155ab31ccab56635567126059268317131e93babdc017ace"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-predict-pilot-v001/profile_4_predictions.npz",
+      "sha256": "b5561e40dc46881a87ec2ecce31cbb6ecd6861848325e272ee49cdd34fafb815"
+    },
+    {
+      "path": "runs/c15-paper-ipmsm-predict-pilot-v001/profile_9_predictions.npz",
+      "sha256": "6c78ee69832dc488e38445e673f944394f092733199f5ca866199f95353a18b7"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-assemble-v001/model_lock.json",
+      "sha256": "76ffe298bb5c3d53485d8de8d9dc68f87d5f3524f4a2c86c4130577cb27b395a"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_15_truth.npz",
+      "sha256": "66b650a2324ab5cfa86f74bab9ead9c80a1a56d971a4c2055dd723d0a569f308"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_19_truth.npz",
+      "sha256": "479d66dda9002112b3b982a54e250b6c72626923ed8b820f5665d86b9f2d3b09"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_26_truth.npz",
+      "sha256": "e265d1f706506947a26d9a986274bb0eed31fdbf2401edf5588bb1b7a9690a3b"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_2_truth.npz",
+      "sha256": "e7eb50f74fba33038d9e7aa0f326b0995fc109ffeb8b305b76062869416cd713"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_36_truth.npz",
+      "sha256": "927f65d6f8b6ef8067edb5b2d29c211c0923fc6bdd2c4e77113143b70ff133a6"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_52_truth.npz",
+      "sha256": "67e7ec2e05555f91e6a6ae23afd2aada04392e88b6bdd257d5d0e882a8cd2eef"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_55_truth.npz",
+      "sha256": "454468e8e171de427bc2be4e85eac9a4b9036754ecdf27035dbb523bc42e12fc"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_57_truth.npz",
+      "sha256": "b3fe7b463674ec812beca51e4522490067efa1956920a073d63d1631b57bdb39"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_58_truth.npz",
+      "sha256": "f22b7329674e1817a53142c7e885ea8bf3f3ef6fc2dbb5aaa31b0ba034091768"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_5_truth.npz",
+      "sha256": "749c49110ab2bb687337abe19405a5e0bee3588e997e192996a524a30e036c57"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_62_truth.npz",
+      "sha256": "0259fd4bdefb25f8c77a82e0d1287b61d7e571f8a284280f3a53ea224773ad6f"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_67_truth.npz",
+      "sha256": "63ee0f9f1024291a907859a8b0d6db012cda06969b644d51723b6d74c30db9bc"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_68_truth.npz",
+      "sha256": "50ff5fe507fc29e3a6eaafd74486f1bd8b8f2c680b95fd7137562fe49652b404"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_80_truth.npz",
+      "sha256": "33180cf99b121826456cc62555e0fd11ee7318f1266e26baa8b8f3cf5eb19a42"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_11_truth.npz",
+      "sha256": "31989e744ab1770d4f77d2cd7612beb5aefc08437a9acad1802ef1761a658c36"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_12_truth.npz",
+      "sha256": "0b67fe49a3851b103fa80e72f91db29623b839728bacd7e35965764f4d70263d"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_13_truth.npz",
+      "sha256": "efbb6feb840519dc5f02c2dafea2b42655d9046243def23e013bbdb4f2f1c376"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_18_truth.npz",
+      "sha256": "4caa9a989af9af554981429dd06c82ae09251ceee238b8b2448aa8cb86b401fe"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_20_truth.npz",
+      "sha256": "bac022ec20c1df93855dca88c31db604c1fbe2930d92777175d09b3a97af5502"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_24_truth.npz",
+      "sha256": "d9d6653d74cc0a12ace0fa00d8cebc751b973942693e212b1d89eca1432a8540"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_30_truth.npz",
+      "sha256": "69e0942b7f9d4d772705fefdc2ae79f8fff16d4ecc4b8bedf428c613913b2dcb"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_3_truth.npz",
+      "sha256": "55926a1b4346a357477e15bc5e1d7e2da2a65aed68ffa0f31547491e966bb63f"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_48_truth.npz",
+      "sha256": "78ff446b3c6c33d5df05a7bb7d1dc0f5185e8ff35d453e80a6fe8c5f8e716c79"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_53_truth.npz",
+      "sha256": "401a6d2715ca6895761337c2921ca39509d144cfcb2a9c38abaadfedb39a6d1b"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_66_truth.npz",
+      "sha256": "f299c0ad87c8b86aa7b3229086345c64ba5968dced6d23558e745975b8e9436f"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_78_truth.npz",
+      "sha256": "e7247c1ce55d44a3a51152ad92cd583871bf7f0ae8f99c2e04ac2732902bb258"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_81_truth.npz",
+      "sha256": "cc82492970a79741ddf4c92856527af59664f435a0e8cf9ae01b1e385a60b9de"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_8_truth.npz",
+      "sha256": "475fbc124c4be2c4b33e7b45fbc63bf9bab222a86e1beb92151a5302c76b396b"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost/model.json",
+      "sha256": "ab102e4f637e802debad1ea61075da5a9c9b881519d952d1f82ff469645daef8"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost/receipt.json",
+      "sha256": "2dccf4b9a49b2b3b036b169c1ce1798fcf172aa2ea3bfd7e33bbb13d0b1d2f8f"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.json",
+      "sha256": "21a77fc969ea3ba05907b6a6f6867674e5e2f28dcfe6a3d61d44c7d5f217ce4f"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/receipt.json",
+      "sha256": "c3ff1e79bf885919ad52f7ced223fad07df117cb8cc431aae4547879b0576962"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.json",
+      "sha256": "7ed39c764f4cd945ef5041a27a780a40a10310c8c9d7fc6b4aa7dbf9709cf1db"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/receipt.json",
+      "sha256": "14a0f0a961f3a8ac7e81ec795ef24e3fff2cab3947ed3e4a84e20490ce98d617"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_15_predictions.npz",
+      "sha256": "e2088b0883eb8812817445507bc9a40b60983bbe282ca4eeaffbbf80d03f35db"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_19_predictions.npz",
+      "sha256": "2808e304dc590614cd92df8583de968fe670c2e90325be7231fbc5af559de639"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_26_predictions.npz",
+      "sha256": "276d86bfc3e157eb67c78ac02c42710851693f7cf89c994d52f2c55273c930c3"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_2_predictions.npz",
+      "sha256": "059ee1453720494c96db0e6c6096a2db2edf1a412ba75d738ab220c893faa9e6"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_36_predictions.npz",
+      "sha256": "832730f04e631b5fa5f6d61e2dabe030c449615a3252c594c5b75fd83e723b96"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_52_predictions.npz",
+      "sha256": "6375a53883e8586e9c660b7632ef9a9ed8e325a4cdddc15a1d695e8a5e67c9c4"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_55_predictions.npz",
+      "sha256": "8672cebff2d461384a3edcb69dc9e94b0a758c88ed5edffdbbb9298a97c81f87"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_57_predictions.npz",
+      "sha256": "180d98b5a6bdd0f702013ce82dfcfddda9677a0ee9cab8930360cddcf223755f"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_58_predictions.npz",
+      "sha256": "7ec2432d1f62107c69f8b11c6551eaa02ce1d395e0d1cc7805495f35d89dcb08"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_5_predictions.npz",
+      "sha256": "77bfc833b463c259bdd4ead0f00f5741d4171872a7dc0f1e24ae718de170f3f4"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_62_predictions.npz",
+      "sha256": "b1c68cf6b287e499d71b4adb9ce23d5ae4c8f96eb44155072bb93232442639d6"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_67_predictions.npz",
+      "sha256": "ba2ddd7e1c148f64d6d5252a710dd3d17f9bc6af9c990c78e2d8b02c4d432f57"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_68_predictions.npz",
+      "sha256": "53d4abb9ff05bbfa404b4c52dd9fe8310ee4bdd87178847825ba4df3366683d3"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_80_predictions.npz",
+      "sha256": "aa5f1dde5be9e6704a1dee4a4ac0a25de3b54eb7fda4e3d4b759f483c47b811a"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-development-v001/profile_11_predictions.npz",
+      "sha256": "df15cccdf4a236c0dcbc3691ea7abf02e24099cf8e214344a91a7fe9b2d0e9eb"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-development-v001/profile_12_predictions.npz",
+      "sha256": "339d9cda1eba38102f72ad747126e908f049f0661cbf6fc981e374253903b0c9"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-development-v001/profile_13_predictions.npz",
+      "sha256": "e2ed4496223d575a7b117b2629d01b210f9606836054ca8cac828d7899d0afff"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-development-v001/profile_18_predictions.npz",
+      "sha256": "70d33133a4891de2a6574e9b855aaa41269f63713a3e7589c28faaff495c6f6e"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-development-v001/profile_20_predictions.npz",
+      "sha256": "ea33479aa60ddf09b5a7e35f087aefee11ba8de4becf32f97de089db37f38f09"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-development-v001/profile_24_predictions.npz",
+      "sha256": "fd3325845a3ea40fea5cdc28dbef58640a71465dd421ade7a52d9ae34cba385a"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-development-v001/profile_30_predictions.npz",
+      "sha256": "115915811f48bd28370874a2886232980d8b3c5b0a0f7bda169b3c4c4618f273"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-development-v001/profile_3_predictions.npz",
+      "sha256": "4c700fbcb18d64a434f5d3a30c8e8f4d1940bdfc425939e0727ad10d0f372d73"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-development-v001/profile_48_predictions.npz",
+      "sha256": "92957ab39095eb14806cbace25e4de0f2bc20063d3e8e4efc88cf3e672e7e076"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-development-v001/profile_53_predictions.npz",
+      "sha256": "cc234f97a60f4442eebaf887f531ef21a89a083a7975a10463db932901471d7d"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-development-v001/profile_66_predictions.npz",
+      "sha256": "38503e1093d913650be2f8cc4883c30a78fa4e0aa4c0b231e6bfc9a4a9347d52"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-development-v001/profile_78_predictions.npz",
+      "sha256": "af7d73152c13b7bc661ca5bb21e8ddfaabd60882e18d85dd1baee6bc4b31fc99"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-development-v001/profile_81_predictions.npz",
+      "sha256": "8e5bbf9a0b6c1034c5b262bd03276b80d4573af0dbb93f2f0d6e6eb40ffee668"
+    },
+    {
+      "path": "runs/c15-paper-paderborn-predict-development-v001/profile_8_predictions.npz",
+      "sha256": "db39391e31aa9b55caea8d0e24bbf419054d62e1b9c854bdf1346d321ddb3f08"
+    }
+  ],
+  "_public_view": {
+    "schema": "public-sanitized-historical-view-v1",
+    "source_id": "private_v007_archive:analysis/initialization-results.json",
+    "source_sha256": "0c15855c355bff88108ab9e9eddef9d28c957e1b7313846eb059f854eadf8df0",
+    "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data.",
+    "receipt_scope": "Historical archival record, not evidence that the current portable release script was executed. Current release checks are recorded separately in provenance/validation-v007.json.",
+    "original_preserved": true,
+    "independent_confirmation": false
+  }
+}

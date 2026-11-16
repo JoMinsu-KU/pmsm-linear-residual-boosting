@@ -1,0 +1,169 @@
+{
+  "schema": "pmsm-package-validation-v007",
+  "package_version": "0.3.0",
+  "date": "2026-11-16",
+  "status": "PASS",
+  "base_commit": "4b994add7845fd6d0334b5d0086700e744f426f4",
+  "scope": "Public v007 analysis ports, regression tests, archived aggregate evidence and release packaging. No complete study retraining or new independent confirmation.",
+  "regression_tests": {
+    "passed": 43,
+    "failed": 0,
+    "skipped": 0,
+    "includes_optional_historical_archive_checks": 3,
+    "includes_review_analysis_tests": 12,
+    "environment": "WSL / Python 3.10.12 / NumPy 1.26.4 / SciPy 1.15.3 / scikit-learn 1.5.1 / PyTorch 2.7.1+cu126 / Matplotlib 3.10.9",
+    "log_sha256": "4af9bccfca62c886f6c97b73d93d6c407b3c66ae3df8b2592c148f3a39dc5f5c"
+  },
+  "analysis_port_validation": {
+    "status": "PASS",
+    "scope": "Public portability port verified against existing completed smoke run; no fits or new inference.",
+    "run_key": "2ee0a414202d5b2d4431096fe19a52804ebdfbfec90dd1814e0761ea0a3178b7",
+    "run_manifest_sha256": "a8fa2a498fb5efc5d5540c630e166338f8323bfb6bed60957bea16002d29e607",
+    "source_scripts": {
+      "analyze_failure.py": "a58b1e94a06306cff617ec1a3e94034168f2b3e94dbf394edc0e27d87c77c94b",
+      "analyze_initialization.py": "e5b6b59ead28e4bd30fc9d4d9000fc93c1c076a722d0441d493229d851f22be4"
+    },
+    "public_scripts": {
+      "analyze_failure.py": "2eb6bdd139d36a7e137cfca2b4650c3fd16dde170f8def09077332e47bdfc3ea",
+      "analyze_initialization.py": "590eb6ac0d89e2619da38f2b579b743989c63044f729e518d19f97c40773716c"
+    },
+    "focused_tests": {
+      "count": 12,
+      "result": "PASS",
+      "test_file_sha256": "de2667c0454e3c09d397e94be84804703a9c720af2f0f9471cd8b0e97f35b728"
+    },
+    "retained_functions_ast_equal": {
+      "analyze_failure.py": {
+        "variables": true,
+        "distribution": true,
+        "support": true,
+        "metric_rows": true,
+        "aggregate_rows": true,
+        "range_rows": true,
+        "selection": true,
+        "plot_examples_except_output_local_matplotlib_cache": true
+      },
+      "analyze_initialization.py": {
+        "exact": true,
+        "profile_metrics_pair": true,
+        "aggregate_pairs": true,
+        "save_metrics": true,
+        "plot": true
+      }
+    },
+    "csv_equivalence": {
+      "failure-profile-corrections.csv": {
+        "rows": 72,
+        "exact_csv_values_equal_excluding_smoke_only": true,
+        "public_sha256": "3561d0c704f046faae11314470301c5fd83546a254122a1c98f74b93d2c4bf93"
+      },
+      "failure-cohort-corrections.csv": {
+        "rows": 10,
+        "exact_csv_values_equal_excluding_smoke_only": true,
+        "public_sha256": "3317ec3c08970672add5a638631b61748eb59c13ebc9a7ac2797134230166f7c"
+      },
+      "failure-operating-ranges.csv": {
+        "rows": 36,
+        "exact_csv_values_equal_excluding_smoke_only": true,
+        "public_sha256": "cd5759df265308b70673b174197b26a281cfbba247518e52d1b40b4f6aa2024d"
+      },
+      "failure-profile-support.csv": {
+        "rows": 144,
+        "exact_csv_values_equal_excluding_smoke_only": true,
+        "public_sha256": "fa551e1451b5693081a62657368d8d0de15dad1ab31fcf4a126650acc156676e"
+      },
+      "initialization-profiles.csv": {
+        "rows": 1080,
+        "exact_csv_values_equal_excluding_smoke_only": true,
+        "public_sha256": "6783d73fbe09c69f11872933c08525719546ab14e3283b62d5c7e8d39d5cfb74"
+      },
+      "initialization-paired.csv": {
+        "rows": 540,
+        "exact_csv_values_equal_excluding_smoke_only": true,
+        "public_sha256": "acebae1b37a8c65fa4ad977377b38569b005bffbba74e8fa270ddda1d59ad4e0"
+      },
+      "initialization-summary.csv": {
+        "rows": 75,
+        "exact_csv_values_equal_excluding_smoke_only": true,
+        "public_sha256": "9e77ecdbdcd2e06b5b3268e9b647e33cc2eed1726ca015f5ed6845d24d6ea7b4"
+      },
+      "initialization-whole-profile.csv": {
+        "rows": 108,
+        "exact_csv_values_equal_excluding_smoke_only": true,
+        "public_sha256": "07184d20c29f17917dff99e9d6ba2d62046025a59350a7ebb6bb07c0b2185fdf"
+      },
+      "initialization-whole-summary.csv": {
+        "rows": 15,
+        "exact_csv_values_equal_excluding_smoke_only": true,
+        "public_sha256": "a70ee4434d4b1266beba91774b5fe47fb1bbb5a1b16cac4f86a40964d55cb67f"
+      }
+    },
+    "failure": {
+      "profiles": 72,
+      "selected_examples": [],
+      "figure5_created": false,
+      "reason": "No qualifying Paderborn improvement or IPMSM degradation under the stated selection rule"
+    },
+    "initialization": {
+      "paired_profiles": 36,
+      "fifth_summary_cells": 75,
+      "figure6_visually_inspected": true,
+      "smoke_label_visible": true
+    },
+    "new_fits": 0,
+    "new_predictions": 0,
+    "archived_fallback_used": false
+  },
+  "analysis_port_runtime": {
+    "python": "3.12.7",
+    "numpy": "1.26.4",
+    "matplotlib": "3.9.2",
+    "platform": "Windows"
+  },
+  "saved_reference_validation": {
+    "schema": "pmsm-v007-public-aggregate-validation-v1",
+    "status": "PASS",
+    "scope": "Independent standard-library arithmetic checks of published profile metrics, public file digests and provenance links, exact historical criteria and figure numbering. Private original source digests are recorded but cannot be rechecked without those originals. No raw-array replay, training, inference or fresh confirmation.",
+    "verifier_sha256": "6a150c3edb9582f65883a3800d33188a1fefef4c21f60859401099be8a10d83d",
+    "checked": {
+      "failure_profile_rows": 72,
+      "failure_cohort_rows": 10,
+      "support_profile_rows": 144,
+      "operating_range_rows": 36,
+      "initialization_paired_fifth_rows": 540,
+      "initialization_arm_fifth_rows": 1080,
+      "initialization_fifth_summary_rows": 75,
+      "initialization_whole_profile_rows": 108,
+      "initialization_whole_summary_rows": 15,
+      "historical_confirmation_attempts": 2,
+      "historical_source_digest_records": 7,
+      "publication_figures": 6
+    },
+    "arithmetic_tolerance": {
+      "relative": 1e-11,
+      "absolute": 1e-10
+    },
+    "historically_exposed": true,
+    "independent_confirmation": false,
+    "unverified_from_aggregates": [
+      "Raw source measurements and their marginal quantiles",
+      "Archived model predictions",
+      "Original model fitting",
+      "Cross-motor independence or generalization"
+    ]
+  },
+  "training_procedure_changed": false,
+  "full_paper_scale_retraining_executed_in_this_validation": false,
+  "new_independent_confirmation": false,
+  "earlier_end_to_end_validation": "provenance/validation.json documents the earlier v0.2.0 38-stage smoke run. The new analysis ports read that completed run after verifying its original binding; it was not relabeled as a new training run.",
+  "source_hashes": {
+    "scripts/acquire_data.py": "9d1d9b9f08620416a52d5df909e69643262aa0fceb8ecc758052435d7e1191e3",
+    "scripts/analyze_failure.py": "2eb6bdd139d36a7e137cfca2b4650c3fd16dde170f8def09077332e47bdfc3ea",
+    "scripts/analyze_initialization.py": "590eb6ac0d89e2619da38f2b579b743989c63044f729e518d19f97c40773716c",
+    "scripts/render_reference.py": "449bf4292ec64fad6e1993248cb7e7550ef22fc6501d345d3852658bfc5a3429",
+    "scripts/reproduce.py": "7c26d1f63ecb9bddeac6c7d83b8879a3be2f62dd19589636223e5ed788e102e6",
+    "scripts/run_tests.py": "f914f0ecb9c19e0454477c923f1a75929d55fb9df425d9c258804f629f815189",
+    "scripts/verify_repository.py": "1e329d85812ac90e6b68b406719c29b6c6383661d3aef0962c9b0bee8ec300a8",
+    "scripts/verify_review_reference.py": "6a150c3edb9582f65883a3800d33188a1fefef4c21f60859401099be8a10d83d"
+  }
+}

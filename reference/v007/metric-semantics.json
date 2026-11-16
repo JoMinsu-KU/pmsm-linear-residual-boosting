@@ -1,0 +1,41 @@
+{
+  "schema": "pmsm-v007-public-metric-semantics-v1",
+  "evidence_status": "DESCRIPTIVE_REANALYSIS_OF_HISTORICALLY_EXPOSED_DATA",
+  "independently_held_out": false,
+  "initialization": {
+    "rmse_and_difference_units": "degC",
+    "mse_units": "degC^2",
+    "difference_direction": "own_boundary minus original; negative favors channel-wise boundary initialization",
+    "original": "All boundary filter states initialized to first ambient value; heating states initialized to zero.",
+    "own_boundary": "Each boundary filter state initialized to its own channel's first value; heating states initialized to zero.",
+    "macro": "Arithmetic mean of profile RMSEs; each profile has equal weight.",
+    "pooled": "Square root of sample-count-weighted profile MSE; different from macro RMSE.",
+    "fifths": "Half-open bounds floor(n*b/5) to floor(n*(b+1)/5) on retained rows, b=0..4. Original profile indices begin at 300; fifths are not verified physical durations.",
+    "comparison": "Two separately fitted historical procedures; current reanalysis does not fit models or isolate the physical rotor initial temperature.",
+    "methods": {
+      "linear_residual": "Complete unconstrained 33-feature ridge prior plus residual HGB",
+      "direct200": "Matched direct HGB with 200 trees",
+      "d9": "FIT-selected direct HGB"
+    }
+  },
+  "failure": {
+    "rmse_bias_and_correction_units": "degC",
+    "mse_cross_term_and_energy_units": "degC^2",
+    "identity": "For e=P-y and c=L-P: MSE(L)-MSE(P)=2*mean(e*c)+mean(c*c).",
+    "units": {
+      "rotor_temperature": "degC",
+      "current_magnitude": "source current units",
+      "absolute_speed": "source speed units",
+      "coolant_temperature": "degC"
+    },
+    "support": "Marginal min-max and 5th-95th percentile ranges are descriptive; they do not identify multivariate distribution shift or establish causes."
+  },
+  "omitted_private_material": [
+    "Raw measurement arrays",
+    "Per-row measured/predicted-temperature CSV",
+    "Trained model files",
+    "Manuscript PDFs",
+    "Author photographs",
+    "Unrelated exploration documents"
+  ]
+}

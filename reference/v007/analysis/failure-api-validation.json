@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "scope": "Pure array APIs on existing portable smoke files; no new fits or inference.",
+  "checks": [
+    {
+      "dataset": "ipmsm",
+      "profile": 10,
+      "rows": 400,
+      "identity_error": 7.563502775476127e-15
+    },
+    {
+      "dataset": "paderborn",
+      "profile": 57,
+      "rows": 400,
+      "identity_error": 5.273559366969494e-16
+    }
+  ],
+  "script_sha256": "e17f28f14bd0944ff18bc0cbfde51cbc821d88267234a351b66d7f502f60edb3",
+  "_public_view": {
+    "schema": "public-sanitized-historical-view-v1",
+    "source_id": "private_v007_archive:analysis/failure-api-validation.json",
+    "source_sha256": "af1ddc2b869ef6a1eae5cc3552ecdfa384687364d989b73f737192772d94e891",
+    "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data.",
+    "receipt_scope": "Historical archival record, not evidence that the current portable release script was executed. Current release checks are recorded separately in provenance/validation-v007.json.",
+    "original_preserved": true,
+    "independent_confirmation": false
+  }
+}

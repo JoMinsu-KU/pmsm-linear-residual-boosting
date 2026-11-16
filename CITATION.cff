@@ -18,13 +18,14 @@ authors:
     given-names: Hoansuk
   - family-names: Yang
     given-names: Jinhong
-version: 0.2.0
+version: 0.3.0
 date-released: '2026-11-16'
 repository-code: 'https://github.com/JoMinsu-KU/pmsm-linear-residual-boosting'
 abstract: >-
   Portable data preparation, model fitting, evaluation, scalar CPU benchmarking,
   and table and figure generation for permanent-magnet synchronous motor
-  rotor-temperature estimation. The study compares linear residual boosting,
+  rotor-temperature estimation, with the v007 manuscript's residual-correction,
+  operating-range, and paired initialization analyses. The study compares linear residual boosting,
   direct boosting, averaging, initialization interventions, and neural controls
   using fixed previously selected settings. All configured evaluation profiles
   were historically exposed; a fresh execution is a computational reproduction,

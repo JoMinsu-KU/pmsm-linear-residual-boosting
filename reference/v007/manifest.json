@@ -1,0 +1,632 @@
+{
+  "schema": "pmsm-v007-public-evidence-manifest-v1",
+  "release": "v007",
+  "record_type": "PUBLIC_SANITIZED_HISTORICAL_VIEW",
+  "evidence_status": "DESCRIPTIVE_REANALYSIS_OF_HISTORICALLY_EXPOSED_DATA",
+  "independent_confirmation": false,
+  "new_training_or_inference_for_this_export": false,
+  "source_roots": {
+    "private_v007_archive": "Original immutable v007 delivery archive; not distributed here.",
+    "private_campaign_archive": "Private historical scientific records; only relevant summaries and source hashes are public."
+  },
+  "provenance_rule": "sources[].sha256 identifies an unchanged private original; files[].sha256 identifies the actual public bytes. A sanitized public view is not a byte-identical original. Historical receipt script hashes are preserved; current release validation is separate.",
+  "exclusions": [
+    "Raw measurement arrays",
+    "Trained models",
+    "Per-row temperature CSV",
+    "Manuscript PDFs",
+    "Author photographs",
+    "Unrelated campaign material",
+    "Machine-specific absolute paths, usernames and server addresses"
+  ],
+  "sources": [
+    {
+      "id": "private_campaign_archive:analysis/confirmations.csv",
+      "root": "private_campaign_archive",
+      "relative_path": "analysis/confirmations.csv",
+      "sha256": "d34e44934c380796f715decd2d826b2a45a1ffb8d8b1b8ec0c852317d95b20c0",
+      "bytes": 1557
+    },
+    {
+      "id": "private_campaign_archive:followup-risk-20261110/protocols/rwth-replication-v002-frozen.md",
+      "root": "private_campaign_archive",
+      "relative_path": "followup-risk-20261110/protocols/rwth-replication-v002-frozen.md",
+      "sha256": "f1d201fe4aa6243f8c77c6a8a85a91268d183d0cd24d48bc35ec86b269082b0f",
+      "bytes": 20799
+    },
+    {
+      "id": "private_campaign_archive:followup-risk-20261110/review/c16-c17-final-root-adjudication-v002.json",
+      "root": "private_campaign_archive",
+      "relative_path": "followup-risk-20261110/review/c16-c17-final-root-adjudication-v002.json",
+      "sha256": "e68f178d47d396e8bbe20d5c893e6a8590525e7f0f12c1b46b0eb401b63b937f",
+      "bytes": 39016
+    },
+    {
+      "id": "private_campaign_archive:linear-followup-20261111/review/c18-feasibility-assessment-v001.md",
+      "root": "private_campaign_archive",
+      "relative_path": "linear-followup-20261111/review/c18-feasibility-assessment-v001.md",
+      "sha256": "7c2e3e11087842d126dc5edffc3ae5281eee7d68503275a2cf83eb5a2e3e7acb",
+      "bytes": 12738
+    },
+    {
+      "id": "private_campaign_archive:protocols/c15-paper-v001-frozen.md",
+      "root": "private_campaign_archive",
+      "relative_path": "protocols/c15-paper-v001-frozen.md",
+      "sha256": "ae506220a508838bf985612237cd3075700cf4ee133ec440c3312c4985361673",
+      "bytes": 11149
+    },
+    {
+      "id": "private_campaign_archive:protocols/campaign-confirmation-policy-v001.md",
+      "root": "private_campaign_archive",
+      "relative_path": "protocols/campaign-confirmation-policy-v001.md",
+      "sha256": "148200a1f689c3db4a743b3e53b8e7768c7af88a27b484ff0cfc493eeac5c42e",
+      "bytes": 2391
+    },
+    {
+      "id": "private_campaign_archive:review/c15-paper-final-root-adjudication-v001.json",
+      "root": "private_campaign_archive",
+      "relative_path": "review/c15-paper-final-root-adjudication-v001.json",
+      "sha256": "7369354f091cdbcec2fbbfcb43bf7e661bcc2ba988f21320080353053bfa7f55",
+      "bytes": 4319
+    },
+    {
+      "id": "private_v007_archive:analysis/failure-api-validation.json",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/failure-api-validation.json",
+      "sha256": "af1ddc2b869ef6a1eae5cc3552ecdfa384687364d989b73f737192772d94e891",
+      "bytes": 491
+    },
+    {
+      "id": "private_v007_archive:analysis/failure-cohort-corrections.csv",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/failure-cohort-corrections.csv",
+      "sha256": "0e728082d95bf76ac6662d19d0e56ca3e53f8020d16574e8e845d6ce49e5f53e",
+      "bytes": 2213
+    },
+    {
+      "id": "private_v007_archive:analysis/failure-definition.json",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/failure-definition.json",
+      "sha256": "da6f8418fbf8c900efb879315cd6486f551f080196d34cf5b82b27dfa8a666b3",
+      "bytes": 2207
+    },
+    {
+      "id": "private_v007_archive:analysis/failure-label-validation.json",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/failure-label-validation.json",
+      "sha256": "a93249d8fb8c925fa993b20305322381390462b2e7f1a4b09570716583572f36",
+      "bytes": 839
+    },
+    {
+      "id": "private_v007_archive:analysis/failure-operating-ranges.csv",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/failure-operating-ranges.csv",
+      "sha256": "a36d760256c9e9327061ada0037152a8b470648e8eb28c11970b7cc0d0c31227",
+      "bytes": 7110
+    },
+    {
+      "id": "private_v007_archive:analysis/failure-portable-validation.json",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/failure-portable-validation.json",
+      "sha256": "7b18ff9230e0ae7cd7705d90c81ec0a07d0ae148970dcef7d0ea100d24bb37b4",
+      "bytes": 332
+    },
+    {
+      "id": "private_v007_archive:analysis/failure-profile-corrections.csv",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/failure-profile-corrections.csv",
+      "sha256": "5ac20119746024f8efe15ed4b57134ec9f8dca6ee57ca428203058c1700d4de2",
+      "bytes": 32877
+    },
+    {
+      "id": "private_v007_archive:analysis/failure-profile-support.csv",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/failure-profile-support.csv",
+      "sha256": "fd375d42ff1340ab17eef168ed9298a04261f0d7391246f64147307933659069",
+      "bytes": 28014
+    },
+    {
+      "id": "private_v007_archive:analysis/failure-results.json",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/failure-results.json",
+      "sha256": "0c0a3c14dfa4b681a445aac8e9c2b47ec9e728633a92d38938590786a0aba501",
+      "bytes": 51421
+    },
+    {
+      "id": "private_v007_archive:analysis/initialization-paired.csv",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/initialization-paired.csv",
+      "sha256": "debb4ab3b8cce20fddc48591deca7780705aab2ee92c5114fc8a78da0b89ffb3",
+      "bytes": 78712
+    },
+    {
+      "id": "private_v007_archive:analysis/initialization-plan.json",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/initialization-plan.json",
+      "sha256": "2a8a07f7f700a54bb8b4dc6e77b24e7cd9bbcd4554e429202f3cb2d465d277ff",
+      "bytes": 1783
+    },
+    {
+      "id": "private_v007_archive:analysis/initialization-plot-validation.json",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/initialization-plot-validation.json",
+      "sha256": "5f1b041d501787f66cb0c9e0eb3cf361dcaa17d845a83379c1c0c1266f5c97b4",
+      "bytes": 1694
+    },
+    {
+      "id": "private_v007_archive:analysis/initialization-profiles.csv",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/initialization-profiles.csv",
+      "sha256": "31036ef70e9d00c199ffe2fca66f23c63e100a7bf5abb0ffe391869bd502a54d",
+      "bytes": 107783
+    },
+    {
+      "id": "private_v007_archive:analysis/initialization-results.json",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/initialization-results.json",
+      "sha256": "0c15855c355bff88108ab9e9eddef9d28c957e1b7313846eb059f854eadf8df0",
+      "bytes": 87485
+    },
+    {
+      "id": "private_v007_archive:analysis/initialization-summary.csv",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/initialization-summary.csv",
+      "sha256": "15e35581114847ac72981f5f5cbae2e720cc87e3ca38568176fab9152175f26e",
+      "bytes": 10479
+    },
+    {
+      "id": "private_v007_archive:analysis/initialization-validation.json",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/initialization-validation.json",
+      "sha256": "c5e9f7e0507d72cda12925a5632e2788e3c1db96d829eea3eb7e7510f93c37a4",
+      "bytes": 617
+    },
+    {
+      "id": "private_v007_archive:analysis/initialization-whole-profile.csv",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/initialization-whole-profile.csv",
+      "sha256": "87a3c04c7e8d8dda51974f0d384c96eb280a76ea23958f3083ffbdb7052f507c",
+      "bytes": 14551
+    },
+    {
+      "id": "private_v007_archive:analysis/initialization-whole-summary.csv",
+      "root": "private_v007_archive",
+      "relative_path": "analysis/initialization-whole-summary.csv",
+      "sha256": "a94b3ddbf033b353685df5b000960bf63a9858ba24b4682230351e8eb9a4f687",
+      "bytes": 1187
+    },
+    {
+      "id": "private_v007_archive:figures/figure1-method-overview.pdf",
+      "root": "private_v007_archive",
+      "relative_path": "figures/figure1-method-overview.pdf",
+      "sha256": "478718cd781844eab3ccc851fba3be1374a7b590f20d0f6c3285fa522ebc4b2d",
+      "bytes": 28252
+    },
+    {
+      "id": "private_v007_archive:figures/figure1-method-overview.png",
+      "root": "private_v007_archive",
+      "relative_path": "figures/figure1-method-overview.png",
+      "sha256": "1ba7364e00f9f6fe8227ddb90340ed882a75759bd43fdd3903efcabe3c3dc178",
+      "bytes": 129087
+    },
+    {
+      "id": "private_v007_archive:figures/figure2-accuracy-latency.pdf",
+      "root": "private_v007_archive",
+      "relative_path": "figures/figure2-accuracy-latency.pdf",
+      "sha256": "cff0bc70400b0643241ce6d3959551d274210929bf028fa4cdadfc59a7fda5cc",
+      "bytes": 17763
+    },
+    {
+      "id": "private_v007_archive:figures/figure2-accuracy-latency.png",
+      "root": "private_v007_archive",
+      "relative_path": "figures/figure2-accuracy-latency.png",
+      "sha256": "e5fd4bae4fc518af52acaa9e117a2eb43351d54a2fb9185dbec5d7ee0f650e10",
+      "bytes": 141448
+    },
+    {
+      "id": "private_v007_archive:figures/figure3-paired-profile-errors.pdf",
+      "root": "private_v007_archive",
+      "relative_path": "figures/figure3-paired-profile-errors.pdf",
+      "sha256": "09be488a52cbdf613233ceb0111f5e731e4e62b58f65121c2cf576a42dba64d2",
+      "bytes": 14993
+    },
+    {
+      "id": "private_v007_archive:figures/figure3-paired-profile-errors.png",
+      "root": "private_v007_archive",
+      "relative_path": "figures/figure3-paired-profile-errors.png",
+      "sha256": "eff6bfc5cf690215da00e225b5637bbda1622827427f32955468a56871980903",
+      "bytes": 96273
+    },
+    {
+      "id": "private_v007_archive:figures/figure4-initialization-effect.pdf",
+      "root": "private_v007_archive",
+      "relative_path": "figures/figure4-initialization-effect.pdf",
+      "sha256": "f1e753521f16b0264899e477c17d25643b381483d0e0a9051520808321c3c838",
+      "bytes": 22815
+    },
+    {
+      "id": "private_v007_archive:figures/figure4-initialization-effect.png",
+      "root": "private_v007_archive",
+      "relative_path": "figures/figure4-initialization-effect.png",
+      "sha256": "dec8aac18eac80c9a2a8f5696058c985b1abfe46c53d6829190790b29d676214",
+      "bytes": 161040
+    },
+    {
+      "id": "private_v007_archive:figures/figure5-temperature-trajectories.pdf",
+      "root": "private_v007_archive",
+      "relative_path": "figures/figure5-temperature-trajectories.pdf",
+      "sha256": "fdfadd3269b35daf76654ddf3dc6b33b79326a1c8e703e73ea14aa1e1a63c9db",
+      "bytes": 242179
+    },
+    {
+      "id": "private_v007_archive:figures/figure5-temperature-trajectories.png",
+      "root": "private_v007_archive",
+      "relative_path": "figures/figure5-temperature-trajectories.png",
+      "sha256": "c18ee73935d293bfbee534938d580b671065ff8faf5f5579bdb59fe200ecc9a2",
+      "bytes": 387064
+    },
+    {
+      "id": "private_v007_archive:figures/figure6-initialization-segments.pdf",
+      "root": "private_v007_archive",
+      "relative_path": "figures/figure6-initialization-segments.pdf",
+      "sha256": "497ce0ea101451b86b2ef3cafc727e6fa01def6d21e7eee150ec6b2cc67df0e3",
+      "bytes": 21154
+    },
+    {
+      "id": "private_v007_archive:figures/figure6-initialization-segments.png",
+      "root": "private_v007_archive",
+      "relative_path": "figures/figure6-initialization-segments.png",
+      "sha256": "af071eb6f5ba204b0b1816473979197b5aa8737456528764eb177959bfb78344",
+      "bytes": 220848
+    },
+    {
+      "id": "private_v007_archive:review/history-literature.json",
+      "root": "private_v007_archive",
+      "relative_path": "review/history-literature.json",
+      "sha256": "dd311584a4b2e08d4cb4c36137c2701fa4aef1edb1c05dee5f6d4055de0256c9",
+      "bytes": 12157
+    },
+    {
+      "id": "private_v007_archive:review/renumbering.json",
+      "root": "private_v007_archive",
+      "relative_path": "review/renumbering.json",
+      "sha256": "09f7ec1a8f7688402b85366eda6e47db20dcd68ea92695d6ea4682bbee1b3106",
+      "bytes": 293
+    }
+  ],
+  "files": [
+    {
+      "path": "aggregate-validation.json",
+      "sha256": "0c85612312905a1181b377dc102d7fea1e8f5fc4d40baba14d4f132c6f17bb26",
+      "bytes": 1385,
+      "source_ids": [
+        "private_campaign_archive:analysis/confirmations.csv",
+        "private_campaign_archive:followup-risk-20261110/protocols/rwth-replication-v002-frozen.md",
+        "private_campaign_archive:followup-risk-20261110/review/c16-c17-final-root-adjudication-v002.json",
+        "private_campaign_archive:linear-followup-20261111/review/c18-feasibility-assessment-v001.md",
+        "private_campaign_archive:protocols/c15-paper-v001-frozen.md",
+        "private_campaign_archive:protocols/campaign-confirmation-policy-v001.md",
+        "private_campaign_archive:review/c15-paper-final-root-adjudication-v001.json",
+        "private_v007_archive:analysis/failure-cohort-corrections.csv",
+        "private_v007_archive:analysis/failure-operating-ranges.csv",
+        "private_v007_archive:analysis/failure-profile-corrections.csv",
+        "private_v007_archive:analysis/failure-profile-support.csv",
+        "private_v007_archive:analysis/initialization-paired.csv",
+        "private_v007_archive:analysis/initialization-profiles.csv",
+        "private_v007_archive:analysis/initialization-summary.csv",
+        "private_v007_archive:analysis/initialization-whole-profile.csv",
+        "private_v007_archive:analysis/initialization-whole-summary.csv",
+        "private_v007_archive:review/history-literature.json",
+        "private_v007_archive:review/renumbering.json"
+      ],
+      "transformation": "New independent aggregate-arithmetic verification of the public metrics; no model fitting, raw-array replay or new inference. Verifier source SHA-256 is included in the report."
+    },
+    {
+      "path": "analysis/failure-api-validation.json",
+      "sha256": "ec1747e6739ddd0a6dffe091a1d85e5d18cdcfe913c9a7478345aa633a2510c0",
+      "bytes": 1253,
+      "source_ids": [
+        "private_v007_archive:analysis/failure-api-validation.json"
+      ],
+      "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data."
+    },
+    {
+      "path": "analysis/failure-cohort-corrections.csv",
+      "sha256": "0e728082d95bf76ac6662d19d0e56ca3e53f8020d16574e8e845d6ce49e5f53e",
+      "bytes": 2213,
+      "source_ids": [
+        "private_v007_archive:analysis/failure-cohort-corrections.csv"
+      ],
+      "transformation": "Byte-identical aggregate/profile-metric CSV; no per-row measured or predicted temperatures included."
+    },
+    {
+      "path": "analysis/failure-definition.json",
+      "sha256": "56049b8c4921cbd4a9b26acd3834e498d68789c663706bd49af6ac2aebc42adf",
+      "bytes": 3089,
+      "source_ids": [
+        "private_v007_archive:analysis/failure-definition.json"
+      ],
+      "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data."
+    },
+    {
+      "path": "analysis/failure-label-validation.json",
+      "sha256": "d13782267a37e7ef94b80ef8b4472256f623dcbbcf89811bb274b49da83e9fe8",
+      "bytes": 1603,
+      "source_ids": [
+        "private_v007_archive:analysis/failure-label-validation.json"
+      ],
+      "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data."
+    },
+    {
+      "path": "analysis/failure-operating-ranges.csv",
+      "sha256": "a36d760256c9e9327061ada0037152a8b470648e8eb28c11970b7cc0d0c31227",
+      "bytes": 7110,
+      "source_ids": [
+        "private_v007_archive:analysis/failure-operating-ranges.csv"
+      ],
+      "transformation": "Byte-identical aggregate/profile-metric CSV; no per-row measured or predicted temperatures included."
+    },
+    {
+      "path": "analysis/failure-portable-validation.json",
+      "sha256": "2fe61ce9c80e1cf8c6ebd985aa4e0b1b38dc7780703fcf2989b2c500d90ecda3",
+      "bytes": 1099,
+      "source_ids": [
+        "private_v007_archive:analysis/failure-portable-validation.json"
+      ],
+      "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data."
+    },
+    {
+      "path": "analysis/failure-profile-corrections.csv",
+      "sha256": "5ac20119746024f8efe15ed4b57134ec9f8dca6ee57ca428203058c1700d4de2",
+      "bytes": 32877,
+      "source_ids": [
+        "private_v007_archive:analysis/failure-profile-corrections.csv"
+      ],
+      "transformation": "Byte-identical aggregate/profile-metric CSV; no per-row measured or predicted temperatures included."
+    },
+    {
+      "path": "analysis/failure-profile-support.csv",
+      "sha256": "fd375d42ff1340ab17eef168ed9298a04261f0d7391246f64147307933659069",
+      "bytes": 28014,
+      "source_ids": [
+        "private_v007_archive:analysis/failure-profile-support.csv"
+      ],
+      "transformation": "Byte-identical aggregate/profile-metric CSV; no per-row measured or predicted temperatures included."
+    },
+    {
+      "path": "analysis/failure-results.json",
+      "sha256": "1f5e3cdb938ce43565e573b0a34b1eac40041093ed4131c109fac420b56d3670",
+      "bytes": 52176,
+      "source_ids": [
+        "private_v007_archive:analysis/failure-results.json"
+      ],
+      "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data."
+    },
+    {
+      "path": "analysis/initialization-paired.csv",
+      "sha256": "debb4ab3b8cce20fddc48591deca7780705aab2ee92c5114fc8a78da0b89ffb3",
+      "bytes": 78712,
+      "source_ids": [
+        "private_v007_archive:analysis/initialization-paired.csv"
+      ],
+      "transformation": "Byte-identical aggregate/profile-metric CSV; no per-row measured or predicted temperatures included."
+    },
+    {
+      "path": "analysis/initialization-plan.json",
+      "sha256": "242230259708addf9622fcbdf071e22046a4d374a03e71b17aa8475eeff53be0",
+      "bytes": 2669,
+      "source_ids": [
+        "private_v007_archive:analysis/initialization-plan.json"
+      ],
+      "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data."
+    },
+    {
+      "path": "analysis/initialization-plot-validation.json",
+      "sha256": "ec1af22b3e658e9e0d07ac072f3c2281bc64175ef904ba9d6a8f8c36024b86a1",
+      "bytes": 2464,
+      "source_ids": [
+        "private_v007_archive:analysis/initialization-plot-validation.json"
+      ],
+      "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data."
+    },
+    {
+      "path": "analysis/initialization-profiles.csv",
+      "sha256": "31036ef70e9d00c199ffe2fca66f23c63e100a7bf5abb0ffe391869bd502a54d",
+      "bytes": 107783,
+      "source_ids": [
+        "private_v007_archive:analysis/initialization-profiles.csv"
+      ],
+      "transformation": "Byte-identical aggregate/profile-metric CSV; no per-row measured or predicted temperatures included."
+    },
+    {
+      "path": "analysis/initialization-results.json",
+      "sha256": "59419d2549087179dfe4011ba4a4587ecd24493a73e08fca347504985cd4fcb6",
+      "bytes": 88247,
+      "source_ids": [
+        "private_v007_archive:analysis/initialization-results.json"
+      ],
+      "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data."
+    },
+    {
+      "path": "analysis/initialization-summary.csv",
+      "sha256": "15e35581114847ac72981f5f5cbae2e720cc87e3ca38568176fab9152175f26e",
+      "bytes": 10479,
+      "source_ids": [
+        "private_v007_archive:analysis/initialization-summary.csv"
+      ],
+      "transformation": "Byte-identical aggregate/profile-metric CSV; no per-row measured or predicted temperatures included."
+    },
+    {
+      "path": "analysis/initialization-validation.json",
+      "sha256": "5c4038d38450fa3cb025ff010e2018b9fba4b75cac0e9bb069609e864c086c22",
+      "bytes": 1382,
+      "source_ids": [
+        "private_v007_archive:analysis/initialization-validation.json"
+      ],
+      "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data."
+    },
+    {
+      "path": "analysis/initialization-whole-profile.csv",
+      "sha256": "87a3c04c7e8d8dda51974f0d384c96eb280a76ea23958f3083ffbdb7052f507c",
+      "bytes": 14551,
+      "source_ids": [
+        "private_v007_archive:analysis/initialization-whole-profile.csv"
+      ],
+      "transformation": "Byte-identical aggregate/profile-metric CSV; no per-row measured or predicted temperatures included."
+    },
+    {
+      "path": "analysis/initialization-whole-summary.csv",
+      "sha256": "a94b3ddbf033b353685df5b000960bf63a9858ba24b4682230351e8eb9a4f687",
+      "bytes": 1187,
+      "source_ids": [
+        "private_v007_archive:analysis/initialization-whole-summary.csv"
+      ],
+      "transformation": "Byte-identical aggregate/profile-metric CSV; no per-row measured or predicted temperatures included."
+    },
+    {
+      "path": "figures/figure1-method-overview.pdf",
+      "sha256": "478718cd781844eab3ccc851fba3be1374a7b590f20d0f6c3285fa522ebc4b2d",
+      "bytes": 28252,
+      "source_ids": [
+        "private_v007_archive:figures/figure1-method-overview.pdf"
+      ],
+      "transformation": "Byte-identical publication figure; filename numbering retained. See figures/mapping.json for current manuscript numbering."
+    },
+    {
+      "path": "figures/figure1-method-overview.png",
+      "sha256": "1ba7364e00f9f6fe8227ddb90340ed882a75759bd43fdd3903efcabe3c3dc178",
+      "bytes": 129087,
+      "source_ids": [
+        "private_v007_archive:figures/figure1-method-overview.png"
+      ],
+      "transformation": "Byte-identical publication figure; filename numbering retained. See figures/mapping.json for current manuscript numbering."
+    },
+    {
+      "path": "figures/figure2-accuracy-latency.pdf",
+      "sha256": "cff0bc70400b0643241ce6d3959551d274210929bf028fa4cdadfc59a7fda5cc",
+      "bytes": 17763,
+      "source_ids": [
+        "private_v007_archive:figures/figure2-accuracy-latency.pdf"
+      ],
+      "transformation": "Byte-identical publication figure; filename numbering retained. See figures/mapping.json for current manuscript numbering."
+    },
+    {
+      "path": "figures/figure2-accuracy-latency.png",
+      "sha256": "e5fd4bae4fc518af52acaa9e117a2eb43351d54a2fb9185dbec5d7ee0f650e10",
+      "bytes": 141448,
+      "source_ids": [
+        "private_v007_archive:figures/figure2-accuracy-latency.png"
+      ],
+      "transformation": "Byte-identical publication figure; filename numbering retained. See figures/mapping.json for current manuscript numbering."
+    },
+    {
+      "path": "figures/figure3-paired-profile-errors.pdf",
+      "sha256": "09be488a52cbdf613233ceb0111f5e731e4e62b58f65121c2cf576a42dba64d2",
+      "bytes": 14993,
+      "source_ids": [
+        "private_v007_archive:figures/figure3-paired-profile-errors.pdf"
+      ],
+      "transformation": "Byte-identical publication figure; filename numbering retained. See figures/mapping.json for current manuscript numbering."
+    },
+    {
+      "path": "figures/figure3-paired-profile-errors.png",
+      "sha256": "eff6bfc5cf690215da00e225b5637bbda1622827427f32955468a56871980903",
+      "bytes": 96273,
+      "source_ids": [
+        "private_v007_archive:figures/figure3-paired-profile-errors.png"
+      ],
+      "transformation": "Byte-identical publication figure; filename numbering retained. See figures/mapping.json for current manuscript numbering."
+    },
+    {
+      "path": "figures/figure4-initialization-effect.pdf",
+      "sha256": "f1e753521f16b0264899e477c17d25643b381483d0e0a9051520808321c3c838",
+      "bytes": 22815,
+      "source_ids": [
+        "private_v007_archive:figures/figure4-initialization-effect.pdf"
+      ],
+      "transformation": "Byte-identical publication figure; filename numbering retained. See figures/mapping.json for current manuscript numbering."
+    },
+    {
+      "path": "figures/figure4-initialization-effect.png",
+      "sha256": "dec8aac18eac80c9a2a8f5696058c985b1abfe46c53d6829190790b29d676214",
+      "bytes": 161040,
+      "source_ids": [
+        "private_v007_archive:figures/figure4-initialization-effect.png"
+      ],
+      "transformation": "Byte-identical publication figure; filename numbering retained. See figures/mapping.json for current manuscript numbering."
+    },
+    {
+      "path": "figures/figure5-temperature-trajectories.pdf",
+      "sha256": "fdfadd3269b35daf76654ddf3dc6b33b79326a1c8e703e73ea14aa1e1a63c9db",
+      "bytes": 242179,
+      "source_ids": [
+        "private_v007_archive:figures/figure5-temperature-trajectories.pdf"
+      ],
+      "transformation": "Byte-identical publication figure; filename numbering retained. See figures/mapping.json for current manuscript numbering."
+    },
+    {
+      "path": "figures/figure5-temperature-trajectories.png",
+      "sha256": "c18ee73935d293bfbee534938d580b671065ff8faf5f5579bdb59fe200ecc9a2",
+      "bytes": 387064,
+      "source_ids": [
+        "private_v007_archive:figures/figure5-temperature-trajectories.png"
+      ],
+      "transformation": "Byte-identical publication figure; filename numbering retained. See figures/mapping.json for current manuscript numbering."
+    },
+    {
+      "path": "figures/figure6-initialization-segments.pdf",
+      "sha256": "497ce0ea101451b86b2ef3cafc727e6fa01def6d21e7eee150ec6b2cc67df0e3",
+      "bytes": 21154,
+      "source_ids": [
+        "private_v007_archive:figures/figure6-initialization-segments.pdf"
+      ],
+      "transformation": "Byte-identical publication figure; filename numbering retained. See figures/mapping.json for current manuscript numbering."
+    },
+    {
+      "path": "figures/figure6-initialization-segments.png",
+      "sha256": "af071eb6f5ba204b0b1816473979197b5aa8737456528764eb177959bfb78344",
+      "bytes": 220848,
+      "source_ids": [
+        "private_v007_archive:figures/figure6-initialization-segments.png"
+      ],
+      "transformation": "Byte-identical publication figure; filename numbering retained. See figures/mapping.json for current manuscript numbering."
+    },
+    {
+      "path": "figures/mapping.json",
+      "sha256": "0f914524b0c5c137511ca8c46b687cd476d197b30ffd135e3d58fda21ce75bed",
+      "bytes": 1951,
+      "source_ids": [
+        "private_v007_archive:review/renumbering.json"
+      ],
+      "transformation": "Selected original-to-current figure map and scientifically relevant axis/interpretation notes; table renumbering omitted."
+    },
+    {
+      "path": "history/confirmations.json",
+      "sha256": "2a0d6f247da2d512b2692f5fc54a0acac31fc404e00a5d5a1e475dde03bda7de",
+      "bytes": 15140,
+      "source_ids": [
+        "private_v007_archive:review/history-literature.json",
+        "private_campaign_archive:analysis/confirmations.csv",
+        "private_campaign_archive:protocols/campaign-confirmation-policy-v001.md",
+        "private_campaign_archive:protocols/c15-paper-v001-frozen.md",
+        "private_campaign_archive:review/c15-paper-final-root-adjudication-v001.json",
+        "private_campaign_archive:followup-risk-20261110/protocols/rwth-replication-v002-frozen.md",
+        "private_campaign_archive:followup-risk-20261110/review/c16-c17-final-root-adjudication-v002.json",
+        "private_campaign_archive:linear-followup-20261111/review/c18-feasibility-assessment-v001.md"
+      ],
+      "transformation": "Selected confirmation history and interpretation limits from the v007 audit; verified all seven original source SHA-256 values and read relevant frozen-rule/result passages. Removed machine-specific absolute paths, unrelated literature and campaign content. Added clearly named original adjudication subsets and relevant ledger fields. Original records remain unchanged in the private archive."
+    },
+    {
+      "path": "metric-semantics.json",
+      "sha256": "348ca631b9c022ea7429da50193f27a2dd98dea3a56eee6798f40b9b7f6e49fa",
+      "bytes": 2150,
+      "source_ids": [
+        "private_v007_archive:analysis/failure-definition.json",
+        "private_v007_archive:analysis/initialization-plan.json",
+        "private_v007_archive:analysis/failure-results.json"
+      ],
+      "transformation": "Derived concise metric/unit dictionary; scientific meanings retained."
+    }
+  ],
+  "manifest_self_hash_excluded": true
+}

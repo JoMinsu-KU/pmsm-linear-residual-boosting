@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "change": "Axis and plotted CSV coordinate name clarify zero-based within-profile rows; numerical inputs and outputs unchanged.",
+  "plotted_rows_checked": 15339,
+  "numerical_csv_hashes_unchanged": [
+    "analysis/failure-cohort-corrections.csv",
+    "analysis/failure-operating-ranges.csv",
+    "analysis/failure-profile-corrections.csv",
+    "analysis/failure-profile-support.csv"
+  ],
+  "full_scientific_result_except_source_provenance_unchanged": true,
+  "original_script_sha256": "e17f28f14bd0944ff18bc0cbfde51cbc821d88267234a351b66d7f502f60edb3",
+  "script_sha256": "a58b1e94a06306cff617ec1a3e94034168f2b3e94dbf394edc0e27d87c77c94b",
+  "new_training_fits": 0,
+  "new_inference_calls": 0,
+  "portable_cli": "Preserved; the changed plot function is shared by historical and portable paths.",
+  "_public_view": {
+    "schema": "public-sanitized-historical-view-v1",
+    "source_id": "private_v007_archive:analysis/failure-label-validation.json",
+    "source_sha256": "a93249d8fb8c925fa993b20305322381390462b2e7f1a4b09570716583572f36",
+    "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data.",
+    "receipt_scope": "Historical archival record, not evidence that the current portable release script was executed. Current release checks are recorded separately in provenance/validation-v007.json.",
+    "original_preserved": true,
+    "independent_confirmation": false
+  }
+}

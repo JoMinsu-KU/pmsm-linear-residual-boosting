@@ -1,0 +1,59 @@
+{
+  "schema": "pmsm-v007-public-figure-map-v1",
+  "note": "Original filenames are immutable artifact names. Manuscript numbering follows first appearance: original figure 5 is main Figure 4, original figure 4 is main Figure 5.",
+  "historically_exposed_evaluation": true,
+  "independent_confirmation": false,
+  "figure5_source_row_coordinate": "Zero-based within-profile source-row index, not verified elapsed seconds.",
+  "figure6_partition_coordinate": "Five equal-count partitions of retained evaluation rows, not equal physical durations; change is own_boundary minus original RMSE in degC.",
+  "figures": [
+    {
+      "original_filename_number": 1,
+      "v007_main_figure_number": 1,
+      "files": [
+        "figure1-method-overview.pdf",
+        "figure1-method-overview.png"
+      ]
+    },
+    {
+      "original_filename_number": 2,
+      "v007_main_figure_number": 2,
+      "files": [
+        "figure2-accuracy-latency.pdf",
+        "figure2-accuracy-latency.png"
+      ]
+    },
+    {
+      "original_filename_number": 3,
+      "v007_main_figure_number": 3,
+      "files": [
+        "figure3-paired-profile-errors.pdf",
+        "figure3-paired-profile-errors.png"
+      ]
+    },
+    {
+      "original_filename_number": 4,
+      "v007_main_figure_number": 5,
+      "files": [
+        "figure4-initialization-effect.pdf",
+        "figure4-initialization-effect.png"
+      ]
+    },
+    {
+      "original_filename_number": 5,
+      "v007_main_figure_number": 4,
+      "files": [
+        "figure5-temperature-trajectories.pdf",
+        "figure5-temperature-trajectories.png"
+      ]
+    },
+    {
+      "original_filename_number": 6,
+      "v007_main_figure_number": 6,
+      "files": [
+        "figure6-initialization-segments.pdf",
+        "figure6-initialization-segments.png"
+      ]
+    }
+  ],
+  "source_sha256": "09f7ec1a8f7688402b85366eda6e47db20dcd68ea92695d6ea4682bbee1b3106"
+}

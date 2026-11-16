@@ -1,0 +1,38 @@
+{
+  "status": "PASS",
+  "scope": "Publication-width plotting only; historical metrics and earlier numerical validation receipt left unchanged.",
+  "script_sha256": "e5b6b59ead28e4bd30fc9d4d9000fc93c1c076a722d0441d493229d851f22be4",
+  "numerical_validation_script_sha256": "c8c4a34eff180c6f36d325fb087d5e4deaeda8fbd422e801d6f7f0b4a945f2ff",
+  "numeric_inputs_unchanged": true,
+  "protected_inputs_sha256": {
+    "analysis\\initialization-profiles.csv": "31036ef70e9d00c199ffe2fca66f23c63e100a7bf5abb0ffe391869bd502a54d",
+    "analysis\\initialization-paired.csv": "debb4ab3b8cce20fddc48591deca7780705aab2ee92c5114fc8a78da0b89ffb3",
+    "analysis\\initialization-summary.csv": "15e35581114847ac72981f5f5cbae2e720cc87e3ca38568176fab9152175f26e",
+    "analysis\\initialization-whole-profile.csv": "87a3c04c7e8d8dda51974f0d384c96eb280a76ea23958f3083ffbdb7052f507c",
+    "analysis\\initialization-whole-summary.csv": "a94b3ddbf033b353685df5b000960bf63a9858ba24b4682230351e8eb9a4f687",
+    "analysis\\initialization-results.json": "0c15855c355bff88108ab9e9eddef9d28c957e1b7313846eb059f854eadf8df0",
+    "analysis\\initialization-plan.json": "2a8a07f7f700a54bb8b4dc6e77b24e7cd9bbcd4554e429202f3cb2d465d277ff",
+    "analysis\\initialization-validation.json": "c5e9f7e0507d72cda12925a5632e2788e3c1db96d829eea3eb7e7510f93c37a4"
+  },
+  "figure_inches": [
+    7.2,
+    5.2
+  ],
+  "font_sizes_points": [
+    8.5
+  ],
+  "text_overflow": [],
+  "manual_publication_width_inspection": "PASS: five panels, all three model curves, zero lines, shared dataset axes, legend and annotation visible at 100 dpi.",
+  "new_fits": 0,
+  "new_predictions": 0,
+  "new_metric_computation": false,
+  "_public_view": {
+    "schema": "public-sanitized-historical-view-v1",
+    "source_id": "private_v007_archive:analysis/initialization-plot-validation.json",
+    "source_sha256": "5f1b041d501787f66cb0c9e0eb3cf361dcaa17d845a83379c1c0c1266f5c97b4",
+    "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data.",
+    "receipt_scope": "Historical archival record, not evidence that the current portable release script was executed. Current release checks are recorded separately in provenance/validation-v007.json.",
+    "original_preserved": true,
+    "independent_confirmation": false
+  }
+}

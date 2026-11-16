@@ -1,0 +1,47 @@
+{
+  "schema": "review-failure-reanalysis-definition-v1",
+  "scope": "Descriptive reanalysis of existing complete historical IPMSM and Paderborn predictions; no fits, hyperparameter selection, formal tests, or new confirmation.",
+  "arms": [
+    "original",
+    "own_boundary"
+  ],
+  "inclusion": "Every configured non-training profile in each dataset. Exact source-row alignment and archived hashes must pass before calculation.",
+  "decomposition": "With e=P-y and c=L-P, MSE(L)-MSE(P)=2 mean(e*c)+mean(c*c). Both terms and row-wise improvement fractions are reported; no causal interpretation.",
+  "range_reference": "Original measured raw variables at actual fitting endpoints (row300 onward, stride5); held ranges use every evaluated row300 onward. Include full raw training ranges separately. No cross-dataset pooling.",
+  "variables": [
+    "rotor target",
+    "sqrt(id^2+iq^2)",
+    "absolute motor speed",
+    "coolant/water-outlet temperature"
+  ],
+  "quantiles": [
+    0.01,
+    0.05,
+    0.5,
+    0.95,
+    0.99
+  ],
+  "exceedance": "Observed marginal min-max and 5th-95th percentile ranges are descriptive support checks, not multivariate out-of-distribution detectors or inferential thresholds.",
+  "figure_selection": {
+    "success": "Paderborn own_boundary historical evaluation: among profiles with linear_residual-minus-matched_direct RMSE<0, select smallest absolute distance to the median difference of the entire14-profile cohort; break ties by lower profile ID.",
+    "failure": "IPMSM own_boundary historical evaluation: select largest linear_residual-minus-matched_direct RMSE among both profiles; break ties by lower profile ID.",
+    "interpretation": "Illustrative selected records with explicit outcome-based rules, not prospective or representative sampling. Every eligible profile remains in CSV summaries.",
+    "x_axis": "Original source-row index, avoiding an unverified IPMSM physical sampling interval.",
+    "curves": [
+      "measured target",
+      "ridge prior",
+      "linear residual boosting",
+      "matched direct boosting"
+    ]
+  },
+  "claim_limits": "Observed operating-range shifts or correction directions do not establish why motor datasets differ; they describe failure patterns under existing fits. Historical data exposure is unchanged.",
+  "_public_view": {
+    "schema": "public-sanitized-historical-view-v1",
+    "source_id": "private_v007_archive:analysis/failure-definition.json",
+    "source_sha256": "da6f8418fbf8c900efb879315cd6486f551f080196d34cf5b82b27dfa8a666b3",
+    "transformation": "JSON reserialization with this provenance notice; scientific values and original historical receipt hashes retained. Source-record paths are relative and refer to private archived inputs, not bundled raw data.",
+    "receipt_scope": "Historical archival record, not evidence that the current portable release script was executed. Current release checks are recorded separately in provenance/validation-v007.json.",
+    "original_preserved": true,
+    "independent_confirmation": false
+  }
+}
