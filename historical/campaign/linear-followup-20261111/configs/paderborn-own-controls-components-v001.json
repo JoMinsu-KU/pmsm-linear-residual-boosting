@@ -1,0 +1,31 @@
+{
+  "schema": "c18-own-controls-components-v001",
+  "dataset": "paderborn",
+  "config": {
+    "path": "linear-followup-20261111/configs/paderborn-own-controls-v001.json",
+    "sha256": "13c3ea028501a01c26d55cc2c398be8ca52b0a1b5a91615075b62a69b5f51993"
+  },
+  "cpu": {
+    "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/summary.json",
+    "sha256": "f2ca34df080349090a7e3f4a1c5a005f3a897e9522ea8096a0b49f2fbe1db62f"
+  },
+  "mlp": [
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-mlp-2026111701-v001/summary.json",
+      "sha256": "acb400c2111341c37a80cb286cc1e40c09a4c6a815adef5c62b593125abbaa15"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-mlp-2026111702-v001/summary.json",
+      "sha256": "0971bce7155e5133057e541ed10c3bc2a90a152b65a3a7b4494b3e79a07a2050"
+    },
+    {
+      "path": "linear-followup-20261111/runs/paderborn-own-controls-mlp-2026111703-v001/summary.json",
+      "sha256": "b09e37c624b73ce4d515af5bad973d6bbd26d8978840bdf934258044427130a5"
+    }
+  ],
+  "seed_order": [
+    2026111701,
+    2026111702,
+    2026111703
+  ]
+}

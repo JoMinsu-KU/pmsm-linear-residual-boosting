@@ -1,0 +1,679 @@
+{
+  "schema": "c18-own-controls-config-v001",
+  "dataset": "paderborn",
+  "arm": "own_boundary",
+  "scientific_execution_admitted": true,
+  "formal_confirmation_allowed": false,
+  "all_data_previously_exposed": true,
+  "protocol": {
+    "path": "linear-followup-20261111/protocols/c18-review-followup-v001-frozen.md",
+    "sha256": "00aee40005399af1df692671e757d998f937eeb939817a5251b6ff478a92de0d"
+  },
+  "runtime_addendum": {
+    "path": "linear-followup-20261111/protocols/c18-review-runtime-addendum-v001.md",
+    "sha256": "a5397df92507fb59736448d44dc1906e2ee0cbae90580ad83e90e150067e4d4b"
+  },
+  "limits": {
+    "path": "linear-followup-20261111/configs/limits-v001.json",
+    "sha256": "5585ebee34a5357c1bc1390bd21a61e4dbf182c43a7bdbfc2635479b7fb53305"
+  },
+  "producer": {
+    "path": "linear-followup-20261111/code/c18_own_controls_v001.py",
+    "sha256": "a2991ed7cdd0e62d73383165262a624d043c3c17deb611b15557538aed446aa4"
+  },
+  "fit_ids": [
+    61,
+    79,
+    14,
+    9,
+    27,
+    60,
+    46,
+    72,
+    75,
+    63,
+    71,
+    6,
+    21,
+    43,
+    54,
+    59,
+    29,
+    17,
+    31,
+    42,
+    64,
+    32,
+    70,
+    23,
+    76,
+    7,
+    10,
+    41,
+    47,
+    74,
+    44,
+    69,
+    56,
+    45,
+    50,
+    73,
+    4,
+    49,
+    51,
+    16,
+    65
+  ],
+  "roles": [
+    {
+      "role": "development",
+      "ids": [
+        18,
+        53,
+        78,
+        20,
+        12,
+        11,
+        81,
+        8,
+        3,
+        30,
+        13,
+        24,
+        48,
+        66
+      ],
+      "records": [
+        {
+          "id": 18,
+          "rows": 37732,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-development-v001/profile_18_predictions.npz",
+            "sha256": "70d33133a4891de2a6574e9b855aaa41269f63713a3e7589c28faaff495c6f6e"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_18_truth.npz",
+            "sha256": "4caa9a989af9af554981429dd06c82ae09251ceee238b8b2448aa8cb86b401fe"
+          }
+        },
+        {
+          "id": 53,
+          "rows": 32442,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-development-v001/profile_53_predictions.npz",
+            "sha256": "cc234f97a60f4442eebaf887f531ef21a89a083a7975a10463db932901471d7d"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_53_truth.npz",
+            "sha256": "401a6d2715ca6895761337c2921ca39509d144cfcb2a9c38abaadfedb39a6d1b"
+          }
+        },
+        {
+          "id": 78,
+          "rows": 8445,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-development-v001/profile_78_predictions.npz",
+            "sha256": "af7d73152c13b7bc661ca5bb21e8ddfaabd60882e18d85dd1baee6bc4b31fc99"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_78_truth.npz",
+            "sha256": "e7247c1ce55d44a3a51152ad92cd583871bf7f0ae8f99c2e04ac2732902bb258"
+          }
+        },
+        {
+          "id": 20,
+          "rows": 43971,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-development-v001/profile_20_predictions.npz",
+            "sha256": "ea33479aa60ddf09b5a7e35f087aefee11ba8de4becf32f97de089db37f38f09"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_20_truth.npz",
+            "sha256": "bac022ec20c1df93855dca88c31db604c1fbe2930d92777175d09b3a97af5502"
+          }
+        },
+        {
+          "id": 12,
+          "rows": 21942,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-development-v001/profile_12_predictions.npz",
+            "sha256": "339d9cda1eba38102f72ad747126e908f049f0661cbf6fc981e374253903b0c9"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_12_truth.npz",
+            "sha256": "0b67fe49a3851b103fa80e72f91db29623b839728bacd7e35965764f4d70263d"
+          }
+        },
+        {
+          "id": 11,
+          "rows": 7887,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-development-v001/profile_11_predictions.npz",
+            "sha256": "df15cccdf4a236c0dcbc3691ea7abf02e24099cf8e214344a91a7fe9b2d0e9eb"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_11_truth.npz",
+            "sha256": "31989e744ab1770d4f77d2cd7612beb5aefc08437a9acad1802ef1761a658c36"
+          }
+        },
+        {
+          "id": 81,
+          "rows": 17672,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-development-v001/profile_81_predictions.npz",
+            "sha256": "8e5bbf9a0b6c1034c5b262bd03276b80d4573af0dbb93f2f0d6e6eb40ffee668"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_81_truth.npz",
+            "sha256": "cc82492970a79741ddf4c92856527af59664f435a0e8cf9ae01b1e385a60b9de"
+          }
+        },
+        {
+          "id": 8,
+          "rows": 18757,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-development-v001/profile_8_predictions.npz",
+            "sha256": "db39391e31aa9b55caea8d0e24bbf419054d62e1b9c854bdf1346d321ddb3f08"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_8_truth.npz",
+            "sha256": "475fbc124c4be2c4b33e7b45fbc63bf9bab222a86e1beb92151a5302c76b396b"
+          }
+        },
+        {
+          "id": 3,
+          "rows": 19248,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-development-v001/profile_3_predictions.npz",
+            "sha256": "4c700fbcb18d64a434f5d3a30c8e8f4d1940bdfc425939e0727ad10d0f372d73"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_3_truth.npz",
+            "sha256": "55926a1b4346a357477e15bc5e1d7e2da2a65aed68ffa0f31547491e966bb63f"
+          }
+        },
+        {
+          "id": 30,
+          "rows": 23863,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-development-v001/profile_30_predictions.npz",
+            "sha256": "115915811f48bd28370874a2886232980d8b3c5b0a0f7bda169b3c4c4618f273"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_30_truth.npz",
+            "sha256": "69e0942b7f9d4d772705fefdc2ae79f8fff16d4ecc4b8bedf428c613913b2dcb"
+          }
+        },
+        {
+          "id": 13,
+          "rows": 35906,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-development-v001/profile_13_predictions.npz",
+            "sha256": "e2ed4496223d575a7b117b2629d01b210f9606836054ca8cac828d7899d0afff"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_13_truth.npz",
+            "sha256": "efbb6feb840519dc5f02c2dafea2b42655d9046243def23e013bbdb4f2f1c376"
+          }
+        },
+        {
+          "id": 24,
+          "rows": 15015,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-development-v001/profile_24_predictions.npz",
+            "sha256": "fd3325845a3ea40fea5cdc28dbef58640a71465dd421ade7a52d9ae34cba385a"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_24_truth.npz",
+            "sha256": "d9d6653d74cc0a12ace0fa00d8cebc751b973942693e212b1d89eca1432a8540"
+          }
+        },
+        {
+          "id": 48,
+          "rows": 21983,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-development-v001/profile_48_predictions.npz",
+            "sha256": "92957ab39095eb14806cbace25e4de0f2bc20063d3e8e4efc88cf3e672e7e076"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_48_truth.npz",
+            "sha256": "78ff446b3c6c33d5df05a7bb7d1dc0f5185e8ff35d453e80a6fe8c5f8e716c79"
+          }
+        },
+        {
+          "id": 66,
+          "rows": 36476,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-development-v001/profile_66_predictions.npz",
+            "sha256": "38503e1093d913650be2f8cc4883c30a78fa4e0aa4c0b231e6bfc9a4a9347d52"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-development-v001/profile_66_truth.npz",
+            "sha256": "f299c0ad87c8b86aa7b3229086345c64ba5968dced6d23558e745975b8e9436f"
+          }
+        }
+      ],
+      "prediction_lock": {
+        "path": "runs/c15-paper-paderborn-predict-development-v001/prediction_lock.json",
+        "sha256": "1efedfc5a3a139210bd38d614c185a384c7953c50449decac7b5010860a064d9"
+      },
+      "audit": {
+        "path": "runs/c15-paper-audit-paderborn-evaluation-development-v001/report.json",
+        "sha256": "c49909d794e4e0d7173382c9853c60b7cc703a8d1de9ba35f2a3296e0655f71a",
+        "auditor_path": "code/c15_paper_audit_v001.py",
+        "auditor_sha256": "9878f0511079b437dc01973db51ed7b932e317f022ce5823a4ed3d3b81075acb"
+      }
+    },
+    {
+      "role": "confirmation",
+      "ids": [
+        26,
+        19,
+        80,
+        55,
+        67,
+        52,
+        62,
+        57,
+        36,
+        2,
+        15,
+        68,
+        5,
+        58
+      ],
+      "records": [
+        {
+          "id": 26,
+          "rows": 16666,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_26_predictions.npz",
+            "sha256": "276d86bfc3e157eb67c78ac02c42710851693f7cf89c994d52f2c55273c930c3"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_26_truth.npz",
+            "sha256": "e265d1f706506947a26d9a986274bb0eed31fdbf2401edf5588bb1b7a9690a3b"
+          }
+        },
+        {
+          "id": 19,
+          "rows": 10410,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_19_predictions.npz",
+            "sha256": "2808e304dc590614cd92df8583de968fe670c2e90325be7231fbc5af559de639"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_19_truth.npz",
+            "sha256": "479d66dda9002112b3b982a54e250b6c72626923ed8b820f5665d86b9f2d3b09"
+          }
+        },
+        {
+          "id": 80,
+          "rows": 23824,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_80_predictions.npz",
+            "sha256": "aa5f1dde5be9e6704a1dee4a4ac0a25de3b54eb7fda4e3d4b759f483c47b811a"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_80_truth.npz",
+            "sha256": "33180cf99b121826456cc62555e0fd11ee7318f1266e26baa8b8f3cf5eb19a42"
+          }
+        },
+        {
+          "id": 55,
+          "rows": 10807,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_55_predictions.npz",
+            "sha256": "8672cebff2d461384a3edcb69dc9e94b0a758c88ed5edffdbbb9298a97c81f87"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_55_truth.npz",
+            "sha256": "454468e8e171de427bc2be4e85eac9a4b9036754ecdf27035dbb523bc42e12fc"
+          }
+        },
+        {
+          "id": 67,
+          "rows": 11135,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_67_predictions.npz",
+            "sha256": "ba2ddd7e1c148f64d6d5252a710dd3d17f9bc6af9c990c78e2d8b02c4d432f57"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_67_truth.npz",
+            "sha256": "63ee0f9f1024291a907859a8b0d6db012cda06969b644d51723b6d74c30db9bc"
+          }
+        },
+        {
+          "id": 52,
+          "rows": 3726,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_52_predictions.npz",
+            "sha256": "6375a53883e8586e9c660b7632ef9a9ed8e325a4cdddc15a1d695e8a5e67c9c4"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_52_truth.npz",
+            "sha256": "67e7ec2e05555f91e6a6ae23afd2aada04392e88b6bdd257d5d0e882a8cd2eef"
+          }
+        },
+        {
+          "id": 62,
+          "rows": 25600,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_62_predictions.npz",
+            "sha256": "b1c68cf6b287e499d71b4adb9ce23d5ae4c8f96eb44155072bb93232442639d6"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_62_truth.npz",
+            "sha256": "0259fd4bdefb25f8c77a82e0d1287b61d7e571f8a284280f3a53ea224773ad6f"
+          }
+        },
+        {
+          "id": 57,
+          "rows": 14403,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_57_predictions.npz",
+            "sha256": "180d98b5a6bdd0f702013ce82dfcfddda9677a0ee9cab8930360cddcf223755f"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_57_truth.npz",
+            "sha256": "b3fe7b463674ec812beca51e4522490067efa1956920a073d63d1631b57bdb39"
+          }
+        },
+        {
+          "id": 36,
+          "rows": 22609,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_36_predictions.npz",
+            "sha256": "832730f04e631b5fa5f6d61e2dabe030c449615a3252c594c5b75fd83e723b96"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_36_truth.npz",
+            "sha256": "927f65d6f8b6ef8067edb5b2d29c211c0923fc6bdd2c4e77113143b70ff133a6"
+          }
+        },
+        {
+          "id": 2,
+          "rows": 19357,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_2_predictions.npz",
+            "sha256": "059ee1453720494c96db0e6c6096a2db2edf1a412ba75d738ab220c893faa9e6"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_2_truth.npz",
+            "sha256": "e7eb50f74fba33038d9e7aa0f326b0995fc109ffeb8b305b76062869416cd713"
+          }
+        },
+        {
+          "id": 15,
+          "rows": 18124,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_15_predictions.npz",
+            "sha256": "e2088b0883eb8812817445507bc9a40b60983bbe282ca4eeaffbbf80d03f35db"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_15_truth.npz",
+            "sha256": "66b650a2324ab5cfa86f74bab9ead9c80a1a56d971a4c2055dd723d0a569f308"
+          }
+        },
+        {
+          "id": 68,
+          "rows": 23331,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_68_predictions.npz",
+            "sha256": "53d4abb9ff05bbfa404b4c52dd9fe8310ee4bdd87178847825ba4df3366683d3"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_68_truth.npz",
+            "sha256": "50ff5fe507fc29e3a6eaafd74486f1bd8b8f2c680b95fd7137562fe49652b404"
+          }
+        },
+        {
+          "id": 5,
+          "rows": 14788,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_5_predictions.npz",
+            "sha256": "77bfc833b463c259bdd4ead0f00f5741d4171872a7dc0f1e24ae718de170f3f4"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_5_truth.npz",
+            "sha256": "749c49110ab2bb687337abe19405a5e0bee3588e997e192996a524a30e036c57"
+          }
+        },
+        {
+          "id": 58,
+          "rows": 33382,
+          "features": {
+            "path": "runs/c15-paper-paderborn-predict-confirmation-v001/profile_58_predictions.npz",
+            "sha256": "7ec2432d1f62107c69f8b11c6551eaa02ce1d395e0d1cc7805495f35d89dcb08"
+          },
+          "truth": {
+            "path": "runs/c15-paper-paderborn-evaluate-confirmation-v001/profile_58_truth.npz",
+            "sha256": "f22b7329674e1817a53142c7e885ea8bf3f3ef6fc2dbb5aaa31b0ba034091768"
+          }
+        }
+      ],
+      "prediction_lock": {
+        "path": "runs/c15-paper-paderborn-predict-confirmation-v001/prediction_lock.json",
+        "sha256": "45c9dbb888f7a9ecc3ddd232848918b037c2dbea66b7ffa015d8cf806bcde484"
+      },
+      "audit": {
+        "path": "runs/c15-paper-audit-paderborn-evaluation-confirmation-v001/report.json",
+        "sha256": "c83691b7362b0fd98aa2dda9809f65f9282f18966732d1d662f29938a2baa9de",
+        "auditor_path": "code/c15_paper_audit_v001.py",
+        "auditor_sha256": "9878f0511079b437dc01973db51ed7b932e317f022ce5823a4ed3d3b81075acb"
+      }
+    }
+  ],
+  "own_config": {
+    "path": "linear-followup-20261111/configs/paderborn-own_boundary-initialization-v002.json",
+    "sha256": "21aee7ae7f043d302db23ca07f66b47980992d6a10719259e1710433f7e6d256"
+  },
+  "own_audit": {
+    "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-audit-v001/report.json",
+    "sha256": "0d5af3accbd59b09062a0f0746fa9abe2c2a7576b71570738330ac299c2870b3",
+    "auditor_path": "linear-followup-20261111/code/c18_initialization_audit_v001.py",
+    "auditor_sha256": "7673e07d4a5e02cad488edf5bbfa4122ff9bfde12c797158e81d5e1e71880299"
+  },
+  "own_model_lock": {
+    "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/model_lock.json",
+    "sha256": "4f208331709eafe47717dfc9762da5a5041b7bd63c2a13d3f4d2c8fb7134024b"
+  },
+  "own_prediction_lock": {
+    "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/prediction_lock.json",
+    "sha256": "6d1631cfd824c5e2a2b202cb6fb9bb3eb9b62fcc795eaf17650d7395cd87af83"
+  },
+  "training": {
+    "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/training.npz",
+    "sha256": "e6e3822cd81d7a6b7475907efce9a6c345ebbd22c955930bc786ade0255f3603"
+  },
+  "own_linear_model": {
+    "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json",
+    "sha256": "84e6ce0ef074f8cb78ad5830a0bd9c062a98027156c5462565e2b7ff0c26c60a"
+  },
+  "old_model_lock": {
+    "path": "runs/c15-paper-paderborn-assemble-v001/model_lock.json",
+    "sha256": "76ffe298bb5c3d53485d8de8d9dc68f87d5f3524f4a2c86c4130577cb27b395a"
+  },
+  "selection_audit": {
+    "path": "runs/c15-paper-audit-paderborn-selection-all-v001/report.json",
+    "sha256": "1a981ca37747191772170ebe747009762c21aa41e4db7624121ac79285e0f76a",
+    "auditor_path": "code/c15_paper_audit_v001.py",
+    "auditor_sha256": "9878f0511079b437dc01973db51ed7b932e317f022ce5823a4ed3d3b81075acb"
+  },
+  "old_free_receipt": {
+    "path": "runs/c15-paper-paderborn-linear-final-v001/linear_final__free__tuned/receipt.json",
+    "sha256": "5a9f736ae6302ffa4bcbdd4e42db3f77ca386892c42d7ae4ed5e21dd781f44fc"
+  },
+  "old_free_model": {
+    "path": "runs/c15-paper-paderborn-linear-final-v001/linear_final__free__tuned/model.json",
+    "sha256": "e5ceed5ade46788a88c96725d9951cd1592790f579cbe3eee875b5860d1450c8"
+  },
+  "free_lambda": 0.0001,
+  "d9_configuration": {
+    "learning_rate": 0.05,
+    "min_samples_leaf": 20,
+    "l2_regularization": 0.1,
+    "loss": "squared_error",
+    "early_stopping": false,
+    "random_state": 2026111201,
+    "max_leaf_nodes": 15,
+    "max_iter": 1000
+  },
+  "direct200_configuration": {
+    "learning_rate": 0.05,
+    "min_samples_leaf": 20,
+    "l2_regularization": 0.1,
+    "loss": "squared_error",
+    "early_stopping": false,
+    "random_state": 2026111201,
+    "max_leaf_nodes": 15,
+    "max_iter": 200
+  },
+  "capacity_configuration": {
+    "learning_rate": 0.05,
+    "min_samples_leaf": 20,
+    "l2_regularization": 0.1,
+    "loss": "squared_error",
+    "early_stopping": false,
+    "random_state": 2026111201,
+    "max_leaf_nodes": 15,
+    "max_iter": 1200
+  },
+  "methods": [
+    "d9",
+    "linear_prior",
+    "linear_residual",
+    "linear_half",
+    "prior_half",
+    "direct200",
+    "direct200_half",
+    "capacity_direct",
+    "free_prior",
+    "free_residual",
+    "free_half",
+    "mse_mlp_2026111701",
+    "mse_mlp_2026111702",
+    "mse_mlp_2026111703"
+  ],
+  "mlp_settings": {
+    "architecture": [
+      33,
+      64,
+      32,
+      1
+    ],
+    "parameters": 4289,
+    "activation": "ReLU",
+    "loss": "mse",
+    "epochs": 200,
+    "seeds": [
+      2026111701,
+      2026111702,
+      2026111703
+    ],
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "betas": [
+      0.9,
+      0.999
+    ],
+    "eps": 1e-08,
+    "weight_decay": 0.0001,
+    "batch_size": 4096,
+    "gradient_norm_cap": 1.0,
+    "warmup": 300,
+    "label_stride": 5,
+    "feature_std_floor": 1e-08,
+    "target_iqr_floor": 1.0,
+    "permutation": "NumPy PCG64(seed+epoch-1); full permutation; explicit int64",
+    "profile_weight": "N/(P*n_profile); weighted minibatch mean including final partial batch",
+    "precision": "FP64 transforms, FP32 CUDA network and weights, FP64 physical outputs",
+    "scheduler": null,
+    "early_stopping": false,
+    "checkpoint": "last epoch200",
+    "seed_aggregation": "mean of seed metrics; no seed selection or prediction ensemble"
+  },
+  "source_dependencies": {
+    "code/c15_paper_core_v001.py": "17c47c41c27b6e92618a44de0f5860f80ffd1357d998a4cfeb805f5e2d8b7b37",
+    "code/combination_c12_fit_rc_v001.py": "d4aa942ca9db8d8e9319197632cf376730456f3ea5cdc48b9d1c1fd51fc59412",
+    "code/c15_paper_mlp_v001.py": "4ecd405a408a5ec34a20103390f99893ac3264ab28600de0bbde491b58919dbb",
+    "code/c15_neural_rc_core_v001.py": "52d897657163391de6e1e42a51dad04550d5ca6f1dfc2a60f2e0041ec3f68a86",
+    "followup-risk-20261110/code/risk_mlp_v001.py": "54ec228ba97251b1b427845a57c8bd0f906729cab4d950e798eb8ffd9bc5cd7f",
+    "linear-followup-20261111/code/initialization_intervention_v002.py": "63108ce0700e7646dce34663b88542b4273eab052fd5bbb9d30d7d6aea39b046",
+    "linear-followup-20261111/code/linear_diagnostic_v002.py": "d799863cf6c7e19db7604a96c409bb70835c06ed9ad53871fc9ead5b510e3434"
+  },
+  "unchanged_selection": "Original FIT-selected lambda/D9; no own-arm reselection",
+  "new_fits": {
+    "cpu_boosters": 3,
+    "free26_prior": 1,
+    "mlp": 3
+  },
+  "max_stage_seconds": 3600,
+  "max_cuda_stage_seconds": 900,
+  "max_stage_output_bytes": 1000000000,
+  "original_mlp": [
+    {
+      "seed": 2026111701,
+      "model": {
+        "path": "followup-risk-20261110/runs/paderborn-mlp-mse-2026111701-v001/model.json",
+        "sha256": "4e03e7d0dfc49cfb31e8b4f354b7d5b1c5462ea8513a0baf659117aba49159a2"
+      },
+      "initial_weights": {
+        "path": "followup-risk-20261110/runs/paderborn-mlp-mse-2026111701-v001/weights_initial.npz",
+        "sha256": "b1fa7c36fda80e038d95d7c286a55721798c56719e32763cb33c83442bce4639"
+      },
+      "epoch_trace": {
+        "path": "followup-risk-20261110/runs/paderborn-mlp-mse-2026111701-v001/epoch_trace.json",
+        "sha256": "a1fad59197092fcd271ef54d131a28a2bcb84b3762d83ed41a13c9d4a9206fe4"
+      },
+      "audit": {
+        "path": "followup-risk-20261110/runs/paderborn-mlp-audit-mse-2026111701-v001/report.json",
+        "sha256": "def51af733a23354aa2f050843ad4761a22f811e4c1f7d621062da511b3132e4",
+        "auditor_path": "followup-risk-20261110/code/risk_audit_v001.py",
+        "auditor_sha256": "2cfb48953741515e8d9815073075bcc3e46c717c5110837d280acdb93a2bd035"
+      }
+    },
+    {
+      "seed": 2026111702,
+      "model": {
+        "path": "followup-risk-20261110/runs/paderborn-mlp-mse-2026111702-v001/model.json",
+        "sha256": "798995abaa2f9e056a507235cffb90a236fd6b4549740e755ae14bf7a5b0ff73"
+      },
+      "initial_weights": {
+        "path": "followup-risk-20261110/runs/paderborn-mlp-mse-2026111702-v001/weights_initial.npz",
+        "sha256": "bee157058c9405803eea1c6f5038f006cada3e3c9890acce6a63dce8652f1daf"
+      },
+      "epoch_trace": {
+        "path": "followup-risk-20261110/runs/paderborn-mlp-mse-2026111702-v001/epoch_trace.json",
+        "sha256": "194be86b94710ce36d6287426d9caba6ad2eb78359f8e1505e42a7dc515f6f59"
+      },
+      "audit": {
+        "path": "followup-risk-20261110/runs/paderborn-mlp-audit-mse-2026111702-v001/report.json",
+        "sha256": "25a1eec01340d7cf508893066f0109ef4529a9734e5261036d0339aa6c1c50f9",
+        "auditor_path": "followup-risk-20261110/code/risk_audit_v001.py",
+        "auditor_sha256": "2cfb48953741515e8d9815073075bcc3e46c717c5110837d280acdb93a2bd035"
+      }
+    },
+    {
+      "seed": 2026111703,
+      "model": {
+        "path": "followup-risk-20261110/runs/paderborn-mlp-mse-2026111703-v001/model.json",
+        "sha256": "2b57ff914cd00a30981969b1a62e62562251559c94a91ebac835401010c11c1b"
+      },
+      "initial_weights": {
+        "path": "followup-risk-20261110/runs/paderborn-mlp-mse-2026111703-v001/weights_initial.npz",
+        "sha256": "bd14fe5f0e57ecb4fe43b25f501b0f27dfbcd17dcd93cd2d916f8507a49c7269"
+      },
+      "epoch_trace": {
+        "path": "followup-risk-20261110/runs/paderborn-mlp-mse-2026111703-v001/epoch_trace.json",
+        "sha256": "f68341a261f08f86c01b9a431485a6d9f545872c98a15fe512ae70b8d350ff79"
+      },
+      "audit": {
+        "path": "followup-risk-20261110/runs/paderborn-mlp-audit-mse-2026111703-v001/report.json",
+        "sha256": "48474da65928ed32beb828e2c5f05c608d1d431af611c070ec2d7b5b43ffc849",
+        "auditor_path": "followup-risk-20261110/code/risk_audit_v001.py",
+        "auditor_sha256": "2cfb48953741515e8d9815073075bcc3e46c717c5110837d280acdb93a2bd035"
+      }
+    }
+  ]
+}

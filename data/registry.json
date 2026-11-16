@@ -1,0 +1,467 @@
+{
+  "schema": "pmsm-data-registry-v1",
+  "audit_date": "2026-11-16",
+  "raw_data_in_repository": false,
+  "network_executed_for_dataset_payloads": false,
+  "hash_semantics": {
+    "sha256": "SHA-256 of the exact unmodified file bytes",
+    "git_blob_sha1": "SHA-1 of ASCII blob + space + decimal byte length + NUL + exact file bytes, not SHA-1(file bytes)",
+    "md5": "Upstream legacy checksum retained for corroboration; SHA-256 is also supplied"
+  },
+  "datasets": {
+    "ipmsm": {
+      "title": "IPMSM measurements accompanying LPTN-informed LSTM",
+      "landing_url": "https://github.com/Zirui24/lptn_informed_LSTM/tree/98e4566b5fb7c70499996fda18dd73179ec16509",
+      "repository": "Zirui24/lptn_informed_LSTM",
+      "commit": "98e4566b5fb7c70499996fda18dd73179ec16509",
+      "version_date": "2024-06-05",
+      "license_id": "MIT",
+      "license_scope_status": "Repository MIT license verified; dataset-specific grant not separately explicit or independently certified",
+      "license_url": "https://github.com/Zirui24/lptn_informed_LSTM/blob/98e4566b5fb7c70499996fda18dd73179ec16509/LICENSE",
+      "attribution": "Zirui Liu, 2024; repository and paper DOI 10.1109/TPEL.2024.3409388",
+      "redistribution_policy_for_this_package": "External acquisition only; do not bundle raw CSVs or assert a separately established dataset redistribution grant",
+      "downloads": [
+        {
+          "id": 0,
+          "source_path": "dataset/id_0.csv",
+          "local_path": "data/raw/ipmsm/id_0.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_0.csv",
+          "bytes": 1442832,
+          "sha256": "ac80fb2268949165199c4b9f5d550322c1abdae235c70c4ba5ec89e1efb9f508",
+          "git_blob_sha1": "d61e4411b3d7a9660d860ac5b6c776b174382a7a"
+        },
+        {
+          "id": 1,
+          "source_path": "dataset/id_1.csv",
+          "local_path": "data/raw/ipmsm/id_1.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_1.csv",
+          "bytes": 205237,
+          "sha256": "1e935c5cd9d82e5d2113c2caa2316cc221542b39b36e6296846d92bb9199fbca",
+          "git_blob_sha1": "3ba17928f61f7e3d276632319b96d4b8949dd8d9"
+        },
+        {
+          "id": 2,
+          "source_path": "dataset/id_2.csv",
+          "local_path": "data/raw/ipmsm/id_2.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_2.csv",
+          "bytes": 1624776,
+          "sha256": "ecd51af34724048db89fbd53167ee530ade322d965f106806f940f6e6aa85e05",
+          "git_blob_sha1": "4bf51459dafd45093fed642646d90a69580e9bd0"
+        },
+        {
+          "id": 3,
+          "source_path": "dataset/id_3.csv",
+          "local_path": "data/raw/ipmsm/id_3.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_3.csv",
+          "bytes": 1045282,
+          "sha256": "3e0600a7698f506f3c888561682db631d8c3419bc02ddd77d04b49fe410a0ffd",
+          "git_blob_sha1": "db574cf13a45626adcce62471236b0a8813c68f8"
+        },
+        {
+          "id": 4,
+          "source_path": "dataset/id_4.csv",
+          "local_path": "data/raw/ipmsm/id_4.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_4.csv",
+          "bytes": 1325219,
+          "sha256": "193881116fff5686e854072c02809c9b83ee950f04dacc2f886171ac70a397ee",
+          "git_blob_sha1": "43f6f7521fcc2817df6d8c281949ff9e2e82c1ea"
+        },
+        {
+          "id": 5,
+          "source_path": "dataset/id_5.csv",
+          "local_path": "data/raw/ipmsm/id_5.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_5.csv",
+          "bytes": 1447796,
+          "sha256": "c2a0c14c54a9d134bc974245bb6bb105bfe7768b0894b7fc879b85c941616da9",
+          "git_blob_sha1": "1fcbc369f0bb5fe1a313b26ac207d43d87a6d126"
+        },
+        {
+          "id": 6,
+          "source_path": "dataset/id_6.csv",
+          "local_path": "data/raw/ipmsm/id_6.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_6.csv",
+          "bytes": 889993,
+          "sha256": "b0c4f6abb5ef188b34654decf4bb1f54de565c3c01466d7268b9096137e805ae",
+          "git_blob_sha1": "1b4b96e64723ec4b18c0a0626a50f81c0394d736"
+        },
+        {
+          "id": 7,
+          "source_path": "dataset/id_7.csv",
+          "local_path": "data/raw/ipmsm/id_7.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_7.csv",
+          "bytes": 1078869,
+          "sha256": "cbe354e4f6a878529c4106b0522fec5bf64c00c02f27b9365ee42a734cf68951",
+          "git_blob_sha1": "a252e5567759bfaff678166d0b8fbebfc9bafb38"
+        },
+        {
+          "id": 8,
+          "source_path": "dataset/id_8.csv",
+          "local_path": "data/raw/ipmsm/id_8.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_8.csv",
+          "bytes": 620765,
+          "sha256": "9625553ef2b8cf5acb5591c0c1d7a5c366853e64cb15e13bbeee28a78a0021be",
+          "git_blob_sha1": "8661b2bd867d22cfe284744d00adfbcb44a3db45"
+        },
+        {
+          "id": 9,
+          "source_path": "dataset/id_9.csv",
+          "local_path": "data/raw/ipmsm/id_9.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_9.csv",
+          "bytes": 491397,
+          "sha256": "687d09158b10858b0f36b574e537329b3ed52f299a5d46a179c0805433e986b9",
+          "git_blob_sha1": "053c304b7efedc4fe59d00b9607251edc0fbe1fd"
+        },
+        {
+          "id": 10,
+          "source_path": "dataset/id_10.csv",
+          "local_path": "data/raw/ipmsm/id_10.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_10.csv",
+          "bytes": 229217,
+          "sha256": "4c31edb82d93ea5aeeeceaab3ec8d51e9c6c3037abf73cf53b8c6d97ac178369",
+          "git_blob_sha1": "138d795e43a9de2de16795c43ecc8d550a28a19d"
+        },
+        {
+          "id": 11,
+          "source_path": "dataset/id_11.csv",
+          "local_path": "data/raw/ipmsm/id_11.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_11.csv",
+          "bytes": 837412,
+          "sha256": "a0157d3b0f26d0a89be237fb23091a3eb49a4f1775208c1a9479186a48e1c939",
+          "git_blob_sha1": "359089c202bb55a42a92d5de4e397f333f50f0a8"
+        },
+        {
+          "id": 12,
+          "source_path": "dataset/id_12.csv",
+          "local_path": "data/raw/ipmsm/id_12.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_12.csv",
+          "bytes": 683779,
+          "sha256": "804e0a67796141a79fae0c338909091b9a380fef8d9fc331353dc330e1a0b347",
+          "git_blob_sha1": "4c9401cdaac7511c3f306752fa76b6fd6318c33a"
+        },
+        {
+          "id": 13,
+          "source_path": "dataset/id_13.csv",
+          "local_path": "data/raw/ipmsm/id_13.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_13.csv",
+          "bytes": 847227,
+          "sha256": "ebc8942e8b0c3cb71d846853b336157dda05cc61b4d50c5d217eff6952886253",
+          "git_blob_sha1": "bcff2a5dd60d1e099a72e47fb8ba5332bceb4b73"
+        },
+        {
+          "id": 14,
+          "source_path": "dataset/id_14.csv",
+          "local_path": "data/raw/ipmsm/id_14.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_14.csv",
+          "bytes": 1936983,
+          "sha256": "800cd2d628fc757ddde0719b34a147af2ba4ab63c8945c74ee294b0517972ad9",
+          "git_blob_sha1": "8dc0db7afff363a0f774f25319bd39f5baffb84b"
+        },
+        {
+          "id": 15,
+          "source_path": "dataset/id_15.csv",
+          "local_path": "data/raw/ipmsm/id_15.csv",
+          "url": "https://raw.githubusercontent.com/Zirui24/lptn_informed_LSTM/98e4566b5fb7c70499996fda18dd73179ec16509/dataset/id_15.csv",
+          "bytes": 687532,
+          "sha256": "c7e023498cf8882880fa6288fe2f12d4aedf0f1b27e91064a5eeffcbcb1a6908",
+          "git_blob_sha1": "7b62fe05de1fc531529e4bcb7c84d1c822d34955"
+        }
+      ],
+      "excluded_upstream_files": [
+        "dataset/temperature.csv"
+      ],
+      "total_input_bytes": 15394316
+    },
+    "paderborn": {
+      "title": "Electric Motor Temperature",
+      "landing_url": "https://www.kaggle.com/datasets/wkirgsn/electric-motor-temperature/versions/3",
+      "version_doi": "10.34740/KAGGLE/DSV/2161054",
+      "dataset_id": 236410,
+      "dataset_version_record": 2161054,
+      "version_number": 3,
+      "version_date": "2021-04-26",
+      "license_id": "CC-BY-SA-4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "attribution": "Wilhelm Kirchgässner, Oliver Wallscheid, Joachim Böcker; LEA, Paderborn University; Kaggle wkirgsn/electric-motor-temperature",
+      "redistribution_policy_for_this_package": "External acquisition only. License permits sharing with attribution/license notice; adapted licensed material requires ShareAlike. Keep dataset terms distinct from original code license.",
+      "downloads": [
+        {
+          "url": "https://www.kaggle.com/api/v1/datasets/download/wkirgsn/electric-motor-temperature?dataset_version_number=3&file_name=measures_v2.csv",
+          "local_path": "data/raw/paderborn/measures_v2.csv.zip",
+          "bytes": 122212134,
+          "sha256": "cf645265252b858965a4c1b59c08c3cac3e3f0a7f7dacbb74c1cdfebaad51938",
+          "format": "zip",
+          "members": [
+            {
+              "archive_path": "measures_v2.csv",
+              "local_path": "data/raw/paderborn/measures_v2.csv",
+              "bytes": 300061411,
+              "sha256": "78f3d150f0f2ad9c5dc7ff24dd12c00d386ad530f48c1589ad24fcd88867d3ad"
+            }
+          ]
+        }
+      ],
+      "download_notes": [
+        "Pinned query requests dataset_version_number=3. On 2026-11-10 it returned a single-member ZIP despite file_name=measures_v2.csv.",
+        "Do not save an expired signed storage redirect URL. Use stable Kaggle source or manual version-3 download.",
+        "No download was tested in this audit. Current metadata API view request returned404; manual official-page fallback must remain available.",
+        "ZIP SHA is the exact previously acquired transport, not a guarantee that future recompression retains identical ZIP bytes; extracted CSV SHA is the semantic file identity."
+      ]
+    },
+    "rwth": {
+      "title": "Drive Cycle Measurement Data with rotor and stator temperature from a 48V dual three-phase permanent magnet radial flux synchronous machine",
+      "landing_url": "https://zenodo.org/records/15599966",
+      "version_doi": "10.5281/zenodo.15599966",
+      "record_id": 15599966,
+      "version_date": "2025-06-05",
+      "license_id": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "attribution": "Anna Isabel Ramones, Samuel Kieling, Michael Engels, Jakob Andert, 2025",
+      "redistribution_policy_for_this_package": "External acquisition only; license permits sharing with attribution, license link, and change indication.",
+      "downloads": [
+        {
+          "url": "https://zenodo.org/records/15599966/files/DriveCycles.zip?download=1",
+          "local_path": "data/raw/rwth/DriveCycles.zip",
+          "bytes": 3789917,
+          "sha256": "a6b219a17acbbc2a9899fa7d750e1b0531756eeefcf16efd56009c43a0c4fce6",
+          "md5": "2a6c8801f050b14a05feaf4091175693",
+          "format": "zip",
+          "members": [
+            {
+              "archive_path": "final/001.csv",
+              "local_path": "data/raw/rwth/final/001.csv",
+              "bytes": 260868,
+              "sha256": "c5e6158d25aaca2ca2eb5b021ce1eb3ab3aabff124bdbc56a92b48f1f45b2adb"
+            },
+            {
+              "archive_path": "final/002.csv",
+              "local_path": "data/raw/rwth/final/002.csv",
+              "bytes": 202679,
+              "sha256": "3b702a844d1efd6261c778a3a36df7dbd2bdd4c2bf5ca17f7fa54a99c6a377e5"
+            },
+            {
+              "archive_path": "final/003.csv",
+              "local_path": "data/raw/rwth/final/003.csv",
+              "bytes": 187396,
+              "sha256": "9d1daf76a075e8dc6191a1ce9da9c8d232def8a26ae17f1185a37f17d5593834"
+            },
+            {
+              "archive_path": "final/004.csv",
+              "local_path": "data/raw/rwth/final/004.csv",
+              "bytes": 141057,
+              "sha256": "ef051c1ccf609871096a71d80b24bfc3d02f09b8004badf7aaf867d5e59ae72a"
+            },
+            {
+              "archive_path": "final/005.csv",
+              "local_path": "data/raw/rwth/final/005.csv",
+              "bytes": 232091,
+              "sha256": "d64dc33fbf7dd117120f1c2cb76125a54ebb01db6ca4a5d772b3192e0504b0f5"
+            },
+            {
+              "archive_path": "final/006.csv",
+              "local_path": "data/raw/rwth/final/006.csv",
+              "bytes": 154726,
+              "sha256": "0d65b95212430073fae038960903fac02b4d0305492a6e1edbe813b6926bd370"
+            },
+            {
+              "archive_path": "final/007.csv",
+              "local_path": "data/raw/rwth/final/007.csv",
+              "bytes": 148311,
+              "sha256": "800a25fb9e2d6aec1d8315a3b4afdc921084281f66f60c036f2d58837a51927e"
+            },
+            {
+              "archive_path": "final/008.csv",
+              "local_path": "data/raw/rwth/final/008.csv",
+              "bytes": 476727,
+              "sha256": "96462a4d70851269a8682931611bee81fd683c6dc1efa1e13f9e17d6fd506026"
+            },
+            {
+              "archive_path": "final/009.csv",
+              "local_path": "data/raw/rwth/final/009.csv",
+              "bytes": 163625,
+              "sha256": "7c228acbe736c12ae9ced047d4ac3b29dc0a47e208d24a4b4f79f5bb236f016e"
+            },
+            {
+              "archive_path": "final/010.csv",
+              "local_path": "data/raw/rwth/final/010.csv",
+              "bytes": 85957,
+              "sha256": "5f0670e788e015b8fca3b265afac0c5930866fb3a2a948a4a0f0c56915cf47f7"
+            },
+            {
+              "archive_path": "final/011.csv",
+              "local_path": "data/raw/rwth/final/011.csv",
+              "bytes": 115613,
+              "sha256": "461a8392a5e1b87b15582b4d6283edeba95b0ffff255c190b921aaeb8cbc7824"
+            },
+            {
+              "archive_path": "final/012.csv",
+              "local_path": "data/raw/rwth/final/012.csv",
+              "bytes": 7980,
+              "sha256": "81d3cd67102d80d5f4f16bccdacd264d1cf4ce4552d3eab283299608db091ec9"
+            },
+            {
+              "archive_path": "final/013.csv",
+              "local_path": "data/raw/rwth/final/013.csv",
+              "bytes": 159395,
+              "sha256": "75e99f121aeb839bcc991913ab1122c779d14af734a0bf2165fad4cb81ed21d5"
+            },
+            {
+              "archive_path": "final/014.csv",
+              "local_path": "data/raw/rwth/final/014.csv",
+              "bytes": 7044,
+              "sha256": "45c6abbeb41a1b5e38e53ae1ca8cf48793706fe30fca397899a31cadfcf047ad"
+            },
+            {
+              "archive_path": "final/015.csv",
+              "local_path": "data/raw/rwth/final/015.csv",
+              "bytes": 274855,
+              "sha256": "cd55388427ad970fa6f54b067ada20bf39f34ae9d28ced8953c0c4f645083545"
+            },
+            {
+              "archive_path": "final/016.csv",
+              "local_path": "data/raw/rwth/final/016.csv",
+              "bytes": 269679,
+              "sha256": "9868a50d27d5dd7ed9a01dc0381aad68917cae2198c94f4657dcdcf20f4f8032"
+            },
+            {
+              "archive_path": "final/017.csv",
+              "local_path": "data/raw/rwth/final/017.csv",
+              "bytes": 425004,
+              "sha256": "ebf326efdfcdd9f08e8421a276038ab409da868286ececc46d17f519493ce37a"
+            },
+            {
+              "archive_path": "final/018.csv",
+              "local_path": "data/raw/rwth/final/018.csv",
+              "bytes": 66938,
+              "sha256": "19f1191fc957fbcf28de6ed294a185e26b8ac8d7d31d26f9ca1b31e18d4ca374"
+            },
+            {
+              "archive_path": "final/019.csv",
+              "local_path": "data/raw/rwth/final/019.csv",
+              "bytes": 174435,
+              "sha256": "d389b89f3a54762905021b2bfada4f463790dddbeb98e57013549629bd4af4c9"
+            },
+            {
+              "archive_path": "final/020.csv",
+              "local_path": "data/raw/rwth/final/020.csv",
+              "bytes": 526716,
+              "sha256": "e3d959beca690882c9b74d6af9fa2472dca6275d5edfc08d09d2ab4ad8bfb373"
+            },
+            {
+              "archive_path": "final/021.csv",
+              "local_path": "data/raw/rwth/final/021.csv",
+              "bytes": 339106,
+              "sha256": "6d7ac6886c333ffb9faaf1b88f9ac9669470f47344cbcc78d21c47511a63721b"
+            },
+            {
+              "archive_path": "final/022.csv",
+              "local_path": "data/raw/rwth/final/022.csv",
+              "bytes": 364122,
+              "sha256": "fd33e007a1459181c86b5299d4af46c4a4ae0084e28a9ed1ba26779235922ffe"
+            },
+            {
+              "archive_path": "final/023.csv",
+              "local_path": "data/raw/rwth/final/023.csv",
+              "bytes": 6317,
+              "sha256": "f4f9a7585f6b66ff9415fa4c2ecc89f9e8e354727022e000794bd64c98e5f2a7"
+            },
+            {
+              "archive_path": "final/024.csv",
+              "local_path": "data/raw/rwth/final/024.csv",
+              "bytes": 508695,
+              "sha256": "1728a37fb91c355314e202a957af0298b12725a76cd643f0ebbe9c66a8c52726"
+            },
+            {
+              "archive_path": "final/025.csv",
+              "local_path": "data/raw/rwth/final/025.csv",
+              "bytes": 326337,
+              "sha256": "2b3bb177dc5c8ebcf80b798b4a2ab4eed656635177cf670007a5e314b89e14d7"
+            },
+            {
+              "archive_path": "final/026.csv",
+              "local_path": "data/raw/rwth/final/026.csv",
+              "bytes": 96417,
+              "sha256": "810a03d9ebbbe489584c82f79940d92aa566bec2346969de493d5e5ab1889b4b"
+            },
+            {
+              "archive_path": "final/027.csv",
+              "local_path": "data/raw/rwth/final/027.csv",
+              "bytes": 442713,
+              "sha256": "0536d50e4aad012e5feadca64418eaecf2ca1d5ffdc41784b6ba221719393a15"
+            },
+            {
+              "archive_path": "final/028.csv",
+              "local_path": "data/raw/rwth/final/028.csv",
+              "bytes": 159611,
+              "sha256": "959fa4beca87b72bd779c2b54be730278c9d2ae40b7d1b30942815a725b119d8"
+            },
+            {
+              "archive_path": "final/029.csv",
+              "local_path": "data/raw/rwth/final/029.csv",
+              "bytes": 969603,
+              "sha256": "117b92c38f5cb64a53d5db669bf8fe30c1b951012f28912181257701dcdffc05"
+            },
+            {
+              "archive_path": "final/030.csv",
+              "local_path": "data/raw/rwth/final/030.csv",
+              "bytes": 250743,
+              "sha256": "93abe09e685dd27d06e89471883edbf7ab61a632b17261948465c3a34886ae90"
+            },
+            {
+              "archive_path": "final/031.csv",
+              "local_path": "data/raw/rwth/final/031.csv",
+              "bytes": 224738,
+              "sha256": "16f9aeda991f0e9ddbafb45c3e22e49dac1c0b7dfb59c9f13f9e5399ec4a809f"
+            },
+            {
+              "archive_path": "final/032.csv",
+              "local_path": "data/raw/rwth/final/032.csv",
+              "bytes": 729243,
+              "sha256": "29d112eb3ec23e5961fdcd7bdac98292e5a123e6f93ebec7e5eada90bea37c34"
+            },
+            {
+              "archive_path": "final/033.csv",
+              "local_path": "data/raw/rwth/final/033.csv",
+              "bytes": 912485,
+              "sha256": "3e75e0b6e1e42ed4e9805596accef8084cbc34b879f47fa262c29b2a70deae4a"
+            },
+            {
+              "archive_path": "final/034.csv",
+              "local_path": "data/raw/rwth/final/034.csv",
+              "bytes": 300167,
+              "sha256": "04ff63013582939928b739566ae8ad6f07f192600a9b31b49f5132bd887cb109"
+            },
+            {
+              "archive_path": "final/035.csv",
+              "local_path": "data/raw/rwth/final/035.csv",
+              "bytes": 356661,
+              "sha256": "3e1dfce94b74f94b09de3b08cda4ac99996b4bf281a982630f8ac19c3ce846ac"
+            },
+            {
+              "archive_path": "final/036.csv",
+              "local_path": "data/raw/rwth/final/036.csv",
+              "bytes": 135679,
+              "sha256": "dbbb78b7e388e16c64a819e663c7b9c48859bc4ce10d3e8c06227b8f49c8ea2b"
+            },
+            {
+              "archive_path": "final/037.csv",
+              "local_path": "data/raw/rwth/final/037.csv",
+              "bytes": 503978,
+              "sha256": "7a3c02147dee5ebcec84453d969e42ac2eeaa2332f277f6895f2e2f87ae76520"
+            },
+            {
+              "archive_path": "final/038.csv",
+              "local_path": "data/raw/rwth/final/038.csv",
+              "bytes": 859722,
+              "sha256": "7d2f8266d271e09dbb291b4cc88b6537dcd28e212921082374bd005a38f6f6bb"
+            }
+          ]
+        }
+      ],
+      "download_notes": [
+        "Use version DOI15599966, not concept DOI15599965.",
+        "Current Zenodo API metadata request returned403; DataCite DOI registration was200 and confirms CC BY4.0. No new dataset payload request was made."
+      ]
+    }
+  },
+  "source_identity_only": "Historical experimental roles, exposure state, and old C15 protocol are deliberately not copied into this acquisition registry. Published experiment partitions belong in separate experiment configurations."
+}

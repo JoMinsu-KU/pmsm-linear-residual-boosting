@@ -1,0 +1,3016 @@
+{
+  "created_at_utc": "2026-11-11T09:26:34.509842+00:00",
+  "status": "METADATA_AND_BYTE_UNION_CHECKS_PASS",
+  "metadata_audit_generator": {
+    "path": "linear-followup-20261111/manuscript-v001/reproducibility/_build_cost_reproducibility_v001.py",
+    "sha256": "e4e0b3997dc83fe63789edae446df789a9c37a4d29edc557c8c23bbd35a1e463",
+    "bytes": 25157
+  },
+  "measurement_code": {
+    "path": "linear-followup-20261111/code/c18_streaming_cost_v003.py",
+    "sha256": "aa96c3fb8144d0e383277b8386a1638fe7fce2e5363cedb4a46de96303e305e9",
+    "bytes": 27004
+  },
+  "original_cost_auditor": {
+    "path": "linear-followup-20261111/code/c18_streaming_cost_audit_v003.py",
+    "sha256": "f7460e403332dca47796606425feddf10d7243e989bcb5324e3f2998fcc9f71e",
+    "bytes": 16858
+  },
+  "comparison": {
+    "path": "linear-followup-20261111/review/c18-streaming-comparison-v001.json",
+    "sha256": "4b24e9b2109b8fb0c4158f031f6e3e8deca593c286641558d1f6666e064f7654",
+    "bytes": 23364
+  },
+  "scope": "Existing JSON/selectors and file hashes/sizes only; no model unpickle, NPZ decoding, training, inference or benchmark.",
+  "schema": "c18-deployment-artifacts-reproducibility-v001",
+  "panels": [
+    {
+      "dataset": "ipmsm",
+      "arm": "original",
+      "role": "calibration",
+      "profile_id": 1,
+      "config": {
+        "path": "linear-followup-20261111/configs/streaming-ipmsm-original-main-v003.json",
+        "sha256": "59aab7547626d6369892d18d5187f0ac5f5263f1176ccc1608ef84cec30859ba",
+        "bytes": 15932
+      },
+      "summary": {
+        "path": "linear-followup-20261111/runs/streaming-ipmsm-original-main-v003/summary.json",
+        "sha256": "fa19a2a6f820b098042ccfb5f3e766cf0fe2d2f1cec6c51afd5c508be8459ed9",
+        "bytes": 31452
+      },
+      "original_independent_audit": {
+        "path": "linear-followup-20261111/runs/streaming-ipmsm-original-audit-v003/report.json",
+        "sha256": "e28e572252f7d72ec0e6192b71982eb5a295821c506ba50914b0bdc1ce0dd93f",
+        "bytes": 17116
+      },
+      "runtime": {
+        "path": "linear-followup-20261111/runs/streaming-ipmsm-original-main-v003/runtime.json",
+        "sha256": "c3b6d2ae92b3dca6cea5a4d6cfd79f8f7af7f5646f41b3694814ee26980f4a33",
+        "bytes": 2454
+      },
+      "components": {
+        "d9": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.json",
+              "sha256": "63d05c36aa28aa1712420400fc8edbab07a4145da285fa3853222c752c941277",
+              "bytes": 3676
+            },
+            "scale": {
+              "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.json",
+              "sha256": "63d05c36aa28aa1712420400fc8edbab07a4145da285fa3853222c752c941277",
+              "bytes": 3676
+            },
+            "pickle": {
+              "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.pickle",
+              "sha256": "5250d486cf12fe044738fe1138b11495b417060f0b4e41fc7b94f9f95a7bd327",
+              "bytes": 494174
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "9461f9c674ece518cad818573051b0c48463f3ea373ec36d867521746cc72031",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 7,
+            "max_iter": 500
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.json",
+            "sha256": "63d05c36aa28aa1712420400fc8edbab07a4145da285fa3853222c752c941277",
+            "bytes": 3676
+          },
+          "selected_scale_sha256": "bda59adca949b9bda6c8e761df11a4bf1a38c525d3317f9f3533a54a90f67ca6"
+        },
+        "linear_residual_tree": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.json",
+              "sha256": "f831c5f9e66f0e4cf6faf23a73e91ca9e4f836cf18e355e3fdc69a7fd58196a7",
+              "bytes": 10384
+            },
+            "scale": {
+              "path": "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.json",
+              "sha256": "f831c5f9e66f0e4cf6faf23a73e91ca9e4f836cf18e355e3fdc69a7fd58196a7",
+              "bytes": 10384
+            },
+            "pickle": {
+              "path": "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.pickle",
+              "sha256": "21680283c6e3b89a72b69e2403eff48e5ccc3ec5474314284ca834b3f69458a3",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "78b0e2f502cc11b23a8c304de3693791c5a14500c19ac1071547ed508a1a2938",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 15,
+            "max_iter": 200
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.json",
+            "sha256": "f831c5f9e66f0e4cf6faf23a73e91ca9e4f836cf18e355e3fdc69a7fd58196a7",
+            "bytes": 10384
+          },
+          "selected_scale_sha256": "bda59adca949b9bda6c8e761df11a4bf1a38c525d3317f9f3533a54a90f67ca6"
+        },
+        "linear_prior": {
+          "kind": "linear",
+          "artifact_fields": {
+            "metadata": {
+              "path": "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.json",
+              "sha256": "f831c5f9e66f0e4cf6faf23a73e91ca9e4f836cf18e355e3fdc69a7fd58196a7",
+              "bytes": 10384
+            }
+          },
+          "metadata_selector": "$.prior",
+          "selected_metadata_sha256": "ba7bc83c7622579c46f8f4b13e42b2c4e64051f409d6e5efc5b41c319522959a",
+          "family": "linear33",
+          "coefficients": 34,
+          "coefficient_selector": "$.prior.coef",
+          "coefficient_values_sha256": "9cf607d96990ef7964478d54c26a477395c2ad19cb625c5bef688ca1cfdbaab1",
+          "scale_selector": "$.prior.scale",
+          "scale_fields": [
+            "ewma_mean",
+            "ewma_scale",
+            "ids",
+            "linear33_mean",
+            "linear33_scale",
+            "qscale",
+            "y_mid",
+            "y_scale"
+          ],
+          "scale_values_sha256": "c4f9a2c4d8ad66ba0d6466f9c6c24823b20ffad5006b935b649f1070c4b37917",
+          "target_output": "y_mid + y_scale * (design @ coef)",
+          "lambda_value": 0.01
+        },
+        "direct200": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost/model.json",
+              "sha256": "14bf9de72b2f8c56545197a5f280a651620c724442c478d16770e78058064388",
+              "bytes": 3665
+            },
+            "scale": {
+              "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost/model.json",
+              "sha256": "14bf9de72b2f8c56545197a5f280a651620c724442c478d16770e78058064388",
+              "bytes": 3665
+            },
+            "pickle": {
+              "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost/model.pickle",
+              "sha256": "198e4a72b8394e176c3f48a7c9cfa9a9038209d42fe838d559f081ece9382de3",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "0595eeab73c1fe1f4bea5d2cd30f913f1fe7a1bd5f7cacd171de91b4fb6a8a94",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 15,
+            "max_iter": 200
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost/model.json",
+            "sha256": "14bf9de72b2f8c56545197a5f280a651620c724442c478d16770e78058064388",
+            "bytes": 3665
+          },
+          "selected_scale_sha256": "bda59adca949b9bda6c8e761df11a4bf1a38c525d3317f9f3533a54a90f67ca6"
+        },
+        "free_residual_tree": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.json",
+              "sha256": "f442d755d2846121035dbf1ef5a62438b7aaa1abcc88a0a37895988917bc0935",
+              "bytes": 6958
+            },
+            "scale": {
+              "path": "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.json",
+              "sha256": "f442d755d2846121035dbf1ef5a62438b7aaa1abcc88a0a37895988917bc0935",
+              "bytes": 6958
+            },
+            "pickle": {
+              "path": "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.pickle",
+              "sha256": "d55e1863dbc715e2413b4684b7638a8ba1f04c7fcaeef8671ed438090942a302",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "0ef87cda54d9ac18dd00ff074bf6e9715997b7d3c25c7ef5a8ba3bcdb6028dc5",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 15,
+            "max_iter": 200
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.json",
+            "sha256": "f442d755d2846121035dbf1ef5a62438b7aaa1abcc88a0a37895988917bc0935",
+            "bytes": 6958
+          },
+          "selected_scale_sha256": "bda59adca949b9bda6c8e761df11a4bf1a38c525d3317f9f3533a54a90f67ca6"
+        },
+        "free_prior": {
+          "kind": "linear",
+          "artifact_fields": {
+            "metadata": {
+              "path": "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.json",
+              "sha256": "f442d755d2846121035dbf1ef5a62438b7aaa1abcc88a0a37895988917bc0935",
+              "bytes": 6958
+            }
+          },
+          "metadata_selector": "$.prior",
+          "selected_metadata_sha256": "3b2de2f4dc8dbfaafec3a15c0382f95937a30f4f5d45daab890bb2e1311cb9e9",
+          "family": "free",
+          "coefficients": 26,
+          "coefficient_selector": "$.prior.coef",
+          "coefficient_values_sha256": "3ccf3c0a5e3e60cd0bdbfba58d9f903ab50bbf4823ea87988c9662d279ced91d",
+          "scale_selector": "$.prior.scale",
+          "scale_fields": [
+            "ewma_mean",
+            "ewma_scale",
+            "ids",
+            "qscale",
+            "y_mid",
+            "y_scale"
+          ],
+          "scale_values_sha256": "bda59adca949b9bda6c8e761df11a4bf1a38c525d3317f9f3533a54a90f67ca6",
+          "target_output": "y_mid + y_scale * (design @ coef)",
+          "lambda_value": 0.01
+        },
+        "capacity": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/capacity-ipmsm-v001/model.json",
+              "sha256": "f9647f1c3183a8e08d8510d2b63e481b0706245b6930cdbd6a9d68c41082b108",
+              "bytes": 1576
+            },
+            "scale": {
+              "path": "linear-followup-20261111/runs/capacity-ipmsm-v001/model.json",
+              "sha256": "f9647f1c3183a8e08d8510d2b63e481b0706245b6930cdbd6a9d68c41082b108",
+              "bytes": 1576
+            },
+            "pickle": {
+              "path": "linear-followup-20261111/runs/capacity-ipmsm-v001/model.pkl",
+              "sha256": "ac57c0ac12a07e471b0412e1c355ba77303c85f758f068626b60affde34a099d",
+              "bytes": 889777
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "89b27728b8e7767b80536e431c152e35e85bd92fc93f37eb524ab2768eb8f0ad",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_bins": 255,
+            "max_leaf_nodes": 7,
+            "max_iter": 967
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "linear-followup-20261111/runs/capacity-ipmsm-v001/model.json",
+            "sha256": "f9647f1c3183a8e08d8510d2b63e481b0706245b6930cdbd6a9d68c41082b108",
+            "bytes": 1576
+          },
+          "selected_scale_sha256": "bdd78c9565f07dfd62c88445ef7c67febaee0da0324abbd25afb595d4ecde5ce"
+        },
+        "mlp": {
+          "kind": "mlp",
+          "artifact_fields": {
+            "metadata": {
+              "path": "followup-risk-20261110/runs/ipmsm-mlp-mse-2026111701-v001/model.json",
+              "sha256": "a98cc3f196a1d84b85ef87d773ee80ed2c48b5933dccd8cb4ee697712590d3c0",
+              "bytes": 6092
+            },
+            "weights": {
+              "path": "followup-risk-20261110/runs/ipmsm-mlp-mse-2026111701-v001/weights_final.npz",
+              "sha256": "e2ef7793db38eb88df859fb146cd0b849fa1fa25012708caef961ffe46ff7ee9",
+              "bytes": 17152
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "25aaf6db9aaac7923ee660136d501bb279566277fb17d3f011084aa57327aa8f",
+          "seed": 2026111701,
+          "loss": "mse",
+          "architecture": [
+            33,
+            64,
+            32,
+            1
+          ],
+          "parameters": 4289,
+          "transform_selector": "$.transform",
+          "input_mean_count": 33,
+          "input_std_count": 33,
+          "transform_sha256": "be4a5d5db685848f4b2ed61a797965da59646d78dc4fa91c412ed047b8831ae2"
+        }
+      },
+      "inventory": {
+        "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.json": {
+          "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.json",
+          "sha256": "63d05c36aa28aa1712420400fc8edbab07a4145da285fa3853222c752c941277",
+          "bytes": 3676
+        },
+        "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.pickle": {
+          "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.pickle",
+          "sha256": "5250d486cf12fe044738fe1138b11495b417060f0b4e41fc7b94f9f95a7bd327",
+          "bytes": 494174
+        },
+        "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.json": {
+          "path": "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.json",
+          "sha256": "f831c5f9e66f0e4cf6faf23a73e91ca9e4f836cf18e355e3fdc69a7fd58196a7",
+          "bytes": 10384
+        },
+        "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.pickle": {
+          "path": "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.pickle",
+          "sha256": "21680283c6e3b89a72b69e2403eff48e5ccc3ec5474314284ca834b3f69458a3",
+          "bytes": 419264
+        },
+        "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost/model.json": {
+          "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost/model.json",
+          "sha256": "14bf9de72b2f8c56545197a5f280a651620c724442c478d16770e78058064388",
+          "bytes": 3665
+        },
+        "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost/model.pickle": {
+          "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost/model.pickle",
+          "sha256": "198e4a72b8394e176c3f48a7c9cfa9a9038209d42fe838d559f081ece9382de3",
+          "bytes": 419264
+        },
+        "linear-followup-20261111/runs/capacity-ipmsm-v001/model.json": {
+          "path": "linear-followup-20261111/runs/capacity-ipmsm-v001/model.json",
+          "sha256": "f9647f1c3183a8e08d8510d2b63e481b0706245b6930cdbd6a9d68c41082b108",
+          "bytes": 1576
+        },
+        "linear-followup-20261111/runs/capacity-ipmsm-v001/model.pkl": {
+          "path": "linear-followup-20261111/runs/capacity-ipmsm-v001/model.pkl",
+          "sha256": "ac57c0ac12a07e471b0412e1c355ba77303c85f758f068626b60affde34a099d",
+          "bytes": 889777
+        },
+        "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.json": {
+          "path": "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.json",
+          "sha256": "f442d755d2846121035dbf1ef5a62438b7aaa1abcc88a0a37895988917bc0935",
+          "bytes": 6958
+        },
+        "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.pickle": {
+          "path": "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.pickle",
+          "sha256": "d55e1863dbc715e2413b4684b7638a8ba1f04c7fcaeef8671ed438090942a302",
+          "bytes": 419264
+        },
+        "followup-risk-20261110/runs/ipmsm-mlp-mse-2026111701-v001/model.json": {
+          "path": "followup-risk-20261110/runs/ipmsm-mlp-mse-2026111701-v001/model.json",
+          "sha256": "a98cc3f196a1d84b85ef87d773ee80ed2c48b5933dccd8cb4ee697712590d3c0",
+          "bytes": 6092
+        },
+        "followup-risk-20261110/runs/ipmsm-mlp-mse-2026111701-v001/weights_final.npz": {
+          "path": "followup-risk-20261110/runs/ipmsm-mlp-mse-2026111701-v001/weights_final.npz",
+          "sha256": "e2ef7793db38eb88df859fb146cd0b849fa1fa25012708caef961ffe46ff7ee9",
+          "bytes": 17152
+        }
+      },
+      "methods": {
+        "D": {
+          "terms": [
+            [
+              "d9",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.json",
+            "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.pickle"
+          ],
+          "total_unique_bytes": 497850,
+          "numeric_payload_bytes_from_original_audit": 364008
+        },
+        "P": {
+          "terms": [
+            [
+              "linear_prior",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.json"
+          ],
+          "total_unique_bytes": 10384,
+          "numeric_payload_bytes_from_original_audit": 272
+        },
+        "L": {
+          "terms": [
+            [
+              "linear_prior",
+              1.0
+            ],
+            [
+              "linear_residual_tree",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.json",
+            "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.pickle"
+          ],
+          "total_unique_bytes": 429648,
+          "numeric_payload_bytes_from_original_audit": 325080
+        },
+        "H": {
+          "terms": [
+            [
+              "d9",
+              0.5
+            ],
+            [
+              "linear_prior",
+              0.5
+            ],
+            [
+              "linear_residual_tree",
+              0.5
+            ]
+          ],
+          "required_files": [
+            "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.json",
+            "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.pickle",
+            "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.json",
+            "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.pickle"
+          ],
+          "total_unique_bytes": 927498,
+          "numeric_payload_bytes_from_original_audit": 689088
+        },
+        "direct200": {
+          "terms": [
+            [
+              "direct200",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost/model.json",
+            "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost/model.pickle"
+          ],
+          "total_unique_bytes": 422929,
+          "numeric_payload_bytes_from_original_audit": 324808
+        },
+        "capacity": {
+          "terms": [
+            [
+              "capacity",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/capacity-ipmsm-v001/model.json",
+            "linear-followup-20261111/runs/capacity-ipmsm-v001/model.pkl"
+          ],
+          "total_unique_bytes": 891353,
+          "numeric_payload_bytes_from_original_audit": 703984
+        },
+        "free25_residual": {
+          "terms": [
+            [
+              "free_prior",
+              1.0
+            ],
+            [
+              "free_residual_tree",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.json",
+            "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.pickle"
+          ],
+          "total_unique_bytes": 426222,
+          "numeric_payload_bytes_from_original_audit": 325016
+        },
+        "free25_half": {
+          "terms": [
+            [
+              "d9",
+              0.5
+            ],
+            [
+              "free_prior",
+              0.5
+            ],
+            [
+              "free_residual_tree",
+              0.5
+            ]
+          ],
+          "required_files": [
+            "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.json",
+            "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.pickle",
+            "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.json",
+            "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.pickle"
+          ],
+          "total_unique_bytes": 924072,
+          "numeric_payload_bytes_from_original_audit": 689024
+        },
+        "mlp_mse_seed1": {
+          "terms": [
+            [
+              "mlp",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "followup-risk-20261110/runs/ipmsm-mlp-mse-2026111701-v001/model.json",
+            "followup-risk-20261110/runs/ipmsm-mlp-mse-2026111701-v001/weights_final.npz"
+          ],
+          "total_unique_bytes": 23244,
+          "numeric_payload_bytes_from_original_audit": 17156
+        }
+      },
+      "H_union_proof": {
+        "D_intersection_L": [],
+        "overlap_bytes": 0,
+        "shared_set_equals_P": false,
+        "P_required_files_in_H": true,
+        "formula": "bytes(H)=bytes(D)+bytes(L)-bytes(D intersection L)",
+        "panel_formula": "bytes(H)=bytes(D)+bytes(L)",
+        "H_terms": [
+          [
+            "d9",
+            0.5
+          ],
+          [
+            "linear_prior",
+            0.5
+          ],
+          [
+            "linear_residual_tree",
+            0.5
+          ]
+        ],
+        "P_metadata": {
+          "path": "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.json",
+          "sha256": "f831c5f9e66f0e4cf6faf23a73e91ca9e4f836cf18e355e3fdc69a7fd58196a7",
+          "bytes": 10384
+        },
+        "P_coefficient_selector": "$.prior.coef",
+        "P_scale_selector": "$.prior.scale",
+        "D_scale_file": {
+          "path": "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.json",
+          "sha256": "63d05c36aa28aa1712420400fc8edbab07a4145da285fa3853222c752c941277",
+          "bytes": 3676
+        },
+        "D_scale_selector": "$.scale",
+        "P_coefficient_values_sha256": "9cf607d96990ef7964478d54c26a477395c2ad19cb625c5bef688ca1cfdbaab1",
+        "P_scale_values_sha256": "c4f9a2c4d8ad66ba0d6466f9c6c24823b20ffad5006b935b649f1070c4b37917"
+      }
+    },
+    {
+      "dataset": "paderborn",
+      "arm": "original",
+      "role": "development",
+      "profile_id": 18,
+      "config": {
+        "path": "linear-followup-20261111/configs/streaming-paderborn-original-main-v003.json",
+        "sha256": "6ada69152eaf51329fa3a1d4a95e47b1ecc3c807f05e8649c3d26408fb3e0eb4",
+        "bytes": 16100
+      },
+      "summary": {
+        "path": "linear-followup-20261111/runs/streaming-paderborn-original-main-v003/summary.json",
+        "sha256": "7723c3cc03da66ee7769bf38849a7de1d5084170375768ecfc9689c8c50acaed",
+        "bytes": 31372
+      },
+      "original_independent_audit": {
+        "path": "linear-followup-20261111/runs/streaming-paderborn-original-audit-v003/report.json",
+        "sha256": "5681383abf23019cab5e848aaa579c703f25289f7193a53ed806701b6b5250c2",
+        "bytes": 17265
+      },
+      "runtime": {
+        "path": "linear-followup-20261111/runs/streaming-paderborn-original-main-v003/runtime.json",
+        "sha256": "c3b6d2ae92b3dca6cea5a4d6cfd79f8f7af7f5646f41b3694814ee26980f4a33",
+        "bytes": 2454
+      },
+      "components": {
+        "d9": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.json",
+              "sha256": "21a77fc969ea3ba05907b6a6f6867674e5e2f28dcfe6a3d61d44c7d5f217ce4f",
+              "bytes": 4668
+            },
+            "scale": {
+              "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.json",
+              "sha256": "21a77fc969ea3ba05907b6a6f6867674e5e2f28dcfe6a3d61d44c7d5f217ce4f",
+              "bytes": 4668
+            },
+            "pickle": {
+              "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.pickle",
+              "sha256": "bcac173d5b53d9f74415cd2f48657c1a31e19b37a2725e19db47d2a653e96ffc",
+              "bytes": 1813854
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "fd22a7040cdc000bbf112257e2075236fd34117f12015624d8120ef0aa131d43",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 15,
+            "max_iter": 1000
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.json",
+            "sha256": "21a77fc969ea3ba05907b6a6f6867674e5e2f28dcfe6a3d61d44c7d5f217ce4f",
+            "bytes": 4668
+          },
+          "selected_scale_sha256": "2f21a687380babd91eef3556a294c1f62477735ac35311551e2ffb4d3e87191c"
+        },
+        "linear_residual_tree": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.json",
+              "sha256": "7ed39c764f4cd945ef5041a27a780a40a10310c8c9d7fc6b4aa7dbf9709cf1db",
+              "bytes": 11832
+            },
+            "scale": {
+              "path": "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.json",
+              "sha256": "7ed39c764f4cd945ef5041a27a780a40a10310c8c9d7fc6b4aa7dbf9709cf1db",
+              "bytes": 11832
+            },
+            "pickle": {
+              "path": "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.pickle",
+              "sha256": "3917c0fa38f0a3e434b938bb4c53a7916eb9b09326aac1ceafe90a057ba24e66",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "0dd222f154e16edca1b21addfbb89db4ae58b46364e800a107b01b7f12fdeab1",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 15,
+            "max_iter": 200
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.json",
+            "sha256": "7ed39c764f4cd945ef5041a27a780a40a10310c8c9d7fc6b4aa7dbf9709cf1db",
+            "bytes": 11832
+          },
+          "selected_scale_sha256": "2f21a687380babd91eef3556a294c1f62477735ac35311551e2ffb4d3e87191c"
+        },
+        "linear_prior": {
+          "kind": "linear",
+          "artifact_fields": {
+            "metadata": {
+              "path": "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.json",
+              "sha256": "7ed39c764f4cd945ef5041a27a780a40a10310c8c9d7fc6b4aa7dbf9709cf1db",
+              "bytes": 11832
+            }
+          },
+          "metadata_selector": "$.prior",
+          "selected_metadata_sha256": "9d1cb461d11e0295b5c975383e167f8972120a19e6024418ec46c48d23146131",
+          "family": "linear33",
+          "coefficients": 34,
+          "coefficient_selector": "$.prior.coef",
+          "coefficient_values_sha256": "53a093007a43fc627eb53727731a5995980767d739dc85306994f0b0eb259645",
+          "scale_selector": "$.prior.scale",
+          "scale_fields": [
+            "ewma_mean",
+            "ewma_scale",
+            "ids",
+            "linear33_mean",
+            "linear33_scale",
+            "qscale",
+            "y_mid",
+            "y_scale"
+          ],
+          "scale_values_sha256": "8dc9dd09f69760857ec781585c73940074cfd2cc0c44524061cdcf7d83927f63",
+          "target_output": "y_mid + y_scale * (design @ coef)",
+          "lambda_value": 0.0001
+        },
+        "direct200": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost/model.json",
+              "sha256": "ab102e4f637e802debad1ea61075da5a9c9b881519d952d1f82ff469645daef8",
+              "bytes": 4647
+            },
+            "scale": {
+              "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost/model.json",
+              "sha256": "ab102e4f637e802debad1ea61075da5a9c9b881519d952d1f82ff469645daef8",
+              "bytes": 4647
+            },
+            "pickle": {
+              "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost/model.pickle",
+              "sha256": "4b80dd21d39f4e37d1ef2c29e80d26263ba07cd29ab1cf2aee00a8699abad31b",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "1f0e08b3b5f9c54d36d8caa86156968bd25b6e62bf08f28c25af787ef7cab89e",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 15,
+            "max_iter": 200
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost/model.json",
+            "sha256": "ab102e4f637e802debad1ea61075da5a9c9b881519d952d1f82ff469645daef8",
+            "bytes": 4647
+          },
+          "selected_scale_sha256": "2f21a687380babd91eef3556a294c1f62477735ac35311551e2ffb4d3e87191c"
+        },
+        "free_residual_tree": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.json",
+              "sha256": "c9180c3f988b73bf37d0882783b94709cf53aadd34639fbf2ba3f43305b5a288",
+              "bytes": 8408
+            },
+            "scale": {
+              "path": "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.json",
+              "sha256": "c9180c3f988b73bf37d0882783b94709cf53aadd34639fbf2ba3f43305b5a288",
+              "bytes": 8408
+            },
+            "pickle": {
+              "path": "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.pickle",
+              "sha256": "a5a69366f5bf31227f641f76e3dab03e47c175ccddd2bd3096ef048ed9ca164c",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "3336987bc46e3101408153fd5e2e3388af742c289944cb4818bbfceeb535ac83",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 15,
+            "max_iter": 200
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.json",
+            "sha256": "c9180c3f988b73bf37d0882783b94709cf53aadd34639fbf2ba3f43305b5a288",
+            "bytes": 8408
+          },
+          "selected_scale_sha256": "2f21a687380babd91eef3556a294c1f62477735ac35311551e2ffb4d3e87191c"
+        },
+        "free_prior": {
+          "kind": "linear",
+          "artifact_fields": {
+            "metadata": {
+              "path": "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.json",
+              "sha256": "c9180c3f988b73bf37d0882783b94709cf53aadd34639fbf2ba3f43305b5a288",
+              "bytes": 8408
+            }
+          },
+          "metadata_selector": "$.prior",
+          "selected_metadata_sha256": "57ab526b250514bc34ea3048b69b506ee78a5fac3006f33e231d29dd3133a526",
+          "family": "free",
+          "coefficients": 26,
+          "coefficient_selector": "$.prior.coef",
+          "coefficient_values_sha256": "71fd4f6172b5c936862dda94819fb40e6a272d9a90ad43834debdef910471d31",
+          "scale_selector": "$.prior.scale",
+          "scale_fields": [
+            "ewma_mean",
+            "ewma_scale",
+            "ids",
+            "qscale",
+            "y_mid",
+            "y_scale"
+          ],
+          "scale_values_sha256": "2f21a687380babd91eef3556a294c1f62477735ac35311551e2ffb4d3e87191c",
+          "target_output": "y_mid + y_scale * (design @ coef)",
+          "lambda_value": 0.0001
+        },
+        "capacity": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/capacity-paderborn-v001/model.json",
+              "sha256": "711688b4837b64daf0f3be336e168b1ee6a4f27e046c40b53d4b13f17de41a78",
+              "bytes": 1889
+            },
+            "scale": {
+              "path": "linear-followup-20261111/runs/capacity-paderborn-v001/model.json",
+              "sha256": "711688b4837b64daf0f3be336e168b1ee6a4f27e046c40b53d4b13f17de41a78",
+              "bytes": 1889
+            },
+            "pickle": {
+              "path": "linear-followup-20261111/runs/capacity-paderborn-v001/model.pkl",
+              "sha256": "03544405cc040c547ed0d82c9633cb7781e28b7873bdab7a0d1c9ab5a7feb309",
+              "bytes": 2162501
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "fab5c5c82dc6d18584ddfacfcc44c001dd79cd4c11648950a9e2993cd0168ca7",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_bins": 255,
+            "max_leaf_nodes": 15,
+            "max_iter": 1200
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "linear-followup-20261111/runs/capacity-paderborn-v001/model.json",
+            "sha256": "711688b4837b64daf0f3be336e168b1ee6a4f27e046c40b53d4b13f17de41a78",
+            "bytes": 1889
+          },
+          "selected_scale_sha256": "78029164e90bc1d9e882269a943737a9766434bd121d746474b8da8732a9dcaf"
+        },
+        "mlp": {
+          "kind": "mlp",
+          "artifact_fields": {
+            "metadata": {
+              "path": "followup-risk-20261110/runs/paderborn-mlp-mse-2026111701-v001/model.json",
+              "sha256": "4e03e7d0dfc49cfb31e8b4f354b7d5b1c5462ea8513a0baf659117aba49159a2",
+              "bytes": 7674
+            },
+            "weights": {
+              "path": "followup-risk-20261110/runs/paderborn-mlp-mse-2026111701-v001/weights_final.npz",
+              "sha256": "294a946be6954e2d6f23f4afab1ad5846045a238c9ba6fe168c1ff4a63671593",
+              "bytes": 17203
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "ed36fd827d02d88909f11f433ec7997b26ba92b609b51db3ceaf5319ab03a982",
+          "seed": 2026111701,
+          "loss": "mse",
+          "architecture": [
+            33,
+            64,
+            32,
+            1
+          ],
+          "parameters": 4289,
+          "transform_selector": "$.transform",
+          "input_mean_count": 33,
+          "input_std_count": 33,
+          "transform_sha256": "03e831946c92f709915f357f79d8a5198d68e0ea1c9c961454847eecec185fbe"
+        }
+      },
+      "inventory": {
+        "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.json": {
+          "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.json",
+          "sha256": "21a77fc969ea3ba05907b6a6f6867674e5e2f28dcfe6a3d61d44c7d5f217ce4f",
+          "bytes": 4668
+        },
+        "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.pickle": {
+          "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.pickle",
+          "sha256": "bcac173d5b53d9f74415cd2f48657c1a31e19b37a2725e19db47d2a653e96ffc",
+          "bytes": 1813854
+        },
+        "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.json": {
+          "path": "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.json",
+          "sha256": "7ed39c764f4cd945ef5041a27a780a40a10310c8c9d7fc6b4aa7dbf9709cf1db",
+          "bytes": 11832
+        },
+        "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.pickle": {
+          "path": "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.pickle",
+          "sha256": "3917c0fa38f0a3e434b938bb4c53a7916eb9b09326aac1ceafe90a057ba24e66",
+          "bytes": 419264
+        },
+        "runs/c15-paper-paderborn-full-v001/full__direct_boost/model.json": {
+          "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost/model.json",
+          "sha256": "ab102e4f637e802debad1ea61075da5a9c9b881519d952d1f82ff469645daef8",
+          "bytes": 4647
+        },
+        "runs/c15-paper-paderborn-full-v001/full__direct_boost/model.pickle": {
+          "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost/model.pickle",
+          "sha256": "4b80dd21d39f4e37d1ef2c29e80d26263ba07cd29ab1cf2aee00a8699abad31b",
+          "bytes": 419264
+        },
+        "linear-followup-20261111/runs/capacity-paderborn-v001/model.json": {
+          "path": "linear-followup-20261111/runs/capacity-paderborn-v001/model.json",
+          "sha256": "711688b4837b64daf0f3be336e168b1ee6a4f27e046c40b53d4b13f17de41a78",
+          "bytes": 1889
+        },
+        "linear-followup-20261111/runs/capacity-paderborn-v001/model.pkl": {
+          "path": "linear-followup-20261111/runs/capacity-paderborn-v001/model.pkl",
+          "sha256": "03544405cc040c547ed0d82c9633cb7781e28b7873bdab7a0d1c9ab5a7feb309",
+          "bytes": 2162501
+        },
+        "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.json": {
+          "path": "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.json",
+          "sha256": "c9180c3f988b73bf37d0882783b94709cf53aadd34639fbf2ba3f43305b5a288",
+          "bytes": 8408
+        },
+        "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.pickle": {
+          "path": "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.pickle",
+          "sha256": "a5a69366f5bf31227f641f76e3dab03e47c175ccddd2bd3096ef048ed9ca164c",
+          "bytes": 419264
+        },
+        "followup-risk-20261110/runs/paderborn-mlp-mse-2026111701-v001/model.json": {
+          "path": "followup-risk-20261110/runs/paderborn-mlp-mse-2026111701-v001/model.json",
+          "sha256": "4e03e7d0dfc49cfb31e8b4f354b7d5b1c5462ea8513a0baf659117aba49159a2",
+          "bytes": 7674
+        },
+        "followup-risk-20261110/runs/paderborn-mlp-mse-2026111701-v001/weights_final.npz": {
+          "path": "followup-risk-20261110/runs/paderborn-mlp-mse-2026111701-v001/weights_final.npz",
+          "sha256": "294a946be6954e2d6f23f4afab1ad5846045a238c9ba6fe168c1ff4a63671593",
+          "bytes": 17203
+        }
+      },
+      "methods": {
+        "D": {
+          "terms": [
+            [
+              "d9",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.json",
+            "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.pickle"
+          ],
+          "total_unique_bytes": 1818522,
+          "numeric_payload_bytes_from_original_audit": 1624008
+        },
+        "P": {
+          "terms": [
+            [
+              "linear_prior",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.json"
+          ],
+          "total_unique_bytes": 11832,
+          "numeric_payload_bytes_from_original_audit": 272
+        },
+        "L": {
+          "terms": [
+            [
+              "linear_prior",
+              1.0
+            ],
+            [
+              "linear_residual_tree",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.json",
+            "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.pickle"
+          ],
+          "total_unique_bytes": 431096,
+          "numeric_payload_bytes_from_original_audit": 325080
+        },
+        "H": {
+          "terms": [
+            [
+              "d9",
+              0.5
+            ],
+            [
+              "linear_prior",
+              0.5
+            ],
+            [
+              "linear_residual_tree",
+              0.5
+            ]
+          ],
+          "required_files": [
+            "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.json",
+            "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.pickle",
+            "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.json",
+            "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.pickle"
+          ],
+          "total_unique_bytes": 2249618,
+          "numeric_payload_bytes_from_original_audit": 1949088
+        },
+        "direct200": {
+          "terms": [
+            [
+              "direct200",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "runs/c15-paper-paderborn-full-v001/full__direct_boost/model.json",
+            "runs/c15-paper-paderborn-full-v001/full__direct_boost/model.pickle"
+          ],
+          "total_unique_bytes": 423911,
+          "numeric_payload_bytes_from_original_audit": 324808
+        },
+        "capacity": {
+          "terms": [
+            [
+              "capacity",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/capacity-paderborn-v001/model.json",
+            "linear-followup-20261111/runs/capacity-paderborn-v001/model.pkl"
+          ],
+          "total_unique_bytes": 2164390,
+          "numeric_payload_bytes_from_original_audit": 1948808
+        },
+        "free25_residual": {
+          "terms": [
+            [
+              "free_prior",
+              1.0
+            ],
+            [
+              "free_residual_tree",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.json",
+            "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.pickle"
+          ],
+          "total_unique_bytes": 427672,
+          "numeric_payload_bytes_from_original_audit": 325016
+        },
+        "free25_half": {
+          "terms": [
+            [
+              "d9",
+              0.5
+            ],
+            [
+              "free_prior",
+              0.5
+            ],
+            [
+              "free_residual_tree",
+              0.5
+            ]
+          ],
+          "required_files": [
+            "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.json",
+            "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.pickle",
+            "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.json",
+            "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.pickle"
+          ],
+          "total_unique_bytes": 2246194,
+          "numeric_payload_bytes_from_original_audit": 1949024
+        },
+        "mlp_mse_seed1": {
+          "terms": [
+            [
+              "mlp",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "followup-risk-20261110/runs/paderborn-mlp-mse-2026111701-v001/model.json",
+            "followup-risk-20261110/runs/paderborn-mlp-mse-2026111701-v001/weights_final.npz"
+          ],
+          "total_unique_bytes": 24877,
+          "numeric_payload_bytes_from_original_audit": 17156
+        }
+      },
+      "H_union_proof": {
+        "D_intersection_L": [],
+        "overlap_bytes": 0,
+        "shared_set_equals_P": false,
+        "P_required_files_in_H": true,
+        "formula": "bytes(H)=bytes(D)+bytes(L)-bytes(D intersection L)",
+        "panel_formula": "bytes(H)=bytes(D)+bytes(L)",
+        "H_terms": [
+          [
+            "d9",
+            0.5
+          ],
+          [
+            "linear_prior",
+            0.5
+          ],
+          [
+            "linear_residual_tree",
+            0.5
+          ]
+        ],
+        "P_metadata": {
+          "path": "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.json",
+          "sha256": "7ed39c764f4cd945ef5041a27a780a40a10310c8c9d7fc6b4aa7dbf9709cf1db",
+          "bytes": 11832
+        },
+        "P_coefficient_selector": "$.prior.coef",
+        "P_scale_selector": "$.prior.scale",
+        "D_scale_file": {
+          "path": "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.json",
+          "sha256": "21a77fc969ea3ba05907b6a6f6867674e5e2f28dcfe6a3d61d44c7d5f217ce4f",
+          "bytes": 4668
+        },
+        "D_scale_selector": "$.scale",
+        "P_coefficient_values_sha256": "53a093007a43fc627eb53727731a5995980767d739dc85306994f0b0eb259645",
+        "P_scale_values_sha256": "8dc9dd09f69760857ec781585c73940074cfd2cc0c44524061cdcf7d83927f63"
+      }
+    },
+    {
+      "dataset": "rwth",
+      "arm": "original",
+      "role": "calibration",
+      "profile_id": 10,
+      "config": {
+        "path": "linear-followup-20261111/configs/streaming-rwth-original-main-v003.json",
+        "sha256": "b024110d3e0c5bdbd00988c45b1250412ba498cb74b6ff35a31472a008986134",
+        "bytes": 15972
+      },
+      "summary": {
+        "path": "linear-followup-20261111/runs/streaming-rwth-original-main-v003/summary.json",
+        "sha256": "41e1d2f72e104e5492f7d91f7711100907e05ed16c8463092b37f6c42a901555",
+        "bytes": 31938
+      },
+      "original_independent_audit": {
+        "path": "linear-followup-20261111/runs/streaming-rwth-original-audit-v003/report.json",
+        "sha256": "467020bd44b84fc8108f1a53ff6a6e441ef02dd7a99ec25449f5816f55af90fe",
+        "bytes": 17459
+      },
+      "runtime": {
+        "path": "linear-followup-20261111/runs/streaming-rwth-original-main-v003/runtime.json",
+        "sha256": "c3b6d2ae92b3dca6cea5a4d6cfd79f8f7af7f5646f41b3694814ee26980f4a33",
+        "bytes": 2454
+      },
+      "components": {
+        "d9": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.json",
+              "sha256": "094c962064696cc1a72d2c2b8e22eb2eb729d547cabf95f108e15ace8fb42290",
+              "bytes": 3603
+            },
+            "scale": {
+              "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.json",
+              "sha256": "094c962064696cc1a72d2c2b8e22eb2eb729d547cabf95f108e15ace8fb42290",
+              "bytes": 3603
+            },
+            "pickle": {
+              "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.pkl",
+              "sha256": "ad087deaeb4446959ce596d66e1d50ba5f84bff60a3cb4eb68083d21c24d9a3e",
+              "bytes": 494174
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "c96bd7c217be31f30645f638edeffbef28e47d08fc7e28f6eca0719233687f30",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "max_bins": 255,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 7,
+            "max_iter": 500,
+            "l2_regularization": 0.1
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.json",
+            "sha256": "094c962064696cc1a72d2c2b8e22eb2eb729d547cabf95f108e15ace8fb42290",
+            "bytes": 3603
+          },
+          "selected_scale_sha256": "35fd46fe4d8720b1389afcd84f13436d949ead30c149a21339b9771c9d384d5a"
+        },
+        "direct200": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/direct_boost/model.json",
+              "sha256": "9a7d2677c6f1610ddae95d3b824b5478c90fcaeeae992aaec042b66bde0873a9",
+              "bytes": 3604
+            },
+            "scale": {
+              "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/direct_boost/model.json",
+              "sha256": "9a7d2677c6f1610ddae95d3b824b5478c90fcaeeae992aaec042b66bde0873a9",
+              "bytes": 3604
+            },
+            "pickle": {
+              "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/direct_boost/model.pkl",
+              "sha256": "92cf4346d1ec5a5b0fe0e9539d63d0c8cc61df465a6a2af3a813789b83b4e24b",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "cabdd5d11451e1b1783f4f296bf8f48b4f3b4b6173410236e13c5512fc197604",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "max_bins": 255,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 15,
+            "max_iter": 200,
+            "l2_regularization": 0.1
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/direct_boost/model.json",
+            "sha256": "9a7d2677c6f1610ddae95d3b824b5478c90fcaeeae992aaec042b66bde0873a9",
+            "bytes": 3604
+          },
+          "selected_scale_sha256": "35fd46fe4d8720b1389afcd84f13436d949ead30c149a21339b9771c9d384d5a"
+        },
+        "linear_residual_tree": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/linear33_insample_boost/model.json",
+              "sha256": "9b679979bf42d43e1e94292551631a4a489232a0b33e67cce3aa84309e941d58",
+              "bytes": 3611
+            },
+            "scale": {
+              "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/linear33_insample_boost/model.json",
+              "sha256": "9b679979bf42d43e1e94292551631a4a489232a0b33e67cce3aa84309e941d58",
+              "bytes": 3611
+            },
+            "pickle": {
+              "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/linear33_insample_boost/model.pkl",
+              "sha256": "2f608838c9d77450ca63e5606f129ef0df81457952e00f4271e0ec6c454f4971",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "953bf9479dd76031737253454d2bbfa652071b018ae76eb06a40e64c5bd4d896",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "max_bins": 255,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 15,
+            "max_iter": 200,
+            "l2_regularization": 0.1
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/linear33_insample_boost/model.json",
+            "sha256": "9b679979bf42d43e1e94292551631a4a489232a0b33e67cce3aa84309e941d58",
+            "bytes": 3611
+          },
+          "selected_scale_sha256": "35fd46fe4d8720b1389afcd84f13436d949ead30c149a21339b9771c9d384d5a"
+        },
+        "free_residual_tree": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/unconstrained_rc_insample_boost/model.json",
+              "sha256": "67fd0315255109ca5881ca4b5e6305c47271519446b1dfe84e336846d8a06d12",
+              "bytes": 3609
+            },
+            "scale": {
+              "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/unconstrained_rc_insample_boost/model.json",
+              "sha256": "67fd0315255109ca5881ca4b5e6305c47271519446b1dfe84e336846d8a06d12",
+              "bytes": 3609
+            },
+            "pickle": {
+              "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/unconstrained_rc_insample_boost/model.pkl",
+              "sha256": "e1c1cfe02e4cba5db71c659dc213e374d33414cdeec95bf9db36de67f54e5a94",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "9727364942d5aeeaff5690b1b9acb92f42ac798e25bb55a1c070189bbac080ce",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "max_bins": 255,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 15,
+            "max_iter": 200,
+            "l2_regularization": 0.1
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/unconstrained_rc_insample_boost/model.json",
+            "sha256": "67fd0315255109ca5881ca4b5e6305c47271519446b1dfe84e336846d8a06d12",
+            "bytes": 3609
+          },
+          "selected_scale_sha256": "35fd46fe4d8720b1389afcd84f13436d949ead30c149a21339b9771c9d384d5a"
+        },
+        "linear_prior": {
+          "kind": "linear",
+          "artifact_fields": {
+            "metadata": {
+              "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/priors.json",
+              "sha256": "68f7e8dc02632885668cfaf15d3833c55c85793c66b890892206428e45713dd6",
+              "bytes": 89678
+            }
+          },
+          "metadata_selector": "$.linear33",
+          "selected_metadata_sha256": "607ddd469a973009bc575b15dac7f8626ab622ab2ebfda7326e476ccde64ba44",
+          "family": "linear33",
+          "coefficients": 34,
+          "coefficient_selector": "$.linear33.coef",
+          "coefficient_values_sha256": "3d32fb96e292357aaa344548c17c9b9ea0518ed14fa86d4be80ac78ff226a377",
+          "scale_selector": "$.linear33.scale",
+          "scale_fields": [
+            "drive_rms",
+            "fit_ids",
+            "x_mean",
+            "x_std",
+            "y_mid",
+            "y_scale"
+          ],
+          "scale_values_sha256": "35fd46fe4d8720b1389afcd84f13436d949ead30c149a21339b9771c9d384d5a",
+          "target_output": "y_mid + y_scale * (design @ coef)",
+          "lambda_value": 0.01
+        },
+        "free_prior": {
+          "kind": "linear",
+          "artifact_fields": {
+            "metadata": {
+              "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/priors.json",
+              "sha256": "68f7e8dc02632885668cfaf15d3833c55c85793c66b890892206428e45713dd6",
+              "bytes": 89678
+            }
+          },
+          "metadata_selector": "$.free25",
+          "selected_metadata_sha256": "3e6dd7f57b6d0c31b2fae0ff9ba10ec1b8f0b0bcd1229229f0a94566eaf4f330",
+          "family": "free25",
+          "coefficients": 25,
+          "coefficient_selector": "$.free25.coef",
+          "coefficient_values_sha256": "2b73a7c43683a76f9859b95baddf06bf4a45767a5d168a7666bd159d24a0f60c",
+          "scale_selector": "$.free25.scale",
+          "scale_fields": [
+            "drive_rms",
+            "fit_ids",
+            "x_mean",
+            "x_std",
+            "y_mid",
+            "y_scale"
+          ],
+          "scale_values_sha256": "35fd46fe4d8720b1389afcd84f13436d949ead30c149a21339b9771c9d384d5a",
+          "target_output": "y_mid + y_scale * (design @ coef)",
+          "lambda_value": 0.01
+        },
+        "capacity": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/capacity-rwth-v001/model.json",
+              "sha256": "25409764eb60d39b31f2fa1a3d7171070bd4a1850eacb996dbd0dbdbcb41dcbe",
+              "bytes": 3049
+            },
+            "scale": {
+              "path": "linear-followup-20261111/runs/capacity-rwth-v001/model.json",
+              "sha256": "25409764eb60d39b31f2fa1a3d7171070bd4a1850eacb996dbd0dbdbcb41dcbe",
+              "bytes": 3049
+            },
+            "pickle": {
+              "path": "linear-followup-20261111/runs/capacity-rwth-v001/model.pkl",
+              "sha256": "e2b9d0b8abfc512dba76ddf766ccea813e35b15bfcd4d3870a364c636a4472e1",
+              "bytes": 889777
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "763fbadd6cde2c7876bb1d7b9b48644c911e4c39bbedb164d26f2e1fc31e37be",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_bins": 255,
+            "max_leaf_nodes": 7,
+            "max_iter": 967
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "linear-followup-20261111/runs/capacity-rwth-v001/model.json",
+            "sha256": "25409764eb60d39b31f2fa1a3d7171070bd4a1850eacb996dbd0dbdbcb41dcbe",
+            "bytes": 3049
+          },
+          "selected_scale_sha256": "decce2e93a957da17c0d207d9a90de01a6fcd5b94f4818ae28108c16db333d60"
+        },
+        "mlp": {
+          "kind": "mlp",
+          "artifact_fields": {
+            "metadata": {
+              "path": "followup-risk-20261110/runs/rwth-mlp-2026111701-v002/model.json",
+              "sha256": "31fc887fb41a3089d066f96c9e83caaf4d945a770f01be13e5e9ead39c22ba0e",
+              "bytes": 5920
+            },
+            "weights": {
+              "path": "followup-risk-20261110/runs/rwth-mlp-2026111701-v002/weights_final.npz",
+              "sha256": "26d2e6b747beaeb0538d8dd6538a79910b38e0d520b1c36be05a27fb259bd803",
+              "bytes": 17177
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "143437da419b53ad88c69df76f6e647a21333a4e3384004212c0a71b5024ae19",
+          "seed": 2026111701,
+          "loss": "mse",
+          "architecture": [
+            33,
+            64,
+            32,
+            1
+          ],
+          "parameters": 4289,
+          "transform_selector": "$.transform",
+          "input_mean_count": 33,
+          "input_std_count": 33,
+          "transform_sha256": "ec47276556e12a75d6bbce1185d3551f314ee4d0a5c2f77fd9330e9746f3ed75"
+        }
+      },
+      "inventory": {
+        "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.json": {
+          "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.json",
+          "sha256": "094c962064696cc1a72d2c2b8e22eb2eb729d547cabf95f108e15ace8fb42290",
+          "bytes": 3603
+        },
+        "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.pkl": {
+          "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.pkl",
+          "sha256": "ad087deaeb4446959ce596d66e1d50ba5f84bff60a3cb4eb68083d21c24d9a3e",
+          "bytes": 494174
+        },
+        "followup-risk-20261110/runs/rwth-cpu-final-v002/priors.json": {
+          "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/priors.json",
+          "sha256": "68f7e8dc02632885668cfaf15d3833c55c85793c66b890892206428e45713dd6",
+          "bytes": 89678
+        },
+        "followup-risk-20261110/runs/rwth-cpu-final-v002/linear33_insample_boost/model.json": {
+          "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/linear33_insample_boost/model.json",
+          "sha256": "9b679979bf42d43e1e94292551631a4a489232a0b33e67cce3aa84309e941d58",
+          "bytes": 3611
+        },
+        "followup-risk-20261110/runs/rwth-cpu-final-v002/linear33_insample_boost/model.pkl": {
+          "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/linear33_insample_boost/model.pkl",
+          "sha256": "2f608838c9d77450ca63e5606f129ef0df81457952e00f4271e0ec6c454f4971",
+          "bytes": 419264
+        },
+        "followup-risk-20261110/runs/rwth-cpu-final-v002/direct_boost/model.json": {
+          "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/direct_boost/model.json",
+          "sha256": "9a7d2677c6f1610ddae95d3b824b5478c90fcaeeae992aaec042b66bde0873a9",
+          "bytes": 3604
+        },
+        "followup-risk-20261110/runs/rwth-cpu-final-v002/direct_boost/model.pkl": {
+          "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/direct_boost/model.pkl",
+          "sha256": "92cf4346d1ec5a5b0fe0e9539d63d0c8cc61df465a6a2af3a813789b83b4e24b",
+          "bytes": 419264
+        },
+        "linear-followup-20261111/runs/capacity-rwth-v001/model.json": {
+          "path": "linear-followup-20261111/runs/capacity-rwth-v001/model.json",
+          "sha256": "25409764eb60d39b31f2fa1a3d7171070bd4a1850eacb996dbd0dbdbcb41dcbe",
+          "bytes": 3049
+        },
+        "linear-followup-20261111/runs/capacity-rwth-v001/model.pkl": {
+          "path": "linear-followup-20261111/runs/capacity-rwth-v001/model.pkl",
+          "sha256": "e2b9d0b8abfc512dba76ddf766ccea813e35b15bfcd4d3870a364c636a4472e1",
+          "bytes": 889777
+        },
+        "followup-risk-20261110/runs/rwth-cpu-final-v002/unconstrained_rc_insample_boost/model.json": {
+          "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/unconstrained_rc_insample_boost/model.json",
+          "sha256": "67fd0315255109ca5881ca4b5e6305c47271519446b1dfe84e336846d8a06d12",
+          "bytes": 3609
+        },
+        "followup-risk-20261110/runs/rwth-cpu-final-v002/unconstrained_rc_insample_boost/model.pkl": {
+          "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/unconstrained_rc_insample_boost/model.pkl",
+          "sha256": "e1c1cfe02e4cba5db71c659dc213e374d33414cdeec95bf9db36de67f54e5a94",
+          "bytes": 419264
+        },
+        "followup-risk-20261110/runs/rwth-mlp-2026111701-v002/model.json": {
+          "path": "followup-risk-20261110/runs/rwth-mlp-2026111701-v002/model.json",
+          "sha256": "31fc887fb41a3089d066f96c9e83caaf4d945a770f01be13e5e9ead39c22ba0e",
+          "bytes": 5920
+        },
+        "followup-risk-20261110/runs/rwth-mlp-2026111701-v002/weights_final.npz": {
+          "path": "followup-risk-20261110/runs/rwth-mlp-2026111701-v002/weights_final.npz",
+          "sha256": "26d2e6b747beaeb0538d8dd6538a79910b38e0d520b1c36be05a27fb259bd803",
+          "bytes": 17177
+        }
+      },
+      "methods": {
+        "D": {
+          "terms": [
+            [
+              "d9",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.json",
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.pkl"
+          ],
+          "total_unique_bytes": 497777,
+          "numeric_payload_bytes_from_original_audit": 364008
+        },
+        "P": {
+          "terms": [
+            [
+              "linear_prior",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/priors.json"
+          ],
+          "total_unique_bytes": 89678,
+          "numeric_payload_bytes_from_original_audit": 272
+        },
+        "L": {
+          "terms": [
+            [
+              "linear_prior",
+              1.0
+            ],
+            [
+              "linear_residual_tree",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/linear33_insample_boost/model.json",
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/linear33_insample_boost/model.pkl",
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/priors.json"
+          ],
+          "total_unique_bytes": 512553,
+          "numeric_payload_bytes_from_original_audit": 325080
+        },
+        "H": {
+          "terms": [
+            [
+              "d9",
+              0.5
+            ],
+            [
+              "linear_prior",
+              0.5
+            ],
+            [
+              "linear_residual_tree",
+              0.5
+            ]
+          ],
+          "required_files": [
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.json",
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.pkl",
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/linear33_insample_boost/model.json",
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/linear33_insample_boost/model.pkl",
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/priors.json"
+          ],
+          "total_unique_bytes": 1010330,
+          "numeric_payload_bytes_from_original_audit": 689088
+        },
+        "direct200": {
+          "terms": [
+            [
+              "direct200",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/direct_boost/model.json",
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/direct_boost/model.pkl"
+          ],
+          "total_unique_bytes": 422868,
+          "numeric_payload_bytes_from_original_audit": 324808
+        },
+        "capacity": {
+          "terms": [
+            [
+              "capacity",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/capacity-rwth-v001/model.json",
+            "linear-followup-20261111/runs/capacity-rwth-v001/model.pkl"
+          ],
+          "total_unique_bytes": 892826,
+          "numeric_payload_bytes_from_original_audit": 703984
+        },
+        "free25_residual": {
+          "terms": [
+            [
+              "free_prior",
+              1.0
+            ],
+            [
+              "free_residual_tree",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/priors.json",
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/unconstrained_rc_insample_boost/model.json",
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/unconstrained_rc_insample_boost/model.pkl"
+          ],
+          "total_unique_bytes": 512551,
+          "numeric_payload_bytes_from_original_audit": 325008
+        },
+        "free25_half": {
+          "terms": [
+            [
+              "d9",
+              0.5
+            ],
+            [
+              "free_prior",
+              0.5
+            ],
+            [
+              "free_residual_tree",
+              0.5
+            ]
+          ],
+          "required_files": [
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.json",
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.pkl",
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/priors.json",
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/unconstrained_rc_insample_boost/model.json",
+            "followup-risk-20261110/runs/rwth-cpu-final-v002/unconstrained_rc_insample_boost/model.pkl"
+          ],
+          "total_unique_bytes": 1010328,
+          "numeric_payload_bytes_from_original_audit": 689016
+        },
+        "mlp_mse_seed1": {
+          "terms": [
+            [
+              "mlp",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "followup-risk-20261110/runs/rwth-mlp-2026111701-v002/model.json",
+            "followup-risk-20261110/runs/rwth-mlp-2026111701-v002/weights_final.npz"
+          ],
+          "total_unique_bytes": 23097,
+          "numeric_payload_bytes_from_original_audit": 17156
+        }
+      },
+      "H_union_proof": {
+        "D_intersection_L": [],
+        "overlap_bytes": 0,
+        "shared_set_equals_P": false,
+        "P_required_files_in_H": true,
+        "formula": "bytes(H)=bytes(D)+bytes(L)-bytes(D intersection L)",
+        "panel_formula": "bytes(H)=bytes(D)+bytes(L)",
+        "H_terms": [
+          [
+            "d9",
+            0.5
+          ],
+          [
+            "linear_prior",
+            0.5
+          ],
+          [
+            "linear_residual_tree",
+            0.5
+          ]
+        ],
+        "P_metadata": {
+          "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/priors.json",
+          "sha256": "68f7e8dc02632885668cfaf15d3833c55c85793c66b890892206428e45713dd6",
+          "bytes": 89678
+        },
+        "P_coefficient_selector": "$.linear33.coef",
+        "P_scale_selector": "$.linear33.scale",
+        "D_scale_file": {
+          "path": "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.json",
+          "sha256": "094c962064696cc1a72d2c2b8e22eb2eb729d547cabf95f108e15ace8fb42290",
+          "bytes": 3603
+        },
+        "D_scale_selector": "$.scale",
+        "P_coefficient_values_sha256": "3d32fb96e292357aaa344548c17c9b9ea0518ed14fa86d4be80ac78ff226a377",
+        "P_scale_values_sha256": "35fd46fe4d8720b1389afcd84f13436d949ead30c149a21339b9771c9d384d5a"
+      }
+    },
+    {
+      "dataset": "ipmsm",
+      "arm": "own_boundary",
+      "role": "calibration",
+      "profile_id": 1,
+      "config": {
+        "path": "linear-followup-20261111/configs/streaming-ipmsm-own-main-v003.json",
+        "sha256": "6a723ffcd299ae76209c243c7b85cd8cc409b76cff247eb98d4c6e3eb1b26486",
+        "bytes": 14730
+      },
+      "summary": {
+        "path": "linear-followup-20261111/runs/streaming-ipmsm-own-main-v003/summary.json",
+        "sha256": "1eb913dd995caea08cf53c254980bd0d2a443b331d078090dbb1dda09c17404a",
+        "bytes": 32365
+      },
+      "original_independent_audit": {
+        "path": "linear-followup-20261111/runs/streaming-ipmsm-own-audit-v003/report.json",
+        "sha256": "7c6ba72a52203f9e9690c1b0650a9759b936a6ca9d9b34e2361e52f854d1384a",
+        "bytes": 17771
+      },
+      "runtime": {
+        "path": "linear-followup-20261111/runs/streaming-ipmsm-own-main-v003/runtime.json",
+        "sha256": "c3b6d2ae92b3dca6cea5a4d6cfd79f8f7af7f5646f41b3694814ee26980f4a33",
+        "bytes": 2454
+      },
+      "components": {
+        "d9": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/model.json",
+              "sha256": "e4662e0674822e2a6bc16e4e0de3afaa351fcbeb8cc33b2719b685fc3ec478fa",
+              "bytes": 1646
+            },
+            "scale": {
+              "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json",
+              "sha256": "ac8019ad320fb8b7dea2fb9fd9c37f63a4f65f1029fe0f490d662c9dffc7822c",
+              "bytes": 6056
+            },
+            "pickle": {
+              "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/booster.pkl",
+              "sha256": "688e1c61754ea4e3247cd0877cb638c6f15ab5ab68bab33c4626a1106f5bc289",
+              "bytes": 494174
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "7817f1b3fd0834ea5a56ea9aa39960aac280240b2c12b0beb9b0e25a79788b9d",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 7,
+            "max_iter": 500
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json",
+            "sha256": "ac8019ad320fb8b7dea2fb9fd9c37f63a4f65f1029fe0f490d662c9dffc7822c",
+            "bytes": 6056
+          },
+          "selected_scale_sha256": "7284f042d90fa9096b7a5f14a2f8cb5d22def65be326111ccbe2ca6acdb1afa4"
+        },
+        "linear_residual_tree": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/residual/model.json",
+              "sha256": "08ec93dce32504c241600b6233452df6a246363baa1ceaea2b9d31eb6fbe9c29",
+              "bytes": 1668
+            },
+            "scale": {
+              "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json",
+              "sha256": "ac8019ad320fb8b7dea2fb9fd9c37f63a4f65f1029fe0f490d662c9dffc7822c",
+              "bytes": 6056
+            },
+            "pickle": {
+              "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/residual/booster.pkl",
+              "sha256": "574fbb36376b619835ebd3527647566005137244c580b1e68b88d3307e842210",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "ae8773f1ee85d1e26558362c8cfa0be994eaf2460d9ea7d946ddcbb5f7d1a2b1",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 15,
+            "max_iter": 200
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json",
+            "sha256": "ac8019ad320fb8b7dea2fb9fd9c37f63a4f65f1029fe0f490d662c9dffc7822c",
+            "bytes": 6056
+          },
+          "selected_scale_sha256": "7284f042d90fa9096b7a5f14a2f8cb5d22def65be326111ccbe2ca6acdb1afa4"
+        },
+        "linear_prior": {
+          "kind": "linear",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json",
+              "sha256": "ac8019ad320fb8b7dea2fb9fd9c37f63a4f65f1029fe0f490d662c9dffc7822c",
+              "bytes": 6056
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "1bc529cfb3fb2993d8a12df788f69785e58710feb2632573232a90291e73a67e",
+          "family": "linear33",
+          "coefficients": 34,
+          "coefficient_selector": "$.coef",
+          "coefficient_values_sha256": "75b164645504774de7cb0fcf90c049b48bcd3457fcf56af7980596e17816d1df",
+          "scale_selector": "$.scale",
+          "scale_fields": [
+            "ewma_mean",
+            "ewma_scale",
+            "ids",
+            "linear33_mean",
+            "linear33_scale",
+            "qscale",
+            "y_mid",
+            "y_scale"
+          ],
+          "scale_values_sha256": "7284f042d90fa9096b7a5f14a2f8cb5d22def65be326111ccbe2ca6acdb1afa4",
+          "target_output": "y_mid + y_scale * (design @ coef)",
+          "lambda_value": 0.01
+        },
+        "free_prior": {
+          "kind": "linear",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_prior.json",
+              "sha256": "528d942cef9d9d93053bc6e94ab6feaec0dd979a918dbb1822ec1e06f107e7bc",
+              "bytes": 2918
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "4aab5c6cddbf9e2b564cd931a2181de6ce897b55867ba7b3c663c21046f80b14",
+          "family": "free",
+          "coefficients": 26,
+          "coefficient_selector": "$.coef",
+          "coefficient_values_sha256": "9bcf56f577840add7b36c0511f1c07de2ababd5e6b854df73e5d583dd363f528",
+          "scale_selector": "$.scale",
+          "scale_fields": [
+            "ids",
+            "qscale",
+            "y_mid",
+            "y_scale"
+          ],
+          "scale_values_sha256": "5c519c5d6e2f7dff4ee7f34161b30a7bc4173c11cb3ca8ac3feb147b52873c60",
+          "target_output": "y_mid + y_scale * (design @ coef)",
+          "lambda_value": 0.01
+        },
+        "direct200": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/direct200/model.json",
+              "sha256": "5469481e3fa58812239725926f3fdcdbc4e9e05532671bbdb649d400cc4d6120",
+              "bytes": 2253
+            },
+            "scale": {
+              "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/direct200/model.json",
+              "sha256": "5469481e3fa58812239725926f3fdcdbc4e9e05532671bbdb649d400cc4d6120",
+              "bytes": 2253
+            },
+            "pickle": {
+              "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/direct200/booster.pkl",
+              "sha256": "bc18a1989f38b669be12d6e42f292b84caef405cde2d145d35fc17dc140dbe2e",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "e41c231e1ecd02672fe7e4447d9639368e7c6f2c6ffd6c83f3c42934b86fc5ea",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_iter": 200,
+            "max_leaf_nodes": 15
+          },
+          "scale_selector": "$.feature_scale",
+          "scale_file": {
+            "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/direct200/model.json",
+            "sha256": "5469481e3fa58812239725926f3fdcdbc4e9e05532671bbdb649d400cc4d6120",
+            "bytes": 2253
+          },
+          "selected_scale_sha256": "5c519c5d6e2f7dff4ee7f34161b30a7bc4173c11cb3ca8ac3feb147b52873c60"
+        },
+        "capacity": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/capacity_direct/model.json",
+              "sha256": "a6e5abd07454e502b48cc2aabcf25cd7cf7915e4e01f6b637cd29d5f131c9eba",
+              "bytes": 2272
+            },
+            "scale": {
+              "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/capacity_direct/model.json",
+              "sha256": "a6e5abd07454e502b48cc2aabcf25cd7cf7915e4e01f6b637cd29d5f131c9eba",
+              "bytes": 2272
+            },
+            "pickle": {
+              "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/capacity_direct/booster.pkl",
+              "sha256": "7339f18d8aed9411dbffb8d9f011f9a84a0510c89b9b4a2a35ebfb1da33db3fc",
+              "bytes": 889777
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "28060a3dab6ab2b37f202fb83f9937bb6075e583d516306bba53281086ca97cb",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_iter": 967,
+            "max_leaf_nodes": 7
+          },
+          "scale_selector": "$.feature_scale",
+          "scale_file": {
+            "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/capacity_direct/model.json",
+            "sha256": "a6e5abd07454e502b48cc2aabcf25cd7cf7915e4e01f6b637cd29d5f131c9eba",
+            "bytes": 2272
+          },
+          "selected_scale_sha256": "5c519c5d6e2f7dff4ee7f34161b30a7bc4173c11cb3ca8ac3feb147b52873c60"
+        },
+        "free_residual_tree": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_residual/model.json",
+              "sha256": "fe44c35acd70a7b18081623fb8bd8df41b90fcfae624beaf74a444f2d62cbcea",
+              "bytes": 2457
+            },
+            "scale": {
+              "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_residual/model.json",
+              "sha256": "fe44c35acd70a7b18081623fb8bd8df41b90fcfae624beaf74a444f2d62cbcea",
+              "bytes": 2457
+            },
+            "pickle": {
+              "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_residual/booster.pkl",
+              "sha256": "8c59eb34ab665e5582b97d137c689250675e8c44e7b27d500fc21f62bf688694",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "a475bbe620fafd3c5c203ebcc5bb0de049a09f70f20ad70374f955bd02090c0b",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_iter": 200,
+            "max_leaf_nodes": 15
+          },
+          "scale_selector": "$.feature_scale",
+          "scale_file": {
+            "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_residual/model.json",
+            "sha256": "fe44c35acd70a7b18081623fb8bd8df41b90fcfae624beaf74a444f2d62cbcea",
+            "bytes": 2457
+          },
+          "selected_scale_sha256": "5c519c5d6e2f7dff4ee7f34161b30a7bc4173c11cb3ca8ac3feb147b52873c60"
+        },
+        "mlp": {
+          "kind": "mlp",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/ipmsm-own-controls-mlp-2026111701-v001/model.json",
+              "sha256": "e30b9f55501e20245facf732c6513665ab78e5aca84fb9bf22371c0802398964",
+              "bytes": 4863
+            },
+            "weights": {
+              "path": "linear-followup-20261111/runs/ipmsm-own-controls-mlp-2026111701-v001/weights_final.npz",
+              "sha256": "3d236bdfb06b8c51b6e0c2a12551e37cbf2da822763880017d9a4beac6778250",
+              "bytes": 17138
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "6d31eae7d54c6416c1a1834d0475191adf33e58d41caab3e910f33f13d0c863c",
+          "seed": 2026111701,
+          "loss": "mse",
+          "architecture": [
+            33,
+            64,
+            32,
+            1
+          ],
+          "parameters": 4289,
+          "transform_selector": "$.transform",
+          "input_mean_count": 33,
+          "input_std_count": 33,
+          "transform_sha256": "f1f3849b298b4afd9891e63294bba491759a0da8478ca2fb88b8f1649c651ddf"
+        }
+      },
+      "inventory": {
+        "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/model.json": {
+          "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/model.json",
+          "sha256": "e4662e0674822e2a6bc16e4e0de3afaa351fcbeb8cc33b2719b685fc3ec478fa",
+          "bytes": 1646
+        },
+        "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json": {
+          "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json",
+          "sha256": "ac8019ad320fb8b7dea2fb9fd9c37f63a4f65f1029fe0f490d662c9dffc7822c",
+          "bytes": 6056
+        },
+        "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/booster.pkl": {
+          "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/booster.pkl",
+          "sha256": "688e1c61754ea4e3247cd0877cb638c6f15ab5ab68bab33c4626a1106f5bc289",
+          "bytes": 494174
+        },
+        "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/residual/model.json": {
+          "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/residual/model.json",
+          "sha256": "08ec93dce32504c241600b6233452df6a246363baa1ceaea2b9d31eb6fbe9c29",
+          "bytes": 1668
+        },
+        "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/residual/booster.pkl": {
+          "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/residual/booster.pkl",
+          "sha256": "574fbb36376b619835ebd3527647566005137244c580b1e68b88d3307e842210",
+          "bytes": 419264
+        },
+        "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/direct200/model.json": {
+          "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/direct200/model.json",
+          "sha256": "5469481e3fa58812239725926f3fdcdbc4e9e05532671bbdb649d400cc4d6120",
+          "bytes": 2253
+        },
+        "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/direct200/booster.pkl": {
+          "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/direct200/booster.pkl",
+          "sha256": "bc18a1989f38b669be12d6e42f292b84caef405cde2d145d35fc17dc140dbe2e",
+          "bytes": 419264
+        },
+        "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/capacity_direct/model.json": {
+          "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/capacity_direct/model.json",
+          "sha256": "a6e5abd07454e502b48cc2aabcf25cd7cf7915e4e01f6b637cd29d5f131c9eba",
+          "bytes": 2272
+        },
+        "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/capacity_direct/booster.pkl": {
+          "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/capacity_direct/booster.pkl",
+          "sha256": "7339f18d8aed9411dbffb8d9f011f9a84a0510c89b9b4a2a35ebfb1da33db3fc",
+          "bytes": 889777
+        },
+        "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_prior.json": {
+          "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_prior.json",
+          "sha256": "528d942cef9d9d93053bc6e94ab6feaec0dd979a918dbb1822ec1e06f107e7bc",
+          "bytes": 2918
+        },
+        "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_residual/model.json": {
+          "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_residual/model.json",
+          "sha256": "fe44c35acd70a7b18081623fb8bd8df41b90fcfae624beaf74a444f2d62cbcea",
+          "bytes": 2457
+        },
+        "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_residual/booster.pkl": {
+          "path": "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_residual/booster.pkl",
+          "sha256": "8c59eb34ab665e5582b97d137c689250675e8c44e7b27d500fc21f62bf688694",
+          "bytes": 419264
+        },
+        "linear-followup-20261111/runs/ipmsm-own-controls-mlp-2026111701-v001/model.json": {
+          "path": "linear-followup-20261111/runs/ipmsm-own-controls-mlp-2026111701-v001/model.json",
+          "sha256": "e30b9f55501e20245facf732c6513665ab78e5aca84fb9bf22371c0802398964",
+          "bytes": 4863
+        },
+        "linear-followup-20261111/runs/ipmsm-own-controls-mlp-2026111701-v001/weights_final.npz": {
+          "path": "linear-followup-20261111/runs/ipmsm-own-controls-mlp-2026111701-v001/weights_final.npz",
+          "sha256": "3d236bdfb06b8c51b6e0c2a12551e37cbf2da822763880017d9a4beac6778250",
+          "bytes": 17138
+        }
+      },
+      "methods": {
+        "D": {
+          "terms": [
+            [
+              "d9",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/booster.pkl",
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/model.json",
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json"
+          ],
+          "total_unique_bytes": 501876,
+          "numeric_payload_bytes_from_original_audit": 364008
+        },
+        "P": {
+          "terms": [
+            [
+              "linear_prior",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json"
+          ],
+          "total_unique_bytes": 6056,
+          "numeric_payload_bytes_from_original_audit": 272
+        },
+        "L": {
+          "terms": [
+            [
+              "linear_prior",
+              1.0
+            ],
+            [
+              "linear_residual_tree",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json",
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/residual/booster.pkl",
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/residual/model.json"
+          ],
+          "total_unique_bytes": 426988,
+          "numeric_payload_bytes_from_original_audit": 325080
+        },
+        "H": {
+          "terms": [
+            [
+              "d9",
+              0.5
+            ],
+            [
+              "linear_prior",
+              0.5
+            ],
+            [
+              "linear_residual_tree",
+              0.5
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/booster.pkl",
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/model.json",
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json",
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/residual/booster.pkl",
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/residual/model.json"
+          ],
+          "total_unique_bytes": 922808,
+          "numeric_payload_bytes_from_original_audit": 689088
+        },
+        "direct200": {
+          "terms": [
+            [
+              "direct200",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/direct200/booster.pkl",
+            "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/direct200/model.json"
+          ],
+          "total_unique_bytes": 421517,
+          "numeric_payload_bytes_from_original_audit": 324808
+        },
+        "capacity": {
+          "terms": [
+            [
+              "capacity",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/capacity_direct/booster.pkl",
+            "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/capacity_direct/model.json"
+          ],
+          "total_unique_bytes": 892049,
+          "numeric_payload_bytes_from_original_audit": 703984
+        },
+        "free25_residual": {
+          "terms": [
+            [
+              "free_prior",
+              1.0
+            ],
+            [
+              "free_residual_tree",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_prior.json",
+            "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_residual/booster.pkl",
+            "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_residual/model.json"
+          ],
+          "total_unique_bytes": 424639,
+          "numeric_payload_bytes_from_original_audit": 325016
+        },
+        "free25_half": {
+          "terms": [
+            [
+              "d9",
+              0.5
+            ],
+            [
+              "free_prior",
+              0.5
+            ],
+            [
+              "free_residual_tree",
+              0.5
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_prior.json",
+            "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_residual/booster.pkl",
+            "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_residual/model.json",
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/booster.pkl",
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/model.json",
+            "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json"
+          ],
+          "total_unique_bytes": 926515,
+          "numeric_payload_bytes_from_original_audit": 689024
+        },
+        "mlp_mse_seed1": {
+          "terms": [
+            [
+              "mlp",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/ipmsm-own-controls-mlp-2026111701-v001/model.json",
+            "linear-followup-20261111/runs/ipmsm-own-controls-mlp-2026111701-v001/weights_final.npz"
+          ],
+          "total_unique_bytes": 22001,
+          "numeric_payload_bytes_from_original_audit": 17156
+        }
+      },
+      "H_union_proof": {
+        "D_intersection_L": [
+          "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json"
+        ],
+        "overlap_bytes": 6056,
+        "shared_set_equals_P": true,
+        "P_required_files_in_H": true,
+        "formula": "bytes(H)=bytes(D)+bytes(L)-bytes(D intersection L)",
+        "panel_formula": "bytes(H)=bytes(D)+bytes(L)-bytes(P)",
+        "H_terms": [
+          [
+            "d9",
+            0.5
+          ],
+          [
+            "linear_prior",
+            0.5
+          ],
+          [
+            "linear_residual_tree",
+            0.5
+          ]
+        ],
+        "P_metadata": {
+          "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json",
+          "sha256": "ac8019ad320fb8b7dea2fb9fd9c37f63a4f65f1029fe0f490d662c9dffc7822c",
+          "bytes": 6056
+        },
+        "P_coefficient_selector": "$.coef",
+        "P_scale_selector": "$.scale",
+        "D_scale_file": {
+          "path": "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json",
+          "sha256": "ac8019ad320fb8b7dea2fb9fd9c37f63a4f65f1029fe0f490d662c9dffc7822c",
+          "bytes": 6056
+        },
+        "D_scale_selector": "$.scale",
+        "P_coefficient_values_sha256": "75b164645504774de7cb0fcf90c049b48bcd3457fcf56af7980596e17816d1df",
+        "P_scale_values_sha256": "7284f042d90fa9096b7a5f14a2f8cb5d22def65be326111ccbe2ca6acdb1afa4"
+      }
+    },
+    {
+      "dataset": "paderborn",
+      "arm": "own_boundary",
+      "role": "development",
+      "profile_id": 18,
+      "config": {
+        "path": "linear-followup-20261111/configs/streaming-paderborn-own-main-v003.json",
+        "sha256": "1e5c77d2283a9249de2ed59050d54ea6354846182b2850b43000214c1b9cc2f4",
+        "bytes": 14914
+      },
+      "summary": {
+        "path": "linear-followup-20261111/runs/streaming-paderborn-own-main-v003/summary.json",
+        "sha256": "8687a0acf05b6ffaf7fb931e52aaef52fb6ccaccae285ff9f277dd1eaf488447",
+        "bytes": 32505
+      },
+      "original_independent_audit": {
+        "path": "linear-followup-20261111/runs/streaming-paderborn-own-audit-v003/report.json",
+        "sha256": "99de646b30fe2d7cd749bbd5893aacd2a62bbcc83e1eec507e2641eb4523a016",
+        "bytes": 17927
+      },
+      "runtime": {
+        "path": "linear-followup-20261111/runs/streaming-paderborn-own-main-v003/runtime.json",
+        "sha256": "c3b6d2ae92b3dca6cea5a4d6cfd79f8f7af7f5646f41b3694814ee26980f4a33",
+        "bytes": 2454
+      },
+      "components": {
+        "d9": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/model.json",
+              "sha256": "1e246077e95a3406a1a4404cd7b303833c38e9a870e047e2db354f6250f590c0",
+              "bytes": 1661
+            },
+            "scale": {
+              "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json",
+              "sha256": "84e6ce0ef074f8cb78ad5830a0bd9c062a98027156c5462565e2b7ff0c26c60a",
+              "bytes": 6438
+            },
+            "pickle": {
+              "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/booster.pkl",
+              "sha256": "39718967041c36997c1e7c00c7cf1a3774187324d88b621f60109361710cf648",
+              "bytes": 1813854
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "d63c8a80cd526aaa7289a08db92c098b5f1237de51fd79635a6738fde09b7a3e",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 15,
+            "max_iter": 1000
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json",
+            "sha256": "84e6ce0ef074f8cb78ad5830a0bd9c062a98027156c5462565e2b7ff0c26c60a",
+            "bytes": 6438
+          },
+          "selected_scale_sha256": "5c74ff1578b76558bbc03f5e09de90c3c85cfd4da4101dd917d7e5cea2c7b3f4"
+        },
+        "linear_residual_tree": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/residual/model.json",
+              "sha256": "d9e7f148802faec653f05be05c3d5865ee1f6eedbded20135d3d83b84ee2fde0",
+              "bytes": 1668
+            },
+            "scale": {
+              "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json",
+              "sha256": "84e6ce0ef074f8cb78ad5830a0bd9c062a98027156c5462565e2b7ff0c26c60a",
+              "bytes": 6438
+            },
+            "pickle": {
+              "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/residual/booster.pkl",
+              "sha256": "dc2c061fcb44c9a6b4e4cbc7783d976de073a5e89478785508c6cc6f43264c8c",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "44b4f3c7692fdb144a3645ec20f3a40d48801920af8d984058c938c760a4359f",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_leaf_nodes": 15,
+            "max_iter": 200
+          },
+          "scale_selector": "$.scale",
+          "scale_file": {
+            "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json",
+            "sha256": "84e6ce0ef074f8cb78ad5830a0bd9c062a98027156c5462565e2b7ff0c26c60a",
+            "bytes": 6438
+          },
+          "selected_scale_sha256": "5c74ff1578b76558bbc03f5e09de90c3c85cfd4da4101dd917d7e5cea2c7b3f4"
+        },
+        "linear_prior": {
+          "kind": "linear",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json",
+              "sha256": "84e6ce0ef074f8cb78ad5830a0bd9c062a98027156c5462565e2b7ff0c26c60a",
+              "bytes": 6438
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "395943617e2cb24403e7b6007cc3973ae582b025f3d623113ea80822f238c987",
+          "family": "linear33",
+          "coefficients": 34,
+          "coefficient_selector": "$.coef",
+          "coefficient_values_sha256": "503cf0305e9d7ea158e1c90c30cba133e6ebbb1553313c72705abe049712dc2f",
+          "scale_selector": "$.scale",
+          "scale_fields": [
+            "ewma_mean",
+            "ewma_scale",
+            "ids",
+            "linear33_mean",
+            "linear33_scale",
+            "qscale",
+            "y_mid",
+            "y_scale"
+          ],
+          "scale_values_sha256": "5c74ff1578b76558bbc03f5e09de90c3c85cfd4da4101dd917d7e5cea2c7b3f4",
+          "target_output": "y_mid + y_scale * (design @ coef)",
+          "lambda_value": 0.0001
+        },
+        "free_prior": {
+          "kind": "linear",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_prior.json",
+              "sha256": "fe55095857d82f02ccb024f7b48bf8765680325b9071fa9c2a04888b19443b8b",
+              "bytes": 3631
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "afdd36fa7f6b506e1f6de9b0948af293d7a970c79358589dd050fc2f42107c0d",
+          "family": "free",
+          "coefficients": 26,
+          "coefficient_selector": "$.coef",
+          "coefficient_values_sha256": "42fa3f6feba9b6636da6df4a5fbd47e761e66ca8e8c44b159f00450511f61909",
+          "scale_selector": "$.scale",
+          "scale_fields": [
+            "ids",
+            "qscale",
+            "y_mid",
+            "y_scale"
+          ],
+          "scale_values_sha256": "b0aafcec8c5db8ee70befb9188a2eafe7a22ed6c117324a45bbb4930b4447355",
+          "target_output": "y_mid + y_scale * (design @ coef)",
+          "lambda_value": 0.0001
+        },
+        "direct200": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/direct200/model.json",
+              "sha256": "8fc90720d17a0e3569d772a8529ee4412f2c27ac3a2718eb7ab4cbe5ac27bf18",
+              "bytes": 2667
+            },
+            "scale": {
+              "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/direct200/model.json",
+              "sha256": "8fc90720d17a0e3569d772a8529ee4412f2c27ac3a2718eb7ab4cbe5ac27bf18",
+              "bytes": 2667
+            },
+            "pickle": {
+              "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/direct200/booster.pkl",
+              "sha256": "173b56de39395e19185b5ef963ff8887b4876a0e44a6c67af8208331c77cee6a",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "f06cb224d4abff6a9a3626c526ee6fe22e041e97cce14fa253fea98bed7179db",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_iter": 200,
+            "max_leaf_nodes": 15
+          },
+          "scale_selector": "$.feature_scale",
+          "scale_file": {
+            "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/direct200/model.json",
+            "sha256": "8fc90720d17a0e3569d772a8529ee4412f2c27ac3a2718eb7ab4cbe5ac27bf18",
+            "bytes": 2667
+          },
+          "selected_scale_sha256": "b0aafcec8c5db8ee70befb9188a2eafe7a22ed6c117324a45bbb4930b4447355"
+        },
+        "capacity": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/capacity_direct/model.json",
+              "sha256": "ff6ad82d3d85f90cb33783bac3326ef8b4ed817fde711a7603a3ce71f1d3d194",
+              "bytes": 2687
+            },
+            "scale": {
+              "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/capacity_direct/model.json",
+              "sha256": "ff6ad82d3d85f90cb33783bac3326ef8b4ed817fde711a7603a3ce71f1d3d194",
+              "bytes": 2687
+            },
+            "pickle": {
+              "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/capacity_direct/booster.pkl",
+              "sha256": "748d796e35081daf0075e060536bd730f0236175185f52727af142d8e48fa3ec",
+              "bytes": 2162501
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "dd9d63c1a8debf0d761cab2edb4c77481bff5d2e643e10f72aef164a2f7ac2b0",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_iter": 1200,
+            "max_leaf_nodes": 15
+          },
+          "scale_selector": "$.feature_scale",
+          "scale_file": {
+            "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/capacity_direct/model.json",
+            "sha256": "ff6ad82d3d85f90cb33783bac3326ef8b4ed817fde711a7603a3ce71f1d3d194",
+            "bytes": 2687
+          },
+          "selected_scale_sha256": "b0aafcec8c5db8ee70befb9188a2eafe7a22ed6c117324a45bbb4930b4447355"
+        },
+        "free_residual_tree": {
+          "kind": "tree",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_residual/model.json",
+              "sha256": "069e0014b154d16bb2856654e7a6d7e00e87732972e983240eca13664d6bb567",
+              "bytes": 2876
+            },
+            "scale": {
+              "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_residual/model.json",
+              "sha256": "069e0014b154d16bb2856654e7a6d7e00e87732972e983240eca13664d6bb567",
+              "bytes": 2876
+            },
+            "pickle": {
+              "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_residual/booster.pkl",
+              "sha256": "251e8f279710e84766c9059b96fc1aef132df9b42fe5eb6d198f567c1d5a51c1",
+              "bytes": 419264
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "3f915911ce51b8d3a2bc969e9e25827707924e09bcc3ce329020b09df143596a",
+          "configuration": {
+            "learning_rate": 0.05,
+            "min_samples_leaf": 20,
+            "l2_regularization": 0.1,
+            "loss": "squared_error",
+            "early_stopping": false,
+            "random_state": 2026111201,
+            "max_iter": 200,
+            "max_leaf_nodes": 15
+          },
+          "scale_selector": "$.feature_scale",
+          "scale_file": {
+            "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_residual/model.json",
+            "sha256": "069e0014b154d16bb2856654e7a6d7e00e87732972e983240eca13664d6bb567",
+            "bytes": 2876
+          },
+          "selected_scale_sha256": "b0aafcec8c5db8ee70befb9188a2eafe7a22ed6c117324a45bbb4930b4447355"
+        },
+        "mlp": {
+          "kind": "mlp",
+          "artifact_fields": {
+            "metadata": {
+              "path": "linear-followup-20261111/runs/paderborn-own-controls-mlp-2026111701-v001/model.json",
+              "sha256": "48498bfa62eeffb20e7cb2379b147fe1766f03b8409484cd4e424dc2191048bf",
+              "bytes": 6047
+            },
+            "weights": {
+              "path": "linear-followup-20261111/runs/paderborn-own-controls-mlp-2026111701-v001/weights_final.npz",
+              "sha256": "77dab678292858d690a466aa2b359ce01f4e937bc3f0ca895725cba7e133f58c",
+              "bytes": 17211
+            }
+          },
+          "metadata_selector": "$",
+          "selected_metadata_sha256": "fd9724dac519d4e686b560cd9020b180512f905666071d69c99835e14e20d5a9",
+          "seed": 2026111701,
+          "loss": "mse",
+          "architecture": [
+            33,
+            64,
+            32,
+            1
+          ],
+          "parameters": 4289,
+          "transform_selector": "$.transform",
+          "input_mean_count": 33,
+          "input_std_count": 33,
+          "transform_sha256": "2121558be73c9f75afd7561c21676b03fee19a9918b5c2ebeeda4d7c0f9d9d63"
+        }
+      },
+      "inventory": {
+        "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/model.json": {
+          "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/model.json",
+          "sha256": "1e246077e95a3406a1a4404cd7b303833c38e9a870e047e2db354f6250f590c0",
+          "bytes": 1661
+        },
+        "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json": {
+          "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json",
+          "sha256": "84e6ce0ef074f8cb78ad5830a0bd9c062a98027156c5462565e2b7ff0c26c60a",
+          "bytes": 6438
+        },
+        "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/booster.pkl": {
+          "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/booster.pkl",
+          "sha256": "39718967041c36997c1e7c00c7cf1a3774187324d88b621f60109361710cf648",
+          "bytes": 1813854
+        },
+        "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/residual/model.json": {
+          "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/residual/model.json",
+          "sha256": "d9e7f148802faec653f05be05c3d5865ee1f6eedbded20135d3d83b84ee2fde0",
+          "bytes": 1668
+        },
+        "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/residual/booster.pkl": {
+          "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/residual/booster.pkl",
+          "sha256": "dc2c061fcb44c9a6b4e4cbc7783d976de073a5e89478785508c6cc6f43264c8c",
+          "bytes": 419264
+        },
+        "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/direct200/model.json": {
+          "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/direct200/model.json",
+          "sha256": "8fc90720d17a0e3569d772a8529ee4412f2c27ac3a2718eb7ab4cbe5ac27bf18",
+          "bytes": 2667
+        },
+        "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/direct200/booster.pkl": {
+          "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/direct200/booster.pkl",
+          "sha256": "173b56de39395e19185b5ef963ff8887b4876a0e44a6c67af8208331c77cee6a",
+          "bytes": 419264
+        },
+        "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/capacity_direct/model.json": {
+          "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/capacity_direct/model.json",
+          "sha256": "ff6ad82d3d85f90cb33783bac3326ef8b4ed817fde711a7603a3ce71f1d3d194",
+          "bytes": 2687
+        },
+        "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/capacity_direct/booster.pkl": {
+          "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/capacity_direct/booster.pkl",
+          "sha256": "748d796e35081daf0075e060536bd730f0236175185f52727af142d8e48fa3ec",
+          "bytes": 2162501
+        },
+        "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_prior.json": {
+          "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_prior.json",
+          "sha256": "fe55095857d82f02ccb024f7b48bf8765680325b9071fa9c2a04888b19443b8b",
+          "bytes": 3631
+        },
+        "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_residual/model.json": {
+          "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_residual/model.json",
+          "sha256": "069e0014b154d16bb2856654e7a6d7e00e87732972e983240eca13664d6bb567",
+          "bytes": 2876
+        },
+        "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_residual/booster.pkl": {
+          "path": "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_residual/booster.pkl",
+          "sha256": "251e8f279710e84766c9059b96fc1aef132df9b42fe5eb6d198f567c1d5a51c1",
+          "bytes": 419264
+        },
+        "linear-followup-20261111/runs/paderborn-own-controls-mlp-2026111701-v001/model.json": {
+          "path": "linear-followup-20261111/runs/paderborn-own-controls-mlp-2026111701-v001/model.json",
+          "sha256": "48498bfa62eeffb20e7cb2379b147fe1766f03b8409484cd4e424dc2191048bf",
+          "bytes": 6047
+        },
+        "linear-followup-20261111/runs/paderborn-own-controls-mlp-2026111701-v001/weights_final.npz": {
+          "path": "linear-followup-20261111/runs/paderborn-own-controls-mlp-2026111701-v001/weights_final.npz",
+          "sha256": "77dab678292858d690a466aa2b359ce01f4e937bc3f0ca895725cba7e133f58c",
+          "bytes": 17211
+        }
+      },
+      "methods": {
+        "D": {
+          "terms": [
+            [
+              "d9",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/booster.pkl",
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/model.json",
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json"
+          ],
+          "total_unique_bytes": 1821953,
+          "numeric_payload_bytes_from_original_audit": 1624008
+        },
+        "P": {
+          "terms": [
+            [
+              "linear_prior",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json"
+          ],
+          "total_unique_bytes": 6438,
+          "numeric_payload_bytes_from_original_audit": 272
+        },
+        "L": {
+          "terms": [
+            [
+              "linear_prior",
+              1.0
+            ],
+            [
+              "linear_residual_tree",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json",
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/residual/booster.pkl",
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/residual/model.json"
+          ],
+          "total_unique_bytes": 427370,
+          "numeric_payload_bytes_from_original_audit": 325080
+        },
+        "H": {
+          "terms": [
+            [
+              "d9",
+              0.5
+            ],
+            [
+              "linear_prior",
+              0.5
+            ],
+            [
+              "linear_residual_tree",
+              0.5
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/booster.pkl",
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/model.json",
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json",
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/residual/booster.pkl",
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/residual/model.json"
+          ],
+          "total_unique_bytes": 2242885,
+          "numeric_payload_bytes_from_original_audit": 1949088
+        },
+        "direct200": {
+          "terms": [
+            [
+              "direct200",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/direct200/booster.pkl",
+            "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/direct200/model.json"
+          ],
+          "total_unique_bytes": 421931,
+          "numeric_payload_bytes_from_original_audit": 324808
+        },
+        "capacity": {
+          "terms": [
+            [
+              "capacity",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/capacity_direct/booster.pkl",
+            "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/capacity_direct/model.json"
+          ],
+          "total_unique_bytes": 2165188,
+          "numeric_payload_bytes_from_original_audit": 1948808
+        },
+        "free25_residual": {
+          "terms": [
+            [
+              "free_prior",
+              1.0
+            ],
+            [
+              "free_residual_tree",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_prior.json",
+            "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_residual/booster.pkl",
+            "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_residual/model.json"
+          ],
+          "total_unique_bytes": 425771,
+          "numeric_payload_bytes_from_original_audit": 325016
+        },
+        "free25_half": {
+          "terms": [
+            [
+              "d9",
+              0.5
+            ],
+            [
+              "free_prior",
+              0.5
+            ],
+            [
+              "free_residual_tree",
+              0.5
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_prior.json",
+            "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_residual/booster.pkl",
+            "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_residual/model.json",
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/booster.pkl",
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/model.json",
+            "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json"
+          ],
+          "total_unique_bytes": 2247724,
+          "numeric_payload_bytes_from_original_audit": 1949024
+        },
+        "mlp_mse_seed1": {
+          "terms": [
+            [
+              "mlp",
+              1.0
+            ]
+          ],
+          "required_files": [
+            "linear-followup-20261111/runs/paderborn-own-controls-mlp-2026111701-v001/model.json",
+            "linear-followup-20261111/runs/paderborn-own-controls-mlp-2026111701-v001/weights_final.npz"
+          ],
+          "total_unique_bytes": 23258,
+          "numeric_payload_bytes_from_original_audit": 17156
+        }
+      },
+      "H_union_proof": {
+        "D_intersection_L": [
+          "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json"
+        ],
+        "overlap_bytes": 6438,
+        "shared_set_equals_P": true,
+        "P_required_files_in_H": true,
+        "formula": "bytes(H)=bytes(D)+bytes(L)-bytes(D intersection L)",
+        "panel_formula": "bytes(H)=bytes(D)+bytes(L)-bytes(P)",
+        "H_terms": [
+          [
+            "d9",
+            0.5
+          ],
+          [
+            "linear_prior",
+            0.5
+          ],
+          [
+            "linear_residual_tree",
+            0.5
+          ]
+        ],
+        "P_metadata": {
+          "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json",
+          "sha256": "84e6ce0ef074f8cb78ad5830a0bd9c062a98027156c5462565e2b7ff0c26c60a",
+          "bytes": 6438
+        },
+        "P_coefficient_selector": "$.coef",
+        "P_scale_selector": "$.scale",
+        "D_scale_file": {
+          "path": "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json",
+          "sha256": "84e6ce0ef074f8cb78ad5830a0bd9c062a98027156c5462565e2b7ff0c26c60a",
+          "bytes": 6438
+        },
+        "D_scale_selector": "$.scale",
+        "P_coefficient_values_sha256": "503cf0305e9d7ea158e1c90c30cba133e6ebbb1553313c72705abe049712dc2f",
+        "P_scale_values_sha256": "5c74ff1578b76558bbc03f5e09de90c3c85cfd4da4101dd917d7e5cea2c7b3f4"
+      }
+    }
+  ],
+  "definition": "Unique metadata/scale/pickle/weight files actually opened for each configured method; not a minimal executable package, dependencies or runtime RSS.",
+  "coefficient_status": "P coefficient and scale selectors are present in every H required file union; no missing P artifact found.",
+  "arithmetic": "File bytes use path-set inclusion-exclusion. Numeric payload counts computational parameter arrays; it is a different quantity.",
+  "checks": 6264,
+  "all45_method_unions_verified": true,
+  "verified_input_files": {
+    "linear-followup-20261111/manuscript-v001/reproducibility/_build_cost_reproducibility_v001.py": "e4e0b3997dc83fe63789edae446df789a9c37a4d29edc557c8c23bbd35a1e463",
+    "linear-followup-20261111/code/c18_streaming_cost_v003.py": "aa96c3fb8144d0e383277b8386a1638fe7fce2e5363cedb4a46de96303e305e9",
+    "linear-followup-20261111/code/c18_streaming_cost_audit_v003.py": "f7460e403332dca47796606425feddf10d7243e989bcb5324e3f2998fcc9f71e",
+    "linear-followup-20261111/review/c18-streaming-comparison-v001.json": "4b24e9b2109b8fb0c4158f031f6e3e8deca593c286641558d1f6666e064f7654",
+    "review/c15-paper-execution-environment-v001.json": "fc99067c1bd86647b5a84e85402e45bbe091b6ceabf54d1967acfbef2adcfd48",
+    "linear-followup-20261111/runs/streaming-ipmsm-original-main-v003/summary.json": "fa19a2a6f820b098042ccfb5f3e766cf0fe2d2f1cec6c51afd5c508be8459ed9",
+    "linear-followup-20261111/runs/streaming-ipmsm-original-audit-v003/report.json": "e28e572252f7d72ec0e6192b71982eb5a295821c506ba50914b0bdc1ce0dd93f",
+    "linear-followup-20261111/runs/streaming-ipmsm-original-main-v003/runtime.json": "c3b6d2ae92b3dca6cea5a4d6cfd79f8f7af7f5646f41b3694814ee26980f4a33",
+    "linear-followup-20261111/configs/streaming-ipmsm-original-main-v003.json": "59aab7547626d6369892d18d5187f0ac5f5263f1176ccc1608ef84cec30859ba",
+    "linear-followup-20261111/runs/streaming-ipmsm-original-main-v003/configuration.json": "1fe1aa1beb83a1731c05fbad23b8c365e1f4f72dfa44f104b8d53a07600e573c",
+    "linear-followup-20261111/runs/streaming-ipmsm-original-main-v003/input_pins.json": "130439cc2b10024b8968f9b12f24a602f28b879552b1193960b35e3fb212123b",
+    "linear-followup-20261111/runs/streaming-ipmsm-original-main-v003/prediction_trace.npz": "1eb9a4a87e78056fa2d96a05b6d26da48e7d67522fc9837718b168ab38c4597a",
+    "linear-followup-20261111/runs/streaming-ipmsm-original-main-v003/timings.npz": "94200d4ff212f482b89f628c9edf7ddc085cdd327c94faebed46ceb5a017159c",
+    "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.json": "63d05c36aa28aa1712420400fc8edbab07a4145da285fa3853222c752c941277",
+    "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost_7x500/model.pickle": "5250d486cf12fe044738fe1138b11495b417060f0b4e41fc7b94f9f95a7bd327",
+    "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.json": "f831c5f9e66f0e4cf6faf23a73e91ca9e4f836cf18e355e3fdc69a7fd58196a7",
+    "runs/c15-paper-ipmsm-all-fit-v001/full__linear33_insample_boost/model.pickle": "21680283c6e3b89a72b69e2403eff48e5ccc3ec5474314284ca834b3f69458a3",
+    "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost/model.json": "14bf9de72b2f8c56545197a5f280a651620c724442c478d16770e78058064388",
+    "runs/c15-paper-ipmsm-all-fit-v001/full__direct_boost/model.pickle": "198e4a72b8394e176c3f48a7c9cfa9a9038209d42fe838d559f081ece9382de3",
+    "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.json": "f442d755d2846121035dbf1ef5a62438b7aaa1abcc88a0a37895988917bc0935",
+    "runs/c15-paper-ipmsm-all-fit-v001/full__unconstrained_rc_insample_boost/model.pickle": "d55e1863dbc715e2413b4684b7638a8ba1f04c7fcaeef8671ed438090942a302",
+    "linear-followup-20261111/runs/capacity-ipmsm-v001/model.json": "f9647f1c3183a8e08d8510d2b63e481b0706245b6930cdbd6a9d68c41082b108",
+    "linear-followup-20261111/runs/capacity-ipmsm-v001/model.pkl": "ac57c0ac12a07e471b0412e1c355ba77303c85f758f068626b60affde34a099d",
+    "followup-risk-20261110/runs/ipmsm-mlp-mse-2026111701-v001/model.json": "a98cc3f196a1d84b85ef87d773ee80ed2c48b5933dccd8cb4ee697712590d3c0",
+    "followup-risk-20261110/runs/ipmsm-mlp-mse-2026111701-v001/weights_final.npz": "e2ef7793db38eb88df859fb146cd0b849fa1fa25012708caef961ffe46ff7ee9",
+    "linear-followup-20261111/runs/streaming-paderborn-original-main-v003/summary.json": "7723c3cc03da66ee7769bf38849a7de1d5084170375768ecfc9689c8c50acaed",
+    "linear-followup-20261111/runs/streaming-paderborn-original-audit-v003/report.json": "5681383abf23019cab5e848aaa579c703f25289f7193a53ed806701b6b5250c2",
+    "linear-followup-20261111/runs/streaming-paderborn-original-main-v003/runtime.json": "c3b6d2ae92b3dca6cea5a4d6cfd79f8f7af7f5646f41b3694814ee26980f4a33",
+    "linear-followup-20261111/configs/streaming-paderborn-original-main-v003.json": "6ada69152eaf51329fa3a1d4a95e47b1ecc3c807f05e8649c3d26408fb3e0eb4",
+    "linear-followup-20261111/runs/streaming-paderborn-original-main-v003/configuration.json": "5678b32146b41d0a94d8730fc7e17050bf9b712c03ec3e4ffe898ba0070a2626",
+    "linear-followup-20261111/runs/streaming-paderborn-original-main-v003/input_pins.json": "5d6efa7c5e96142cb98edcb314199b42deca78a883d7d5ed2998fa7e859cecfa",
+    "linear-followup-20261111/runs/streaming-paderborn-original-main-v003/prediction_trace.npz": "e7980f67b9952f39307c4add8f05a7823c7ab64fd02afd6e2101955713d74ebe",
+    "linear-followup-20261111/runs/streaming-paderborn-original-main-v003/timings.npz": "4277e8c2bfc1ad8c4129553a06ea201d38c59ac957f45e47c140aba963399f30",
+    "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.json": "21a77fc969ea3ba05907b6a6f6867674e5e2f28dcfe6a3d61d44c7d5f217ce4f",
+    "runs/c15-paper-paderborn-full-v001/full__direct_boost_15x1000/model.pickle": "bcac173d5b53d9f74415cd2f48657c1a31e19b37a2725e19db47d2a653e96ffc",
+    "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.json": "7ed39c764f4cd945ef5041a27a780a40a10310c8c9d7fc6b4aa7dbf9709cf1db",
+    "runs/c15-paper-paderborn-full-v001/full__linear33_insample_boost/model.pickle": "3917c0fa38f0a3e434b938bb4c53a7916eb9b09326aac1ceafe90a057ba24e66",
+    "runs/c15-paper-paderborn-full-v001/full__direct_boost/model.json": "ab102e4f637e802debad1ea61075da5a9c9b881519d952d1f82ff469645daef8",
+    "runs/c15-paper-paderborn-full-v001/full__direct_boost/model.pickle": "4b80dd21d39f4e37d1ef2c29e80d26263ba07cd29ab1cf2aee00a8699abad31b",
+    "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.json": "c9180c3f988b73bf37d0882783b94709cf53aadd34639fbf2ba3f43305b5a288",
+    "runs/c15-paper-paderborn-full-v001/full__unconstrained_rc_insample_boost/model.pickle": "a5a69366f5bf31227f641f76e3dab03e47c175ccddd2bd3096ef048ed9ca164c",
+    "linear-followup-20261111/runs/capacity-paderborn-v001/model.json": "711688b4837b64daf0f3be336e168b1ee6a4f27e046c40b53d4b13f17de41a78",
+    "linear-followup-20261111/runs/capacity-paderborn-v001/model.pkl": "03544405cc040c547ed0d82c9633cb7781e28b7873bdab7a0d1c9ab5a7feb309",
+    "followup-risk-20261110/runs/paderborn-mlp-mse-2026111701-v001/model.json": "4e03e7d0dfc49cfb31e8b4f354b7d5b1c5462ea8513a0baf659117aba49159a2",
+    "followup-risk-20261110/runs/paderborn-mlp-mse-2026111701-v001/weights_final.npz": "294a946be6954e2d6f23f4afab1ad5846045a238c9ba6fe168c1ff4a63671593",
+    "linear-followup-20261111/runs/streaming-rwth-original-main-v003/summary.json": "41e1d2f72e104e5492f7d91f7711100907e05ed16c8463092b37f6c42a901555",
+    "linear-followup-20261111/runs/streaming-rwth-original-audit-v003/report.json": "467020bd44b84fc8108f1a53ff6a6e441ef02dd7a99ec25449f5816f55af90fe",
+    "linear-followup-20261111/runs/streaming-rwth-original-main-v003/runtime.json": "c3b6d2ae92b3dca6cea5a4d6cfd79f8f7af7f5646f41b3694814ee26980f4a33",
+    "linear-followup-20261111/configs/streaming-rwth-original-main-v003.json": "b024110d3e0c5bdbd00988c45b1250412ba498cb74b6ff35a31472a008986134",
+    "linear-followup-20261111/runs/streaming-rwth-original-main-v003/configuration.json": "5256cfc4ec8b120f532e99d7e90955bc6f1229160af602c2e981961c0193f0ff",
+    "linear-followup-20261111/runs/streaming-rwth-original-main-v003/input_pins.json": "a77d1166ffaa1b8b51ded560b40019fe347eafb554fd85d0eb0337cbc05c9598",
+    "linear-followup-20261111/runs/streaming-rwth-original-main-v003/prediction_trace.npz": "a04d2fe05be9472616600624009c81b76da917ea600e1b5883d518bf45f87926",
+    "linear-followup-20261111/runs/streaming-rwth-original-main-v003/timings.npz": "e50926c9880c5d4c9bd27eec60e52d2c9baa11515e4fe1330ebc98945f8742d4",
+    "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.json": "094c962064696cc1a72d2c2b8e22eb2eb729d547cabf95f108e15ace8fb42290",
+    "followup-risk-20261110/runs/rwth-cpu-final-v002/direct9_fitcv_selected/model.pkl": "ad087deaeb4446959ce596d66e1d50ba5f84bff60a3cb4eb68083d21c24d9a3e",
+    "followup-risk-20261110/runs/rwth-cpu-final-v002/direct_boost/model.json": "9a7d2677c6f1610ddae95d3b824b5478c90fcaeeae992aaec042b66bde0873a9",
+    "followup-risk-20261110/runs/rwth-cpu-final-v002/direct_boost/model.pkl": "92cf4346d1ec5a5b0fe0e9539d63d0c8cc61df465a6a2af3a813789b83b4e24b",
+    "followup-risk-20261110/runs/rwth-cpu-final-v002/linear33_insample_boost/model.json": "9b679979bf42d43e1e94292551631a4a489232a0b33e67cce3aa84309e941d58",
+    "followup-risk-20261110/runs/rwth-cpu-final-v002/linear33_insample_boost/model.pkl": "2f608838c9d77450ca63e5606f129ef0df81457952e00f4271e0ec6c454f4971",
+    "followup-risk-20261110/runs/rwth-cpu-final-v002/unconstrained_rc_insample_boost/model.json": "67fd0315255109ca5881ca4b5e6305c47271519446b1dfe84e336846d8a06d12",
+    "followup-risk-20261110/runs/rwth-cpu-final-v002/unconstrained_rc_insample_boost/model.pkl": "e1c1cfe02e4cba5db71c659dc213e374d33414cdeec95bf9db36de67f54e5a94",
+    "followup-risk-20261110/runs/rwth-cpu-final-v002/priors.json": "68f7e8dc02632885668cfaf15d3833c55c85793c66b890892206428e45713dd6",
+    "linear-followup-20261111/runs/capacity-rwth-v001/model.json": "25409764eb60d39b31f2fa1a3d7171070bd4a1850eacb996dbd0dbdbcb41dcbe",
+    "linear-followup-20261111/runs/capacity-rwth-v001/model.pkl": "e2b9d0b8abfc512dba76ddf766ccea813e35b15bfcd4d3870a364c636a4472e1",
+    "followup-risk-20261110/runs/rwth-mlp-2026111701-v002/model.json": "31fc887fb41a3089d066f96c9e83caaf4d945a770f01be13e5e9ead39c22ba0e",
+    "followup-risk-20261110/runs/rwth-mlp-2026111701-v002/weights_final.npz": "26d2e6b747beaeb0538d8dd6538a79910b38e0d520b1c36be05a27fb259bd803",
+    "linear-followup-20261111/runs/streaming-ipmsm-own-main-v003/summary.json": "1eb913dd995caea08cf53c254980bd0d2a443b331d078090dbb1dda09c17404a",
+    "linear-followup-20261111/runs/streaming-ipmsm-own-audit-v003/report.json": "7c6ba72a52203f9e9690c1b0650a9759b936a6ca9d9b34e2361e52f854d1384a",
+    "linear-followup-20261111/runs/streaming-ipmsm-own-main-v003/runtime.json": "c3b6d2ae92b3dca6cea5a4d6cfd79f8f7af7f5646f41b3694814ee26980f4a33",
+    "linear-followup-20261111/configs/streaming-ipmsm-own-main-v003.json": "6a723ffcd299ae76209c243c7b85cd8cc409b76cff247eb98d4c6e3eb1b26486",
+    "linear-followup-20261111/runs/streaming-ipmsm-own-main-v003/configuration.json": "1af28f1c61a16c4262da35d1c26e454fe719271456d8363ccec77debf4cf4888",
+    "linear-followup-20261111/runs/streaming-ipmsm-own-main-v003/input_pins.json": "95ff4c7a716c63a5a19f27b2a667489f735c1d8015eb3210c98a81f7842685df",
+    "linear-followup-20261111/runs/streaming-ipmsm-own-main-v003/prediction_trace.npz": "73af1ca04a454800092dae568ee72638f5cd718f321732a01aaf5356505423a0",
+    "linear-followup-20261111/runs/streaming-ipmsm-own-main-v003/timings.npz": "35a8f31f2fdac5f2955f5dc71f7c4a99bd2bb9ff915d1308381c01dac644ece1",
+    "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/model.json": "e4662e0674822e2a6bc16e4e0de3afaa351fcbeb8cc33b2719b685fc3ec478fa",
+    "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/linear_model.json": "ac8019ad320fb8b7dea2fb9fd9c37f63a4f65f1029fe0f490d662c9dffc7822c",
+    "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/d9/booster.pkl": "688e1c61754ea4e3247cd0877cb638c6f15ab5ab68bab33c4626a1106f5bc289",
+    "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/residual/model.json": "08ec93dce32504c241600b6233452df6a246363baa1ceaea2b9d31eb6fbe9c29",
+    "linear-followup-20261111/runs/ipmsm-own_boundary-initialization-fit-v002/residual/booster.pkl": "574fbb36376b619835ebd3527647566005137244c580b1e68b88d3307e842210",
+    "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_prior.json": "528d942cef9d9d93053bc6e94ab6feaec0dd979a918dbb1822ec1e06f107e7bc",
+    "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/direct200/model.json": "5469481e3fa58812239725926f3fdcdbc4e9e05532671bbdb649d400cc4d6120",
+    "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/direct200/booster.pkl": "bc18a1989f38b669be12d6e42f292b84caef405cde2d145d35fc17dc140dbe2e",
+    "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/capacity_direct/model.json": "a6e5abd07454e502b48cc2aabcf25cd7cf7915e4e01f6b637cd29d5f131c9eba",
+    "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/capacity_direct/booster.pkl": "7339f18d8aed9411dbffb8d9f011f9a84a0510c89b9b4a2a35ebfb1da33db3fc",
+    "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_residual/model.json": "fe44c35acd70a7b18081623fb8bd8df41b90fcfae624beaf74a444f2d62cbcea",
+    "linear-followup-20261111/runs/ipmsm-own-controls-cpu-v001/free_residual/booster.pkl": "8c59eb34ab665e5582b97d137c689250675e8c44e7b27d500fc21f62bf688694",
+    "linear-followup-20261111/runs/ipmsm-own-controls-mlp-2026111701-v001/model.json": "e30b9f55501e20245facf732c6513665ab78e5aca84fb9bf22371c0802398964",
+    "linear-followup-20261111/runs/ipmsm-own-controls-mlp-2026111701-v001/weights_final.npz": "3d236bdfb06b8c51b6e0c2a12551e37cbf2da822763880017d9a4beac6778250",
+    "linear-followup-20261111/runs/streaming-paderborn-own-main-v003/summary.json": "8687a0acf05b6ffaf7fb931e52aaef52fb6ccaccae285ff9f277dd1eaf488447",
+    "linear-followup-20261111/runs/streaming-paderborn-own-audit-v003/report.json": "99de646b30fe2d7cd749bbd5893aacd2a62bbcc83e1eec507e2641eb4523a016",
+    "linear-followup-20261111/runs/streaming-paderborn-own-main-v003/runtime.json": "c3b6d2ae92b3dca6cea5a4d6cfd79f8f7af7f5646f41b3694814ee26980f4a33",
+    "linear-followup-20261111/configs/streaming-paderborn-own-main-v003.json": "1e5c77d2283a9249de2ed59050d54ea6354846182b2850b43000214c1b9cc2f4",
+    "linear-followup-20261111/runs/streaming-paderborn-own-main-v003/configuration.json": "aeeead221ca5683092d29d1dcebda2152a1a0e767d1daea59daa4322d0e56337",
+    "linear-followup-20261111/runs/streaming-paderborn-own-main-v003/input_pins.json": "6f9e5b05a19b0328220d72c380b17520fccfaeaaf6503d6291920f23969fd608",
+    "linear-followup-20261111/runs/streaming-paderborn-own-main-v003/prediction_trace.npz": "e1e2913ff8970abad12330b0bb639b2907a029de59bea800dd808863cdad033d",
+    "linear-followup-20261111/runs/streaming-paderborn-own-main-v003/timings.npz": "aaa72ecbbfc6eb3ff4a497617cdea8954100f83770aab3d158a3ee78b0aa9cd0",
+    "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/model.json": "1e246077e95a3406a1a4404cd7b303833c38e9a870e047e2db354f6250f590c0",
+    "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/linear_model.json": "84e6ce0ef074f8cb78ad5830a0bd9c062a98027156c5462565e2b7ff0c26c60a",
+    "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/d9/booster.pkl": "39718967041c36997c1e7c00c7cf1a3774187324d88b621f60109361710cf648",
+    "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/residual/model.json": "d9e7f148802faec653f05be05c3d5865ee1f6eedbded20135d3d83b84ee2fde0",
+    "linear-followup-20261111/runs/paderborn-own_boundary-initialization-fit-v002/residual/booster.pkl": "dc2c061fcb44c9a6b4e4cbc7783d976de073a5e89478785508c6cc6f43264c8c",
+    "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_prior.json": "fe55095857d82f02ccb024f7b48bf8765680325b9071fa9c2a04888b19443b8b",
+    "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/direct200/model.json": "8fc90720d17a0e3569d772a8529ee4412f2c27ac3a2718eb7ab4cbe5ac27bf18",
+    "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/direct200/booster.pkl": "173b56de39395e19185b5ef963ff8887b4876a0e44a6c67af8208331c77cee6a",
+    "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/capacity_direct/model.json": "ff6ad82d3d85f90cb33783bac3326ef8b4ed817fde711a7603a3ce71f1d3d194",
+    "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/capacity_direct/booster.pkl": "748d796e35081daf0075e060536bd730f0236175185f52727af142d8e48fa3ec",
+    "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_residual/model.json": "069e0014b154d16bb2856654e7a6d7e00e87732972e983240eca13664d6bb567",
+    "linear-followup-20261111/runs/paderborn-own-controls-cpu-v001/free_residual/booster.pkl": "251e8f279710e84766c9059b96fc1aef132df9b42fe5eb6d198f567c1d5a51c1",
+    "linear-followup-20261111/runs/paderborn-own-controls-mlp-2026111701-v001/model.json": "48498bfa62eeffb20e7cb2379b147fe1766f03b8409484cd4e424dc2191048bf",
+    "linear-followup-20261111/runs/paderborn-own-controls-mlp-2026111701-v001/weights_final.npz": "77dab678292858d690a466aa2b359ce01f4e937bc3f0ca895725cba7e133f58c"
+  }
+}

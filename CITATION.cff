@@ -1,0 +1,36 @@
+cff-version: 1.2.0
+message: >-
+  If you use this research companion, cite it using the metadata below.
+  This record describes the package, not an accepted or published journal article.
+type: software
+title: >-
+  Linear Residual Boosting for Rotor-Temperature Estimation in
+  Permanent-Magnet Synchronous Motors: Accuracy, Initialization,
+  and Computational Cost
+authors:
+  - family-names: Jo
+    given-names: Minsu
+  - family-names: Yoo
+    given-names: Namhyun
+  - family-names: Kim
+    given-names: Beomseok
+  - family-names: Choi
+    given-names: Hoansuk
+  - family-names: Yang
+    given-names: Jinhong
+version: 0.1.0
+date-released: '2026-11-16'
+abstract: >-
+  Historical scientific source and saved-result verification materials for
+  a conditional assessment of linear residual boosting, input-filter
+  initialization, and measured scalar computational cost in permanent-magnet
+  synchronous motor rotor-temperature estimation. All evaluated records
+  were previously exposed. This package does not certify standalone
+  retraining, timing reproduction, or independent confirmation.
+keywords:
+  - filter initialization
+  - gradient boosting
+  - inference latency
+  - permanent-magnet synchronous motor
+  - residual learning
+  - rotor temperature

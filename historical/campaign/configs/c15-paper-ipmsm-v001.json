@@ -1,0 +1,223 @@
+{
+  "schema": "c15-paper-dataset-v001",
+  "scientific_execution_admitted": true,
+  "worker_sha256": "40b49b6d564084bdc92bcbbb944b95f1b53999233352e4b0dc80e55c35e728d5",
+  "core_sha256": "17c47c41c27b6e92618a44de0f5860f80ffd1357d998a4cfeb805f5e2d8b7b37",
+  "confirmation_numeric_access_admitted": false,
+  "dataset": "ipmsm",
+  "roles": {
+    "fit": [
+      0,
+      2,
+      3,
+      5,
+      7,
+      8,
+      11,
+      14
+    ],
+    "calibration": [
+      1,
+      6,
+      12
+    ],
+    "pilot": [
+      4,
+      9,
+      13
+    ],
+    "confirmation": [
+      10,
+      15
+    ]
+  },
+  "source_files": {
+    "protocol": {
+      "path": "protocols/c15-paper-v001-frozen.md",
+      "sha256": "ae506220a508838bf985612237cd3075700cf4ee133ec440c3312c4985361673"
+    },
+    "prior_audit": {
+      "path": "review/c12-raw-audit-v002.json",
+      "sha256": "bff592e881233f50fda6c7dd0f3cdcb4f37c9c4f8ff193ae9d3e532726391bbe"
+    },
+    "legacy_worker": {
+      "path": "code/combination_c12_fit_rc_v001.py",
+      "sha256": "d4aa942ca9db8d8e9319197632cf376730456f3ea5cdc48b9d1c1fd51fc59412"
+    }
+  },
+  "fit_cache": [
+    {
+      "path": "runs/c12-pilot-v001/fit_00.npz",
+      "sha256": "98e61dc69a706385d9019ae5c769f7b8841af23f733983a226bf81354d9273a9",
+      "id": 0,
+      "rows": 6125,
+      "target_key": "target"
+    },
+    {
+      "path": "runs/c12-pilot-v001/fit_02.npz",
+      "sha256": "3b83a708c971c46f20dfa5fc3e8020113bd6688bc5b9bf51ef9130185e0ddaff",
+      "id": 2,
+      "rows": 13236,
+      "target_key": "target"
+    },
+    {
+      "path": "runs/c12-pilot-v001/fit_03.npz",
+      "sha256": "6d45633e3dd85649cd9db65b9aa4cfc971e67ff00f0a146f60b5181698d7c9f8",
+      "id": 3,
+      "rows": 7219,
+      "target_key": "target"
+    },
+    {
+      "path": "runs/c12-pilot-v001/fit_05.npz",
+      "sha256": "5d145bc838cf7a02fa25b497e6b7cb47ba55adef85210c4521bc786593a8f725",
+      "id": 5,
+      "rows": 11065,
+      "target_key": "target"
+    },
+    {
+      "path": "runs/c12-pilot-v001/fit_07.npz",
+      "sha256": "a8c349f7b9d8394860c84f89fd79ed06f2217d3518d3f7009a37882b4e130c6e",
+      "id": 7,
+      "rows": 4661,
+      "target_key": "target"
+    },
+    {
+      "path": "runs/c12-pilot-v001/fit_08.npz",
+      "sha256": "fe553507bbba63346a694d13d9fb53c11fdc8ec3f01d8716f84ca9386b548a3a",
+      "id": 8,
+      "rows": 4387,
+      "target_key": "target"
+    },
+    {
+      "path": "runs/c12-pilot-v001/fit_11.npz",
+      "sha256": "54c8d89a05efb7859434f9223189b3711905b532d168af858f00ba58b02f1148",
+      "id": 11,
+      "rows": 6006,
+      "target_key": "target"
+    },
+    {
+      "path": "runs/c12-pilot-v001/fit_14.npz",
+      "sha256": "6603bda86da3fcac983a89e1ae15295554d3555000c6b1112531f445cbdc48a1",
+      "id": 14,
+      "rows": 8229,
+      "target_key": "target"
+    }
+  ],
+  "evaluation_source": {
+    "format": "profile_csv",
+    "operating_columns": [
+      "IdRef",
+      "IqRef",
+      "Ud",
+      "Uq",
+      "speed",
+      "water_outlet",
+      "ambient"
+    ],
+    "target_column": "rotor",
+    "files": [
+      {
+        "path": "runs/c7-assets-v001/dataset/id_1.csv",
+        "sha256": "1e935c5cd9d82e5d2113c2caa2316cc221542b39b36e6296846d92bb9199fbca",
+        "id": 1,
+        "rows": 1748
+      },
+      {
+        "path": "runs/c7-assets-v001/dataset/id_6.csv",
+        "sha256": "b0c4f6abb5ef188b34654decf4bb1f54de565c3c01466d7268b9096137e805ae",
+        "id": 6,
+        "rows": 3779
+      },
+      {
+        "path": "runs/c7-assets-v001/dataset/id_12.csv",
+        "sha256": "804e0a67796141a79fae0c338909091b9a380fef8d9fc331353dc330e1a0b347",
+        "id": 12,
+        "rows": 4859
+      },
+      {
+        "path": "runs/c7-assets-v001/dataset/id_4.csv",
+        "sha256": "193881116fff5686e854072c02809c9b83ee950f04dacc2f886171ac70a397ee",
+        "id": 4,
+        "rows": 10875
+      },
+      {
+        "path": "runs/c7-assets-v001/dataset/id_9.csv",
+        "sha256": "687d09158b10858b0f36b574e537329b3ed52f299a5d46a179c0805433e986b9",
+        "id": 9,
+        "rows": 3310
+      },
+      {
+        "path": "runs/c7-assets-v001/dataset/id_13.csv",
+        "sha256": "ebc8942e8b0c3cb71d846853b336157dda05cc61b4d50c5d217eff6952886253",
+        "id": 13,
+        "rows": 6122
+      },
+      {
+        "path": "runs/c15-paper-reserved-bytes-v002/id_10.csv",
+        "sha256": "4c31edb82d93ea5aeeeceaab3ec8d51e9c6c3037abf73cf53b8c6d97ac178369",
+        "id": 10,
+        "rows": 1536
+      },
+      {
+        "path": "runs/c15-paper-reserved-bytes-v002/id_15.csv",
+        "sha256": "c7e023498cf8882880fa6288fe2f12d4aedf0f1b27e91064a5eeffcbcb1a6908",
+        "id": 15,
+        "rows": 4568
+      }
+    ]
+  },
+  "audit_fit_sources": {
+    "format": "profile_csv",
+    "files": [
+      {
+        "path": "runs/c7-assets-v001/dataset/id_0.csv",
+        "sha256": "ac80fb2268949165199c4b9f5d550322c1abdae235c70c4ba5ec89e1efb9f508",
+        "id": 0,
+        "rows": 6125
+      },
+      {
+        "path": "runs/c7-assets-v001/dataset/id_2.csv",
+        "sha256": "ecd51af34724048db89fbd53167ee530ade322d965f106806f940f6e6aa85e05",
+        "id": 2,
+        "rows": 13236
+      },
+      {
+        "path": "runs/c7-assets-v001/dataset/id_3.csv",
+        "sha256": "3e0600a7698f506f3c888561682db631d8c3419bc02ddd77d04b49fe410a0ffd",
+        "id": 3,
+        "rows": 7219
+      },
+      {
+        "path": "runs/c7-assets-v001/dataset/id_5.csv",
+        "sha256": "c2a0c14c54a9d134bc974245bb6bb105bfe7768b0894b7fc879b85c941616da9",
+        "id": 5,
+        "rows": 11065
+      },
+      {
+        "path": "runs/c7-assets-v001/dataset/id_7.csv",
+        "sha256": "cbe354e4f6a878529c4106b0522fec5bf64c00c02f27b9365ee42a734cf68951",
+        "id": 7,
+        "rows": 4661
+      },
+      {
+        "path": "runs/c7-assets-v001/dataset/id_8.csv",
+        "sha256": "9625553ef2b8cf5acb5591c0c1d7a5c366853e64cb15e13bbeee28a78a0021be",
+        "id": 8,
+        "rows": 4387
+      },
+      {
+        "path": "runs/c7-assets-v001/dataset/id_11.csv",
+        "sha256": "a0157d3b0f26d0a89be237fb23091a3eb49a4f1775208c1a9479186a48e1c939",
+        "id": 11,
+        "rows": 6006
+      },
+      {
+        "path": "runs/c7-assets-v001/dataset/id_14.csv",
+        "sha256": "800cd2d628fc757ddde0719b34a147af2ba4ab63c8945c74ee294b0517972ad9",
+        "id": 14,
+        "rows": 8229
+      }
+    ]
+  },
+  "measured_values_decoded_by_manifest_builder": false
+}

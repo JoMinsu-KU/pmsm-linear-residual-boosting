@@ -1,0 +1,64 @@
+{
+  "files": [
+    {
+      "path": "analysis/c18-influence-all-deletions-v001.csv",
+      "sha256": "1e979d610a352da6ce1fcc4d094b615b74d1cf33fa06f83db9c59393314b8fd5",
+      "bytes": 30051
+    },
+    {
+      "path": "analysis/c18-influence-review-v001.json",
+      "sha256": "b1641a1c0afc50501e1cb19ee02405d4c72fc8385f2266bbe0072c8aaa305c16",
+      "bytes": 174216
+    },
+    {
+      "path": "analysis/c18-influence-summary-v001.csv",
+      "sha256": "fec4dbaa169610ec2869309926d01c64c628d1d853688629b28b78ad83aca340",
+      "bytes": 5176
+    },
+    {
+      "path": "analysis/condition-analysis-source.json",
+      "sha256": "4137c6d1aafa80543c7c4bd356a4dc5f29d1d11c7939378e1aeced425982be86",
+      "bytes": 1480636
+    },
+    {
+      "path": "analysis/cost-comparison-source.json",
+      "sha256": "4b24e9b2109b8fb0c4158f031f6e3e8deca593c286641558d1f6666e064f7654",
+      "bytes": 23364
+    },
+    {
+      "path": "analysis/ipmsm-own-evaluation-source.json",
+      "sha256": "e4170c1424116b24f05d3d6a6977e6050c98b416f6412ede6d1ea3999c818036",
+      "bytes": 115334
+    },
+    {
+      "path": "analysis/paderborn-own-evaluation-source.json",
+      "sha256": "b1d5487aa347611d35b67d690608c5e1b01833443c5eee0797cae617b5e3550e",
+      "bytes": 278773
+    },
+    {
+      "path": "reproducibility/deployment-artifacts-v001.json",
+      "sha256": "aac540d9598a680592662c58bc70541379c75800bb8c16e1a84b36830d1a1e98",
+      "bytes": 140500
+    },
+    {
+      "path": "tables/S1-own-accuracy-all-methods.csv",
+      "sha256": "f4e2ac6a140b9ef41c38098602ba4d22ea01372593163daec10e38ecd4c441e3",
+      "bytes": 15663
+    },
+    {
+      "path": "tables/S2-own-profile-all-methods.csv",
+      "sha256": "1c21ba42cf158845ff18dfdfcde71b69e077d0c9da8df567b529b59e62df8df8",
+      "bytes": 104929
+    },
+    {
+      "path": "tables/S3-all-streaming-cost.csv",
+      "sha256": "ec1eafb5df920e03689425af2d88f2914310d99e281eb9e4475a34c3f93147c4",
+      "bytes": 4217
+    },
+    {
+      "path": "tables/S4-original-initialization-all-cohorts.csv",
+      "sha256": "29e16587b3a0ab8efd6a98ca70e53ddc837a95ee4a0627dbb9535501c1b7d7b2",
+      "bytes": 4039
+    }
+  ]
+}

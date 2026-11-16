@@ -1,0 +1,5 @@
+# Preserve the literal bytes used by the scientific provenance hashes.
+* -text
+*.pdf binary
+*.png binary
+*.jpg binary
