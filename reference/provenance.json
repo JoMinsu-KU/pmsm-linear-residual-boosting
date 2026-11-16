@@ -1,0 +1,77 @@
+{
+  "schema": "pmsm-reference-provenance-v1",
+  "scope": "Saved manuscript snapshot. No newly executed training, inference, timing or independent confirmation.",
+  "source_path_semantics": "Relative archival provenance identifiers, not runtime dependencies. Original archive sources are not required for rendering.",
+  "original_sources": [
+    {
+      "path": "manuscript-v001/tables/S1-own-accuracy-all-methods.csv",
+      "sha256": "f4e2ac6a140b9ef41c38098602ba4d22ea01372593163daec10e38ecd4c441e3",
+      "purpose": "Channel-wise aggregate accuracy"
+    },
+    {
+      "path": "manuscript-v001/tables/S2-own-profile-all-methods.csv",
+      "sha256": "1c21ba42cf158845ff18dfdfcde71b69e077d0c9da8df567b529b59e62df8df8",
+      "purpose": "Channel-wise profile-level accuracy"
+    },
+    {
+      "path": "manuscript-v001/tables/S3-all-streaming-cost.csv",
+      "sha256": "ec1eafb5df920e03689425af2d88f2914310d99e281eb9e4475a34c3f93147c4",
+      "purpose": "Recorded resident-row timing for all five panels"
+    },
+    {
+      "path": "manuscript-v001/tables/S4-original-initialization-all-cohorts.csv",
+      "sha256": "29e16587b3a0ab8efd6a98ca70e53ddc837a95ee4a0627dbb9535501c1b7d7b2",
+      "purpose": "Original-initialization aggregate accuracy"
+    },
+    {
+      "path": "manuscript-v001/source-evidence/own-controls-comparison.json",
+      "sha256": "2d51eca1da7759598b631b0c4a8e33ce618ecd093d987dc207927cddd16dfcc5",
+      "purpose": "Complete original-initialization controls; keyed records replace less complete original aggregates"
+    },
+    {
+      "path": "ieee-access-v006/manuscript.md",
+      "sha256": "365261d5a23790cf42d5c2d34237ec794ab7dd2e2e3ab9bb014f306dc1b0d244",
+      "purpose": "Current manuscript Table VII settings; Tables IV/V used for numeric verification"
+    }
+  ],
+  "transformation": [
+    "Canonicalize accuracy method aliases using reporting.METHOD_ALIASES.",
+    "Merge original and channel-wise aggregate tables by (dataset,role,arm,method). Replace original entries with the complete original fields from own-controls-comparison.json when present.",
+    "Mark S2 profile rows explicitly as own_boundary. Preserve saved timing measurements.",
+    "Extract model settings from current manuscript Table VII. No numerical estimates or new measurements are introduced."
+  ],
+  "included_inputs": [
+    {
+      "path": "accuracy.csv",
+      "sha256": "a535fd46ee0c9f6b99ddf7d4292faff832604b95af7efa98fa30a8ee0bc0f24c",
+      "bytes": 31372,
+      "rows": 156
+    },
+    {
+      "path": "profiles.csv",
+      "sha256": "b46040a69004fb3a1c619466664c5315c072bf640f4bab29a86a76ce08e8ec2e",
+      "bytes": 110980,
+      "rows": 504
+    },
+    {
+      "path": "timing.csv",
+      "sha256": "49cec2b9bfe8757aa736a1b439d47ecfc345c919c477cd0f96a47cd98e804e84",
+      "bytes": 4171,
+      "rows": 45
+    },
+    {
+      "path": "metadata.json",
+      "sha256": "12bf1145950bbcb0c50ff8bbdf813976c14a684dd148a7d397aac57b58925110",
+      "bytes": 1278
+    }
+  ],
+  "verification_target": {
+    "main_table_numeric_cells": 63,
+    "tables": [
+      "IV",
+      "V"
+    ],
+    "tolerance_absolute": 5e-07
+  },
+  "new_experiment": false
+}

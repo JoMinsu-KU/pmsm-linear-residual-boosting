@@ -1,0 +1,86 @@
+{
+  "schema": "pmsm-package-validation-v2",
+  "date": "2026-11-16",
+  "status": "PASS",
+  "unit_tests": {
+    "passed": 31,
+    "failed": 0,
+    "skipped": 0,
+    "optional_historical_archive_checks": 3
+  },
+  "end_to_end": {
+    "mode": "smoke",
+    "datasets": [
+      "ipmsm",
+      "paderborn",
+      "rwth"
+    ],
+    "neural_fits": 15,
+    "epochs_each": 2,
+    "maximum_boosting_iterations": 3,
+    "completed_stages": 38,
+    "report_input_counts": {
+      "accuracy": 193,
+      "profiles": 1440,
+      "timing": 45
+    },
+    "main_tables": 7,
+    "figures": 4,
+    "supplementary_tables": 5,
+    "all_four_figures_visually_reviewed": true,
+    "resume_reused_verified_stages": 38,
+    "run_key": "2ee0a414202d5b2d4431096fe19a52804ebdfbfec90dd1814e0761ea0a3178b7",
+    "raw_data": "Exact pinned local file bytes; no fresh upstream payload download tested."
+  },
+  "numerical_checks": {
+    "historical_model_recipes": 15,
+    "historical_neural_training_row_orders": 15,
+    "raw_to_training_array_exact_panels": [
+      "ipmsm/original",
+      "ipmsm/own_boundary",
+      "rwth/original"
+    ],
+    "saved_model_forward_max_absolute_difference_c": 1.979e-05,
+    "saved_main_table_numeric_cells": 63,
+    "saved_temporal_fifth_contrasts": 10,
+    "saved_spearman_coefficients": 2,
+    "platform_rounding": "Optional feature parity allows atol1e-8/rtol2e-12; downstream stored prediction tolerances are unchanged."
+  },
+  "runtime": {
+    "python": "3.10.12",
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "scikit_learn": "1.5.1",
+    "torch": "2.7.1+cu126",
+    "matplotlib": "3.10.9"
+  },
+  "full_paper_scale_retraining_executed_in_this_validation": false,
+  "independent_confirmation": false,
+  "source_files": {
+    "configs/study.json": "fa1bbb08bd080b9b8bbb5d6c6d571a0ed89f3bdbe005c9cc56648078df6cb1b1",
+    "data/registry.json": "9401403b1ea89380ed091bc4e760415c287ab7d82e3555c8f853ed324b8a1cc1",
+    "scripts/acquire_data.py": "9d1d9b9f08620416a52d5df909e69643262aa0fceb8ecc758052435d7e1191e3",
+    "scripts/render_reference.py": "449bf4292ec64fad6e1993248cb7e7550ef22fc6501d345d3852658bfc5a3429",
+    "scripts/reproduce.py": "7c26d1f63ecb9bddeac6c7d83b8879a3be2f62dd19589636223e5ed788e102e6",
+    "scripts/run_tests.py": "f914f0ecb9c19e0454477c923f1a75929d55fb9df425d9c258804f629f815189",
+    "scripts/verify_repository.py": "1e329d85812ac90e6b68b406719c29b6c6383661d3aef0962c9b0bee8ec300a8",
+    "src/pmsm_repro/__init__.py": "9cccde0a63dc4d14fffb1654996937bd5c86933ea421b1e1bdc6e24a247a0dd0",
+    "src/pmsm_repro/analysis.py": "230eccfc6c956ef2e008f3be3b765ba65dc9c4a4043b19fdcc38caff422a3fa5",
+    "src/pmsm_repro/benchmark.py": "bf6e6f891f8992a82aa9e694d4b7603900a4e722cda072dd38ecf2e8c69c3478",
+    "src/pmsm_repro/data.py": "45da25568a51bb21d0303621a03f8b02d4d2bf0d297931a4aa7ceb6e6516650e",
+    "src/pmsm_repro/evaluation.py": "662f6603bd42f59ca6a43f0c6b2846b8db2aca5bb532218949864fb593dcb964",
+    "src/pmsm_repro/features.py": "58e1948b2b0e935ba113197ea66d9020eabadc39f19a35e3f7b816bd7931185e",
+    "src/pmsm_repro/io.py": "3f39498330b9e1c871ca368899b17516f0491f3b3aaf0f971ea5a328f12cc354",
+    "src/pmsm_repro/metrics.py": "fb7ecbd0abe1e347a895720c1a5c0d8edc048c823e3b657d4d036a29869f6d73",
+    "src/pmsm_repro/models.py": "01c152de5b8ef9fac9a8544363bec5097921b90d3a11582304895e53fd7e74db",
+    "src/pmsm_repro/neural.py": "20813d8e65c08ced32a15c511ea2cba33dc1629a3e5ef30771a00d36ffd1bb58",
+    "src/pmsm_repro/pipeline.py": "82b19a688a15cfb01b5a1cd5d094090b231dce53fd6cd964883dcb5fcfed62eb",
+    "src/pmsm_repro/reporting.py": "9c2750ad2b1ddad2b1cbe0a354f82e263d23a4b62816718c5192057bb58e60e3",
+    "src/pmsm_repro/streaming.py": "7954c1180c53f75b3a8370124ae6cf77905b6fe5f4b7a61c6dd8dc4d58541f36"
+  },
+  "notes": [
+    "Smoke tests verify execution and plumbing, not paper-scale accuracy or latency.",
+    "Fresh file accounting describes a logical component-file union, not the original archive byte layout.",
+    "Failed development attempts remain in the private validation archive; original research records were preserved."
+  ]
+}

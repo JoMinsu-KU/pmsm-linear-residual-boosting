@@ -1,0 +1,13 @@
+{
+  "source": "linear-followup-20261111/code/c18_streaming_cost_v003.py",
+  "source_sha256": "aa96c3fb8144d0e383277b8386a1638fe7fce2e5363cedb4a46de96303e305e9",
+  "copied_definitions": [
+    "FeatureState",
+    "legacy_x"
+  ],
+  "operational_guards": "Original campaign runner is not invoked; new portable runner has independent time/storage/output controls.",
+  "definition_sha256": {
+    "FeatureState": "095e793d41f695d57ebba678558fb0f4aaa9aa08db3639afa6eb9895f7a30c71",
+    "legacy_x": "1618d356ce5ec362728c73d37869e7a772ae5745d6c17fc8e6d3ecb6fc607a9d"
+  }
+}

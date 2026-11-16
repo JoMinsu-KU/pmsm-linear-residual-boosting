@@ -1,0 +1,35 @@
+{
+  "schema": "pmsm-manuscript-reference-v1",
+  "execution_mode": "saved manuscript reference snapshot; no new training, inference or timing",
+  "reference_snapshot": true,
+  "new_experiment": false,
+  "manuscript_revision": "ieee-access-v006",
+  "timed_neural_seed": 2026111701,
+  "expected_neural_seed_count": 3,
+  "datasets": {
+    "ipmsm": {
+      "training_profiles": 8,
+      "total_profiles": 16,
+      "warmup_exclusion": 300
+    },
+    "paderborn": {
+      "training_profiles": 41,
+      "total_profiles": 69,
+      "warmup_exclusion": 300
+    },
+    "rwth": {
+      "training_profiles": 20,
+      "total_profiles": 38,
+      "warmup_exclusion": 0
+    }
+  },
+  "model_settings": {
+    "Full linear prior": "33 standardized inputs; 34 coefficients including intercept",
+    "Ridge penalty": "0.01 for IPMSM/RWTH; 0.0001 for Paderborn",
+    "Residual booster": "Squared error; 15 maximum leaves; 200 iterations",
+    "Matched direct booster": "Same boosted setting, direct temperature target",
+    "Common tree settings": "Learning rate 0.05; minimum leaf size 20; 255 histogram bins; no early stopping",
+    "Residual and matched-tree L2": "0.1",
+    "Final average": "Equal weights on direct and completed residual predictions"
+  }
+}

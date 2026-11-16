@@ -1,11 +1,11 @@
 # Rights and attribution
 
-This package does **not** grant a blanket open-source license for its code, text, figures or saved results. No project-wide software license has been selected. Public availability, citation metadata and the ability to inspect a file do not themselves establish permission for unrestricted redistribution, modification or commercial use. Obtain an appropriate grant from the relevant rights holders when required.
+No project-wide software license has been selected for this package. Public availability and citation metadata do not grant unrestricted rights to redistribute, modify, or commercially use its original code, text, or figures. Obtain an appropriate grant from the relevant rights holders when required. Existing notices and third-party terms remain applicable.
 
-Existing notices and third-party terms remain applicable independently. The research uses external IPMSM, Paderborn Electric Motor Temperature and RWTH drive-cycle resources identified in the historical configurations and [reproducibility documentation](docs/REPRODUCIBILITY.md). Raw datasets are not redistributed here. Check each upstream source's applicable terms and attribution requirements before acquiring or reusing its data; an upstream software license should not automatically be treated as a separate dataset license.
+Raw datasets are not redistributed. [DATA_SOURCES.md](DATA_SOURCES.md) and [data/registry.json](data/registry.json) identify the IPMSM, Paderborn, and RWTH sources, versions, attribution, and recorded license terms. The IPMSM upstream repository has an MIT license, while a separate dataset-specific grant is not independently established here. The Paderborn and RWTH records respectively identify CC BY-SA 4.0 and CC BY 4.0. Apply each upstream source's terms to its materials; they do not automatically license this project's original code.
 
-NumPy, SciPy, scikit-learn, joblib, threadpoolctl and PyTorch are referenced as historical dependencies. Their software is not bundled, and their respective licenses are not replaced by this document.
+NumPy, SciPy, scikit-learn, joblib, threadpoolctl, Matplotlib, and PyTorch are installed as dependencies rather than bundled. Their respective licenses remain applicable independently.
 
-The package includes four research figure PDFs. Manuscript author photographs, publisher template/font files, private review attachments, full raw datasets and trained-model binaries are not included. Their omission does not grant or waive rights in those materials.
+The pipeline generates model artifacts, result tables, and research figures locally. Manuscript author photographs, publisher template/font files, private review attachments, raw datasets, and pretrained model binaries are not included in the source release. Running the pipeline does not itself establish redistribution rights for resulting artifacts or third-party content.
 
 Use [CITATION.cff](CITATION.cff) to acknowledge this research companion. Citation is distinct from permission. The citation describes a versioned research package and does not assert journal acceptance, publication or an assigned DOI.
