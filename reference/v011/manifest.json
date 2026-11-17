@@ -1,0 +1,147 @@
+{
+  "schema": "pmsm-v011-reference-v1",
+  "revision": "v011",
+  "date": "2026-11-17",
+  "scope": "Frozen plot inputs and final six figure assets. No full raw datasets or model weights.",
+  "paper_figure_mapping": {
+    "1": "figure1-method-overview",
+    "2": "figure2-accuracy-latency",
+    "3": "figure3-paired-profile-errors",
+    "4": "figure5-temperature-trajectories",
+    "5": "figure4-initialization-effect",
+    "6": "figure6-initialization-segments"
+  },
+  "source_manuscript_sha256": "8d500ff4865b3a2264e2dff638c6feb2a54a57aed396da835b4494abef7710bd",
+  "files": [
+    {
+      "path": "data/cost-comparison-source.json",
+      "bytes": 23364,
+      "sha256": "4b24e9b2109b8fb0c4158f031f6e3e8deca593c286641558d1f6666e064f7654"
+    },
+    {
+      "path": "data/figure5-plotted-data.csv",
+      "bytes": 1789362,
+      "sha256": "180d5aa3dede9113ffa8232fb67fd8cd99a19b6fdf19401b12df974d5c0714fd"
+    },
+    {
+      "path": "data/initialization-summary.csv",
+      "bytes": 10479,
+      "sha256": "15e35581114847ac72981f5f5cbae2e720cc87e3ca38568176fab9152175f26e"
+    },
+    {
+      "path": "data/own-controls-comparison.json",
+      "bytes": 715205,
+      "sha256": "2d51eca1da7759598b631b0c4a8e33ce618ecd093d987dc207927cddd16dfcc5"
+    },
+    {
+      "path": "data/paderborn-own-evaluation-source.json",
+      "bytes": 278773,
+      "sha256": "b1d5487aa347611d35b67d690608c5e1b01833443c5eee0797cae617b5e3550e"
+    },
+    {
+      "path": "data/S2-own-profile-all-methods.csv",
+      "bytes": 104929,
+      "sha256": "1c21ba42cf158845ff18dfdfcde71b69e077d0c9da8df567b529b59e62df8df8"
+    },
+    {
+      "path": "data/selected-examples.json",
+      "bytes": 2483,
+      "sha256": "e3acc2d5c4fa37eadba755536cba7655d21fb768730549ddb55910d2e7466695"
+    },
+    {
+      "path": "expected_pdf_boxes.json",
+      "bytes": 722,
+      "sha256": "b0e846d1faaacde5c1455d29437ff540801cc3b89c1e63a14779b41014c2a270"
+    },
+    {
+      "path": "figures/figure1-method-overview.pdf",
+      "bytes": 27912,
+      "sha256": "16fbda58a281414706eae7265ed312f342ee155052b38e10a9c23746a737424f"
+    },
+    {
+      "path": "figures/figure1-method-overview.png",
+      "bytes": 55110,
+      "sha256": "19abf83f1569ebd523d48231906d6acd66665be1fc6432f27492115f79f83b1f"
+    },
+    {
+      "path": "figures/figure1-method-overview.svg",
+      "bytes": 19419,
+      "sha256": "9a2cc7a081cd0d3db7dc653291fc79b21834024d0b50c635d251b594162c321e"
+    },
+    {
+      "path": "figures/figure2-accuracy-latency.pdf",
+      "bytes": 29122,
+      "sha256": "d89c5190491e8f3bf691d36c9789be9cbdd62ad86ce9b9a49fc77cc00d237d95"
+    },
+    {
+      "path": "figures/figure2-accuracy-latency.png",
+      "bytes": 130608,
+      "sha256": "b23562c623b25877f758a039a2bb3b80941f589d058b1130fb2e65612b505d21"
+    },
+    {
+      "path": "figures/figure2-accuracy-latency.svg",
+      "bytes": 33352,
+      "sha256": "f91e2232cfde1b8616e7fe4dfc45fd680f35439acdd0746868372c096ef443e0"
+    },
+    {
+      "path": "figures/figure3-paired-profile-errors.pdf",
+      "bytes": 27352,
+      "sha256": "8fca414aa9c0d6f23664a93ddc64975223e817c76e933937d52816fb6758558e"
+    },
+    {
+      "path": "figures/figure3-paired-profile-errors.png",
+      "bytes": 49478,
+      "sha256": "89bcbee8beec4c2afbb9529319475a30030d540307e01649517ff51c5b91f9b3"
+    },
+    {
+      "path": "figures/figure3-paired-profile-errors.svg",
+      "bytes": 28508,
+      "sha256": "183f3e6fe41d095e69a9a4b2f59824daccbfbd9c187ac0527834af2bd538cd37"
+    },
+    {
+      "path": "figures/figure4-initialization-effect.pdf",
+      "bytes": 47832,
+      "sha256": "2af5789b9de008524f754f31413d73f5fe891b126b5d29ff1be18020f9883010"
+    },
+    {
+      "path": "figures/figure4-initialization-effect.png",
+      "bytes": 73131,
+      "sha256": "b53357dc8adfada86213ee916dd53aa18b4024acb5cb194449713213777249ce"
+    },
+    {
+      "path": "figures/figure4-initialization-effect.svg",
+      "bytes": 95503,
+      "sha256": "b237b7c56fb5b66a9a3c09e07f18ef596c8f99d6a6b6dfca5dcb7fe54916b5c7"
+    },
+    {
+      "path": "figures/figure5-temperature-trajectories.pdf",
+      "bytes": 260461,
+      "sha256": "03a7666d4444e604b418ee21e5bf843ff6944c780784e073a29fe1a338a9d7da"
+    },
+    {
+      "path": "figures/figure5-temperature-trajectories.png",
+      "bytes": 401352,
+      "sha256": "5ab6e22b8ff245c704ff1629fabb7bbcbd486e7080a445f2f1312211ab7a18af"
+    },
+    {
+      "path": "figures/figure5-temperature-trajectories.svg",
+      "bytes": 717913,
+      "sha256": "e887ebb71b8b7c14a862d9b839925a8e3d500b0e96142752db7a3a8f4c05b32f"
+    },
+    {
+      "path": "figures/figure6-initialization-segments.pdf",
+      "bytes": 34561,
+      "sha256": "4adc9be0164addaa24a93f0644751d8f2c72f94e3431acb900e099feca484c2d"
+    },
+    {
+      "path": "figures/figure6-initialization-segments.png",
+      "bytes": 228174,
+      "sha256": "3fb4e6a0ff0926d5f2e9a37df7a769a928d0561cfd779e0c62bc228585b48e78"
+    },
+    {
+      "path": "figures/figure6-initialization-segments.svg",
+      "bytes": 108813,
+      "sha256": "1fee7379092693679ae2dcef12571171e9fbbec819478f6c888940c1012e25a7"
+    }
+  ]
+}

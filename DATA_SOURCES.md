@@ -1,12 +1,24 @@
 # Data sources and acquisition
 
-The repository redistributes no raw measurements. [data/registry.json](data/registry.json) records the exact source versions, download URLs, file sizes, SHA-256 checksums, archive members, and attribution used by the pipeline. Acquire data from the upstream providers under their applicable terms.
+The repository does not redistribute complete raw datasets or source archives. [data/registry.json](data/registry.json) records the exact source versions, download URLs, file sizes, SHA-256 checksums, archive members, and attribution used by the pipeline. Acquire data for a fresh study run from the upstream providers under their applicable terms. Selected derived plot data are included in the v011 reference as described below.
 
 | Dataset | Pinned source and attribution | Terms recorded in the registry |
 | --- | --- | --- |
 | IPMSM | [LPTN-informed LSTM repository](https://github.com/Zirui24/lptn_informed_LSTM/tree/98e4566b5fb7c70499996fda18dd73179ec16509), commit `98e4566b5fb7c70499996fda18dd73179ec16509`; Zirui Liu, 2024; [associated paper](https://doi.org/10.1109/TPEL.2024.3409388) | The repository carries an [MIT license](https://github.com/Zirui24/lptn_informed_LSTM/blob/98e4566b5fb7c70499996fda18dd73179ec16509/LICENSE). A separate dataset-specific grant is not independently established here. |
 | Paderborn | [Electric Motor Temperature, version 3](https://www.kaggle.com/datasets/wkirgsn/electric-motor-temperature/versions/3), [version DOI](https://doi.org/10.34740/KAGGLE/DSV/2161054); Wilhelm Kirchgässner, Oliver Wallscheid, Joachim Böcker, LEA, Paderborn University | [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/); preserve attribution and applicable ShareAlike terms. |
 | RWTH | [48 V drive-cycle measurements, record 15599966](https://zenodo.org/records/15599966), [version DOI](https://doi.org/10.5281/zenodo.15599966); Anna Isabel Ramones, Samuel Kieling, Michael Engels, Jakob Andert, 2025 | [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/); preserve attribution, license notice, and indication of changes. |
+
+## Included v011 plot data
+
+[reference/v011/](reference/v011/) contains saved JSON figure sources and per-profile summaries, 15,339 selected trajectory rows in [data/figure5-plotted-data.csv](reference/v011/data/figure5-plotted-data.csv), and 75 initialization plot cells in [data/initialization-summary.csv](reference/v011/data/initialization-summary.csv) used to render the six archived manuscript figures. The trajectory rows retain selected measured temperatures and fitted predictions after the study's row selection and alignment. The initialization cells are derived summaries. They support inspection and rerendering of saved observations and do not replace acquisition of the pinned upstream datasets for training or evaluation.
+
+The source attributions and recorded terms above remain applicable to the source-derived records. Project changes include selecting and aligning records, generating model predictions, and calculating summaries. Preserve upstream attribution and applicable license notices and ShareAlike terms when reusing the data. [RIGHTS.md](RIGHTS.md) explains the distinct status of the project's original code and figures. No full raw dataset, model weights, publisher assets, private papers, author photographs, or full manuscript PDF is included.
+
+The older `reference/v007/` intentionally omits per-row trajectory CSVs. That historical scope is preserved; the selected v011 records are an explicit addition for figure transparency. Verify their hashes and figure mapping with:
+
+```bash
+python scripts/verify_v011_reference.py
+```
 
 ## Automatic acquisition
 

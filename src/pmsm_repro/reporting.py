@@ -444,85 +444,103 @@ def _draw_figures(out: Path, points: list[dict], paired: list[dict], changes: li
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
     from matplotlib.patches import FancyBboxPatch, FancyArrowPatch, Circle
+    from matplotlib.ticker import MaxNLocator, NullLocator, FuncFormatter
     import numpy as np
-    style = {"font.family": "DejaVu Sans", "font.size": 9, "pdf.fonttype": 42, "ps.fonttype": 42, "axes.spines.top": False, "axes.spines.right": False}
-    blue, orange, teal, purple = "#0072B2", "#D55E00", "#009E73", "#CC79A7"
-    def save(fig, stem):
-        fig.text(.5, .015, scope, ha="center", va="bottom", fontsize=7, color="#555555")
+    from .plot_style import add_panel_labels, scatter_style, INITIALIZATION_BARS, write_style_receipt
+    style = {"font.family": "DejaVu Sans", "font.size": 8.5, "pdf.fonttype": 42, "ps.fonttype": 42, "axes.spines.top": False, "axes.spines.right": False}
+    def save(fig, stem, panels=(), width_mm=177.53):
+        # The fresh report keeps its provenance, including smoke labels. Panel
+        # font substitution is recorded explicitly, without an archive claim.
+        fig.text(.5, .012, scope, ha="center", va="bottom", fontsize=6.5, color="#555555")
+        receipt = add_panel_labels(fig, panels, width_mm) if len(panels) else None
         for ext in ("pdf", "png"):
             fig.savefig(out / "figures" / f"{stem}.{ext}", dpi=220, facecolor="white")
+        write_style_receipt(out / "figures", stem, receipt)
         plt.close(fig)
     with plt.rc_context(style):
         fig, ax = plt.subplots(figsize=(9, 3.4));ax.set(xlim=(0, 9), ylim=(0, 3.4));ax.axis("off")
-        def box(x, y, w, h, text, color="#555555"):
-            ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=.02", facecolor="#F6F8FA", edgecolor=color, linewidth=.9))
+        def box(x, y, w, h, text, color="#222222"):
+            ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle="round,pad=.02", facecolor="#f6f6f6", edgecolor=color, linewidth=.9))
             ax.text(x+w/2, y+h/2, text, ha="center", va="center", fontsize=8.5, color=color)
-        def arrow(x1, y1, x2, y2, color="#555555"):
+        def arrow(x1, y1, x2, y2, color="#222222"):
             ax.add_patch(FancyArrowPatch((x1, y1), (x2, y2), arrowstyle="-|>", mutation_scale=9, color=color, linewidth=.9))
         ax.text(.1, 3.15, "Training: current temperature target", weight="bold")
-        for x, text in [(.15, r"Fit ridge $\hat T_{lin}$"), (2.5, r"Form $y-\hat T_{lin}(x)$"), (5.0, r"Fit residual booster $\hat r$")]:box(x, 2.55, 2, .42, text, blue)
-        arrow(2.2, 2.76, 2.45, 2.76, blue);arrow(4.55, 2.76, 4.95, 2.76, blue)
+        for x, text in [(.15, r"Fit ridge $\hat T_{lin}$"), (2.5, r"Form $y-\hat T_{lin}(x)$"), (5.0, r"Fit residual booster $\hat r$")]:box(x, 2.55, 2, .42, text)
+        arrow(2.2, 2.76, 2.45, 2.76);arrow(4.55, 2.76, 4.95, 2.76)
         ax.text(.15, 2.28, "Fit the direct predictor separately; freeze both complete predictors before evaluation.", fontsize=8.5)
         ax.text(.1, 1.98, "Inference: no target-temperature feedback", weight="bold")
         box(.1, .75, 1.35, .65, "Operating\nmeasurements");box(1.8, .75, 1.35, .65, "Causal history\n33 features")
         arrow(1.5, 1.08, 1.75, 1.08)
-        for y, text, color in [(1.35, "Ridge prediction", blue), (.75, "Residual correction", blue), (.15, "Direct prediction", "#555555")]:
-            box(3.6, y, 1.65, .42, text, color);arrow(3.2, 1.08, 3.55, y+.21, color)
-        ax.add_patch(Circle((5.65, 1.22), .14, facecolor="white", edgecolor=blue));ax.text(5.65, 1.22, "+", ha="center", va="center", color=blue)
-        arrow(5.3, 1.56, 5.55, 1.33, blue);arrow(5.3, .96, 5.55, 1.11, blue)
-        box(6.05, .98, 1.0, .48, r"$\hat T_{LR}$", blue);arrow(5.8, 1.22, 6., 1.22, blue)
-        box(7.55, .98, 1.1, .48, r"$\hat T_{avg}$", orange);arrow(7.1, 1.22, 7.5, 1.22, blue)
+        for y, text in [(1.35, "Ridge prediction"), (.75, "Residual correction"), (.15, "Direct prediction")]:
+            box(3.6, y, 1.65, .42, text);arrow(3.2, 1.08, 3.55, y+.21)
+        ax.add_patch(Circle((5.65, 1.22), .14, facecolor="white", edgecolor="#222222"));ax.text(5.65, 1.22, "+", ha="center", va="center")
+        arrow(5.3, 1.56, 5.55, 1.33);arrow(5.3, .96, 5.55, 1.11)
+        box(6.05, .98, 1.0, .48, r"$\hat T_{LR}$");arrow(5.8, 1.22, 6., 1.22)
+        box(7.55, .98, 1.1, .48, r"$\hat T_{avg}$");arrow(7.1, 1.22, 7.5, 1.22)
         ax.plot([5.3, 8.1], [.36, .36], color="#555555", lw=.9);arrow(8.1, .36, 8.1, .93)
         ax.text(6.9, .08, "Fixed equal-weight average", ha="center", fontsize=8)
         fig.subplots_adjust(left=.015, right=.99, top=.99, bottom=.1);save(fig, "figure1-method-overview")
 
-        fig, axes = plt.subplots(1, 2, figsize=(9, 4.6), sharey=True)
-        labels = list(dict.fromkeys(p["method"] for p in points))
-        colors = {method_label("linear_residual"): blue, method_label("linear_half"): orange, method_label("free_residual"): purple, method_label("free_half"): purple}
-        markers = ["o", "s", "^", "D", "P", "h", "v", "*"]
+        fig, axes = plt.subplots(1, 2, figsize=(7.1, 4.6), sharey=True)
         for ax, role in zip(axes, ("Development", "Historical evaluation")):
             current = [p for p in points if p["cohort"] == role]
             for p in current:
-                k = labels.index(p["method"])
-                ax.scatter(p["median_us"], p["macro_rmse"], marker=markers[k % len(markers)], color=teal if p["method"].startswith("Neural network (seed") else colors.get(p["method"], "#555555"), s=38, label=p["method"])
+                ax.scatter(p["median_us"], p["macro_rmse"], **scatter_style(p["method"]), s=38, label=p["method"])
             if not current:ax.text(.5, .5, "Not available in supplied run", transform=ax.transAxes, ha="center")
             ax.set_xscale("log");ax.set_title(role);ax.grid(alpha=.2);ax.set_xlabel("Median CPU latency (μs/row; log scale)")
+            if current and max(p["median_us"] for p in current) / min(p["median_us"] for p in current) < 10:
+                ax.xaxis.set_major_locator(MaxNLocator(nbins=4))
+                ax.xaxis.set_major_formatter(FuncFormatter(lambda value, _: f"{value:g}"))
+                ax.xaxis.set_minor_locator(NullLocator())
         axes[0].set_ylabel("Profile-macro RMSE (°C)")
-        handles, names = axes[0].get_legend_handles_labels()
-        if handles:fig.legend(handles, names, loc="lower center", bbox_to_anchor=(.5,.07), ncol=2, fontsize=7.8, frameon=False)
+        legend = {label: handle for ax in axes for handle, label in zip(*ax.get_legend_handles_labels())}
+        if legend:fig.legend(legend.values(), legend.keys(), loc="lower center", bbox_to_anchor=(.5,.045), ncol=2, fontsize=7.8, frameon=False)
         fig.text(.5, .94, "Paderborn: channel-wise initialization", ha="center", weight="bold")
-        fig.subplots_adjust(left=.09, right=.98, bottom=.33, top=.86, wspace=.16);save(fig, "figure2-accuracy-latency")
+        fig.subplots_adjust(left=.10, right=.98, bottom=.40, top=.86, wspace=.16);save(fig, "figure2-accuracy-latency", axes)
 
-        fig, axes = plt.subplots(2, 1, figsize=(7.1, 5.4), sharey=True)
+        fig, axes = plt.subplots(2, 1, figsize=(3.6, 5.4), sharey=True)
         for ax, role in zip(axes, ("Development", "Historical evaluation")):
             current = [r for r in paired if r["cohort"] == role];x=np.arange(len(current))
-            ax.bar(x, [r["rmse_difference"] for r in current], color=[blue if r["rmse_difference"] < 0 else orange for r in current])
+            bars = ax.bar(x, [r["rmse_difference"] for r in current], edgecolor="black", linewidth=.65)
+            for bar in bars:
+                negative = bar.get_height() < 0
+                bar.set_facecolor("#bdbdbd" if negative else "white")
+                bar.set_hatch("/" if negative else "xx")
             ax.axhline(0, color="black", lw=.7);ax.set_xticks(x, [r["profile"] for r in current]);ax.set_title(role)
             ax.set_ylabel("RMSE difference (°C)");ax.grid(axis="y", alpha=.15);ax.set_axisbelow(True)
+            ax.set_xlabel("Profile identifier (supplied order)")
+            ax.tick_params(axis="x", labelsize=7)
             if not current:ax.text(.5,.5,"Not available in supplied run",transform=ax.transAxes,ha="center")
-        axes[1].set_xlabel("Profile identifier (supplied order)")
-        fig.text(.5,.96,"Linear residual boosting minus matched direct boosting",ha="center",fontsize=9)
-        fig.subplots_adjust(left=.12,right=.98,top=.87,bottom=.14,hspace=.6);save(fig,"figure3-paired-profile-errors")
+        fig.text(.5,.98,"Linear residual boosting minus\nmatched direct boosting",ha="center",va="top",fontsize=8)
+        fig.text(.5,.044,"Negative /: favors linear residual.\nPositive x: favors matched direct.",ha="center",fontsize=7)
+        fig.subplots_adjust(left=.20,right=.98,top=.85,bottom=.22,hspace=.90);save(fig,"figure3-paired-profile-errors",axes,85.29)
 
-        fig, axes = plt.subplots(3, 1, figsize=(8.2, 7.5), sharex=True)
+        fig, axes = plt.subplots(3, 1, figsize=(3.6, 6.0), sharex=True)
         names = [method_label(m) for m in ("d9", "linear_residual", "linear_half", "free_half", "mlp_mean")]
+        short_names = ["Selected direct", "Linear residual", "Equal-weight", "History-only avg.", "Neural mean"]
+        values = [r["change_percent"] for r in changes]
+        lower, upper = min([0., *values]), max([0., *values])
         for ax, (ds, role) in zip(axes, (("IPMSM", "Historical evaluation"), ("Paderborn", "Development"), ("Paderborn", "Historical evaluation"))):
             current = {r["method"]: r for r in changes if r["dataset"] == ds and r["cohort"] == role}
             for i, name in enumerate(names):
                 if name in current:
                     v = current[name]["change_percent"]
-                    ax.barh(i, v, color=["#555555",blue,orange,purple,teal][i], height=.7)
-                    ax.annotate(f"{v:+.1f}%", (v,i), xytext=(4 if v>=0 else -4,0), textcoords="offset points", va="center", ha="left" if v>=0 else "right", fontsize=8)
+                    fill, hatch = INITIALIZATION_BARS[i]
+                    ax.barh(i, v, color=fill, hatch=hatch, edgecolor="black", linewidth=.65, height=.7)
+                    inside = abs(v) >= .35 * (upper-lower) and v != 0
+                    direction = (1 if v >= 0 else -1) * (-1 if inside else 1)
+                    ax.annotate(f"{v:+.1f}%", (v,i), xytext=(4*direction,0), textcoords="offset points",
+                                va="center", ha="left" if direction > 0 else "right", fontsize=8,
+                                bbox=dict(facecolor="white", edgecolor="none", pad=.35) if inside else None)
                 else:ax.text(.98,i,"not available",transform=ax.get_yaxis_transform(),ha="right",va="center",fontsize=8,color="#777777")
-            ax.set_yticks(range(len(names)),names);ax.invert_yaxis();ax.axvline(0,color="black",lw=.7);ax.grid(axis="x",alpha=.15);ax.set_axisbelow(True)
-            ax.set_title(ds+" — "+role)
-        values = [r["change_percent"] for r in changes]
-        lower, upper = min([0., *values]), max([0., *values])
-        padding = max(1., .2*(upper-lower))
+            ax.set_yticks(range(len(names)),short_names,fontsize=8);ax.invert_yaxis();ax.axvline(0,color="black",lw=.7);ax.grid(axis="x",alpha=.15);ax.set_axisbelow(True)
+            ax.set_title(ds+"\n"+role,fontsize=8.5)
+        padding = max(1., .35*(upper-lower))
         for ax in axes:
             ax.set_xlim(lower-padding, upper+padding)
-        axes[-1].set_xlabel("Macro-RMSE change: channel-wise versus original initialization (%)")
-        fig.subplots_adjust(left=.37,right=.97,top=.94,bottom=.1,hspace=.62);save(fig,"figure4-initialization-effect")
+        axes[-1].set_xlabel("Relative macro-RMSE change (%)",fontsize=8)
+        fig.text(.5,.045,"Channel-wise versus original; negative = better.",ha="center",fontsize=7)
+        fig.subplots_adjust(left=.40,right=.97,top=.92,bottom=.19,hspace=.78);save(fig,"figure4-initialization-effect",axes,85.29)
 
 
 def generate_from_directory(results_dir: str | Path, output_dir: str | Path, *,

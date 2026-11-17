@@ -1,9 +1,10 @@
 """Reanalyze locked complete predictions; no model fitting or inference."""
 from pathlib import Path
-import argparse,csv,hashlib,json,math,os
+import argparse,csv,hashlib,json,math,os,sys
 from collections import defaultdict
 import numpy as np
 
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 METHODS=('linear_prior','linear_residual','direct200','d9')
 
 def sha(path):
@@ -62,20 +63,19 @@ def plot_examples(examples,output,smoke=False):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
+    from pmsm_repro.plot_style import add_panel_labels,line_style,write_style_receipt
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':9,'axes.titlesize':9.5,'axes.labelsize':9,
                          'legend.fontsize':8,'pdf.fonttype':42,'ps.fonttype':42})
     fig,axes=plt.subplots(2,2,figsize=(7.4,5.0),sharex='col')
-    styles={'target':('Measured rotor','#222222','-',1.15),
-        'linear_prior':('Ridge prior','#777777','--',1.),
-        'linear_residual':('Linear residual boosting','#0072B2','-',1.0),
-        'direct200':('Matched direct boosting','#D55E00',':',1.05)}
+    styles={'target':('Measured rotor',1.15),'linear_prior':('Ridge prior',1.),
+        'linear_residual':('Linear residual boosting',1.0),'direct200':('Matched direct boosting',1.05)}
     rows=[]
     for column,example in enumerate(examples):
         z,y,row=example['arrays'],example['target'],example['metrics'];index=z['index']
-        for key,(label,color,style,width) in styles.items():
+        for key,(label,width) in styles.items():
             v=y if key=='target' else z['prediction__'+key]
-            axes[0,column].plot(index,v,label=label,color=color,ls=style,lw=width)
-            if key!='target':axes[1,column].plot(index,v-y,color=color,ls=style,lw=width)
+            axes[0,column].plot(index,v,label=label,lw=width,**line_style(key,len(index)))
+            if key!='target':axes[1,column].plot(index,v-y,lw=width,**line_style(key,len(index)))
         axes[0,column].set_title(('Paderborn' if row['dataset']=='paderborn' else 'IPMSM')+', profile '+str(row['profile'])+'\n'+('Median-near improvement' if column==0 else 'Largest historical degradation'))
         axes[1,column].axhline(0,color='black',lw=.6)
         axes[1,column].set_xlabel('Within-profile source-row index')
@@ -86,11 +86,16 @@ def plot_examples(examples,output,smoke=False):
             rows.append(dict(dataset=row['dataset'],arm=row['arm'],role=row['role'],profile=row['profile'],within_profile_row=int(j),target_c=float(y[i]),
                 **{m+'_c':float(z['prediction__'+m][i]) for m in METHODS[:3]}))
     axes[0,0].set_ylabel('Rotor temperature (°C)');axes[1,0].set_ylabel('Prediction minus target (°C)')
+    for column in range(len(examples),2):
+        for ax in axes[:,column]:ax.axis('off')
     handles,labels=axes[0,0].get_legend_handles_labels()
-    fig.legend(handles,labels,loc='upper center',bbox_to_anchor=(.5,1.0),ncol=2,frameon=False)
-    fig.subplots_adjust(top=.82,bottom=.14 if smoke else .105,left=.09,right=.99,hspace=.2,wspace=.22)
+    fig.legend(handles,labels,loc='upper center',bbox_to_anchor=(.5,1.0),ncol=2,frameon=False,handlelength=3.4)
+    fig.subplots_adjust(top=.82,bottom=.21,left=.09,right=.99,hspace=.45,wspace=.22)
     if smoke:fig.text(.5,.015,'SMOKE TEST: reduced data and training; not paper results',ha='center',fontsize=8,color='#555555')
-    for ext in ('pdf','png'):fig.savefig(output/('figure5-temperature-trajectories.'+ext),dpi=240,bbox_inches='tight')
+    active=[ax for row in axes for ax in row if ax.axison]
+    receipt=add_panel_labels(fig,active,177.53)
+    for ext in ('pdf','png'):fig.savefig(output/('figure5-temperature-trajectories.'+ext),dpi=240)
+    write_style_receipt(output,'figure5-temperature-trajectories',receipt)
     plt.close(fig);write_csv(output/'figure5-plotted-data.csv',rows)
 
 def aggregate_rows(profile_rows):

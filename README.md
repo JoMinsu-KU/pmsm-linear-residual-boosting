@@ -2,13 +2,49 @@
 
 Research code for **Linear Residual Boosting for Rotor-Temperature Estimation in Permanent-Magnet Synchronous Motors: Accuracy, Initialization, and Computational Cost**.
 
-Version 0.3.0 integrates the **v007 manuscript** analyses into the portable reproduction package. The core pipeline prepares pinned public measurements, fits the configured models, evaluates predictions, measures scalar CPU inference cost, and generates table and figure assets. Two additional scripts analyze residual-correction failures, operating ranges, and paired initialization effects. Results are computed from the named run's artifacts; missing values are never replaced with saved manuscript results. This release reruns the frozen, previously selected settings in [configs/study.json](configs/study.json). It does not repeat the original hyperparameter search.
+Version **0.4.0** accompanies the **v011 manuscript** and adds a saved-data renderer for its six figures. The v011 manuscript retains the nine tables, six figures, and numerical results of v007 while updating the figure presentation. The subsequent v012 manuscript update changes author biography text only; its scientific assets remain those archived as v011. The archived PDF, PNG, and SVG figures are in [reference/v011/figures/](reference/v011/figures/). The commands below distinguish rendering those saved observations from running the study again.
+
+The full pipeline prepares pinned public measurements, fits the configured models, evaluates predictions, measures scalar CPU inference cost, and generates table and figure assets. Two additional scripts analyze residual-correction failures, operating ranges, and paired initialization effects. Results are computed from the named run's artifacts; missing values are never replaced with saved manuscript results. This release reruns the frozen, previously selected settings in [configs/study.json](configs/study.json). It does not repeat the original hyperparameter search.
 
 All configured evaluation profiles have already been examined during the study. A fresh execution is a computational reproduction, **not independent confirmation**. Numerical identity across hardware and software environments is not assumed, and latency must be measured on the reader's machine.
 
-## Install
+## Render the six saved v011 figures
 
-Use Linux or WSL with Python 3.10. Full study training requires an NVIDIA GPU accessible through CUDA; the smoke run also supports CPU. Run the following from a terminal:
+This route uses the included figure data and needs no dataset download, model training, CUDA, or model weights. Use a dedicated Python 3.10 environment: `requirements-figures.txt` pins Matplotlib **3.9.2**, while the fresh-study `requirements.txt` pins **3.10.9**. Keep the two requirement sets in separate virtual environments. On Linux or WSL:
+
+```bash
+git clone https://github.com/JoMinsu-KU/pmsm-linear-residual-boosting.git
+cd pmsm-linear-residual-boosting
+python3.10 -m venv .venv-figures
+source .venv-figures/bin/activate
+python -m pip install -r requirements-figures.txt
+python scripts/verify_v011_reference.py
+python scripts/render_reference_v011.py --output work/reference-v011
+```
+
+For Windows PowerShell, replace the environment creation and activation lines with `py -3.10 -m venv .venv-figures` and `.\.venv-figures\Scripts\Activate.ps1`.
+
+The renderer rebuilds all six manuscript figures from the saved sources in `reference/v011/data/`. The command writes PDF, PNG, and SVG figures to `work/reference-v011/figures/`, and JSON verification receipts to `work/reference-v011/review/`. The output directory must not already exist; choose a new `--output` path for each rendering. This is a rendering of historical observations, not a new fit, evaluation, or latency measurement. Use the archived files when the exact manuscript figure files are needed; rerendered bytes or pixels can vary with the rendering environment.
+
+The v011 panel labels require a licensed installation of **Times New Roman**. No font files are bundled. If the renderer cannot find the font, pass the regular font file path explicitly. For example, in Windows PowerShell, use this command in place of the rendering command above:
+
+```powershell
+python scripts/render_reference_v011.py --output work/reference-v011 --font-path "C:\Windows\Fonts\times.ttf"
+```
+
+On Linux or WSL, install the font under its applicable terms or supply a licensed font file:
+
+```bash
+python scripts/render_reference_v011.py --output work/reference-v011 --font-path /path/to/licensed/times.ttf
+```
+
+The saved renderer also accepts the regular font file path through `TIMES_NEW_ROMAN_FONT`; an explicit `--font-path` takes precedence. It requires Times New Roman and fails if the font is unavailable. The standard-library-only `verify_v011_reference.py` checks the saved source hashes, data consistency, and manuscript figure mapping without a font or plotting dependencies.
+
+Fresh study reports use the v011 line styles, markers, and panel labels. Their optional font override is `PMSM_TIMES_FONT`, and they use **DejaVu Serif** for panel labels if Times New Roman is unavailable. This fallback is recorded in the output and does not reproduce the manuscript typography.
+
+## Install for a fresh study run
+
+Use Linux or WSL with Python 3.10 and a separate `.venv` for the fresh-study dependencies. Full study training requires an NVIDIA GPU accessible through CUDA; the smoke run also supports CPU. Run the following from a terminal. If the repository is already cloned, start from its root and omit the first two lines:
 
 ```bash
 git clone https://github.com/JoMinsu-KU/pmsm-linear-residual-boosting.git
@@ -28,7 +64,7 @@ python -m pip install torch==2.7.1 --index-url https://download.pytorch.org/whl/
 
 ## Obtain the data
 
-Raw measurements are not included. [DATA_SOURCES.md](DATA_SOURCES.md) gives source versions, attribution, expected paths, and manual download instructions. Preview the pinned downloads before enabling network access:
+Complete raw datasets are acquired separately; the included v011 plot records are insufficient for training or evaluation. [DATA_SOURCES.md](DATA_SOURCES.md) gives source versions, attribution, expected paths, and manual download instructions. Preview the pinned downloads before enabling network access:
 
 ```bash
 python scripts/acquire_data.py --dataset all
@@ -54,7 +90,7 @@ Run the complete frozen study on CUDA:
 python scripts/reproduce.py all --mode paper --device cuda --workdir work/paper
 ```
 
-Then generate the v007 additional analyses from that completed run:
+Then generate the additional analyses used by v011 from that completed run:
 
 ```bash
 python scripts/analyze_failure.py --run-dir work/paper --output work/paper-failure
@@ -83,7 +119,7 @@ Each core pipeline invocation defaults to a **24-hour wall-time limit** and a **
 
 To resume, rerun the same command. Completed stages are reused only after their exact file inventory and SHA-256 hashes pass verification. The run is bound to source/configuration hashes, dataset selection, mode, device, and recorded numerical runtime versions. A changed binding requires a new work directory. An interrupted stage starts again; unfinished neural epochs are **not** resumed. Failed attempt directories remain available for inspection and count toward the work-directory limit.
 
-The new analysis commands can read an already completed v0.2.0 run after verifying its original manifests. Updating the repository changes the core run binding, so use a new work directory for core training after upgrading; do not rewrite an older run's manifest to resume it.
+The analysis commands can read an already completed v0.2.0 run after verifying its original manifests. Updating the repository changes the core run binding, so use a new work directory for core training after upgrading; do not rewrite an older run's manifest to resume it.
 
 ## Generated artifacts
 
@@ -94,7 +130,7 @@ The selected work directory contains `run.json`, a data receipt, prepared caches
 | `accuracy.csv`, `profiles.csv`, `timing.csv` | Newly computed aggregate metrics, profile metrics, and local timing measurements |
 | `temporal_fifths.csv`, `diagnostics.json`, `metadata.json` | Within-profile segments, error decompositions, and run settings |
 | `diagnostic-summary.json` | Equal-profile temporal contrasts and paired initialization associations, with Pearson and historical-compatible Spearman explicitly distinguished |
-| `paper/tables/table1.csv` through `table7.csv`, with matching `.tex` files | Seven core tables; see the v007 numbering below |
+| `paper/tables/table1.csv` through `table7.csv`, with matching `.tex` files | Seven core tables; see the v011 numbering below |
 | `paper/figures/figure1-method-overview`, `figure2-accuracy-latency`, `figure3-paired-profile-errors`, `figure4-initialization-effect` | Four core figures, each in PDF and PNG; numeric data in `figure2-data.csv` through `figure4-data.csv` |
 | `paper/tables/S1` through `S5` | Five named supplementary CSVs covering accuracy, profiles, timing, initialization, and profile deletion |
 | `paper/report-manifest.json` | Input digest, output hashes, provenance, and completeness status |
@@ -112,13 +148,13 @@ The additional commands write these outputs separately:
 
 The initialization analysis compares refitted prediction procedures; it does not estimate an unknown physical starting rotor temperature. Retained-row fifths divide rows, not matched physical durations. Operating ranges and exceedances are marginal descriptions, not causal explanations or multivariate out-of-distribution tests.
 
-## v007 manuscript mapping
+## v011 manuscript mapping
 
 The manuscript has **nine main tables and six figures**. Established asset filenames are retained, so their numbers do not always match the manuscript. Paths below assume the commands above; core table files also have matching `.tex` versions and figures have matching `.png` versions.
 
-| v007 table | Source and assembly |
+| v011 table | Source and assembly |
 | --- | --- |
-| I — methodological precedents | Manually curated literature comparison; the core `report/paper/tables/table1.csv` is the earlier comparison, not the revised v007 table |
+| I — methodological precedents | Manually curated literature comparison; the core `report/paper/tables/table1.csv` is the earlier comparison, not the revised manuscript table |
 | II — data and evaluation roles | `work/paper/report/paper/tables/table2.csv` |
 | III — observed marginal ranges | Assemble the displayed ranges from `work/paper-failure/failure-operating-ranges.csv`; supporting exceedances are in `failure-profile-support.csv` |
 | IV — earlier confirmation attempts | Manually assembled from [reference/v007/history/confirmations.json](reference/v007/history/confirmations.json), which preserves the earlier criteria and results; no new hypothesis test is performed |
@@ -128,7 +164,7 @@ The manuscript has **nine main tables and six figures**. Established asset filen
 | VIII — feature-vector structure | `work/paper/report/paper/tables/table6.csv` |
 | IX — fixed settings | `work/paper/report/paper/tables/table7.csv` |
 
-| v007 figure | Generated PDF |
+| v011 figure | Fresh-run generated PDF |
 | --- | --- |
 | 1 — method overview | `work/paper/report/paper/figures/figure1-method-overview.pdf` |
 | 2 — accuracy and latency | `work/paper/report/paper/figures/figure2-accuracy-latency.pdf` |
@@ -137,7 +173,7 @@ The manuscript has **nine main tables and six figures**. Established asset filen
 | 5 — aggregate initialization effect | `work/paper/report/paper/figures/figure4-initialization-effect.pdf` |
 | 6 — within-profile initialization contrasts | `work/paper-initialization/figures/figure6-initialization-segments.pdf` |
 
-The core report retains its earlier table captions and numbering. Use this mapping when assembling v007; the commands do not automatically produce its revised prose, literature table, or historical decision table. Newly reproduced values and selected illustrative profiles can differ from the archived manuscript observations.
+The core report retains its earlier table captions and numbering. Use this mapping when assembling v011; the commands do not automatically produce its revised prose, literature table, or historical decision table. Newly reproduced values and selected illustrative profiles can differ from the archived manuscript observations. Fresh figures follow the v011 presentation conventions, but an independently executed run is not expected to reproduce the saved figure pixels.
 
 ## Checks and saved reference
 
@@ -145,17 +181,20 @@ Verify the listed release-file hashes and run the focused tests:
 
 ```bash
 python scripts/verify_repository.py
+python scripts/verify_v011_reference.py
 python scripts/verify_review_reference.py
 python scripts/run_tests.py
 ```
 
 The hash verifier uses only the Python standard library. It checks the files listed in `provenance/release-manifest.json`; raw inputs and generated outputs have separate manifests. The tests cover numerical behavior, artifacts, reporting, and pipeline checks. Three optional historical-parity tests require the authors' separate archive through `PMSM_HISTORICAL_ROOT` and are skipped when it is absent. That archive is not needed to execute the reproduction pipeline.
 
-The separate `verify_review_reference.py` command also uses only the Python standard library. It verifies the v007 reference manifest and independently recalculates aggregate consistency checks from the saved summary CSVs. It does not run models or create new evaluation evidence.
+The `verify_v011_reference.py` command uses only the Python standard library. It checks the v011 reference hashes and figure mapping, recalculates saved trajectory RMSE/bias, and verifies the initialization difference grid. The separate `verify_review_reference.py` command also uses only the standard library and retains its historical scope: it verifies the v007 reference manifest and independently recalculates aggregate consistency checks from the saved summary CSVs. Neither command runs models or creates new evaluation evidence.
 
-Current v0.3.0 checks and their scope are recorded in [provenance/validation-v007.json](provenance/validation-v007.json). The earlier [v0.2.0 validation receipt](provenance/validation.json) records **31 passing tests in WSL**, including the three optional archive checks, and an all-dataset smoke run with 15 neural fits of two epochs each. That run generated 193 aggregate accuracy rows, 1,440 profile-metric rows, 45 timing rows, seven core tables, and four core figures; all 38 completed stages were reused after hash checks during its resume test. These are historical v0.2.0 checks, not a new v0.3.0 full-training result. **That validation did not execute a full paper-scale rerun.** Smoke success verifies pipeline integration, not paper accuracy or timing.
+The v0.4.0 checks and their scope are recorded in [provenance/validation-v011.json](provenance/validation-v011.json). Earlier checks remain in the [v0.3.0 receipt](provenance/validation-v007.json). The [v0.2.0 validation receipt](provenance/validation.json) records **31 passing tests in WSL**, including the three optional archive checks, and an all-dataset smoke run with 15 neural fits of two epochs each. That run generated 193 aggregate accuracy rows, 1,440 profile-metric rows, 45 timing rows, seven core tables, and four core figures; all 38 completed stages were reused after hash checks during its resume test. These are historical v0.2.0 checks, not a new v0.4.0 full-training result. **That validation did not execute a full paper-scale rerun.** Smoke success verifies pipeline integration, not paper accuracy or timing.
 
-The small CSV snapshot in `reference/` preserves the saved manuscript results independently of newly generated runs. To reproduce the corresponding table and figure assets without data acquisition or model execution:
+The [v011 reference](reference/v011/) contains the final six figures in PDF, PNG, and SVG; saved JSON sources and per-profile summaries; 15,339 selected per-row trajectory records in `data/figure5-plotted-data.csv`; and 75 saved initialization plot cells in `data/initialization-summary.csv`. Its [manifest](reference/v011/manifest.json) records the file hashes and manuscript figure mapping. These data support figure inspection and rendering. They do not include the complete raw datasets or trained model weights. The trajectory records are selected derived plot data, with upstream attribution and applicable terms retained in [DATA_SOURCES.md](DATA_SOURCES.md) and [RIGHTS.md](RIGHTS.md). The package does not redistribute the full manuscript, author photographs, publisher assets, or private papers.
+
+The earlier small CSV snapshot in `reference/` preserves saved core results independently of newly generated runs. The following **legacy renderer** produces its earlier core tables and four figures; it does **not** produce the complete v011 figure set:
 
 ```bash
 python scripts/render_reference.py --output work/reference
@@ -165,7 +204,7 @@ python scripts/render_reference.py --output work/reference
 
 The additional [reference/v007/](reference/v007/) directory contains the archived full-run analysis summaries, publication PDF/PNG figures, quantitative history, and provenance records. Its [manifest](reference/v007/manifest.json) records the included files. These files describe the original exposed-profile study; they are not outputs of your reproduction. Figure 6's saved values are the cohort/method/fifth `macro_difference` values in `reference/v007/analysis/initialization-summary.csv`. Per-profile and paired CSVs support independent recalculation of those equal-profile means.
 
-The v007 reference omits raw inputs, model binaries, per-row temperature/prediction trajectory CSVs, manuscript PDFs, author photographs, and exploration documents. Regenerate trajectory CSVs locally from acquired inputs with `analyze_failure.py`. Its saved publication figure contains only selected illustrative records, while the summary CSVs retain all eligible profiles. Historical receipts can name hashes of the original analysis programs; those hashes document the versions checked at the time, while the release manifest and current validation receipt identify the integrated portable scripts.
+The v007 reference omits raw inputs, model binaries, per-row temperature/prediction trajectory CSVs, manuscript PDFs, author photographs, and exploration documents. That historical exclusion still describes `reference/v007/`; the new `reference/v011/` includes selected trajectory records for figure transparency. For fresh-run trajectory CSVs, use `analyze_failure.py` with locally acquired inputs. The saved publication figure contains only selected illustrative records, while the v007 summary CSVs retain all eligible profiles. Historical receipts can name hashes of the original analysis programs; those hashes document the versions checked at the time, while the release manifest and current validation receipt identify the integrated portable scripts.
 
 ## Scientific protocol
 

@@ -1,0 +1,332 @@
+{
+  "schema": "pmsm-package-validation-v011",
+  "package_version": "0.4.0",
+  "date": "2026-11-17",
+  "status": "PASS",
+  "base_commit": "04e2f9da6b300e270201f29edc641227dbdac858",
+  "scope": "v011 figure scripts, frozen plot inputs, fresh-report styling and reproduction commands. The manuscript v012 changes biography text only.",
+  "regression_tests": {
+    "run": 64,
+    "passed": 62,
+    "failed": 0,
+    "skipped": 2,
+    "skip_reason": "Two installed Times New Roman face checks unavailable on WSL; both covered by the separate Windows checks.",
+    "optional_historical_archive_checks": 3,
+    "environment": "WSL / Python 3.10.12 / NumPy 1.26.4 / SciPy 1.15.3 / scikit-learn 1.5.1 / PyTorch 2.7.1+cu126 / Matplotlib 3.10.9",
+    "log_sha256": "e78b826b2a3c293e8361d58fa877e531eaf9e2063a0dd88db37b9a4739bc025a"
+  },
+  "windows_archive_and_font_checks": {
+    "run": 15,
+    "passed": 15,
+    "failed": 0,
+    "skipped": 0,
+    "scope": "14 integrity/preflight tests plus one fresh-render regular-font rejection test.",
+    "log_sha256": {
+      "v011-font-integrity-windows.log": "13a227bbb87ae0f1f6b44150d477a4fb9aa5225191649548be6b64142a8179cf",
+      "v011-regular-font-windows.log": "717ca1737eae317ad32a85f1d1410247afbdd00b27a1474cc6ea46396de85574"
+    }
+  },
+  "six_figure_regeneration": {
+    "status": "PASS",
+    "revision": "v011",
+    "new_fits": 0,
+    "new_predictions": 0,
+    "source_verification": {
+      "status": "PASS",
+      "revision": "v011",
+      "verified_files": 26,
+      "archived_figures": 6,
+      "trajectory_rows": 15339,
+      "initialization_cells": 75,
+      "trajectory_metric_checks": 12,
+      "scope": "File integrity, saved-example RMSE/bias, segment differences and manuscript figure mapping; no training."
+    },
+    "schematic": {
+      "status": "PASS",
+      "programmatic_schematic": true,
+      "color_conversion_preserves_all_non_color_pdf_operators": true,
+      "palette": {
+        "#0072b2": "#2e2e2e",
+        "#555555": "#555555",
+        "#c8d0d9": "#b8b8b8",
+        "#d55e00": "#1a1a1a",
+        "#eaf4fa": "#eeeeee",
+        "#f2f5f8": "#f3f3f3",
+        "#f7f8fa": "#f7f7f7",
+        "#fdf1ea": "#dddddd",
+        "#ffffff": "#ffffff"
+      }
+    },
+    "font": {
+      "family": "Times New Roman",
+      "sha256": "931c5de5c70401d9324d5014c123802b4fb753000360ceb2f56c589403cd58c5",
+      "redistributed": false
+    },
+    "runtime": {
+      "numpy": "1.26.4",
+      "matplotlib": "3.9.2",
+      "Pillow": "10.4.0",
+      "PyMuPDF": "1.28.0"
+    },
+    "figures": [
+      {
+        "paper_figure": 1,
+        "stem": "figure1-method-overview",
+        "grayscale": true,
+        "vector_pdf": true,
+        "archive_text_and_page_boxes_match": true,
+        "rendered_pdf_pixels_match_archive_at_100dpi": true,
+        "sha256": {
+          "pdf": "4ee3ec22311961d3a79160d11b660b84b7ab204a52e8a1366dd92dc17f5caceb",
+          "svg": "8c14ac36fc0ab6805d3266a66204b6552c1c7b5da36603215da227561eb15f58",
+          "png": "19abf83f1569ebd523d48231906d6acd66665be1fc6432f27492115f79f83b1f"
+        }
+      },
+      {
+        "paper_figure": 2,
+        "stem": "figure2-accuracy-latency",
+        "grayscale": false,
+        "vector_pdf": true,
+        "archive_text_and_page_boxes_match": true,
+        "rendered_pdf_pixels_match_archive_at_100dpi": true,
+        "sha256": {
+          "pdf": "5eb684edbc403dce2dc34b489e824bbcc77f925d72ffb447ee8dbb8ceec9fca8",
+          "svg": "579080921423dcef07e69ede033f6d4b028f37b92fb434a4603728c52d9ffb2f",
+          "png": "b23562c623b25877f758a039a2bb3b80941f589d058b1130fb2e65612b505d21"
+        }
+      },
+      {
+        "paper_figure": 3,
+        "stem": "figure3-paired-profile-errors",
+        "grayscale": true,
+        "vector_pdf": true,
+        "archive_text_and_page_boxes_match": true,
+        "rendered_pdf_pixels_match_archive_at_100dpi": true,
+        "sha256": {
+          "pdf": "b4cf9ae194e6d727f5897bf04a9ff71cd4cad21a828a19b29743bc96ec1e3bcd",
+          "svg": "d69e248cc67e261dbbfa42129748a44b3c99c8f670da3fc1273dbbd63e8229bd",
+          "png": "89bcbee8beec4c2afbb9529319475a30030d540307e01649517ff51c5b91f9b3"
+        }
+      },
+      {
+        "paper_figure": 4,
+        "stem": "figure5-temperature-trajectories",
+        "grayscale": false,
+        "vector_pdf": true,
+        "archive_text_and_page_boxes_match": true,
+        "rendered_pdf_pixels_match_archive_at_100dpi": true,
+        "sha256": {
+          "pdf": "f335d2dbdda3a6f694a99dd5f8348fb5e5f0b5ec8cfe22c1b655f9191c3e562f",
+          "svg": "8789d3c40fc3d4405c3535b686d8b667f569dd9a46fc6b36568b3a829bf78176",
+          "png": "5ab6e22b8ff245c704ff1629fabb7bbcbd486e7080a445f2f1312211ab7a18af"
+        }
+      },
+      {
+        "paper_figure": 5,
+        "stem": "figure4-initialization-effect",
+        "grayscale": true,
+        "vector_pdf": true,
+        "archive_text_and_page_boxes_match": true,
+        "rendered_pdf_pixels_match_archive_at_100dpi": true,
+        "sha256": {
+          "pdf": "827d299e6c02066179066b50dcc6a41c6c480659ffed240911e5707911fd791b",
+          "svg": "b4fa03d55e6002e5d98d5be6be9ec33efa58f8425daee89d5eba73f152f377ba",
+          "png": "b53357dc8adfada86213ee916dd53aa18b4024acb5cb194449713213777249ce"
+        }
+      },
+      {
+        "paper_figure": 6,
+        "stem": "figure6-initialization-segments",
+        "grayscale": false,
+        "vector_pdf": true,
+        "archive_text_and_page_boxes_match": true,
+        "rendered_pdf_pixels_match_archive_at_100dpi": true,
+        "sha256": {
+          "pdf": "e3fcf4cacc698a59abba97c851f287f8faa57443ea848d979dcd58f1dcf23cc2",
+          "svg": "01c5303efc18fc8aac2cf9c3cd980451dbdd165f8df5898d3459b2ac7ac9f226",
+          "png": "3fb4e6a0ff0926d5f2e9a37df7a769a928d0561cfd779e0c62bc228585b48e78"
+        }
+      }
+    ],
+    "scope": "Saved plot inputs; exact data/axes assertions, archived text/page boxes and print styles; file bytes depend on renderer metadata/environment."
+  },
+  "clean_extraction_renderer": {
+    "status": "PASS",
+    "six_figures_rebuilt": true,
+    "different_windows_drive_output": true,
+    "six_archive_pixel_comparisons_passed": true
+  },
+  "numeric_display_equivalence": {
+    "status": "PASS",
+    "compared_csvs": 15,
+    "files": [
+      {
+        "path": "figures/figure2-data.csv",
+        "equal": true
+      },
+      {
+        "path": "figures/figure3-data.csv",
+        "equal": true
+      },
+      {
+        "path": "figures/figure4-data.csv",
+        "equal": true
+      },
+      {
+        "path": "tables/S1-channelwise-accuracy.csv",
+        "equal": true
+      },
+      {
+        "path": "tables/S2-profile-metrics.csv",
+        "equal": true
+      },
+      {
+        "path": "tables/S3-streaming-cost.csv",
+        "equal": true
+      },
+      {
+        "path": "tables/S4-all-initializations.csv",
+        "equal": true
+      },
+      {
+        "path": "tables/S5-profile-deletion.csv",
+        "equal": true
+      },
+      {
+        "path": "tables/table1.csv",
+        "equal": true
+      },
+      {
+        "path": "tables/table2.csv",
+        "equal": true
+      },
+      {
+        "path": "tables/table3.csv",
+        "equal": true
+      },
+      {
+        "path": "tables/table4.csv",
+        "equal": true
+      },
+      {
+        "path": "tables/table5.csv",
+        "equal": true
+      },
+      {
+        "path": "tables/table6.csv",
+        "equal": true
+      },
+      {
+        "path": "tables/table7.csv",
+        "equal": true
+      }
+    ]
+  },
+  "saved_v011_reference": {
+    "status": "PASS",
+    "revision": "v011",
+    "verified_files": 26,
+    "archived_figures": 6,
+    "trajectory_rows": 15339,
+    "initialization_cells": 75,
+    "trajectory_metric_checks": 12,
+    "scope": "File integrity, saved-example RMSE/bias, segment differences and manuscript figure mapping; no training."
+  },
+  "saved_v007_reference": {
+    "schema": "pmsm-v007-public-aggregate-validation-v1",
+    "status": "PASS",
+    "scope": "Independent standard-library arithmetic checks of published profile metrics, public file digests and provenance links, exact historical criteria and figure numbering. Private original source digests are recorded but cannot be rechecked without those originals. No raw-array replay, training, inference or fresh confirmation.",
+    "verifier_sha256": "6a150c3edb9582f65883a3800d33188a1fefef4c21f60859401099be8a10d83d",
+    "checked": {
+      "failure_profile_rows": 72,
+      "failure_cohort_rows": 10,
+      "support_profile_rows": 144,
+      "operating_range_rows": 36,
+      "initialization_paired_fifth_rows": 540,
+      "initialization_arm_fifth_rows": 1080,
+      "initialization_fifth_summary_rows": 75,
+      "initialization_whole_profile_rows": 108,
+      "initialization_whole_summary_rows": 15,
+      "historical_confirmation_attempts": 2,
+      "historical_source_digest_records": 7,
+      "publication_figures": 6
+    },
+    "arithmetic_tolerance": {
+      "relative": 1e-11,
+      "absolute": 1e-10
+    },
+    "historically_exposed": true,
+    "independent_confirmation": false,
+    "unverified_from_aggregates": [
+      "Raw source measurements and their marginal quantiles",
+      "Archived model predictions",
+      "Original model fitting",
+      "Cross-motor independence or generalization"
+    ]
+  },
+  "analysis_commands_on_existing_smoke_run": {
+    "status": "PASS",
+    "failure_analysis_profiles": 72,
+    "failure_figure": "Unavailable: no qualifying improvement/degradation under the fixed rule; no archived example substituted.",
+    "initialization_paired_profiles": 36,
+    "initialization_cells": 75,
+    "existing_run_manifest_sha256": "a8fa2a498fb5efc5d5540c630e166338f8323bfb6bed60957bea16002d29e607",
+    "new_training": false
+  },
+  "fresh_figure_visual_review": {
+    "status": "PASS",
+    "scopes": [
+      "synthetic fixture",
+      "saved reference values",
+      "existing smoke result values"
+    ],
+    "checks": [
+      "monochrome Figures 1/3/5",
+      "distinct markers and lines in color Figures 2/4/6",
+      "panel labels and font substitution receipts",
+      "bar annotation placement",
+      "legend and explanatory-note separation"
+    ]
+  },
+  "training_and_metric_algorithms_changed": false,
+  "full_paper_scale_retraining_executed_in_this_validation": false,
+  "new_independent_confirmation": false,
+  "source_hashes": {
+    "scripts/acquire_data.py": "9d1d9b9f08620416a52d5df909e69643262aa0fceb8ecc758052435d7e1191e3",
+    "scripts/analyze_failure.py": "051c670b3dc499afb27e0f7f9c4eed403b10db69aca41d823b7566173142c445",
+    "scripts/analyze_initialization.py": "35bad5b922398b113cc23066abee7d94234652e8d92cf9e81e06d206913bb0c4",
+    "scripts/publication_v011/__init__.py": "dce0ed553bf9ed5a057751b6465f198d2ca47e3b8ccc9f6376960918d9b735cb",
+    "scripts/publication_v011/builder.py": "6a643ac59fc37cfec9273f743753d03d5ff1fa9ce04bd2b39f0458577739ecba",
+    "scripts/publication_v011/summary.py": "6b7184f24b80e9cffea5133878b38635315ecef7118e1d8f9b520dafd3b0a042",
+    "scripts/publication_v011/timeseries.py": "785f14dccdcdcdab21cef81e57599f98e490152279e944f0be1832e199111b90",
+    "scripts/render_reference.py": "449bf4292ec64fad6e1993248cb7e7550ef22fc6501d345d3852658bfc5a3429",
+    "scripts/render_reference_v011.py": "efc6c850f9c2f161b78abe0b1bce73890bda3b2270520a57af1d91994b534e56",
+    "scripts/reproduce.py": "7c26d1f63ecb9bddeac6c7d83b8879a3be2f62dd19589636223e5ed788e102e6",
+    "scripts/run_tests.py": "f914f0ecb9c19e0454477c923f1a75929d55fb9df425d9c258804f629f815189",
+    "scripts/verify_repository.py": "1e329d85812ac90e6b68b406719c29b6c6383661d3aef0962c9b0bee8ec300a8",
+    "scripts/verify_review_reference.py": "6a150c3edb9582f65883a3800d33188a1fefef4c21f60859401099be8a10d83d",
+    "scripts/verify_v011_reference.py": "662309ed804f7fd4a76a46299674561d727fb0e9f31adaf8c32a6548cad410ff",
+    "src/pmsm_repro/__init__.py": "c01a544e553e3a85c627a6d1d21cb3749ed78d556ca221459cd25cd8d0e12a69",
+    "src/pmsm_repro/analysis.py": "230eccfc6c956ef2e008f3be3b765ba65dc9c4a4043b19fdcc38caff422a3fa5",
+    "src/pmsm_repro/benchmark.py": "bf6e6f891f8992a82aa9e694d4b7603900a4e722cda072dd38ecf2e8c69c3478",
+    "src/pmsm_repro/data.py": "45da25568a51bb21d0303621a03f8b02d4d2bf0d297931a4aa7ceb6e6516650e",
+    "src/pmsm_repro/evaluation.py": "662f6603bd42f59ca6a43f0c6b2846b8db2aca5bb532218949864fb593dcb964",
+    "src/pmsm_repro/features.py": "58e1948b2b0e935ba113197ea66d9020eabadc39f19a35e3f7b816bd7931185e",
+    "src/pmsm_repro/io.py": "3f39498330b9e1c871ca368899b17516f0491f3b3aaf0f971ea5a328f12cc354",
+    "src/pmsm_repro/metrics.py": "fb7ecbd0abe1e347a895720c1a5c0d8edc048c823e3b657d4d036a29869f6d73",
+    "src/pmsm_repro/models.py": "01c152de5b8ef9fac9a8544363bec5097921b90d3a11582304895e53fd7e74db",
+    "src/pmsm_repro/neural.py": "20813d8e65c08ced32a15c511ea2cba33dc1629a3e5ef30771a00d36ffd1bb58",
+    "src/pmsm_repro/pipeline.py": "82b19a688a15cfb01b5a1cd5d094090b231dce53fd6cd964883dcb5fcfed62eb",
+    "src/pmsm_repro/plot_style.py": "6dffdc425c487cbe641f8ca50fba2fee7f342504d47d77e3b9df4926954dcf75",
+    "src/pmsm_repro/reporting.py": "c28bbe0ef51cda9d4df0217dd7aa71244e6ff15b84ee1c5253c38012b51e05c5",
+    "src/pmsm_repro/streaming.py": "7954c1180c53f75b3a8370124ae6cf77905b6fe5f4b7a61c6dd8dc4d58541f36",
+    "tests/test_analysis.py": "906b9686fc2e8d8a813b302b15843f8e643ed7975bad85b635ff4662bd2a18e3",
+    "tests/test_neural.py": "99ac160d0b335155a28d29edbac8338842a01b445392bd5c19476240f9d9ac89",
+    "tests/test_numeric.py": "5e47e38f5e638263f38f2adad7c7172d4d3e941184b73794f4ca8da3c2558e9e",
+    "tests/test_pipeline.py": "6c72a431470b80c3a2f67a1ea72b5a76e415ccdc0fed4d60590ce09df1d4b0f5",
+    "tests/test_reporting.py": "c111f0511ef8ec80ffbc2444353bbd40588dee19697d2e5360d87921d18adca9",
+    "tests/test_review_analysis.py": "de2667c0454e3c09d397e94be84804703a9c720af2f0f9471cd8b0e97f35b728",
+    "tests/test_v011_plot_styles.py": "bd46adf8a0860dbd1043f5a51a64fdebe7e22d9a9c67e3c83c48d6604575c7ba",
+    "tests/test_v011_reference.py": "e86639fff506c759bd1ada116512f18317d56334d64fe8c0adc998e1e578847c"
+  }
+}

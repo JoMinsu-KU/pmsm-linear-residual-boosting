@@ -4,9 +4,10 @@ No training, prediction, model deserialization, original campaign execution or
 network operation occurs. Source hashes and complete endpoint pairs are checked.
 """
 from pathlib import Path
-import argparse, csv, hashlib, json, math, os
+import argparse, csv, hashlib, json, math, os, sys
 import numpy as np
 
+sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 METHODS=('linear_residual','direct200','d9')
 LABELS={'linear_residual':'Linear residual boosting','direct200':'Matched direct boosting','d9':'Selected direct boosting'}
 COHORTS=(('ipmsm','calibration'),('ipmsm','pilot'),('ipmsm','confirmation'),('paderborn','development'),('paderborn','confirmation'))
@@ -168,19 +169,19 @@ def plot(rows,out,smoke=False):
     import matplotlib
     matplotlib.use('Agg')
     import matplotlib.pyplot as plt
+    from pmsm_repro.plot_style import add_panel_labels,line_style,write_style_receipt
     plt.rcParams.update({'font.family':'DejaVu Sans','font.size':8.5,'pdf.fonttype':42,'ps.fonttype':42,'axes.spines.top':False,'axes.spines.right':False})
     fig,axes=plt.subplots(2,3,figsize=(7.2,5.2),sharex=True)
-    colors={'linear_residual':'#0072B2','direct200':'#D55E00','d9':'#009E73'}
-    markers={'linear_residual':'o','direct200':'s','d9':'^'}
     for idx,(ds,role) in enumerate(COHORTS):
         ax=axes.flat[idx]
         selected=[r for r in rows if r['dataset']==ds and r['role']==role]
         for method in METHODS:
             current=sorted((r for r in selected if r['method']==method),key=lambda r:int(r['fifth']))
             ax.plot([int(r['fifth']) for r in current],[float(r['macro_difference']) for r in current],
-                    marker=markers[method],color=colors[method],lw=1.4,ms=4.5,label=LABELS[method])
-        count=int(selected[0]['profiles'])
-        ax.set_title(('IPMSM' if ds=='ipmsm' else 'Paderborn')+'\n'+ROLE[role]+f' (n={count})',fontsize=8.5)
+                    lw=1.4,ms=4.5,label=LABELS[method],**line_style(method))
+        count=f" (n={int(selected[0]['profiles'])})" if selected else ''
+        ax.set_title(('IPMSM' if ds=='ipmsm' else 'Paderborn')+'\n'+ROLE[role]+count,fontsize=8.5)
+        if not selected:ax.text(.5,.5,'Not available in supplied run',transform=ax.transAxes,ha='center',fontsize=7)
         ax.axhline(0,color='black',lw=.8);ax.grid(axis='y',alpha=.18);ax.set_xticks([1,2,3,4,5]);ax.set_xlim(.75,5.25)
         ax.tick_params(axis='x',labelbottom=True)
         ax.set_xlabel('Retained-row fifth')
@@ -188,17 +189,23 @@ def plot(rows,out,smoke=False):
     # Preserve comparable scales within each dataset, not across unlike regimes.
     for ds,indices in [('ipmsm',[0,1,2]),('paderborn',[3,4])]:
         values=[float(r['macro_difference']) for r in rows if r['dataset']==ds]
-        lower=min(0.,min(values));upper=max(0.,max(values));padding=max(.03,.12*(upper-lower))
+        lower=min([0.,*values]);upper=max([0.,*values]);padding=max(.03,.12*(upper-lower))
         for i in indices:axes.flat[i].set_ylim(lower-padding,upper+padding)
     axes.flat[5].axis('off')
+    fig.subplots_adjust(left=.11,right=.985,bottom=.19,top=.89,wspace=.37,hspace=.90)
     handles,labels=axes.flat[0].get_legend_handles_labels()
-    axes.flat[5].legend(handles,labels,loc='upper left',frameon=False,fontsize=8.5,
-                        handlelength=1.5,handletextpad=.5,borderaxespad=0.,bbox_to_anchor=(-.02,.91))
-    axes.flat[5].text(0.,.53,'Change: channel-wise\nminus ambient.\nNegative: lower RMSE.\n\nShared y scale per dataset.\nFifths count rows, not time.',transform=axes.flat[5].transAxes,va='top',fontsize=8.5,linespacing=1.4)
-    fig.subplots_adjust(left=.11,right=.985,bottom=.10,top=.89,wspace=.37,hspace=.69)
+    legend=axes.flat[5].legend(handles,labels,loc='upper left',frameon=False,fontsize=7.5,
+                        handlelength=2.3,handletextpad=.5,borderaxespad=0.,bbox_to_anchor=(0.,.98))
+    fig.canvas.draw()
+    legend_box=legend.get_window_extent(fig.canvas.get_renderer()).transformed(fig.transFigure.inverted())
+    fig.text(axes.flat[5].get_position().x0,legend_box.y0-5./(72*fig.get_figheight()),
+        'Change: channel-wise\nminus ambient. Negative:\nlower RMSE.\nShared y scale per dataset.\nFifths count rows, not time.',
+        va='top',fontsize=7.5,linespacing=1.3)
     if smoke:fig.text(.5,.012,'SMOKE TEST: reduced rows, trees, and epochs; not paper results',ha='center',fontsize=8,color='#555555')
+    receipt=add_panel_labels(fig,list(axes.flat)[:5],177.53)
     for suffix in ('pdf','png'):
         fig.savefig(out/f'figures/figure6-initialization-segments.{suffix}',dpi=250)
+    write_style_receipt(out/'figures','figure6-initialization-segments',receipt)
     plt.close(fig)
 
 
@@ -211,7 +218,7 @@ def main():
     plot(rows,out,result['smoke_only'])
     caption=('Same-model initialization differences over retained-row fifths. Each point is the equally weighted mean, across all profiles in the named cohort, of channel-wise minus ambient-initialized RMSE for the same predictor. Negative values favor channel-wise initialization. All predictors were separately refitted under fixed settings. Y-axis ranges are shared within each dataset. The two-profile IPMSM historical comparison is descriptive. Fifths are formed from retained row counts rather than elapsed physical time, and the results do not identify an unknown physical rotor starting temperature.')
     (out/'analysis/initialization-caption.txt').write_text(caption+'\n',encoding='utf-8')
-    files=sorted([*out.glob('analysis/initialization-*'),*out.glob('figures/figure6-*')])
+    files=sorted([*out.glob('analysis/initialization-*'),*out.glob('figures/figure6-*'),*out.glob('figures/plot-style-receipt.json')])
     dump(out/'analysis/initialization-output-manifest.json',{'files':[{'path':p.relative_to(out).as_posix(),'sha256':sha(p)} for p in files if p.name!='initialization-output-manifest.json']})
     print(json.dumps({'status':'COMPLETE','paired_profiles':result['paired_profiles'],
         'fifth_summary_cells':len(rows),'mode':result['execution_mode'],'output':str(out)}))
