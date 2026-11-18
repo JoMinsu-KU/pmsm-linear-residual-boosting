@@ -1,0 +1,17 @@
+{
+  "schema": "v013-equal-budget-1",
+  "design_date": "2026-11-18",
+  "scope": "Retrospective sensitivity on two fixed datasets with a common seven-input contract. Prior outcomes from these exposed datasets are known. No prospective external validation or compute-time matching.",
+  "datasets": ["ipmsm", "paderborn"],
+  "arms": ["original", "own_boundary"],
+  "families": ["direct", "linear_residual"],
+  "inner_cv": "Within each dataset, sort FIT profile IDs, assign round-robin to three folds. Fit scaling, unconditional fixed-penalty ridge (for residual family), and booster exclusively on remaining FIT profiles. Score all fold-held profiles at historical training endpoint stride. Choose lowest mean per-profile OOF RMSE across pooled held profiles, ties resolved by listed order. Run selection separately per dataset, arm and family.",
+  "ridge_lambda": 0.001,
+  "ridge_note": "Fixed single regularization for both datasets, with no lambda search or use of a full-FIT-selected lambda inside validation folds. The two families differ only by this ridge and choice from the same tree grid.",
+  "ipmsm_grid": [[15,200],[7,500],[15,500]],
+  "paderborn_grid": [[15,200],[15,500],[15,1000]],
+  "grid_columns": ["max_leaf_nodes","max_iter"],
+  "shared": {"learning_rate": 0.05,"min_samples_leaf": 20,"l2_regularization": 0.1,"max_bins": 255,"loss": "squared_error","early_stopping": false,"random_state": 2026111201},
+  "training": "Original 33 features, all FIT profiles, 300-row warmup, stride 5, profile-balanced tree and ridge losses; train-set residuals in degrees Celsius. Validation at 300::5 within FIT; evaluation later at 300::1 on every non-FIT role. Equal budget = three candidate scores on identical profile folds per family and arm, not equal CPU time.",
+  "evaluation": "Refit each chosen model on all FIT profiles and score all historical non-FIT roles, without role outcomes used for tuning. Primary descriptive measure = profile-macro RMSE. Secondary = pooled RMSE and macro underestimation RMSE. Report every result, profile wins and paired changes. No significance tests or outcome-dependent grid extension."
+}

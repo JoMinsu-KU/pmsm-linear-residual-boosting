@@ -1,0 +1,32 @@
+{
+  "schema": "pmsm-package-validation-v013",
+  "package_version": "0.5.0",
+  "base_commit": "5da91166ca91b0b7c12f9741c74cb3d541d0c893",
+  "distribution": "Local companion overlay; apply over the exact public v0.4.0 commit.",
+  "date": "2026-11-18",
+  "historical_fixed_setting_contrast": {
+    "command": "python scripts/analyze_initialization_contrast.py --check",
+    "result": "PASS",
+    "profiles": 36,
+    "profile_arm_rows": 72,
+    "cohorts": 5,
+    "scope": "Recomputed two arm contrasts from matched profile RMSEs; cross-checked each against the separate whole-profile initialization ledger. Omit-one-profile sensitivity without refitting. Fresh smoke failure-analysis CSV also accepted and outputs retained the smoke label."
+  },
+  "equal_budget_refits": {
+    "command": "python scripts/verify_equal_budget.py",
+    "result": "PASS",
+    "scope": "Separate actual CPU fits from locally verified raw inputs. The verifier recomputes the training-only candidate scores, validates folds, refit output cohort metrics and four artifact hashes. Evaluation profiles were already exposed.",
+    "inner_profile_scores": 588,
+    "selection_rows": 24,
+    "evaluation_profile_rows": 144,
+    "cohort_rows": 20,
+    "run_receipt": "reference/v013/equal-budget/run.json"
+  },
+  "legacy_verifications": [
+    "python scripts/verify_review_reference.py: PASS",
+    "python scripts/verify_v011_reference.py: PASS"
+  ],
+  "original_200_epoch_study_rerun": false,
+  "new_inference_timing_measurement": false,
+  "independent_confirmation": false
+}

@@ -1,6 +1,6 @@
 {
   "schema": "pmsm-release-manifest-v2",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "files": [
     {
       "path": ".gitattributes",
@@ -14,8 +14,28 @@
     },
     {
       "path": "CITATION.cff",
-      "bytes": 1594,
-      "sha256": "36337e32869911204dab103b1477bef4bde1e611f704456f64caa780862cb17e"
+      "bytes": 1763,
+      "sha256": "33d2b1a7bf543b6d44e4221d50afb2a280fd0249c266f4b588fc8c11942cfd1c"
+    },
+    {
+      "path": "DATA_SOURCES.md",
+      "bytes": 7341,
+      "sha256": "d673d810ca19e68014460704d4dba6ffccdd4dfe45127d798959414ca4d7e941"
+    },
+    {
+      "path": "README.md",
+      "bytes": 27130,
+      "sha256": "4c6283bcd7554dbd90a24e5d623afb881759c1bcb90666490a8d9599d8d8d37c"
+    },
+    {
+      "path": "RIGHTS.md",
+      "bytes": 3480,
+      "sha256": "a6b98e08aeb402b80587eced5712a4153f199a01bff5ab5bf495f1d9c6dc2c11"
+    },
+    {
+      "path": "configs/equal_budget_v013.json",
+      "bytes": 2132,
+      "sha256": "356dcb3bfe7211d7d6d3a01b2ee1a83f663279bdcba7666282bbf320d48729f0"
     },
     {
       "path": "configs/study.json",
@@ -26,11 +46,6 @@
       "path": "data/registry.json",
       "bytes": 22949,
       "sha256": "9401403b1ea89380ed091bc4e760415c287ab7d82e3555c8f853ed324b8a1cc1"
-    },
-    {
-      "path": "DATA_SOURCES.md",
-      "bytes": 6490,
-      "sha256": "16f162fc45b04def9513ec215152e909241d9ac8eb6ab8cf63c589afe1d1c75a"
     },
     {
       "path": "provenance/streaming-source.json",
@@ -48,14 +63,14 @@
       "sha256": "07648a6e2bf1781d113f9762b733d30c962ff52299559261d2b11f390169e794"
     },
     {
+      "path": "provenance/validation-v013.json",
+      "bytes": 1542,
+      "sha256": "f97b4a6f219cad99fa6d007c2bf368a46084a32a94f9c5248624d67cad9e9350"
+    },
+    {
       "path": "provenance/validation.json",
       "bytes": 4155,
       "sha256": "494d8b595a80dd1ab55280b0bd38ca3b1dd16b0860559c04cc5bb0ed7207e5f0"
-    },
-    {
-      "path": "README.md",
-      "bytes": 24389,
-      "sha256": "7cc26adf73cb24ebe5e905c51feb2cb53a65aab021393fd03848365d4dfc4afc"
     },
     {
       "path": "reference/accuracy.csv",
@@ -258,6 +273,11 @@
       "sha256": "348ca631b9c022ea7429da50193f27a2dd98dea3a56eee6798f40b9b7f6e49fa"
     },
     {
+      "path": "reference/v011/data/S2-own-profile-all-methods.csv",
+      "bytes": 104929,
+      "sha256": "1c21ba42cf158845ff18dfdfcde71b69e077d0c9da8df567b529b59e62df8df8"
+    },
+    {
       "path": "reference/v011/data/cost-comparison-source.json",
       "bytes": 23364,
       "sha256": "4b24e9b2109b8fb0c4158f031f6e3e8deca593c286641558d1f6666e064f7654"
@@ -281,11 +301,6 @@
       "path": "reference/v011/data/paderborn-own-evaluation-source.json",
       "bytes": 278773,
       "sha256": "b1d5487aa347611d35b67d690608c5e1b01833443c5eee0797cae617b5e3550e"
-    },
-    {
-      "path": "reference/v011/data/S2-own-profile-all-methods.csv",
-      "bytes": 104929,
-      "sha256": "1c21ba42cf158845ff18dfdfcde71b69e077d0c9da8df567b529b59e62df8df8"
     },
     {
       "path": "reference/v011/data/selected-examples.json",
@@ -393,6 +408,46 @@
       "sha256": "789a4d4e8d0cb202ab2d0f4ebaec72af3dd1c21bf45e55fa0f3a29b58348575f"
     },
     {
+      "path": "reference/v013/equal-budget/cohorts.csv",
+      "bytes": 4520,
+      "sha256": "da7bd69bac649545a1b41f2daca8976f6e14f08506c7ef67e0abdf7aa2ae378e"
+    },
+    {
+      "path": "reference/v013/equal-budget/inner_profiles.csv",
+      "bytes": 41357,
+      "sha256": "2c2233705bf4ac9e1d3118adc5cad1a4a9d44eabd39bd74a361f9255b86dac55"
+    },
+    {
+      "path": "reference/v013/equal-budget/profiles.csv",
+      "bytes": 31458,
+      "sha256": "2e26edf6c8901d6b78367af851a62c660727efb61c97ab644b18ee9df77024f3"
+    },
+    {
+      "path": "reference/v013/equal-budget/run.json",
+      "bytes": 1034,
+      "sha256": "2cfbe40665683a963598cd3f6b3f58fabe458889738eadfc952e08831b4775e8"
+    },
+    {
+      "path": "reference/v013/equal-budget/selection.csv",
+      "bytes": 1537,
+      "sha256": "2c93d070752bfaeb817bf29ba57c7802b4d827cf1d240c33917f866b11b415f4"
+    },
+    {
+      "path": "reference/v013/initialization-contrast/cohorts.csv",
+      "bytes": 1413,
+      "sha256": "e32f2b8abe481d3c0809d6d06c808f05b61c296fd279c479901a69cbacf809c3"
+    },
+    {
+      "path": "reference/v013/initialization-contrast/profiles.csv",
+      "bytes": 3541,
+      "sha256": "b29489509e67a30c991a466d38183012501f596beba8e03d84e5b1455bade0ea"
+    },
+    {
+      "path": "reference/v013/initialization-contrast/receipt.json",
+      "bytes": 366,
+      "sha256": "57ef0af441f560012c0fd2ff316af27b4745904d5aab04aab22403a48935b70b"
+    },
+    {
       "path": "requirements-cuda.txt",
       "bytes": 64,
       "sha256": "526f4b275ff753574d4ed27d939e4e9dfa545de782965a4b96f7f6d1652c7202"
@@ -408,11 +463,6 @@
       "sha256": "735cd94396e5cf86db1fb34ece6cc1fb82bec10aa43af7075bb04ffc6c3c74ee"
     },
     {
-      "path": "RIGHTS.md",
-      "bytes": 3480,
-      "sha256": "a6b98e08aeb402b80587eced5712a4153f199a01bff5ab5bf495f1d9c6dc2c11"
-    },
-    {
       "path": "scripts/acquire_data.py",
       "bytes": 9807,
       "sha256": "9d1d9b9f08620416a52d5df909e69643262aa0fceb8ecc758052435d7e1191e3"
@@ -426,6 +476,11 @@
       "path": "scripts/analyze_initialization.py",
       "bytes": 16918,
       "sha256": "35bad5b922398b113cc23066abee7d94234652e8d92cf9e81e06d206913bb0c4"
+    },
+    {
+      "path": "scripts/analyze_initialization_contrast.py",
+      "bytes": 6510,
+      "sha256": "aee337d806274961d14d7a403f72d46365510b7596fb3f04907c8fcd8321748b"
     },
     {
       "path": "scripts/publication_v011/__init__.py",
@@ -463,9 +518,19 @@
       "sha256": "7c26d1f63ecb9bddeac6c7d83b8879a3be2f62dd19589636223e5ed788e102e6"
     },
     {
+      "path": "scripts/run_equal_budget.py",
+      "bytes": 8580,
+      "sha256": "0bece5ddc142bb0760b74417a737e8109539537cdf60e9c48801ff0caaa6e4cf"
+    },
+    {
       "path": "scripts/run_tests.py",
       "bytes": 589,
       "sha256": "f914f0ecb9c19e0454477c923f1a75929d55fb9df425d9c258804f629f815189"
+    },
+    {
+      "path": "scripts/verify_equal_budget.py",
+      "bytes": 5921,
+      "sha256": "379827ad6f51d97abf36eb1adfc9ba95b55de551b5fd9f9a8bd7491e091364a8"
     },
     {
       "path": "scripts/verify_repository.py",

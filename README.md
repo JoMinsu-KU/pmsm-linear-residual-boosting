@@ -2,11 +2,39 @@
 
 Research code for **Linear Residual Boosting for Rotor-Temperature Estimation in Permanent-Magnet Synchronous Motors: Accuracy, Initialization, and Computational Cost**.
 
-Version **0.4.0** accompanies the **v011 manuscript** and adds a saved-data renderer for its six figures. The v011 manuscript retains the nine tables, six figures, and numerical results of v007 while updating the figure presentation. The subsequent v012 manuscript update changes author biography text only; its scientific assets remain those archived as v011. The archived PDF, PNG, and SVG figures are in [reference/v011/figures/](reference/v011/figures/). The commands below distinguish rendering those saved observations from running the study again.
+Version **0.5.0** accompanies manuscript v013. It adds the comparison of initialization-dependent model rankings and a separate equal-search-budget refitting experiment. The six saved figures and the original measurements remain in the [public v0.4.0 snapshot](https://github.com/JoMinsu-KU/pmsm-linear-residual-boosting/tree/5da91166ca91b0b7c12f9741c74cb3d541d0c893). The figure revision was v011 and the biography-only revision was v012. The archival v0.2.0 validation described below pertains to a reduced training run, not to these new analyses.
 
-The full pipeline prepares pinned public measurements, fits the configured models, evaluates predictions, measures scalar CPU inference cost, and generates table and figure assets. Two additional scripts analyze residual-correction failures, operating ranges, and paired initialization effects. Results are computed from the named run's artifacts; missing values are never replaced with saved manuscript results. This release reruns the frozen, previously selected settings in [configs/study.json](configs/study.json). It does not repeat the original hyperparameter search.
+The full pipeline prepares pinned public measurements, fits the configured models, evaluates predictions, measures scalar CPU inference cost, and generates table and figure assets. Two additional scripts analyze residual-correction failures, operating ranges, and paired initialization effects. Results are computed from the named run's artifacts; missing values are never replaced with saved manuscript results. The original pipeline reruns the previously selected settings in [configs/study.json](configs/study.json); the v013 budget experiment below is a new, separately defined search.
 
 All configured evaluation profiles have already been examined during the study. A fresh execution is a computational reproduction, **not independent confirmation**. Numerical identity across hardware and software environments is not assumed, and latency must be measured on the reader's machine.
+
+## Reproduce the v013 analyses
+
+Clone the tagged version used for manuscript v013:
+
+```bash
+git clone --branch v0.5.0 --depth 1 https://github.com/JoMinsu-KU/pmsm-linear-residual-boosting.git
+cd pmsm-linear-residual-boosting
+```
+
+The checkout includes the original figure assets and the v013 experiment; no supplementary ZIP is required. From the repository root, verify the files and regenerate the fixed-setting comparison without downloading data or retraining:
+
+```bash
+python scripts/verify_repository.py
+python scripts/analyze_initialization_contrast.py --check
+python scripts/verify_equal_budget.py
+python scripts/analyze_initialization_contrast.py --output work/v013-contrast
+```
+
+`cohorts.csv` gives the two models' errors and contrasts for both initializations, the paired change, the count of profile-level changes below zero, and the range after omitting one profile at a time. `profiles.csv` keeps every pair; `receipt.json` identifies the source file by hash. Negative change means that the residual model's relative position improved after channel-wise initialization **and refitting**. This is a descriptive comparison of the historical fixed settings; it is not evidence about an initialization switch with weights held fixed. For a newly executed full study, use `--source work/paper-failure/failure-profile-corrections.csv --output work/fresh-contrast` after the failure analysis instead.
+
+The separate equal-budget experiment uses the [frozen search protocol](configs/equal_budget_v013.json). After installing the study dependencies and acquiring and verifying IPMSM and Paderborn as described below, run:
+
+```bash
+python scripts/run_equal_budget.py --data-root data/raw --output work/equal-budget
+```
+
+The [archived equal-budget outputs](reference/v013/equal-budget/) include inner-fold profile scores, family-specific selections, held-profile metrics, cohort summaries, and an execution receipt. The standard-library verifier above recomputes selections and aggregates, including all dataset/role contrasts. The search uses three profile-grouped folds within the training split, three candidate settings per family per arm, and a fixed residual-family ridge penalty of 0.001. This freezes the ridge penalty as well as the tree grid before the new fits; it is not a replay of the historical, dataset-specific ridge choices. Inspect `run.json` for the actual package versions. The later evaluation cohorts were already exposed during the earlier campaign. An equal number of candidate settings does not mean equal training time, tree count, or inference latency; timing from the fixed-setting experiment must not be assigned to newly selected models.
 
 ## Render the six saved v011 figures
 
@@ -183,6 +211,7 @@ Verify the listed release-file hashes and run the focused tests:
 python scripts/verify_repository.py
 python scripts/verify_v011_reference.py
 python scripts/verify_review_reference.py
+python scripts/analyze_initialization_contrast.py --check
 python scripts/run_tests.py
 ```
 

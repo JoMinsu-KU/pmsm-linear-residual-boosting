@@ -1,0 +1,9 @@
+{
+  "source_sha256": "5ac20119746024f8efe15ed4b57134ec9f8dca6ee57ca428203058c1700d4de2",
+  "paired_profiles": 36,
+  "arm_rows": 72,
+  "cohorts": 5,
+  "smoke_only": false,
+  "contrast": "(residual - matched direct) channel-wise minus ambient, degrees Celsius",
+  "scope": "Descriptive, equal-profile means after arm-specific refits; deletion is without refitting."
+}

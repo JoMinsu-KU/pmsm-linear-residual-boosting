@@ -1,0 +1,25 @@
+{
+  "status": "complete",
+  "started_utc": "2026-11-18T01:30:11.493354+00:00",
+  "protocol_sha256": "356dcb3bfe7211d7d6d3a01b2ee1a83f663279bdcba7666282bbf320d48729f0",
+  "study_sha256": "fa1bbb08bd080b9b8bbb5d6c6d571a0ed89f3bdbe005c9cc56648078df6cb1b1",
+  "driver_sha256": "0bece5ddc142bb0760b74417a737e8109539537cdf60e9c48801ff0caaa6e4cf",
+  "python": "3.12.7",
+  "numpy": "1.26.4",
+  "scipy": "1.13.1",
+  "sklearn": "1.5.1",
+  "workers": 4,
+  "threads_per_worker": 1,
+  "pinned_raw_files_verified": [
+    "ipmsm",
+    "paderborn"
+  ],
+  "finished_utc": "2026-11-18T01:32:51.092841+00:00",
+  "elapsed_seconds": 159.59399999992456,
+  "sha256": {
+    "inner_profiles.csv": "2c2233705bf4ac9e1d3118adc5cad1a4a9d44eabd39bd74a361f9255b86dac55",
+    "selection.csv": "2c93d070752bfaeb817bf29ba57c7802b4d827cf1d240c33917f866b11b415f4",
+    "profiles.csv": "2e26edf6c8901d6b78367af851a62c660727efb61c97ab644b18ee9df77024f3",
+    "cohorts.csv": "da7bd69bac649545a1b41f2daca8976f6e14f08506c7ef67e0abdf7aa2ae378e"
+  }
+}
